@@ -1,0 +1,321 @@
+{
+  "source_base_path": "/home/runner/work/AnyMotion-Development-Project/AnyMotion-Development-Project/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Noise.Axis3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.Axis3D",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.Noise.Axis3D.yml\" sourcestartlinenumber=\"1\">Which local axes a noise or shake channel drives. Combinable, so a channel can drive any subset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.NoiseMath",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.yml\" sourcestartlinenumber=\"1\">Pure, allocation-free noise and oscillator functions shared by every product. Rig-agnostic: takes\nand returns plain numbers only, so the same functions can drive a humanoid bone, a camera, or a\nmachine part unmodified. See <code>shake-noise-spec.md</code> §2 and §4 for why this lives in Core and\nwhy per-axis 1D noise was chosen over a 3D/vector noise field.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Noise.Trauma.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Noise.Trauma.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.Trauma",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.Noise.Trauma.yml\" sourcestartlinenumber=\"1\">Squared-decay burst model (Eiserloh's trauma model): a 0..1 value set by an event and decayed back\nto 0 over time, whose square is used as an amplitude multiplier so a burst starts strong and fades\nquickly rather than ramping up. Pure functions over plain floats — the caller owns the state, so\nany driver can add trauma without this type needing to know what a &quot;driver&quot; is.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Noise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Noise.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.yml\" sourcestartlinenumber=\"1\">Wraps one preset data type as a Unity asset. Unity's own asset serialization persists\n<xref href=\"CodeSmile.AnyMotion.Core.Presets.PresetAsset%601.Data\" data-throw-if-not-resolved=\"false\"></xref> natively; no code here is needed for that. Text-based save/load — sharing a\npreset outside the project — is a separate concern handled by\n<code>CodeSmile.AnyMotion.Core.SaveLoad</code>, not by this class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.Presets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.Presets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Presets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.yml\" sourcestartlinenumber=\"1\">The default <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem\" data-throw-if-not-resolved=\"false\"></xref> composition: JSON text over plain files. Convenience for\nthe common case; build a <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem\" data-throw-if-not-resolved=\"false\"></xref> directly when a different serializer or file\nI/O is needed instead.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.IFileIO",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.yml\" sourcestartlinenumber=\"1\">Reads and writes preset text at a file path. Knows nothing about JSON or ScriptableObjects, so\nit can be swapped or mocked independently of both.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.yml\" sourcestartlinenumber=\"1\">Saves and loads preset-shaped data as text. Composes an <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer\" data-throw-if-not-resolved=\"false\"></xref> and an\n<xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.IFileIO\" data-throw-if-not-resolved=\"false\"></xref>; knows nothing about <code>PresetAsset&lt;T&gt;</code> or ScriptableObjects,\nso it is reusable for any serializable data, not only preset assets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.yml\" sourcestartlinenumber=\"1\">Converts preset data to and from a text representation. Isolated behind an interface so the\nformat can change (eg JSON to a binary format) without touching file I/O or the save system\nthat composes this with it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.yml\" sourcestartlinenumber=\"1\">The only format in use today. See serialization-format-decision.md for why.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.LoadException",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.yml\" sourcestartlinenumber=\"1\">A load operation failed. See <xref href=\"System.Exception.InnerException\" data-throw-if-not-resolved=\"false\"></xref> for the underlying cause.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.yml\" sourcestartlinenumber=\"1\">Outcome of a load. Never throws — check <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.LoadResult%601.Success\" data-throw-if-not-resolved=\"false\"></xref> instead, per\nserialization-format-decision.md's &quot;must never fail to load&quot; requirement.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveException",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.yml\" sourcestartlinenumber=\"1\">A save operation failed. See <xref href=\"System.Exception.InnerException\" data-throw-if-not-resolved=\"false\"></xref> for the underlying cause.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.yml\" sourcestartlinenumber=\"1\">Base for every exception <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem\" data-throw-if-not-resolved=\"false\"></xref> wraps an underlying failure in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveResult",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.yml\" sourcestartlinenumber=\"1\">Outcome of a save. Never throws — check <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success\" data-throw-if-not-resolved=\"false\"></xref> instead, per\nserialization-format-decision.md's &quot;must never fail to load&quot; requirement applied to saving too.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.yml\" sourcestartlinenumber=\"1\">Default <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem\" data-throw-if-not-resolved=\"false\"></xref>. Wraps expected I/O and format failures into a Result rather\nthan throwing, so callers never need a try/catch around Save or Load. Exceptions outside that\nexpected set — eg a bug in a custom <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer\" data-throw-if-not-resolved=\"false\"></xref> — still propagate, because\nthose are programming errors, not the external-input failures this exists to handle.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO",
+      "Summary": "<p sourcefile=\"api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.yml\" sourcestartlinenumber=\"1\">Plain <xref href=\"System.IO.File\" data-throw-if-not-resolved=\"false\"></xref> wrapper. Works in the Editor and in builds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodeSmile.AnyMotion.Core.SaveLoad.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

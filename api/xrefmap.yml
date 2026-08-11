@@ -1,0 +1,803 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: CodeSmile.AnyMotion.Core.Noise
+  name: CodeSmile.AnyMotion.Core.Noise
+  href: api/CodeSmile.AnyMotion.Core.Noise.html
+  commentId: N:CodeSmile.AnyMotion.Core.Noise
+  fullName: CodeSmile.AnyMotion.Core.Noise
+  nameWithType: CodeSmile.AnyMotion.Core.Noise
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D
+  name: Axis3D
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html
+  commentId: T:CodeSmile.AnyMotion.Core.Noise.Axis3D
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D
+  nameWithType: Axis3D
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D.All
+  name: All
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html#CodeSmile_AnyMotion_Core_Noise_Axis3D_All
+  commentId: F:CodeSmile.AnyMotion.Core.Noise.Axis3D.All
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D.All
+  nameWithType: Axis3D.All
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D.None
+  name: None
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html#CodeSmile_AnyMotion_Core_Noise_Axis3D_None
+  commentId: F:CodeSmile.AnyMotion.Core.Noise.Axis3D.None
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D.None
+  nameWithType: Axis3D.None
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D.X
+  name: X
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html#CodeSmile_AnyMotion_Core_Noise_Axis3D_X
+  commentId: F:CodeSmile.AnyMotion.Core.Noise.Axis3D.X
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D.X
+  nameWithType: Axis3D.X
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D.Y
+  name: Y
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html#CodeSmile_AnyMotion_Core_Noise_Axis3D_Y
+  commentId: F:CodeSmile.AnyMotion.Core.Noise.Axis3D.Y
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D.Y
+  nameWithType: Axis3D.Y
+- uid: CodeSmile.AnyMotion.Core.Noise.Axis3D.Z
+  name: Z
+  href: api/CodeSmile.AnyMotion.Core.Noise.Axis3D.html#CodeSmile_AnyMotion_Core_Noise_Axis3D_Z
+  commentId: F:CodeSmile.AnyMotion.Core.Noise.Axis3D.Z
+  fullName: CodeSmile.AnyMotion.Core.Noise.Axis3D.Z
+  nameWithType: Axis3D.Z
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath
+  name: NoiseMath
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html
+  commentId: T:CodeSmile.AnyMotion.Core.Noise.NoiseMath
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath
+  nameWithType: NoiseMath
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.AnimationCurve)
+  name: AttenuateByDistance(Vector3, Vector3, float, AnimationCurve)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_AttenuateByDistance_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_AnimationCurve_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.AnimationCurve)
+  name.vb: AttenuateByDistance(Vector3, Vector3, Single, AnimationCurve)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3, UnityEngine.Vector3, float, UnityEngine.AnimationCurve)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3, UnityEngine.Vector3, Single, UnityEngine.AnimationCurve)
+  nameWithType: NoiseMath.AttenuateByDistance(Vector3, Vector3, float, AnimationCurve)
+  nameWithType.vb: NoiseMath.AttenuateByDistance(Vector3, Vector3, Single, AnimationCurve)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance*
+  name: AttenuateByDistance
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_AttenuateByDistance_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance
+  nameWithType: NoiseMath.AttenuateByDistance
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(System.Single,System.Single,System.Single)
+  name: Blend(float, float, float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Blend_System_Single_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(System.Single,System.Single,System.Single)
+  name.vb: Blend(Single, Single, Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(float, float, float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(Single, Single, Single)
+  nameWithType: NoiseMath.Blend(float, float, float)
+  nameWithType.vb: NoiseMath.Blend(Single, Single, Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend*
+  name: Blend
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Blend_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend
+  nameWithType: NoiseMath.Blend
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(System.Single,System.Int32,System.Int32)
+  name: Sample1D(float, int, int)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_System_Single_System_Int32_System_Int32_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(System.Single,System.Int32,System.Int32)
+  name.vb: Sample1D(Single, Integer, Integer)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(float, int, int)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(Single, Integer, Integer)
+  nameWithType: NoiseMath.Sample1D(float, int, int)
+  nameWithType.vb: NoiseMath.Sample1D(Single, Integer, Integer)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D*
+  name: Sample1D
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D
+  nameWithType: NoiseMath.Sample1D
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D(System.Single,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
+  name: SampleFbm1D(float, int, int, int, float, float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleFbm1D_System_Single_System_Int32_System_Int32_System_Int32_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D(System.Single,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
+  name.vb: SampleFbm1D(Single, Integer, Integer, Integer, Single, Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D(float, int, int, int, float, float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D(Single, Integer, Integer, Integer, Single, Single)
+  nameWithType: NoiseMath.SampleFbm1D(float, int, int, int, float, float)
+  nameWithType.vb: NoiseMath.SampleFbm1D(Single, Integer, Integer, Integer, Single, Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D*
+  name: SampleFbm1D
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleFbm1D_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D
+  nameWithType: NoiseMath.SampleFbm1D
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(System.Single)
+  name: SamplePeriodic(float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(System.Single)
+  name.vb: SamplePeriodic(Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(Single)
+  nameWithType: NoiseMath.SamplePeriodic(float)
+  nameWithType.vb: NoiseMath.SamplePeriodic(Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic*
+  name: SamplePeriodic
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic
+  nameWithType: NoiseMath.SamplePeriodic
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(System.Single,System.Single)
+  name: SampleSharpenedWave(float, float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleSharpenedWave_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(System.Single,System.Single)
+  name.vb: SampleSharpenedWave(Single, Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(float, float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(Single, Single)
+  nameWithType: NoiseMath.SampleSharpenedWave(float, float)
+  nameWithType.vb: NoiseMath.SampleSharpenedWave(Single, Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave*
+  name: SampleSharpenedWave
+  href: api/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleSharpenedWave_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave
+  nameWithType: NoiseMath.SampleSharpenedWave
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma
+  name: Trauma
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html
+  commentId: T:CodeSmile.AnyMotion.Core.Noise.Trauma
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma
+  nameWithType: Trauma
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Add(System.Single,System.Single)
+  name: Add(float, float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Add_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.Trauma.Add(System.Single,System.Single)
+  name.vb: Add(Single, Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Add(float, float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.Trauma.Add(Single, Single)
+  nameWithType: Trauma.Add(float, float)
+  nameWithType.vb: Trauma.Add(Single, Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Add*
+  name: Add
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Add_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.Trauma.Add
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Add
+  nameWithType: Trauma.Add
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Decay(System.Single,System.Single,System.Single)
+  name: Decay(float, float, float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Decay_System_Single_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.Trauma.Decay(System.Single,System.Single,System.Single)
+  name.vb: Decay(Single, Single, Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Decay(float, float, float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.Trauma.Decay(Single, Single, Single)
+  nameWithType: Trauma.Decay(float, float, float)
+  nameWithType.vb: Trauma.Decay(Single, Single, Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Decay*
+  name: Decay
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Decay_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.Trauma.Decay
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Decay
+  nameWithType: Trauma.Decay
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier(System.Single)
+  name: Multiplier(float)
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Multiplier_System_Single_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier(System.Single)
+  name.vb: Multiplier(Single)
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier(float)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier(Single)
+  nameWithType: Trauma.Multiplier(float)
+  nameWithType.vb: Trauma.Multiplier(Single)
+- uid: CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier*
+  name: Multiplier
+  href: api/CodeSmile.AnyMotion.Core.Noise.Trauma.html#CodeSmile_AnyMotion_Core_Noise_Trauma_Multiplier_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.Trauma.Multiplier
+  nameWithType: Trauma.Multiplier
+- uid: CodeSmile.AnyMotion.Core.Presets
+  name: CodeSmile.AnyMotion.Core.Presets
+  href: api/CodeSmile.AnyMotion.Core.Presets.html
+  commentId: N:CodeSmile.AnyMotion.Core.Presets
+  fullName: CodeSmile.AnyMotion.Core.Presets
+  nameWithType: CodeSmile.AnyMotion.Core.Presets
+- uid: CodeSmile.AnyMotion.Core.Presets.PresetAsset`1
+  name: PresetAsset<T>
+  href: api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html
+  commentId: T:CodeSmile.AnyMotion.Core.Presets.PresetAsset`1
+  name.vb: PresetAsset(Of T)
+  fullName: CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>
+  fullName.vb: CodeSmile.AnyMotion.Core.Presets.PresetAsset(Of T)
+  nameWithType: PresetAsset<T>
+  nameWithType.vb: PresetAsset(Of T)
+- uid: CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.Data
+  name: Data
+  href: api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html#CodeSmile_AnyMotion_Core_Presets_PresetAsset_1_Data
+  commentId: P:CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.Data
+  fullName: CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>.Data
+  fullName.vb: CodeSmile.AnyMotion.Core.Presets.PresetAsset(Of T).Data
+  nameWithType: PresetAsset<T>.Data
+  nameWithType.vb: PresetAsset(Of T).Data
+- uid: CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.Data*
+  name: Data
+  href: api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html#CodeSmile_AnyMotion_Core_Presets_PresetAsset_1_Data_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.Data
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>.Data
+  fullName.vb: CodeSmile.AnyMotion.Core.Presets.PresetAsset(Of T).Data
+  nameWithType: PresetAsset<T>.Data
+  nameWithType.vb: PresetAsset(Of T).Data
+- uid: CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.SchemaVersion
+  name: SchemaVersion
+  href: api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html#CodeSmile_AnyMotion_Core_Presets_PresetAsset_1_SchemaVersion
+  commentId: P:CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.SchemaVersion
+  fullName: CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>.SchemaVersion
+  fullName.vb: CodeSmile.AnyMotion.Core.Presets.PresetAsset(Of T).SchemaVersion
+  nameWithType: PresetAsset<T>.SchemaVersion
+  nameWithType.vb: PresetAsset(Of T).SchemaVersion
+- uid: CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.SchemaVersion*
+  name: SchemaVersion
+  href: api/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html#CodeSmile_AnyMotion_Core_Presets_PresetAsset_1_SchemaVersion_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Presets.PresetAsset`1.SchemaVersion
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>.SchemaVersion
+  fullName.vb: CodeSmile.AnyMotion.Core.Presets.PresetAsset(Of T).SchemaVersion
+  nameWithType: PresetAsset<T>.SchemaVersion
+  nameWithType.vb: PresetAsset(Of T).SchemaVersion
+- uid: CodeSmile.AnyMotion.Core.SaveLoad
+  name: CodeSmile.AnyMotion.Core.SaveLoad
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.html
+  commentId: N:CodeSmile.AnyMotion.Core.SaveLoad
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad
+  nameWithType: CodeSmile.AnyMotion.Core.SaveLoad
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem
+  name: DefaultSaveSystem
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem
+  nameWithType: DefaultSaveSystem
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.Instance
+  name: Instance
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_DefaultSaveSystem_Instance
+  commentId: F:CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.Instance
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.Instance
+  nameWithType: DefaultSaveSystem.Instance
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO
+  name: IFileIO
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO
+  nameWithType: IFileIO
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists(System.String)
+  name: Exists(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_Exists_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists(System.String)
+  name.vb: Exists(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists(String)
+  nameWithType: IFileIO.Exists(string)
+  nameWithType.vb: IFileIO.Exists(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists*
+  name: Exists
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_Exists_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.Exists
+  nameWithType: IFileIO.Exists
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText(System.String)
+  name: ReadAllText(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_ReadAllText_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText(System.String)
+  name.vb: ReadAllText(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText(String)
+  nameWithType: IFileIO.ReadAllText(string)
+  nameWithType.vb: IFileIO.ReadAllText(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText*
+  name: ReadAllText
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_ReadAllText_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.ReadAllText
+  nameWithType: IFileIO.ReadAllText
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText(System.String,System.String)
+  name: WriteAllText(string, string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_WriteAllText_System_String_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText(System.String,System.String)
+  name.vb: WriteAllText(String, String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText(string, string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText(String, String)
+  nameWithType: IFileIO.WriteAllText(string, string)
+  nameWithType.vb: IFileIO.WriteAllText(String, String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText*
+  name: WriteAllText
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_WriteAllText_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.WriteAllText
+  nameWithType: IFileIO.WriteAllText
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem
+  name: ISaveSystem
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem
+  nameWithType: ISaveSystem
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load*
+  name: Load
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_ISaveSystem_Load_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load
+  nameWithType: ISaveSystem.Load
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load``1(System.String)
+  name: Load<T>(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_ISaveSystem_Load__1_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load``1(System.String)
+  name.vb: Load(Of T)(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load<T>(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Load(Of T)(String)
+  nameWithType: ISaveSystem.Load<T>(string)
+  nameWithType.vb: ISaveSystem.Load(Of T)(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save*
+  name: Save
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_ISaveSystem_Save_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save
+  nameWithType: ISaveSystem.Save
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save``1(``0,System.String)
+  name: Save<T>(T, string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_ISaveSystem_Save__1___0_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save``1(``0,System.String)
+  name.vb: Save(Of T)(T, String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save<T>(T, string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.Save(Of T)(T, String)
+  nameWithType: ISaveSystem.Save<T>(T, string)
+  nameWithType.vb: ISaveSystem.Save(Of T)(T, String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer
+  name: ITextSerializer
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer
+  nameWithType: ITextSerializer
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize*
+  name: Deserialize
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_ITextSerializer_Deserialize_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize
+  nameWithType: ITextSerializer.Deserialize
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize``1(System.String)
+  name: Deserialize<T>(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_ITextSerializer_Deserialize__1_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of T)(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize<T>(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Deserialize(Of T)(String)
+  nameWithType: ITextSerializer.Deserialize<T>(string)
+  nameWithType.vb: ITextSerializer.Deserialize(Of T)(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize*
+  name: Serialize
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_ITextSerializer_Serialize_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize
+  nameWithType: ITextSerializer.Serialize
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize``1(``0)
+  name: Serialize<T>(T)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_ITextSerializer_Serialize__1___0_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize``1(``0)
+  name.vb: Serialize(Of T)(T)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize<T>(T)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize(Of T)(T)
+  nameWithType: ITextSerializer.Serialize<T>(T)
+  nameWithType.vb: ITextSerializer.Serialize(Of T)(T)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer
+  name: JsonUtilityTextSerializer
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer
+  nameWithType: JsonUtilityTextSerializer
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize*
+  name: Deserialize
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_JsonUtilityTextSerializer_Deserialize_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize
+  nameWithType: JsonUtilityTextSerializer.Deserialize
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize``1(System.String)
+  name: Deserialize<T>(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_JsonUtilityTextSerializer_Deserialize__1_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of T)(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize<T>(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Deserialize(Of T)(String)
+  nameWithType: JsonUtilityTextSerializer.Deserialize<T>(string)
+  nameWithType.vb: JsonUtilityTextSerializer.Deserialize(Of T)(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize*
+  name: Serialize
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_JsonUtilityTextSerializer_Serialize_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize
+  nameWithType: JsonUtilityTextSerializer.Serialize
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize``1(``0)
+  name: Serialize<T>(T)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html#CodeSmile_AnyMotion_Core_SaveLoad_JsonUtilityTextSerializer_Serialize__1___0_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize``1(``0)
+  name.vb: Serialize(Of T)(T)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize<T>(T)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.Serialize(Of T)(T)
+  nameWithType: JsonUtilityTextSerializer.Serialize<T>(T)
+  nameWithType.vb: JsonUtilityTextSerializer.Serialize(Of T)(T)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadException
+  name: LoadException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.LoadException
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadException
+  nameWithType: LoadException
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.#ctor(System.String,System.String,System.Exception)
+  name: LoadException(string, string, Exception)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadException__ctor_System_String_System_String_System_Exception_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.LoadException.#ctor(System.String,System.String,System.Exception)
+  name.vb: New(String, String, Exception)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.LoadException(string, string, System.Exception)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.New(String, String, System.Exception)
+  nameWithType: LoadException.LoadException(string, string, Exception)
+  nameWithType.vb: LoadException.New(String, String, Exception)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.#ctor*
+  name: LoadException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadException__ctor_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.LoadException
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadException.New
+  nameWithType: LoadException.LoadException
+  nameWithType.vb: LoadException.New
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1
+  name: LoadResult<T>
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1
+  name.vb: LoadResult(Of T)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T)
+  nameWithType: LoadResult<T>
+  nameWithType.vb: LoadResult(Of T)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Data
+  name: Data
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Data
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Data
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Data
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Data
+  nameWithType: LoadResult<T>.Data
+  nameWithType.vb: LoadResult(Of T).Data
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Data*
+  name: Data
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Data_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Data
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Data
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Data
+  nameWithType: LoadResult<T>.Data
+  nameWithType.vb: LoadResult(Of T).Data
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Exception
+  name: Exception
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Exception
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Exception
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Exception
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Exception
+  nameWithType: LoadResult<T>.Exception
+  nameWithType.vb: LoadResult(Of T).Exception
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Exception*
+  name: Exception
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Exception_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Exception
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Exception
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Exception
+  nameWithType: LoadResult<T>.Exception
+  nameWithType.vb: LoadResult(Of T).Exception
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Failed(CodeSmile.AnyMotion.Core.SaveLoad.LoadException)
+  name: Failed(LoadException)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Failed_CodeSmile_AnyMotion_Core_SaveLoad_LoadException_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Failed(CodeSmile.AnyMotion.Core.SaveLoad.LoadException)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Failed(CodeSmile.AnyMotion.Core.SaveLoad.LoadException)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Failed(CodeSmile.AnyMotion.Core.SaveLoad.LoadException)
+  nameWithType: LoadResult<T>.Failed(LoadException)
+  nameWithType.vb: LoadResult(Of T).Failed(LoadException)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Failed*
+  name: Failed
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Failed_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Failed
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Failed
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Failed
+  nameWithType: LoadResult<T>.Failed
+  nameWithType.vb: LoadResult(Of T).Failed
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Succeeded(`0)
+  name: Succeeded(T)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Succeeded__0_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Succeeded(`0)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Succeeded(T)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Succeeded(T)
+  nameWithType: LoadResult<T>.Succeeded(T)
+  nameWithType.vb: LoadResult(Of T).Succeeded(T)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Succeeded*
+  name: Succeeded
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Succeeded_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Succeeded
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Succeeded
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Succeeded
+  nameWithType: LoadResult<T>.Succeeded
+  nameWithType.vb: LoadResult(Of T).Succeeded
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Success
+  name: Success
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Success
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Success
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Success
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Success
+  nameWithType: LoadResult<T>.Success
+  nameWithType.vb: LoadResult(Of T).Success
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Success*
+  name: Success
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Success_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.LoadResult`1.Success
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>.Success
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.LoadResult(Of T).Success
+  nameWithType: LoadResult<T>.Success
+  nameWithType.vb: LoadResult(Of T).Success
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveException
+  name: SaveException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.SaveException
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveException
+  nameWithType: SaveException
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.#ctor(System.String,System.String,System.Exception)
+  name: SaveException(string, string, Exception)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveException__ctor_System_String_System_String_System_Exception_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveException.#ctor(System.String,System.String,System.Exception)
+  name.vb: New(String, String, Exception)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.SaveException(string, string, System.Exception)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.New(String, String, System.Exception)
+  nameWithType: SaveException.SaveException(string, string, Exception)
+  nameWithType.vb: SaveException.New(String, String, Exception)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.#ctor*
+  name: SaveException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveException__ctor_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.SaveException
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveException.New
+  nameWithType: SaveException.SaveException
+  nameWithType.vb: SaveException.New
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException
+  name: SaveLoadException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException
+  nameWithType: SaveLoadException
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.#ctor(System.String,System.String,System.Exception)
+  name: SaveLoadException(string, string, Exception)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveLoadException__ctor_System_String_System_String_System_Exception_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.#ctor(System.String,System.String,System.Exception)
+  name.vb: New(String, String, Exception)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.SaveLoadException(string, string, System.Exception)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.New(String, String, System.Exception)
+  nameWithType: SaveLoadException.SaveLoadException(string, string, Exception)
+  nameWithType.vb: SaveLoadException.New(String, String, Exception)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.#ctor*
+  name: SaveLoadException
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveLoadException__ctor_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.SaveLoadException
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.New
+  nameWithType: SaveLoadException.SaveLoadException
+  nameWithType.vb: SaveLoadException.New
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath
+  name: FilePath
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveLoadException_FilePath
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath
+  nameWithType: SaveLoadException.FilePath
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath*
+  name: FilePath
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveLoadException_FilePath_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.FilePath
+  nameWithType: SaveLoadException.FilePath
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult
+  name: SaveResult
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult
+  nameWithType: SaveResult
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents
+  name: Contents
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Contents
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents
+  nameWithType: SaveResult.Contents
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents*
+  name: Contents
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Contents_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Contents
+  nameWithType: SaveResult.Contents
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception
+  name: Exception
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Exception
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception
+  nameWithType: SaveResult.Exception
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception*
+  name: Exception
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Exception_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Exception
+  nameWithType: SaveResult.Exception
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed(CodeSmile.AnyMotion.Core.SaveLoad.SaveException)
+  name: Failed(SaveException)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Failed_CodeSmile_AnyMotion_Core_SaveLoad_SaveException_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed(CodeSmile.AnyMotion.Core.SaveLoad.SaveException)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed(CodeSmile.AnyMotion.Core.SaveLoad.SaveException)
+  nameWithType: SaveResult.Failed(SaveException)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed*
+  name: Failed
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Failed_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Failed
+  nameWithType: SaveResult.Failed
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded(System.String)
+  name: Succeeded(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Succeeded_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded(System.String)
+  name.vb: Succeeded(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded(String)
+  nameWithType: SaveResult.Succeeded(string)
+  nameWithType.vb: SaveResult.Succeeded(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded*
+  name: Succeeded
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Succeeded_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Succeeded
+  nameWithType: SaveResult.Succeeded
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success
+  name: Success
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Success
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success
+  nameWithType: SaveResult.Success
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success*
+  name: Success
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Success_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success
+  nameWithType: SaveResult.Success
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem
+  name: SaveSystem
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem
+  nameWithType: SaveSystem
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.#ctor(CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer,CodeSmile.AnyMotion.Core.SaveLoad.IFileIO)
+  name: SaveSystem(ITextSerializer, IFileIO)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem__ctor_CodeSmile_AnyMotion_Core_SaveLoad_ITextSerializer_CodeSmile_AnyMotion_Core_SaveLoad_IFileIO_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.#ctor(CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer,CodeSmile.AnyMotion.Core.SaveLoad.IFileIO)
+  name.vb: New(ITextSerializer, IFileIO)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.SaveSystem(CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer, CodeSmile.AnyMotion.Core.SaveLoad.IFileIO)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.New(CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer, CodeSmile.AnyMotion.Core.SaveLoad.IFileIO)
+  nameWithType: SaveSystem.SaveSystem(ITextSerializer, IFileIO)
+  nameWithType.vb: SaveSystem.New(ITextSerializer, IFileIO)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.#ctor*
+  name: SaveSystem
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem__ctor_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.SaveSystem
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.New
+  nameWithType: SaveSystem.SaveSystem
+  nameWithType.vb: SaveSystem.New
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load*
+  name: Load
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem_Load_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load
+  nameWithType: SaveSystem.Load
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load``1(System.String)
+  name: Load<T>(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem_Load__1_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load``1(System.String)
+  name.vb: Load(Of T)(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load<T>(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load(Of T)(String)
+  nameWithType: SaveSystem.Load<T>(string)
+  nameWithType.vb: SaveSystem.Load(Of T)(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save*
+  name: Save
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem_Save_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save
+  nameWithType: SaveSystem.Save
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save``1(``0,System.String)
+  name: Save<T>(T, string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem_Save__1___0_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save``1(``0,System.String)
+  name.vb: Save(Of T)(T, String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save<T>(T, string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Save(Of T)(T, String)
+  nameWithType: SaveSystem.Save<T>(T, string)
+  nameWithType.vb: SaveSystem.Save(Of T)(T, String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO
+  name: SystemFileIO
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO
+  nameWithType: SystemFileIO
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists(System.String)
+  name: Exists(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_Exists_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists(System.String)
+  name.vb: Exists(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists(String)
+  nameWithType: SystemFileIO.Exists(string)
+  nameWithType.vb: SystemFileIO.Exists(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists*
+  name: Exists
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_Exists_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.Exists
+  nameWithType: SystemFileIO.Exists
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText(System.String)
+  name: ReadAllText(string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_ReadAllText_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText(System.String)
+  name.vb: ReadAllText(String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText(string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText(String)
+  nameWithType: SystemFileIO.ReadAllText(string)
+  nameWithType.vb: SystemFileIO.ReadAllText(String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText*
+  name: ReadAllText
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_ReadAllText_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.ReadAllText
+  nameWithType: SystemFileIO.ReadAllText
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText(System.String,System.String)
+  name: WriteAllText(string, string)
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_WriteAllText_System_String_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText(System.String,System.String)
+  name.vb: WriteAllText(String, String)
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText(string, string)
+  fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText(String, String)
+  nameWithType: SystemFileIO.WriteAllText(string, string)
+  nameWithType.vb: SystemFileIO.WriteAllText(String, String)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText*
+  name: WriteAllText
+  href: api/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html#CodeSmile_AnyMotion_Core_SaveLoad_SystemFileIO_WriteAllText_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.WriteAllText
+  nameWithType: SystemFileIO.WriteAllText
