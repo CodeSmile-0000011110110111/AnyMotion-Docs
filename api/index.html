@@ -76,10 +76,13 @@
 <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project">AnyMotion-Development-Project</a>
 repository.</p>
 <p>See the API Reference in the top navigation for generated type documentation.</p>
-<p><strong>Barebones scope, 2026-08-11:</strong> only <code>Core/Runtime/{Noise,SaveLoad,Presets}</code> is documented here —
-the self-contained subset of the public API that compiles without a Unity installation (this CI
-runner has none). Widening coverage to the rest of <code>Assets/CodeSmile/AnyMotion/</code> needs either real
-Unity DLLs in CI or a larger stub <code>UnityEngine</code>/<code>UnityEditor</code> surface; see <code>docfx/ApiSource/ApiSource.csproj</code>.</p>
+<p><strong>Full-tree scope, 2026-08-11:</strong> every public type/member under <code>Assets/CodeSmile/AnyMotion/</code> is
+documented here, except <code>_Development/**</code> (internal dev scenes) and any <code>Tests/**</code> folder (unit
+tests). This CI runner has no Unity installation, so <code>docfx/UnityStubs/</code> provides a hand-written
+stand-in <code>UnityEngine</code>/<code>UnityEditor</code>/etc. surface just deep enough for the real source to compile
+against — see <code>docfx/ApiSource/ApiSource.csproj</code> and <code>docfx/UnityStubs/*.cs</code>. Members with no XML
+doc summary still appear, deliberately: this is meant to show the current public API surface as-is,
+not a curated subset.</p>
 
 </article>
           </div>
@@ -89,7 +92,7 @@ Unity DLLs in CI or a larger stub <code>UnityEngine</code>/<code>UnityEditor</co
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/fm/docfx-api-docs/docfx/index.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/fm/docfx-expand-animateyourself-tree/docfx/index.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
