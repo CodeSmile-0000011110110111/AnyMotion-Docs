@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Struct GaitPose | AnyMotion API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Struct GaitPose | AnyMotion API Reference ">
+    
+    <meta name="description" content="One evaluated frame of gait, expressed in two forms at once so that all three candidate driver spaces of the P2 spike can consume the same source parameters.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose">
+
+
+
+  <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose" class="text-break">Struct GaitPose</h1>
+  <div class="markdown level0 summary"><p>One evaluated frame of gait, expressed in two forms at once so that all three candidate driver
+spaces of the P2 spike can consume the same source parameters.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></h6>
+  <h6><strong>Assembly</strong>: ApiSource.dll</h6>
+  <h5 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct GaitPose</code></pre>
+  </div>
+  <h5 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Units: <b>metres and degrees, already scaled to this specific rig</b> through
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html">RigMetrics</a>. The portable, rig-independent unit is
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>, not this type. Denormalisation happens in exactly one place,
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.html">WalkGait</a>, so there is a single point to inspect when a preset does not carry over
+between rigs.</p>
+<p>
+    Positions are local to the character's visual root: X is right, Y is up with 0 at the ground
+    plane, Z is forward.
+</p>
+<p>
+    Which form each space reads:
+    space A (Mecanim muscle) and space B (custom per-bone rotation frame) read
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftLeg">LeftLeg</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightLeg">RightLeg</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftArm">LeftArm</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightArm">RightArm</a>
+    and the torso rotations; space C (body-normalised IK targets) reads <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftFoot">LeftFoot</a>,
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightFoot">RightFoot</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand">LeftHand</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightHand">RightHand</a> and the same torso
+    rotations. Both forms come from one phase value and one parameter set, so a difference in
+    result is attributable to the space and not to different timing.
+</p>
+</div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Anchoring.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Anchoring%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L87">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Anchoring" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Anchoring">Anchoring</h4>
+  <div class="markdown level1 summary"><p>L05 (foot planting on uneven ground): how a foot's IK target may follow ground the gait did
+not author. Copied from <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_Anchoring">Anchoring</a> so
+<code>IkTargetSpaceDriver</code> can gate its raycast on the pose alone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WalkGaitParameters.GroundGroup.ContactAnchoring Anchoring</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html">GroundGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.html">ContactAnchoring</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmElbowPoleAngle.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmElbowPoleAngle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L176">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmElbowPoleAngle" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmElbowPoleAngle">ArmElbowPoleAngle</h4>
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ElbowPoleAngle">ElbowPoleAngle</a>, copied as-is — already in
+degrees from straight back towards this arm's own side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArmElbowPoleAngle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachAcrossLimit.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachAcrossLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L164">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachAcrossLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachAcrossLimit">ArmReachAcrossLimit</h4>
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachAcrossLimit">ReachAcrossLimit</a>, copied as-is — already in
+degrees, measured from straight forward towards the centre line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArmReachAcrossLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachBehindLimit.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachBehindLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L170">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachBehindLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachBehindLimit">ArmReachBehindLimit</h4>
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachBehindLimit">ReachBehindLimit</a>, copied as-is — already in
+degrees, measured from straight forward, going outwards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArmReachBehindLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachUpLimit.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachUpLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L158">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachUpLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachUpLimit">ArmReachUpLimit</h4>
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachUpLimit">ReachUpLimit</a>, copied as-is — already in
+degrees, measured from hanging straight down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArmReachUpLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ChestEuler.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ChestEuler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L73">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ChestEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ChestEuler">ChestEuler</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 ChestEuler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_GroundSmoothingSeconds.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.GroundSmoothingSeconds%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L101">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_GroundSmoothingSeconds" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.GroundSmoothingSeconds">GroundSmoothingSeconds</h4>
+  <div class="markdown level1 summary"><p>L05: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SmoothingTime">SmoothingTime</a>, copied as-is — already in
+seconds, nothing to denormalise. How long a foot's height correction and the pelvis drop take
+to catch up to a newly measured ground height instead of snapping there in one frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GroundSmoothingSeconds</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HandTargetWeight.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HandTargetWeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L152">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HandTargetWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HandTargetWeight">HandTargetWeight</h4>
+  <div class="markdown level1 summary"><p>L11 (arm layering): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_HandTargetWeight">HandTargetWeight</a>, copied as-is
+— already a 0..1 fraction. <code>IkTargetSpaceDriver</code> reads this to decide how much of a
+hand's reach comes from an externally assigned target (eg a carried object's grip point)
+instead of the gait's own swinging rotation — 0 (the default, and every existing preset)
+leaves the arm exactly as before this field had any consumer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HandTargetWeight</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HeadEuler.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HeadEuler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L75">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HeadEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HeadEuler">HeadEuler</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 HeadEuler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Hips.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Hips%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L68">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Hips" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Hips">Hips</h4>
+  <div class="markdown level1 summary"><p>Where the Hips bone should sit and how it should be oriented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.SegmentPose Hips</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose.html">SegmentPose</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_IdleWeight.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.IdleWeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L48">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_IdleWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.IdleWeight">IdleWeight</h4>
+  <div class="markdown level1 summary"><p>0 while walking, 1 when fully idle (L04). Already folded into every field below by
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.html">WalkGait</a>'s post-evaluation blend — a driver space that ignores this field
+still receives a pose blended toward standing, since the blend is applied here, not layered
+separately downstream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float IdleWeight</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftArm.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftArm%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L79">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftArm">LeftArm</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.ArmAngles LeftArm</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ArmAngles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftFoot.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftFoot%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L50">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftFoot" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftFoot">LeftFoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LimbTarget LeftFoot</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftHand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L62">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftHand">LeftHand</h4>
+  <div class="markdown level1 summary"><p>L11 (arm layering), arm-swing-spec.md §2: the arm's authoritative IK target for space C —
+not a debug approximation. Unlike every other <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">GaitPose.LimbTarget</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_Position">Position</a>
+and <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_NeutralPosition">NeutralPosition</a> here are <b>offsets from the shoulder joint,
+expressed in root space</b>, not root-local points — a hand hangs from the shoulder and must
+follow it wherever the pelvis bob, torso lean, spine twist and clavicle rotation put it, so
+anchoring in the character's root frame the way a planted foot does would fight the shoulder
+instead of following it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LimbTarget LeftHand</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftLeg.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftLeg%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L77">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftLeg">LeftLeg</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LegAngles LeftLeg</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.html">LegAngles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtChestWeight.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtChestWeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L124">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtChestWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtChestWeight">LookAtChestWeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtChestWeight</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtEasing.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtEasing%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L143">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtEasing" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtEasing">LookAtEasing</h4>
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_Easing">Easing</a>, copied as-is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LookAtEasing</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtHeadWeight.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtHeadWeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L121">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtHeadWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtHeadWeight">LookAtHeadWeight</h4>
+  <div class="markdown level1 summary"><p>L01 (look-at / head tracking): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_HeadWeight">HeadWeight</a>/
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_NeckWeight">NeckWeight</a>/
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_ChestWeight">ChestWeight</a>, copied as-is — the split is computed
+from the sum of these three at the point they are applied, not here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtHeadWeight</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtNeckWeight.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtNeckWeight%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L123">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtNeckWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtNeckWeight">LookAtNeckWeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtNeckWeight</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtPitchLimit.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtPitchLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L134">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtPitchLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtPitchLimit">LookAtPitchLimit</h4>
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_PitchLimit">PitchLimit</a>, copied as-is — already in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtPitchLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtTrackingSpeed.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtTrackingSpeed%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L140">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtTrackingSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtTrackingSpeed">LookAtTrackingSpeed</h4>
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_TrackingSpeed">TrackingSpeed</a>, copied as-is — already in
+degrees per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtTrackingSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtYawLimit.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtYawLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L129">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtYawLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtYawLimit">LookAtYawLimit</h4>
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_YawLimit">YawLimit</a>, copied as-is — already in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtYawLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_MaxUnsupportedFootDropMetres.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.MaxUnsupportedFootDropMetres%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L94">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_MaxUnsupportedFootDropMetres" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.MaxUnsupportedFootDropMetres">MaxUnsupportedFootDropMetres</h4>
+  <div class="markdown level1 summary"><p>L05: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_MaxUnsupportedFootDrop">MaxUnsupportedFootDrop</a>, denormalised to
+metres for this rig. The no-ground policy clamps a foot's downward correction to this distance
+instead of reaching for a distant or missing surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxUnsupportedFootDropMetres</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Phase.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Phase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L34">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Phase" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>Position of the gait cycle, 0..1. One cycle is two steps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Phase</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightArm.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightArm%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L80">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightArm">RightArm</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.ArmAngles RightArm</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ArmAngles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightFoot.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightFoot%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L51">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightFoot" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightFoot">RightFoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LimbTarget RightFoot</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightHand.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightHand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L65">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightHand" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightHand">RightHand</h4>
+  <div class="markdown level1 summary"><p>L11: same as <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand">LeftHand</a>, for the right hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LimbTarget RightHand</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightLeg.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightLeg%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L78">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightLeg">RightLeg</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GaitPose.LegAngles RightLeg</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.html">LegAngles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ShoulderGirdleEuler.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ShoulderGirdleEuler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L74">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ShoulderGirdleEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ShoulderGirdleEuler">ShoulderGirdleEuler</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 ShoulderGirdleEuler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopePelvisTiltAmount.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopePelvisTiltAmount%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L107">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopePelvisTiltAmount" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopePelvisTiltAmount">SlopePelvisTiltAmount</h4>
+  <div class="markdown level1 summary"><p>L08 (slope adaptation): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltAmount">PelvisTiltAmount</a>, copied
+as-is — already a 0..1 fraction, nothing to denormalise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SlopePelvisTiltAmount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopeStepShortenRatio.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopeStepShortenRatio%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L113">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopeStepShortenRatio" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopeStepShortenRatio">SlopeStepShortenRatio</h4>
+  <div class="markdown level1 summary"><p>L08: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_StepShortenRatio">StepShortenRatio</a>, copied as-is — already a
+0..1 fraction, nothing to denormalise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SlopeStepShortenRatio</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SpineEuler.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SpineEuler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L71">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SpineEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SpineEuler">SpineEuler</h4>
+  <div class="markdown level1 summary"><p>Rotation offsets for the torso and head chain, in degrees, relative to the bind pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 SpineEuler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepLengthMetres.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepLengthMetres%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L40">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepLengthMetres" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepLengthMetres">StepLengthMetres</h4>
+  <div class="markdown level1 summary"><p>Ground distance one step covers this frame, in metres.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float StepLengthMetres</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepsPerSecond.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepsPerSecond%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L37">View Source</a>
+  </span>
+  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepsPerSecond" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepsPerSecond">StepsPerSecond</h4>
+  <div class="markdown level1 summary"><p>Cadence actually used this frame, in steps per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float StepsPerSecond</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
