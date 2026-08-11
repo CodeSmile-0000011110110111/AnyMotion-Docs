@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>AnimateHumanoid Guide | AnyMotion Docs</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="AnimateHumanoid Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<meta name="twitter:description" property="og:description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<link rel="canonical" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-humanoid/" />
+<meta property="og:url" content="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-humanoid/" />
+<meta property="og:site_name" content="AnyMotion Docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AnimateHumanoid Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the AnyMotion procedural humanoid animation tools.","headline":"AnimateHumanoid Guide","url":"https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-humanoid/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AnyMotion-Docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/feed.xml" title="AnyMotion Docs" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/AnyMotion-Docs/">AnyMotion Docs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/AnyMotion-Docs/animate-humanoid/">AnimateHumanoid Guide</a><a class="page-link" href="/AnyMotion-Docs/api-reference/">API Reference</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">AnimateHumanoid Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="animating-a-character-with-animatehumanoid">Animating a character with AnimateHumanoid</h1>
+
+<p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> is the component that makes a humanoid character walk, run and idle without any
+animation clips. There is no Animator Controller, no recorded motion and nothing to bake — every
+movement is calculated fresh, every frame, from a set of settings you adjust in one Inspector. Add
+this single component to a character and it starts moving.</p>
+
+<p>This page walks through what the component is, how to add it to a character, and what each part of
+its Inspector controls.</p>
+
+<blockquote>
+  <p><strong>A note on this page’s screenshots:</strong> the environment this guide was written in did not have
+access to a Unity Editor session it was safe to modify for screenshots, so this page describes the
+Inspector’s layout in prose and lists its controls by name and section instead of showing them.
+Anyone editing this page from inside the Unity Editor should add real screenshots of each section
+described below — that will make this guide considerably easier to follow for a first-time reader.</p>
+</blockquote>
+
+<h2 id="what-it-actually-does">What it actually does</h2>
+
+<p>Everything about how the character moves — how fast, how the legs swing, how much the hips sway,
+whether the walk turns into a run — is expressed as settings: numbers and sliders, not recorded
+motion. Because those settings are stored as proportions of the character’s own body (a fraction of
+leg length, a fraction of hip width) rather than as fixed distances, one saved set of settings
+produces a matching look on characters of very different sizes and proportions. That is what makes
+the presets and the Save/Load JSON buttons useful: a “Cartoon” walk saved from one character looks
+like the same cartoon walk on a much taller or shorter one.</p>
+
+<p>Under the hood, <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> is a thin wrapper around two other components it automatically
+adds and hides: one works out the pose for the current frame from your settings, and the other
+writes that pose onto the character’s bones after Unity’s own Animator and any Animation Rigging
+setup have already run. You never need to see or touch either of them — <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> is the
+only part of this system meant to be visible in the Inspector or referenced from your own scripts.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Before adding the component, the character needs:</p>
+
+<ul>
+  <li>An <strong>Animator</strong> component with its <strong>Avatar</strong> set to <strong>Humanoid</strong> (not Generic). This is what lets
+the system find the character’s hips, spine, arms and legs by their standard humanoid roles,
+regardless of what the bones are actually named in that particular model.</li>
+  <li>A <strong>uniform scale</strong> on the character (the same scale value on X, Y and Z). A character scaled
+differently on different axes cannot be measured correctly and the system will refuse to animate
+it rather than produce a distorted result.</li>
+  <li>A skinned mesh, so the system can read the character’s true rest pose from the mesh itself.</li>
+</ul>
+
+<h2 id="adding-it-to-a-character">Adding it to a character</h2>
+
+<ol>
+  <li>Select the character’s root GameObject — the one carrying the Animator — or, if you have already
+built a controller/visual hierarchy split (see the note on placement below), the visual root.</li>
+  <li><strong>Add Component ▸ AnyMotion ▸ Animate Humanoid.</strong></li>
+  <li>Unity will add two more components alongside it automatically: one that measures the character’s
+body (leg length, hip width, shoulder height) and one that turns settings into a pose each frame.
+You do not add these yourself and they do not appear as separate entries in the Inspector —
+<code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> owns and hides them, presenting their settings as a single combined UI instead.</li>
+  <li>Find the body-measuring component in the Inspector (it stays visible, since it is shared by other
+tools in this asset) and press <strong>Measure</strong>. Until a character has been measured, <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code>
+shows a warning at the top of its Inspector and does nothing.</li>
+  <li>Once measured, the character should immediately start animating in the Scene view if edit-mode
+preview is on (see <a href="#preview-and-debug">Preview and Debug</a> below), or in Play mode regardless.</li>
+</ol>
+
+<p>If a measurement fails, the warning will say why — almost always either the Avatar is not set to
+Humanoid, or the character’s scale is not uniform.</p>
+
+<h3 id="where-to-put-it-the-hierarchy-matters">Where to put it: the hierarchy matters</h3>
+
+<p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> writes to the character’s bones every frame. If something else — a
+<code class="language-plaintext highlighter-rouge">CharacterController</code>-driven movement script, for example — is also writing to the <em>same</em> transform
+each frame, the two writes fight each other and produce jitter or drift. The safe pattern is a
+two-level hierarchy: an outer object that your movement code moves around the world, and an inner
+“visual root” object, parented under it, that carries the Animator and this component. Movement
+code only ever touches the outer object; <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> only ever touches the inner one.</p>
+
+<p>The menu command <strong>Tools ▸ AnyMotion ▸ Setup Third Person Character</strong> builds this hierarchy
+correctly and adds <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> to it, which is the fastest way to get a working example if you
+are setting one up from scratch.</p>
+
+<h2 id="the-inspector-section-by-section">The Inspector, section by section</h2>
+
+<p>The Inspector is organised top-to-bottom by what you are actually deciding, not by which internal
+component a setting happens to live on. Every field carries its own tooltip written for someone with
+no animation background — hover over anything you are unsure about. The sections below summarise
+what each one is for and when you would open it.</p>
+
+<h3 id="presets">Presets</h3>
+
+<p>The fastest way to see the system doing something. Five buttons apply a complete, ready-made set of
+settings: <strong>Neutral</strong> (an ordinary upright walk — the starting point the others change), <strong>Cartoon</strong>
+(exaggerated, bouncy, long high steps), <strong>Horror</strong> (slow, hunched, uneven, with joints that snap
+rather than ease), <strong>Limp</strong> (one leg noticeably shorter, lower and stiffer than the other), and
+<strong>Run</strong> (a running gait with an airborne moment where both feet leave the ground). Below the presets,
+<strong>Load JSON…</strong> and <strong>Save JSON…</strong> read and write a settings file you can share with someone else or
+check into version control, and <strong>Reset All</strong> returns every setting to its default without touching
+scene references such as look-at or hand targets.</p>
+
+<h3 id="movement">Movement</h3>
+
+<p>How fast the character moves, how a walk turns into a run, and what happens when it stops. This
+includes the overall <strong>Animation Weight</strong> (0 keeps the character in its unanimated rest pose, 1 is
+full animation — useful for fading the system in or out), the core <strong>timing</strong> settings (steps per
+second, or a move speed the system converts into steps per second for you), the <strong>run blend</strong>
+settings that describe what changes as speed rises into a run (duty factor, step length, lean, and
+an overall “how energetic” multiplier, each blended in gradually rather than snapped), and the
+<strong>idle</strong> settings that describe how the character settles when it stops moving — how long the
+transition to standing still takes, and the small breathing and weight-shifting motion that keeps a
+standing character looking alive instead of frozen.</p>
+
+<h3 id="steps-and-ground">Steps and Ground</h3>
+
+<p>Where each foot lands, and how the character reacts to ground that isn’t flat. The <strong>footstep</strong>
+settings shape a single step: how far it reaches, how high it lifts, how far apart the feet are
+placed, and the angle the foot lands and leaves at. The <strong>ground</strong> settings and the <strong>ground probe</strong>
+fields just below them (which layers count as “ground”, and how far up and down the system looks for
+it) work together: the ground settings describe how a foot should react to uneven terrain, and the
+probe fields tell it physically where to look for that terrain in your scene — which is why they are
+grouped together here even though they used to live in two separate Inspectors. Further down,
+<strong>slope</strong> settings control how far the hips tilt to lean into a slope and how much a step shortens
+rather than lowering the hips when the ground is steep, and <strong>knee</strong> settings control knee-bend
+angles directly — these only take effect if the project is using an older internal driver mode; with
+the default mode the knee angle follows automatically from where the foot is placed, so raising Step
+Height under Footstep is the normal way to change how high the leg lifts.</p>
+
+<h3 id="body-and-style">Body and Style</h3>
+
+<p>The part of the character that decides what it <em>reads as</em>, rather than where it goes. <strong>Pelvis</strong>
+settings cover how the hips rise and fall, sway side to side, surge forward and back, and turn and
+tip through the cycle — this is the single biggest contributor to a character’s overall silhouette
+while moving. <strong>Torso</strong> covers lean, sideways bend and twist of the spine and chest. <strong>Arms</strong> covers
+how far the arms swing, how they’re held, elbow bend, and — importantly — how far a hand reaches
+towards an assigned <strong>hand target</strong> (the two “Left/Right Hand Target” fields just below, for
+pointing a hand at a specific world object such as something to carry or grab) instead of following
+the ordinary swing, along with three limits on how far up, across and behind the body a hand may
+reach before the system gives up and lets the arm swing normally instead. <strong>Head</strong> covers the head’s
+own bob, turn and tilt as the character walks, and how much it counter-turns to keep facing forward
+rather than swinging with the torso. <strong>Look At</strong>, together with the <strong>Look At Target</strong> field below
+it, turns the head, neck and chest towards an assigned object — assign a Transform there (for
+example, whatever the character should be watching) and adjust how much of the turn each of the
+three body parts contributes, and how far and how fast they’re allowed to turn.</p>
+
+<h3 id="variation">Variation</h3>
+
+<p>What stops the animation reading as an exact, obviously looping repeat, and what makes two
+characters with the same settings move a little differently from each other. <strong>Irregularity</strong>
+mixes in a small amount of slow random drift and/or fast jitter on top of every movement, and a seed
+value so a crowd of otherwise-identical characters doesn’t move in perfect unison. <strong>Asymmetry</strong>
+makes one specific leg move differently from the other — shorter, lower or stiffer-kneed — which is
+the general mechanism behind the Limp preset above and is also how you would build a similar
+lopsided or injured gait of your own.</p>
+
+<h3 id="preview-and-debug">Preview and Debug</h3>
+
+<p>Controls for watching the animation while you edit — none of these affect a built game. <strong>Preview In
+Edit Mode</strong> runs the animation continuously in the Scene view without pressing Play. <strong>Draw Gizmos</strong>
+and <strong>Draw Trails</strong> turn on debug visualisation. While preview is off, a <strong>Scrub Cycle</strong> slider lets
+you step through exactly one gait cycle by hand to inspect a specific pose; it is hidden while
+preview is running, because the preview would immediately overwrite anything the slider set. Two
+buttons below that: <strong>Restart Cycle</strong> puts both feet back at the start of the cycle, and <strong>Reset
+Pose</strong> re-reads the character’s rest pose from its mesh and reattaches to its bones from scratch —
+useful if a script recompile left the character looking wrong.</p>
+
+<h3 id="advanced">Advanced</h3>
+
+<p>Collapsed by default, and correct as shipped for most projects — open it only if you have a specific
+reason to. It holds the internal driver space selection and update rate, read-only references to the
+component’s own dependencies (filled in automatically, shown here only for troubleshooting), a
+<strong>Re-attach To Bones</strong> button for after you change the Avatar or replace the mesh, and a <strong>Driver
+space comparison</strong> foldout that is development/reference information about the system’s internal
+techniques rather than something a typical project needs to touch.</p>
+
+<h3 id="live-stats">Live Stats</h3>
+
+<p>A foldout at the very bottom of the Inspector — deliberately last, since its contents change every
+frame and anything below a constantly-changing readout would visually shift around as you work.
+Expand it to see what the animation is doing right now: current cadence and step length, whether
+each foot currently reads as on the ground or in the air, hip offset and rotation, and knee/thigh
+angles. This is the fastest way to confirm a character controller is actually feeding in the speed
+you expect, and it will warn you if a foot is being asked to reach further than the character’s leg
+is physically long — a sign to reduce Step Length or Stance Width rather than a bug.</p>
+
+<h2 id="controlling-it-from-your-own-scripts">Controlling it from your own scripts</h2>
+
+<p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> exposes a small public surface for game code, all of it safe to read and write at
+runtime:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">Weight</code></strong> — fade the animation in or out (0 to 1).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">MoveSpeed</code></strong> / <strong><code class="language-plaintext highlighter-rouge">MoveDirection</code></strong> — write these from your movement code each frame if you have
+turned off automatic speed measurement, or if facing and travel direction can differ (for example,
+strafing). <code class="language-plaintext highlighter-rouge">MoveDirection</code> is in degrees relative to the way the character is facing: 0 is straight
+ahead, 90 is sideways to the right, 180 is walking backwards.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">LookAtTarget</code></strong> — assign or clear a Transform for the head/neck/chest to turn towards; safe to
+reassign every frame.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">LeftHandTarget</code></strong> / <strong><code class="language-plaintext highlighter-rouge">RightHandTarget</code></strong> — assign a Transform for a hand to reach towards, for
+example a point on an object being carried.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Parameters</code></strong>, <strong><code class="language-plaintext highlighter-rouge">Pose</code></strong>, <strong><code class="language-plaintext highlighter-rouge">Phase</code></strong> — read or edit the full settings, the current computed
+pose, and the current position in the gait cycle (0 to 1, one cycle is two steps).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">IsReady</code></strong> / <strong><code class="language-plaintext highlighter-rouge">IsBound</code></strong> — check whether the character has been measured and attached to its
+bones before relying on it.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">FootMissedGround</code></strong> — an event raised when a foot’s downward ground probe finds nothing to stand
+on (for example, swinging out over a ledge). The animation already handles this gracefully on its
+own by keeping the foot within a normal stride; this event exists for game code that wants to react
+to it separately, such as triggering a stumble or a ragdoll handoff. This event’s exact payload
+shape is still provisional and may change before release.</li>
+</ul>
+
+<h2 id="things-this-guide-could-not-confirm">Things this guide could not confirm</h2>
+
+<p>This guide was written by reading <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code>’s source and its Inspector code, not by watching
+it run in the Unity Editor. Two things are worth flagging rather than asserting as fact:</p>
+
+<ul>
+  <li>No screenshots of the actual Inspector are included, for the reason noted at the top of this page.</li>
+  <li>This page was written by reading the <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> source rather than watching it run in the
+Unity Editor. <code class="language-plaintext highlighter-rouge">fm/animate-humanoid-inspector</code> (PR #6) has since merged to <code class="language-plaintext highlighter-rouge">main</code>; this page should
+still be spot-checked against the component in the Editor, particularly the sections above that
+describe Inspector layout.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/AnyMotion-Docs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">AnyMotion Docs</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">AnyMotion Docs</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the AnyMotion procedural humanoid animation tools.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
