@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace CodeSmile.AnyMotion.Core.SaveLoad | AnyMotion API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace CodeSmile.AnyMotion.Core.SaveLoad | AnyMotion API Reference ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodeSmile.AnyMotion.Core.SaveLoad">
+
+  <h1 id="CodeSmile_AnyMotion_Core_SaveLoad" data-uid="CodeSmile.AnyMotion.Core.SaveLoad" class="text-break">Namespace CodeSmile.AnyMotion.Core.SaveLoad</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">
+Classes
+</h3>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.html">DefaultSaveSystem</a></h4>
+      <section><p>The default <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html">ISaveSystem</a> composition: JSON text over plain files. Convenience for
+the common case; build a <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html">SaveSystem</a> directly when a different serializer or file
+I/O is needed instead.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html">JsonUtilityTextSerializer</a></h4>
+      <section><p>The only format in use today. See serialization-format-decision.md for why.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html">LoadException</a></h4>
+      <section><p>A load operation failed. See <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">InnerException</a> for the underlying cause.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html">SaveException</a></h4>
+      <section><p>A save operation failed. See <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">InnerException</a> for the underlying cause.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html">SaveLoadException</a></h4>
+      <section><p>Base for every exception <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html">SaveSystem</a> wraps an underlying failure in.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html">SaveSystem</a></h4>
+      <section><p>Default <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html">ISaveSystem</a>. Wraps expected I/O and format failures into a Result rather
+than throwing, so callers never need a try/catch around Save or Load. Exceptions outside that
+expected set — eg a bug in a custom <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html">ITextSerializer</a> — still propagate, because
+those are programming errors, not the external-input failures this exists to handle.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html">SystemFileIO</a></h4>
+      <section><p>Plain <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.file">File</a> wrapper. Works in the Editor and in builds.</p>
+</section>
+    <h3 id="structs">
+Structs
+</h3>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html">LoadResult&lt;T&gt;</a></h4>
+      <section><p>Outcome of a load. Never throws — check <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html#CodeSmile_AnyMotion_Core_SaveLoad_LoadResult_1_Success">Success</a> instead, per
+serialization-format-decision.md's &quot;must never fail to load&quot; requirement.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html">SaveResult</a></h4>
+      <section><p>Outcome of a save. Never throws — check <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveResult_Success">Success</a> instead, per
+serialization-format-decision.md's &quot;must never fail to load&quot; requirement applied to saving too.</p>
+</section>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html">IFileIO</a></h4>
+      <section><p>Reads and writes preset text at a file path. Knows nothing about JSON or ScriptableObjects, so
+it can be swapped or mocked independently of both.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html">ISaveSystem</a></h4>
+      <section><p>Saves and loads preset-shaped data as text. Composes an <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html">ITextSerializer</a> and an
+<a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html">IFileIO</a>; knows nothing about <code>PresetAsset&lt;T&gt;</code> or ScriptableObjects,
+so it is reusable for any serializable data, not only preset assets.</p>
+</section>
+      <h4><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html">ITextSerializer</a></h4>
+      <section><p>Converts preset data to and from a text representation. Isolated behind an interface so the
+format can change (eg JSON to a binary format) without touching file I/O or the save system
+that composes this with it.</p>
+</section>
+
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
