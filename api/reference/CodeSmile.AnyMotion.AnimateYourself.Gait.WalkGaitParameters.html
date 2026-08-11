@@ -1,715 +1,744 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
-
+<html lang="en">
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class WalkGaitParameters | AnyMotion API Reference </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WalkGaitParameters | AnyMotion API Reference ">
-    
-    <meta name="description" content="The authored slider set for a walk. This is the portable, rig-independent unit: the same values should produce the same visible walk on a 1.28 m mouse and a 1.87 m Pumpkinhulk.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="The authored slider set for a walk. This is the portable, rig-independent unit: the same values should produce the same visible walk on a 1.28 m mouse and a 1.87 m Pumpkinhulk.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <link rel="stylesheet" href="../public/alert.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../public/gdscript-loader.js"></script>
+      <script src="../public/highlight-custom.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+            AnyMotion API Reference
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
-          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
         </div>
-      </div>
-      <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters">
+
+        <article data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters">
 
 
 
-  <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters" class="text-break">Class WalkGaitParameters</h1>
-  <div class="markdown level0 summary"><p>The authored slider set for a walk. This is the portable, rig-independent unit: the same values
+  <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters" class="text-break">
+Class WalkGaitParameters  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The authored slider set for a walk. This is the portable, rig-independent unit: the same values
 should produce the same visible walk on a 1.28 m mouse and a 1.87 m Pumpkinhulk.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">WalkGaitParameters</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></h6>
-  <h6><strong>Assembly</strong>: ApiSource.dll</h6>
-  <h5 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_syntax">Syntax</h5>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
 public sealed class WalkGaitParameters</code></pre>
   </div>
-  <h5 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_remarks"><strong>Remarks</strong></h5>
+
+
+
+
+  <details>
+  <summary style="display: list-item; font-size: 15px"><i>Expand Details ...</i></summary>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">WalkGaitParameters</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  </details>
+
+
+
+
+  <h2 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Every length is a <b>ratio</b>, never metres, because the measured rigs differ in shape and not
 only in size: leg-length-to-height ranges from 0.187 to 0.458 and arm-to-leg from 0.629 to 1.127
 across the P2 test set. A single scale factor cannot carry a preset between them, so each length
 is expressed against the body part it belongs to:</p>
 <ul><li>fore/aft and vertical foot motion is in units of <code>LegChainLength</code>;</li><li>lateral foot placement is in units of <code>HipWidth</code>;</li><li>pelvis translation is in units of <code>HipJointHeight</code> or <code>HipWidth</code>;</li><li>everything about the torso, arms and head is in degrees, which needs no normalisation.</li></ul>
 </div>
-  <h3 id="fields">Fields
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Arms.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Arms%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L78">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Arms" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Arms">Arms</h4>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Arms" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Arms">
+  Arms
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Arm swing and posture, and how far the hands may reach for an assigned target such as a carried object.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Arm swing and posture, and how far the hands may reach for an assigned target such as a carried object.&quot;)]
 public WalkGaitParameters.ArmGroup Arms</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html">ArmGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Asymmetry.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Asymmetry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L94">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Asymmetry" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Asymmetry">Asymmetry</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html">ArmGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Asymmetry" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Asymmetry">
+  Asymmetry
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Makes one leg move differently from the other, which is what produces a limp or an injured gait. The hip and torso response follows on its own; it does not need tuning here.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Makes one leg move differently from the other, which is what produces a limp or an injured gait. The hip and torso response follows on its own; it does not need tuning here.&quot;)]
 public WalkGaitParameters.AsymmetryGroup Asymmetry</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Footstep.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Footstep%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L50">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Footstep" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Footstep">Footstep</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Footstep" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Footstep">
+  Footstep
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The shape of one step: how long, how high, how far apart the feet are, and how the foot is angled as it lands and pushes off.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;The shape of one step: how long, how high, how far apart the feet are, and how the foot is angled as it lands and pushes off.&quot;)]
 public WalkGaitParameters.FootstepGroup Footstep</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html">FootstepGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Ground.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Ground%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L59">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Ground" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Ground">Ground</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html">FootstepGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Ground" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Ground">
+  Ground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How the feet follow ground that is not flat: stepping onto a kerb, up stairs, or over the edge of a drop.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the feet follow ground that is not flat: stepping onto a kerb, up stairs, or over the edge of a drop.&quot;)]
 public WalkGaitParameters.GroundGroup Ground</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html">GroundGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Head.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Head%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L82">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Head" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Head">Head</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html">GroundGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Head" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Head">
+  Head
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How the head moves along with the walk: bob, turn, tilt, and how much it stays facing the way the character is going.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the head moves along with the walk: bob, turn, tilt, and how much it stays facing the way the character is going.&quot;)]
 public WalkGaitParameters.HeadGroup Head</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup.html">HeadGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Idle.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Idle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L42">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Idle" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Idle">Idle</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup.html">HeadGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Idle" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Idle">
+  Idle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;What the character does when it stops moving: how quickly it settles, and the breathing and shifting of weight that keep it from looking frozen.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;What the character does when it stops moving: how quickly it settles, and the breathing and shifting of weight that keep it from looking frozen.&quot;)]
 public WalkGaitParameters.IdleGroup Idle</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html">IdleGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Irregularity.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Irregularity%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L90">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Irregularity" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Irregularity">Irregularity</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html">IdleGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Irregularity" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Irregularity">
+  Irregularity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Random variation added on top of everything else, so the animation does not read as an exact repeat and so two characters with the same settings do not move in unison.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Random variation added on top of everything else, so the animation does not read as an exact repeat and so two characters with the same settings do not move in unison.&quot;)]
 public WalkGaitParameters.IrregularityGroup Irregularity</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IrregularityGroup.html">IrregularityGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Knees.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Knees%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L67">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Knees" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Knees">Knees</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IrregularityGroup.html">IrregularityGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Knees" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Knees">
+  Knees
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Knee angles. Two of the three only apply to the two unfinished driver spaces; with the default IK Targets space the knee angle follows from where the foot is placed.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Knee angles. Two of the three only apply to the two unfinished driver spaces; with the default IK Targets space the knee angle follows from where the foot is placed.&quot;)]
 public WalkGaitParameters.KneeGroup Knees</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html">KneeGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAt.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAt%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L86">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAt" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAt">LookAt</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html">KneeGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAt" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAt">
+  LookAt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Turning the head, neck and chest towards an object. Assign that object in Look At Target, in the same section as this group.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Turning the head, neck and chest towards an object. Assign that object in Look At Target, in the same section as this group.&quot;)]
 public WalkGaitParameters.LookAtGroup LookAt</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html">LookAtGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Pelvis.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Pelvis%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L71">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Pelvis" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Pelvis">Pelvis</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html">LookAtGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Pelvis" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Pelvis">
+  Pelvis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How the hips move and rotate through the cycle. This is the largest single influence on how much weight the character appears to have.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the hips move and rotate through the cycle. This is the largest single influence on how much weight the character appears to have.&quot;)]
 public WalkGaitParameters.PelvisGroup Pelvis</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html">PelvisGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlend.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlend%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L55">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlend" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlend">RunBlend</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html">PelvisGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlend" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlend">
+  RunBlend
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;What changes as the character speeds up from a walk into a run. Only the handful of settings that genuinely differ are listed here; everything else is shared, so there is one place to change it rather than two that can drift apart.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;What changes as the character speeds up from a walk into a run. Only the handful of settings that genuinely differ are listed here; everything else is shared, so there is one place to change it rather than two that can drift apart.&quot;)]
 public WalkGaitParameters.RunBlendGroup RunBlend</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html">RunBlendGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Slope.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Slope%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L63">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Slope" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Slope">Slope</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html">RunBlendGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Slope" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Slope">
+  Slope
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;What the body does on a slope: how far the hips tilt to match it, and whether the stride shortens rather than the hips dropping.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;What the body does on a slope: how far the hips tilt to match it, and whether the stride shortens rather than the hips dropping.&quot;)]
 public WalkGaitParameters.SlopeGroup Slope</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html">SlopeGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Timing.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Timing%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L46">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Timing" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Timing">Timing</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html">SlopeGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Timing" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Timing">
+  Timing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How fast the character moves and how the two legs are timed against each other. The settings here decide whether it reads as a walk or a run.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How fast the character moves and how the two legs are timed against each other. The settings here decide whether it reads as a walk or a run.&quot;)]
 public WalkGaitParameters.TimingGroup Timing</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html">TimingGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Torso.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Torso%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L74">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Torso" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Torso">Torso</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html">TimingGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Torso" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Torso">
+  Torso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Lean, side bend and twist of the spine, chest and shoulders.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Lean, side bend and twist of the spine, chest and shoulders.&quot;)]
 public WalkGaitParameters.TorsoGroup Torso</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html">TorsoGroup</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Version%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L27">View Source</a>
-  </span>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Version">Version</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html">TorsoGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Version">
+  Version
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Format version of this settings set, written into saved presets so that a preset made with an older version of AnyMotion can still be read. Do not change it by hand.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Format version of this settings set, written into saved presets so that a preset made with an older version of AnyMotion can still be read. Do not change it by hand.&quot;)]
 public int Version</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Cartoon.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Cartoon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L103">View Source</a>
-  </span>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Cartoon_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Cartoon*"></a>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Cartoon" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Cartoon">Cartoon()</h4>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Cartoon" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Cartoon">
+  Cartoon()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Exaggerated, smooth, bouncy. Large amplitudes with low sharpness, so limbs travel far but
 never snap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WalkGaitParameters Cartoon()</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static WalkGaitParameters Cartoon()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Horror.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Horror%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L132">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Horror_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Horror*"></a>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Horror" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Horror">Horror()</h4>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Horror" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Horror">
+  Horror()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Slow, uneven, high sharpness so joints arrive suddenly rather than easing. Forward hunch,
 dropped pelvis, arms held forward, asymmetric stride.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WalkGaitParameters Horror()</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static WalkGaitParameters Horror()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Limp.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Limp%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L179">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Limp_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Limp*"></a>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Limp" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Limp">Limp()</h4>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Limp" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Limp">
+  Limp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>One injured leg: shortened, low-swinging, stiff-kneed stride on one side. Everything else
 stays neutral, so this demonstrates <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">WalkGaitParameters.AsymmetryGroup</a> on its own — the pelvis and
 torso lean it produces come from <code>WalkGait.Evaluate</code>'s existing leg-differential terms,
 not from separate tuning here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WalkGaitParameters Limp()</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static WalkGaitParameters Limp()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Neutral%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L97">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Neutral*"></a>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Neutral">Neutral()</h4>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Neutral">
+  Neutral()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Neutral upright walk. The reference the other presets are judged against.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WalkGaitParameters Neutral()</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static WalkGaitParameters Neutral()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Run.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Run%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L200">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Run_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Run*"></a>
-  <h4 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Run" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Run">Run()</h4>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Run" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Run">
+  Run()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>L02 (run): not a new pose, per <code>locomotion-catalog.md</code>'s own note — Duty Factor below 0.5
 is what produces the double-float flight phase <code>WalkGait.FlightHeight</code> arcs the pelvis
 through instead of the walking Bob wave. Step Length up widens the thigh-swing amplitude too,
@@ -718,66 +747,51 @@ thigh-swing field is needed. Move Speed raised to match a running pace; <code>De
 (on by default) then raises cadence to match, same as every other preset.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WalkGaitParameters Run()</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static WalkGaitParameters Run()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L22" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L22" class="edit-link">Edit this page</a>
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
