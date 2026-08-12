@@ -1,0 +1,1091 @@
+{
+  "source_base_path": "/home/runner/work/AnyMotion-Development-Project/AnyMotion-Development-Project/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.yml\" sourcestartlinenumber=\"1\">Animates a humanoid character's walk, run and idle entirely from settings, with no animation\nclips and no Animator Controller. Add this one component to a character that has a Humanoid\nAvatar; everything else is configured through its Inspector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice.AnimateYourselfInitialReleaseVersionNotice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice.AnimateYourselfInitialReleaseVersionNotice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice.AnimateYourselfInitialReleaseVersionNotice",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Editor.PreviewNotice",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.yml\" sourcestartlinenumber=\"1\">Rotational description of one arm, in degrees.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.yml\" sourcestartlinenumber=\"1\">Rotational description of one leg, in degrees. Amplitudes are derived from the same\nnormalised step length that produces <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.Position\" data-throw-if-not-resolved=\"false\"></xref>, so the two forms\ndescribe the same intended motion.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.yml\" sourcestartlinenumber=\"1\">Target for one extremity, for the IK-target space.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose.yml\" sourcestartlinenumber=\"1\">Position and rotation of a body segment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.yml\" sourcestartlinenumber=\"1\">One evaluated frame of gait, expressed in two forms at once so that all three candidate driver\nspaces of the P2 spike can consume the same source parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.yml\" sourcestartlinenumber=\"1\">Which leg <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup\" data-throw-if-not-resolved=\"false\"></xref>'s multipliers apply to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.yml\" sourcestartlinenumber=\"1\">L19 (limp / asymmetric gait): per-leg divergence for one selected leg, applied in\n<code>WalkGait.EvaluateLeg</code>. The pelvis and torso response (favouring the good leg, rolling\nonto it, winding up against it) is not authored here — it already falls out of\n<code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance terms once the two\nlegs' strides diverge, since those derive from leg state rather than from independent\noscillators.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.yml\" sourcestartlinenumber=\"1\">How a limb's target may move to follow ground it did not author. Reserved 2026-08-02\n(<code sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.yml\" sourcestartlinenumber=\"2\">roadmap.md</code> §9) as insurance against a P7 schema break; <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.World\" data-throw-if-not-resolved=\"false\"></xref> is\nunimplemented — declaring it now costs nothing, adding it after the freeze would.\n<b>Append-only</b>: never reorder or delete a member, <code sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.yml\" sourcestartlinenumber=\"4\">serialization-format-decision.md</code>\n§Migration strategy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.yml\" sourcestartlinenumber=\"1\">L05 (foot planting on uneven ground): the authored half of vertical ground conformance. The\nraycast, height/normal correction and pelvis lowering are runtime behaviour in\n<code>IkTargetSpaceDriver</code>, not authored data, so they are not here — see\n<code>roadmap.md</code> §9 and <code>locomotion-catalog.md</code> §3.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.yml\" sourcestartlinenumber=\"1\">L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing\nand weight-shift added on top. See <code>idle-motion-spec.md</code>.</p>\n<p>\n    O12 (start/stop) splits that blend in two. <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking\" data-throw-if-not-resolved=\"false\"></xref> hands the legs to\n    <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait\" data-throw-if-not-resolved=\"false\"></xref>'s decoupled leg cycles — each leg parks and unparks on its own,\n    so a planted foot stays planted while the other leg finishes its step — and leaves the\n    cross-fade owning only what has no leg phase to park: the pelvis, torso, head, arms and\n    the breathing and weight-shift oscillators below. See <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.ShouldParkLeg(System.Boolean%2cSystem.Boolean%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IrregularityGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IrregularityGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IrregularityGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.yml\" sourcestartlinenumber=\"1\">L01 (look-at / head tracking): the authored half. Adds an additive rotation, in the character's\nframe, on top of whatever <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.HeadGroup\" data-throw-if-not-resolved=\"false\"></xref>/<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup\" data-throw-if-not-resolved=\"false\"></xref> already produced for\nthis frame — it does not override them. <code>IkTargetSpaceDriver</code> is where the live\n<code>LookAtTarget</code> Transform is read and turned into a yaw/pitch angle; nothing here needs a\nworld position, so it stays portable like every other group.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.yml\" sourcestartlinenumber=\"1\">L02 (run): where <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.FlightGravity\" data-throw-if-not-resolved=\"false\"></xref> comes from for the flight-phase pelvis arc\n(<code>WalkGait.FlightHeight</code>). <b>Append-only</b>, same rule as\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring\" data-throw-if-not-resolved=\"false\"></xref>: this is portable preset data, so reordering or\ndeleting a member after presets exist in the wild would silently reinterpret them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.yml\" sourcestartlinenumber=\"1\">Walk/run speed blend: the &quot;fully running&quot; endpoint for the handful of fields that actually\ndiffer between walking and running (<code>WalkGait.Run()</code>'s own preset note). Ground, Slope,\nLookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters\" data-throw-if-not-resolved=\"false\"></xref> regardless of blend weight, so there is exactly one place to\nkeep those in sync rather than two full duplicated presets that could drift apart on settings\nthat have nothing to do with running. <code>WalkGait.StanceFraction</code> is the only accessor that\nalready centralises Duty Factor for every reader (its own doc comment: &quot;never from Parameters\ndirectly&quot;) — the blend piggybacks on that same accessor, plus private equivalents added in\n<code>WalkGait.cs</code> for Step Length and Torso Lean. <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.DynamismMultiplier\" data-throw-if-not-resolved=\"false\"></xref> is\ndifferent in kind from those three: rather than one more individually-overridden target\nfield, it <i>scales</i> several existing Pelvis/Head/Arms amplitudes together, so &quot;more\ndynamic running&quot; does not need a new override field added here every time another amplitude\nturns out to want it too — see its own tooltip and <code>WalkGait.EffectiveDynamism</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.yml\" sourcestartlinenumber=\"1\">L08 (slope adaptation): the authored half. Extends L05 (foot planting on uneven ground) — the\nground normals it tilts the pelvis towards and the reach deficit it draws step-shortening from\nboth come from L05's existing raycast, so there is no separate authored slope input; only how\nmuch of that already-measured slope shows up in the pelvis and the stride is authored here.\nThe raycast, blend and pelvis-rotation math are runtime behaviour in\n<code>IkTargetSpaceDriver</code>, not authored data, so they are not here — see <code sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.yml\" sourcestartlinenumber=\"6\">roadmap.md</code> §1a.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.yml\" sourcestartlinenumber=\"1\">The authored slider set for a walk. This is the portable, rig-independent unit: the same values\nshould produce the same visible walk on a 1.28 m mouse and a 1.87 m Pumpkinhulk.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset.yml\" sourcestartlinenumber=\"1\">A <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters\" data-throw-if-not-resolved=\"false\"></xref> preset, saved and loaded as a Unity asset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Editor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfCharacterState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfCharacterState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.PerfCharacterState",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfCharacterState.yml\" sourcestartlinenumber=\"1\">Test helper for toggling one character between alive/dead and rendered/hidden states.\nAssumes the assigned GameObject is the logical character root and searches children.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfStressRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfStressRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.PerfStressRunner",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PerfStressRunner.yml\" sourcestartlinenumber=\"1\">Runtime helper for P4: spawns N duplicated characters, toggles systems, and records coarse profiler metrics.\nUse together with Unity Profiler and an FPS overlay.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PuppetMasterReflectionBridge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PuppetMasterReflectionBridge.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.PuppetMasterReflectionBridge",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.PuppetMasterReflectionBridge.yml\" sourcestartlinenumber=\"1\">Reflection-only bridge for PuppetMaster-style components.\nKeeps the sample free of a hard RootMotion/PuppetMaster assembly dependency.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController.yml\" sourcestartlinenumber=\"1\">Third-person locomotion for the P1 hierarchy spike: a <xref href=\"UnityEngine.CharacterController\" data-throw-if-not-resolved=\"false\"></xref> driven\nby the Input System, moving relative to the Cinemachine camera.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities.CameraBillboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities.CameraBillboard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities.CameraBillboard",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Utilities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneChannel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake.BoneChannel",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneChannel.yml\" sourcestartlinenumber=\"1\">One noise-driven bone. A preset is a list of these; an empty list drives nothing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneNoiseDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneNoiseDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake.BoneNoiseDriver",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Shake.BoneNoiseDriver.yml\" sourcestartlinenumber=\"1\">L37 (shake &amp; noise generator): per-bone rotational tremor, jitter and noise, applied additively\non top of whatever pose the rig already has this frame. See <code>shake-noise-spec.md</code> for the\ndesign decisions behind this class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeEnvelope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeEnvelope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeEnvelope",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeEnvelope.yml\" sourcestartlinenumber=\"1\">Which envelope scales a channel's amplitude. See <code>shake-noise-spec.md</code> §5.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoiseParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoiseParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoiseParameters",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoiseParameters.yml\" sourcestartlinenumber=\"1\">The authored bone-noise channel list for one <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Shake.BoneNoiseDriver\" data-throw-if-not-resolved=\"false\"></xref>. This is the portable\nunit — every channel drives rotation only, in degrees, so unlike <code>WalkGaitParameters</code> it needs\nno per-rig normalisation to stay portable across rigs of different size or shape.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoisePreset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoisePreset.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoisePreset",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoisePreset.yml\" sourcestartlinenumber=\"1\">A <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Shake.ShakeNoiseParameters\" data-throw-if-not-resolved=\"false\"></xref> preset, saved and loaded as a Unity asset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Shake.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Shake",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.BoneFrameSpaceDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.BoneFrameSpaceDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.BoneFrameSpaceDriver",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.BoneFrameSpaceDriver.yml\" sourcestartlinenumber=\"1\">Space B: writes each bone's rotation directly, with the authored angles expressed in the\n<b>character's</b> frame rather than in each bone's own local frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.GaitDriverSpaceKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.GaitDriverSpaceKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.GaitDriverSpaceKind",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.GaitDriverSpaceKind.yml\" sourcestartlinenumber=\"1\">Which of the three candidate driver spaces of the P2 spike is in use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.yml\" sourcestartlinenumber=\"1\">Resolved bone Transforms of one Humanoid rig, plus a snapshot of their bind pose.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace.yml\" sourcestartlinenumber=\"1\">Applies a <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose\" data-throw-if-not-resolved=\"false\"></xref> to a rig. The three implementations exist to be compared: each\nconsumes the same pose from the same parameters, so a difference in the result is attributable to\nthe space and not to different timing or different gait maths.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.yml\" sourcestartlinenumber=\"1\">Space C: places the feet, and optionally the hands, at the positions the gait asked for, using an\nanalytic two-bone IK solve.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.MuscleSpaceDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.MuscleSpaceDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces.MuscleSpaceDriver",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.MuscleSpaceDriver.yml\" sourcestartlinenumber=\"1\">Space A: writes Mecanim muscle values through <code>HumanPoseHandler</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Spaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.Axis3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.Axis3D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.Axis3D",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Noise.Axis3D.yml\" sourcestartlinenumber=\"1\">Which local axes a noise or shake channel drives. Combinable, so a channel can drive any subset.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.NoiseMath",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.yml\" sourcestartlinenumber=\"1\">Pure, allocation-free noise and oscillator functions shared by every product. Rig-agnostic: takes\nand returns plain numbers only, so the same functions can drive a humanoid bone, a camera, or a\nmachine part unmodified. See <code>shake-noise-spec.md</code> §2 and §4 for why this lives in Core and\nwhy per-axis 1D noise was chosen over a 3D/vector noise field.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.Trauma.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.Trauma.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise.Trauma",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Noise.Trauma.yml\" sourcestartlinenumber=\"1\">Squared-decay burst model (Eiserloh's trauma model): a 0..1 value set by an event and decayed back\nto 0 over time, whose square is used as an amplitude multiplier so a burst starts strong and fades\nquickly rather than ramping up. Pure functions over plain floats — the caller owns the state, so\nany driver can add trauma without this type needing to know what a &quot;driver&quot; is.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Noise.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Noise",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Presets.PresetAsset<T>",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Presets.PresetAsset-1.yml\" sourcestartlinenumber=\"1\">Wraps one preset data type as a Unity asset. Unity's own asset serialization persists\n<xref href=\"CodeSmile.AnyMotion.Core.Presets.PresetAsset%601.Data\" data-throw-if-not-resolved=\"false\"></xref> natively; no code here is needed for that. Text-based save/load — sharing a\npreset outside the project — is a separate concern handled by\n<code>CodeSmile.AnyMotion.Core.SaveLoad</code>, not by this class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Presets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Presets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Presets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.BindPose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.BindPose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.BindPose",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.BindPose.yml\" sourcestartlinenumber=\"1\">The pose a rig was skinned in, read from the mesh's own bind pose matrices rather than from the\nrig's current state in the scene.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.yml\" sourcestartlinenumber=\"1\">Measured dimensions of one Humanoid rig. All lengths are metres in world scale.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.RigMetrics",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.yml\" sourcestartlinenumber=\"1\">Measures the body dimensions of a Humanoid rig, so that animation parameters\n(step length, knee height, hip sway) can be authored as fractions of the character's own\nproportions rather than as absolute metres. One preset then produces the same visible motion\non rigs of different sizes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.DefaultSaveSystem.yml\" sourcestartlinenumber=\"1\">The default <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem\" data-throw-if-not-resolved=\"false\"></xref> composition: JSON text over plain files. Convenience for\nthe common case; build a <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem\" data-throw-if-not-resolved=\"false\"></xref> directly when a different serializer or file\nI/O is needed instead.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.IFileIO",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.IFileIO.yml\" sourcestartlinenumber=\"1\">Reads and writes preset text at a file path. Knows nothing about JSON or ScriptableObjects, so\nit can be swapped or mocked independently of both.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem.yml\" sourcestartlinenumber=\"1\">Saves and loads preset-shaped data as text. Composes an <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer\" data-throw-if-not-resolved=\"false\"></xref> and an\n<xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.IFileIO\" data-throw-if-not-resolved=\"false\"></xref>; knows nothing about <code>PresetAsset&lt;T&gt;</code> or ScriptableObjects,\nso it is reusable for any serializable data, not only preset assets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.yml\" sourcestartlinenumber=\"1\">Converts preset data to and from a text representation. Isolated behind an interface so the\nformat can change (eg JSON to a binary format) without touching file I/O or the save system\nthat composes this with it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.yml\" sourcestartlinenumber=\"1\">The only format in use today. See serialization-format-decision.md for why.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.LoadException",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadException.yml\" sourcestartlinenumber=\"1\">A load operation failed. See <xref href=\"System.Exception.InnerException\" data-throw-if-not-resolved=\"false\"></xref> for the underlying cause.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.LoadResult<T>",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.LoadResult-1.yml\" sourcestartlinenumber=\"1\">Outcome of a load. Never throws — check <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.LoadResult%601.Success\" data-throw-if-not-resolved=\"false\"></xref> instead, per\nserialization-format-decision.md's &quot;must never fail to load&quot; requirement.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveException",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveException.yml\" sourcestartlinenumber=\"1\">A save operation failed. See <xref href=\"System.Exception.InnerException\" data-throw-if-not-resolved=\"false\"></xref> for the underlying cause.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveLoadException.yml\" sourcestartlinenumber=\"1\">Base for every exception <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem\" data-throw-if-not-resolved=\"false\"></xref> wraps an underlying failure in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveResult",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.yml\" sourcestartlinenumber=\"1\">Outcome of a save. Never throws — check <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveResult.Success\" data-throw-if-not-resolved=\"false\"></xref> instead, per\nserialization-format-decision.md's &quot;must never fail to load&quot; requirement applied to saving too.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.yml\" sourcestartlinenumber=\"1\">Default <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ISaveSystem\" data-throw-if-not-resolved=\"false\"></xref>. Wraps expected I/O and format failures into a Result rather\nthan throwing, so callers never need a try/catch around Save or Load. Exceptions outside that\nexpected set — eg a bug in a custom <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer\" data-throw-if-not-resolved=\"false\"></xref> — still propagate, because\nthose are programming errors, not the external-input failures this exists to handle.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.SystemFileIO.yml\" sourcestartlinenumber=\"1\">Plain <xref href=\"System.IO.File\" data-throw-if-not-resolved=\"false\"></xref> wrapper. Works in the Editor and in builds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "reference/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/toc.html"
+        },
+        ".json": {
+          "relative_path": "reference/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class WalkGaitParameters.IdleGroup | AnyMotion API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WalkGaitParameters.IdleGroup | AnyMotion API Reference ">
+      
+      <meta name="description" content="L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing and weight-shift added on top. See idle-motion-spec.md.      O12 (start/stop) splits that blend in two.  hands the legs to     &#39;s decoupled leg cycles — each leg parks and unparks on its own,     so a planted foot stays planted while the other leg finishes its step — and leaves the     cross-fade owning only what has no leg phase to park: the pelvis, torso, head, arms and     the breathing and weight-shift oscillators below. See .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css?v=2">
+      <link rel="stylesheet" href="../public/alert.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../public/gdscript-loader.js"></script>
+      <script src="../public/highlight-custom.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+            AnyMotion API Reference
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup">
+
+
+
+  <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup" class="text-break">
+Class WalkGaitParameters.IdleGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing
+and weight-shift added on top. See <code>idle-motion-spec.md</code>.</p>
+<p>
+    O12 (start/stop) splits that blend in two. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_LegParking">LegParking</a> hands the legs to
+    <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait</span>'s decoupled leg cycles — each leg parks and unparks on its own,
+    so a planted foot stays planted while the other leg finishes its step — and leaves the
+    cross-fade owning only what has no leg phase to park: the pelvis, torso, head, arms and
+    the breathing and weight-shift oscillators below. See <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.ShouldParkLeg(bool, bool, float, float)</span>.
+</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class WalkGaitParameters.IdleGroup</code></pre>
+  </div>
+
+
+
+
+  <details>
+  <summary style="display: list-item; font-size: 15px"><i>Expand Details ...</i></summary>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">WalkGaitParameters.IdleGroup</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  </details>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_BlendDuration" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.BlendDuration">
+  BlendDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How long the change between walking and standing still takes, in seconds. The same duration is used however far past the threshold the speed went. 0 switches instantly. With Leg Parking on this no longer applies to the legs, which stop by finishing the step they are in the middle of instead of easing towards a standing pose.&quot;)]
+[Range(0, 2)]
+public float BlendDuration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_BreathingBob" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.BreathingBob">
+  BreathingBob
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How far the hips rise and fall with each breath, as a fraction of hip height. Small values are enough to be noticed.&quot;)]
+[Range(0, 0.1)]
+public float BreathingBob</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_BreathingLean" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.BreathingLean">
+  BreathingLean
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How far the chest and spine tip forward and back with each breath, in degrees.&quot;)]
+[Range(0, 10)]
+public float BreathingLean</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_BreathingRate" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.BreathingRate">
+  BreathingRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Breaths per second while standing still. 0.25 is one breath every four seconds, which is a calm resting rate.&quot;)]
+[Range(0.1, 2)]
+public float BreathingRate</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_HeadSettleWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.HeadSettleWeight">
+  HeadSettleWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How much of the head&#39;s walking bob and turn stops when the character stands still. 1 stops it completely, like every other joint. 0 keeps the head moving at full strength even at a complete stop, which reads as unsettling and is useful for horror characters. Values in between stop it partway. Only the head has its own setting; every other joint uses the shared threshold and blend above. Looking at a target is applied separately and keeps working while standing still either way.&quot;)]
+[Range(0, 1)]
+public float HeadSettleWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_LegParking" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking">
+  LegParking
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Let each leg stop and start on its own instead of easing the whole body towards a standing pose on a timer. A foot that is already on the ground stays exactly where it is, while the other leg finishes the step it is in the middle of and puts that foot down — which is what stopping actually looks like. Turn this off to get the older behaviour, where every joint including the legs eases towards the standing pose over Blend Duration.&quot;)]
+public bool LegParking</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_MinTurnRate" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinTurnRate">
+  MinTurnRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Turning on the spot faster than this many degrees per second counts as moving, so the character keeps stepping instead of pivoting as one rigid block with both feet stuck to the ground. 0 turns this off and lets speed alone decide. Only used while Leg Parking is on.&quot;)]
+[Range(0, 360)]
+public float MinTurnRate</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_MinWalkSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinWalkSpeed">
+  MinWalkSpeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Below this speed, in metres per second, the character is treated as standing still and settles into the idle pose. Only used when Derive Cadence From Speed is on, which is the default.&quot;)]
+[Range(0.01, 2)]
+public float MinWalkSpeed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_StepsPerSecondThreshold" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StepsPerSecondThreshold">
+  StepsPerSecondThreshold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Below this many steps per second the character is treated as standing still and settles into the idle pose. Only used when Derive Cadence From Speed is off; when it is on, Min Walk Speed is used instead.&quot;)]
+[Range(0, 2)]
+public float StepsPerSecondThreshold</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_StopStepDuration" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StopStepDuration">
+  StopStepDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How long the last step takes to finish once the character has stopped, in seconds. A foot that is in the air when the character stops still has to land, and the character is no longer moving to time that landing, so this setting is the clock that finishes it. It also decides how quickly the legs pick the walk back up when the character starts moving again. Only used while Leg Parking is on.&quot;)]
+[Range(0.05, 2)]
+public float StopStepDuration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_WeightShiftPeriod" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.WeightShiftPeriod">
+  WeightShiftPeriod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Seconds between shifts of weight from one foot to the other while standing still.&quot;)]
+[Range(1, 20)]
+public float WeightShiftPeriod</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_WeightShiftPeriodJitter" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.WeightShiftPeriodJitter">
+  WeightShiftPeriodJitter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How much the time between weight shifts varies, as a fraction of Weight Shift Period. Above 0 the shifts stop happening at an exactly regular interval. 0 keeps them evenly spaced.&quot;)]
+[Range(0, 0.5)]
+public float WeightShiftPeriodJitter</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_WeightShiftSway" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.WeightShiftSway">
+  WeightShiftSway
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How far the hips move sideways during a weight shift, as a fraction of hip width.&quot;)]
+[Range(0, 0.5)]
+public float WeightShiftSway</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L321" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
