@@ -9,7 +9,7 @@
       <meta name="description" content="Walk/run speed blend: the &amp;quot;fully running&amp;quot; endpoint for the handful of fields that actually differ between walking and running (WalkGait.Run()&#39;s own preset note). Ground, Slope, LookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of  regardless of blend weight, so there is exactly one place to keep those in sync rather than two full duplicated presets that could drift apart on settings that have nothing to do with running. WalkGait.StanceFraction is the only accessor that already centralises Duty Factor for every reader (its own doc comment: &amp;quot;never from Parameters directly&amp;quot;) — the blend piggybacks on that same accessor, plus private equivalents added in WalkGait.cs for Step Length and Torso Lean.  is different in kind from those three: rather than one more individually-overridden target field, it scales several existing Pelvis/Head/Arms amplitudes together, so &amp;quot;more dynamic running&amp;quot; does not need a new override field added here every time another amplitude turns out to want it too — see its own tooltip and WalkGait.EffectiveDynamism.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
+      <link rel="stylesheet" href="../public/main.css?v=2">
       <link rel="stylesheet" href="../public/alert.css">
       <meta name="docfx:navrel" content="../toc.html">
       <meta name="docfx:tocrel" content="../toc.html">
