@@ -2908,6 +2908,22 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ClampLookAngle
   nameWithType: IkTargetSpaceDriver.ClampLookAngle
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop(System.Single,System.Single,System.Single)
+  name: ComputeCompromisePelvisDrop(float, float, float)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeCompromisePelvisDrop_System_Single_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop(System.Single,System.Single,System.Single)
+  name.vb: ComputeCompromisePelvisDrop(Single, Single, Single)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop(float, float, float)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop(Single, Single, Single)
+  nameWithType: IkTargetSpaceDriver.ComputeCompromisePelvisDrop(float, float, float)
+  nameWithType.vb: IkTargetSpaceDriver.ComputeCompromisePelvisDrop(Single, Single, Single)
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop*
+  name: ComputeCompromisePelvisDrop
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeCompromisePelvisDrop_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop
+  nameWithType: IkTargetSpaceDriver.ComputeCompromisePelvisDrop
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeGroundInducedPelvisDrop(System.Single,System.Single,System.Single)
   name: ComputeGroundInducedPelvisDrop(float, float, float)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeGroundInducedPelvisDrop_System_Single_System_Single_System_Single_

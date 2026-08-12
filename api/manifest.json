@@ -1270,11 +1270,11 @@
       "type": "Toc",
       "source_relative_path": "reference/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "reference/toc.html"
-        },
         ".json": {
           "relative_path": "reference/toc.json"
+        },
+        ".html": {
+          "relative_path": "reference/toc.html"
         }
       },
       "version": ""
@@ -1283,11 +1283,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
