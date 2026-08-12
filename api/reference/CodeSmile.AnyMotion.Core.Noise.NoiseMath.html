@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class NoiseMath | AnyMotion API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NoiseMath | AnyMotion API Reference ">
+      
+      <meta name="description" content="Pure, allocation-free noise and oscillator functions shared by every product. Rig-agnostic: takes and returns plain numbers only, so the same functions can drive a humanoid bone, a camera, or a machine part unmodified. See shake-noise-spec.md &#167;2 and &#167;4 for why this lives in Core and why per-axis 1D noise was chosen over a 3D/vector noise field.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <link rel="stylesheet" href="../public/alert.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_Core_Noise_NoiseMath.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.Core.Noise.NoiseMath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../public/gdscript-loader.js"></script>
+      <script src="../public/highlight-custom.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+            AnyMotion API Reference
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath">
+
+
+
+  <h1 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath" class="text-break">
+Class NoiseMath  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.Core.html">Core</a>.<a class="xref" href="CodeSmile.AnyMotion.Core.Noise.html">Noise</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Pure, allocation-free noise and oscillator functions shared by every product. Rig-agnostic: takes
+and returns plain numbers only, so the same functions can drive a humanoid bone, a camera, or a
+machine part unmodified. See <code>shake-noise-spec.md</code> §2 and §4 for why this lives in Core and
+why per-axis 1D noise was chosen over a 3D/vector noise field.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NoiseMath</code></pre>
+  </div>
+
+
+
+
+  <details>
+  <summary style="display: list-item; font-size: 15px"><i>Expand Details ...</i></summary>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><span class="xref">NoiseMath</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  </details>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_AttenuateByDistance_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_AttenuateByDistance_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_AnimationCurve_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.AnimationCurve)">
+  AttenuateByDistance(Vector3, Vector3, float, AnimationCurve)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>0..1 falloff from <code class="paramref">source</code> to <code class="paramref">listener</code>: 1 at zero
+distance, 0 at or beyond <code class="paramref">radius</code>. Pure function, no spatial index — the
+caller (an explosion, an impact) already knows which listeners are nearby and calls this once
+per listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float AttenuateByDistance(Vector3 source, Vector3 listener, float radius, AnimationCurve falloff = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">Vector3</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>source</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">Vector3</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>listener</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>radius</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">AnimationCurve</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>falloff</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_Blend_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_Blend_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(System.Single,System.Single,System.Single)">
+  Blend(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>0 = pure <code class="paramref">periodic</code>, 1 = pure <code class="paramref">noise</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float Blend(float periodic, float noise, float regularity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>periodic</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>noise</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>regularity</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_System_Single_System_Int32_System_Int32_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(System.Single,System.Int32,System.Int32)">
+  Sample1D(float, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>One octave of Perlin noise, remapped to -1..1. <code class="paramref">seed</code> and
+<code class="paramref">axisIndex</code> place this sample on a different, non-integer lattice line so
+multiple axes and channels do not read as the same signal offset in time. The +0.5 keeps that
+line off <span class="xref">UnityEngine.Mathf.PerlinNoise(float, float)</span>'s degenerate integer-coordinate artefact.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float Sample1D(float time, int seed, int axisIndex = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>time</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>seed</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>axisIndex</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleFbm1D_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleFbm1D_System_Single_System_Int32_System_Int32_System_Int32_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleFbm1D(System.Single,System.Int32,System.Int32,System.Int32,System.Single,System.Single)">
+  SampleFbm1D(float, int, int, int, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fractional Brownian motion: <code class="paramref">octaves</code> summed at increasing frequency
+(<code class="paramref">lacunarity</code> per octave) and decreasing amplitude
+(<code class="paramref">persistence</code> per octave). One octave costs the same as
+<a class="xref" href="CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_System_Single_System_Int32_System_Int32_">Sample1D(float, int, int)</a>; this is what separates a plain &quot;tremor&quot; from a textured
+&quot;chatter&quot;/&quot;judder&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float SampleFbm1D(float time, int seed, int axisIndex, int octaves, float persistence, float lacunarity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>time</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>seed</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>axisIndex</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>octaves</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>persistence</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>lacunarity</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(System.Single)">
+  SamplePeriodic(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plain periodic oscillator. <code class="paramref">phase</code> is in cycles, not radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float SamplePeriodic(float phase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>phase</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleSharpenedWave_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleSharpenedWave_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(System.Single,System.Single)">
+  SampleSharpenedWave(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_">SamplePeriodic(float)</a> flattened towards a square wave as <code class="paramref">sharpness</code>
+rises. At 0 this <b>is</b> <a class="xref" href="CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_">SamplePeriodic(float)</a>; near 1 the wave holds a value then
+changes suddenly instead of easing. Originated in <code>WalkGait</code>'s gait shaping and moved here
+2026-08-04 so any oscillator-based feature can reuse it instead of re-deriving the same curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float SampleSharpenedWave(float phase, float sharpness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>phase</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>sharpness</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
