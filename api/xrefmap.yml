@@ -1123,6 +1123,18 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.HeadSettleWeight
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.HeadSettleWeight
   nameWithType: WalkGaitParameters.IdleGroup.HeadSettleWeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking
+  name: LegParking
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_LegParking
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking
+  nameWithType: WalkGaitParameters.IdleGroup.LegParking
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinTurnRate
+  name: MinTurnRate
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_MinTurnRate
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinTurnRate
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinTurnRate
+  nameWithType: WalkGaitParameters.IdleGroup.MinTurnRate
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.MinWalkSpeed
   name: MinWalkSpeed
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_MinWalkSpeed
@@ -1135,6 +1147,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StepsPerSecondThreshold
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StepsPerSecondThreshold
   nameWithType: WalkGaitParameters.IdleGroup.StepsPerSecondThreshold
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StopStepDuration
+  name: StopStepDuration
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_StopStepDuration
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StopStepDuration
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.StopStepDuration
+  nameWithType: WalkGaitParameters.IdleGroup.StopStepDuration
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.WeightShiftPeriod
   name: WeightShiftPeriod
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_WeightShiftPeriod

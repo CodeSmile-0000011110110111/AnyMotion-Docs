@@ -123,6 +123,13 @@ raycast, height/normal correction and pelvis lowering are runtime behaviour in
       <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html">WalkGaitParameters.IdleGroup</a></dt>
       <dd><p>L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing
 and weight-shift added on top. See <code>idle-motion-spec.md</code>.</p>
+<p>
+    O12 (start/stop) splits that blend in two. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_IdleGroup_LegParking">LegParking</a> hands the legs to
+    <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait</span>'s decoupled leg cycles — each leg parks and unparks on its own,
+    so a planted foot stays planted while the other leg finishes its step — and leaves the
+    cross-fade owning only what has no leg phase to park: the pelvis, torso, head, arms and
+    the breathing and weight-shift oscillators below. See <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.ShouldParkLeg(bool, bool, float, float)</span>.
+</p>
 </dd>
     </dl>
     <dl class="jumplist">

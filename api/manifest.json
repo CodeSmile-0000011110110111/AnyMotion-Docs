@@ -396,7 +396,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup",
-      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.yml\" sourcestartlinenumber=\"1\">L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing\nand weight-shift added on top. See <code>idle-motion-spec.md</code>.</p>\n"
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.yml\" sourcestartlinenumber=\"1\">L04 (idle): a post-evaluation blend of the walk pose toward standing-neutral, plus breathing\nand weight-shift added on top. See <code>idle-motion-spec.md</code>.</p>\n<p>\n    O12 (start/stop) splits that blend in two. <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.IdleGroup.LegParking\" data-throw-if-not-resolved=\"false\"></xref> hands the legs to\n    <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait\" data-throw-if-not-resolved=\"false\"></xref>'s decoupled leg cycles — each leg parks and unparks on its own,\n    so a planted foot stays planted while the other leg finishes its step — and leaves the\n    cross-fade owning only what has no leg phase to park: the pelvis, torso, head, arms and\n    the breathing and weight-shift oscillators below. See <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait.ShouldParkLeg(System.Boolean%2cSystem.Boolean%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1270,11 +1270,11 @@
       "type": "Toc",
       "source_relative_path": "reference/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "reference/toc.json"
-        },
         ".html": {
           "relative_path": "reference/toc.html"
+        },
+        ".json": {
+          "relative_path": "reference/toc.json"
         }
       },
       "version": ""
@@ -1283,11 +1283,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
