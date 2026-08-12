@@ -718,6 +718,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopeStepShortenRatio
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopeStepShortenRatio
   nameWithType: GaitPose.SlopeStepShortenRatio
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SoftReachStart
+  name: SoftReachStart
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SoftReachStart
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SoftReachStart
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SoftReachStart
+  nameWithType: GaitPose.SoftReachStart
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SpineEuler
   name: SpineEuler
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SpineEuler
@@ -1201,6 +1207,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.PoleOutward
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.PoleOutward
   nameWithType: WalkGaitParameters.KneeGroup.PoleOutward
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.SoftReachStart
+  name: SoftReachStart
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_KneeGroup_SoftReachStart
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.SoftReachStart
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.SoftReachStart
+  nameWithType: WalkGaitParameters.KneeGroup.SoftReachStart
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.StanceKneeBend
   name: StanceKneeBend
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_KneeGroup_StanceKneeBend
@@ -3284,6 +3296,22 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SmoothTowards
   nameWithType: IkTargetSpaceDriver.SmoothTowards
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(System.Single,System.Single,System.Single)
+  name: SoftenReach(float, float, float)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoftenReach_System_Single_System_Single_System_Single_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(System.Single,System.Single,System.Single)
+  name.vb: SoftenReach(Single, Single, Single)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(float, float, float)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(Single, Single, Single)
+  nameWithType: IkTargetSpaceDriver.SoftenReach(float, float, float)
+  nameWithType.vb: IkTargetSpaceDriver.SoftenReach(Single, Single, Single)
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach*
+  name: SoftenReach
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoftenReach_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach
+  nameWithType: IkTargetSpaceDriver.SoftenReach
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsAnimationRigging
   name: SupportsAnimationRigging
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsAnimationRigging

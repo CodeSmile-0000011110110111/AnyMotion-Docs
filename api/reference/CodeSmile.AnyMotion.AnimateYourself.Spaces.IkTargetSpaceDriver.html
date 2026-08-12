@@ -283,7 +283,7 @@ ordinary swing).</p>
 
   <div class="markdown level1 summary"><p>L11 (arm layering): what the left hand reaches for via IK, blended against the position the
 gait's own arm swing produces by <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HandTargetWeight">HandTargetWeight</a>, scaled down further
-when the target falls outside the reach window — see <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ApplyArm(ArmAngles, LimbTarget, float, float, float, float, float, Transform, float, Transform, float, HumanBodyBones, HumanBodyBones, HumanBodyBones, float, float)</a>. Null leaves the
+when the target falls outside the reach window — see <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ApplyArm(ArmAngles, LimbTarget, float, float, float, float, float, Transform, float, Transform, float, HumanBodyBones, HumanBodyBones, HumanBodyBones, float, float, float)</a>. Null leaves the
 arm on its ordinary swing. Set every frame by <code>GaitDriver.ApplyNow</code>, the same pattern as
 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LookAtTarget">LookAtTarget</a>.</p>
 </div>
@@ -657,7 +657,7 @@ rather than an undefined blend, since there is nothing to measure a slope from.<
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ClampArmReachDistance_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ClampArmReachDistance(System.Single,System.Single,System.Single,System.Single)">
   ClampArmReachDistance(float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1029"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1031"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how far along the reach direction the hand target may be placed. The upper limit is
@@ -924,7 +924,7 @@ uncorrected reach. A hip held at a fixed height while the foot reaches forward a
 the straight-line hip-to-ankle distance close to a straight leg's full reach — ordinary gait
 geometry, present on perfectly flat ground, that <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html">Evaluate(float, float, float, float, Metrics, float)</a>'s own
 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_PelvisGroup_Bob">Bob</a> only partly cancels and that
-<span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolveTwoBone(UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Vector3, float, float)</span>'s own clamp has always silently absorbed (an imperceptibly
+<span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolveTwoBone(UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Vector3, float, float, float)</span>'s own clamp has always silently absorbed (an imperceptibly
 shortened stride). <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputePelvisDrop_System_Single_System_Single_">ComputePelvisDrop(float, float)</a> alone cannot tell that apart from &quot;the
 ground correction pushed this out of reach&quot;, so subtracting the uncorrected deficit is what
 keeps flat ground at zero drop regardless of how tight the stride's own reach margin already
@@ -1351,7 +1351,7 @@ component never changes a vector's length, so a unit normal in stays a unit norm
   <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L782"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>L11 (arm layering): whether and how much <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ApplyArm(ArmAngles, LimbTarget, float, float, float, float, float, Transform, float, Transform, float, HumanBodyBones, HumanBodyBones, HumanBodyBones, float, float)</a> should reach for an external
+  <div class="markdown level1 summary"><p>L11 (arm layering): whether and how much <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ApplyArm(ArmAngles, LimbTarget, float, float, float, float, float, Transform, float, Transform, float, HumanBodyBones, HumanBodyBones, HumanBodyBones, float, float, float)</a> should reach for an external
 hand target instead of the ordinary rotational swing — 0 (no IK at all) whenever
 <code class="paramref">hasTarget</code> is false or the arm's segments cannot be measured
 (<code class="paramref">upperLength</code>/<code class="paramref">lowerLength</code> at or below 0), regardless of
@@ -1415,7 +1415,7 @@ exactly as before this mechanism existed rather than reaching for an undefined p
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveArmPoleDirection_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveArmPoleDirection(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Vector3)">
   ResolveArmPoleDirection(Vector3, Vector3, float, Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1007"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1009"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: which way the elbow points. A relaxed human elbow points backwards and a little outwards,
@@ -1475,7 +1475,7 @@ reported elbow snap as a target passed behind the character.</p>
 
 
   <h4 class="section" id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveArmPoleDirection_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolveTwoBone(UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Vector3, float, float)</span> uses only the part of the pole perpendicular to the aim direction.
+  <div class="markdown level1 remarks"><p><span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolveTwoBone(UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Vector3, float, float, float)</span> uses only the part of the pole perpendicular to the aim direction.
 That part vanishes when the two are collinear, and the solver then falls back to a world axis
 which does not know which arm it is placing, so both elbows could bend the same way. Sliding the
 pole towards <code class="paramref">outwardAxis</code> as the two approach collinear keeps that fallback
@@ -1490,7 +1490,7 @@ is also collinear with, because the two are <code class="paramref">poleOutwardDe
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveAzimuthExcess_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveAzimuthExcess(System.Single,System.Single,System.Single)">
   ResolveAzimuthExcess(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L897"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L899"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how many degrees <code class="paramref">azimuthDegrees</code> lies outside the allowed window
@@ -1616,7 +1616,7 @@ capsule collider can still be holding it up even when both feet miss.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachAzimuth_UnityEngine_Vector3_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachAzimuth(UnityEngine.Vector3,System.Single)">
   ResolveReachAzimuth(Vector3, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L875"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L877"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: the direction from a shoulder to a reach target, as a horizontal bearing in degrees — 0
@@ -1671,7 +1671,7 @@ two arms produce the same number for mirrored targets and one set of limits cove
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachElevation_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachElevation(UnityEngine.Vector3)">
   ResolveReachElevation(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L891"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how far a reach direction is from hanging straight down, in degrees — 0 hanging, 90 level
@@ -1719,7 +1719,7 @@ with the shoulder, 180 straight overhead.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachability_UnityEngine_Vector3_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachability(UnityEngine.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single)">
   ResolveReachability(Vector3, float, float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L927"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L929"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how much of an assigned hand target's reach the arm should actually attempt, 0..1. 1 inside
@@ -1806,7 +1806,7 @@ the reach has no such point, and matches what a person does with something out o
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SlerpReachDirection_UnityEngine_Vector3_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SlerpReachDirection(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
   SlerpReachDirection(Vector3, Vector3, Vector3, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L962"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L964"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: rotates <code class="paramref">fromDirection</code> a fraction <code class="paramref">t</code> of the way
@@ -1995,6 +1995,71 @@ same <code>Time.realtimeSinceStartup</code> value.</p>
     <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
     <td style="width: fit-content;white-space: nowrap"><dt><code>deltaTime</code></dt></td>
     <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoftenReach_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoftenReach_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(System.Single,System.Single,System.Single)">
+  SoftenReach(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>O4 (knee pop): softens reach distance as it approaches full extension instead of hard-clamping
+it there — asymptotically approaching but never reaching <code class="paramref">fullReach</code>, so the
+bend angle's sensitivity to a moving target stays continuous through what used to be a clamp
+boundary. Measured: the hard clamp's sensitivity steps from 5.74 to exactly 0 °/1%L at
+<code>distance == fullReach</code>; that derivative jump, not the peak sensitivity, is what reads as
+a pop. Below <code class="paramref">s</code> of full reach this is the identity function, so a distance
+already inside the chain's ordinary working range is unaffected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float SoftenReach(float distance, float fullReach, float s)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>distance</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>fullReach</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">float</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>s</code></dt></td>
+    <td style="width: 99%"><dd><p>Fraction of <code class="paramref">fullReach</code> where softening begins (the &quot;knee&quot; of the curve).
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.KneeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_KneeGroup_SoftReachStart">SoftReachStart</a>.</p>
+</dd></td>
   </tr>
   </dl>
   </table>
