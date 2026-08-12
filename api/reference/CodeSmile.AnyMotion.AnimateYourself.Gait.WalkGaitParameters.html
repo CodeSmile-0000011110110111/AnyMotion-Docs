@@ -603,7 +603,7 @@ public int Version</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Blank" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Blank">
   Blank()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A blank starting template: every field that produces visible motion is zeroed, leaving only
@@ -611,7 +611,12 @@ the structural gait-shape fields (Duty Factor, Step Width, Cadence and the like)
 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral">Neutral()</a> value. Unlike <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Neutral">Neutral()</a>, which is an ordinary walk and
 already carries a full set of amplitudes, this is meant as the least amount of motion a
 working preset can have, for a user who wants to build a custom look by raising each
-amplitude deliberately rather than by subtracting from an already-tuned walk.</p>
+amplitude deliberately rather than by subtracting from an already-tuned walk.
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_FootstepGroup_StepLength">StepLength</a>/<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_FootstepGroup_StepHeight">StepHeight</a> are the one
+exception: kept at 0.5/0.25 rather than 0, because <code>StepLength</code> is also the divisor in
+<code>stepsPerSecond = MoveSpeed / (StepLength × LegChainLength)</code> — 0 there is a landmine the
+moment a user raises Move Speed above its own blanked 0 without separately remembering to
+raise Step Length too.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
