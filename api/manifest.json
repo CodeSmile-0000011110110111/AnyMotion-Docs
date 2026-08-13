@@ -298,7 +298,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource",
-      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.yml\" sourcestartlinenumber=\"1\">L02 (run): where <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.FlightGravity\" data-throw-if-not-resolved=\"false\"></xref> comes from for the flight-phase pelvis arc\n(<code>WalkGait.FlightHeight</code>). <b>Append-only</b>, same rule as\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring\" data-throw-if-not-resolved=\"false\"></xref>: this is portable preset data, so reordering or\ndeleting a member after presets exist in the wild would silently reinterpret them.</p>\n"
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.yml\" sourcestartlinenumber=\"1\">L02 (run): where <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.FlightGravity\" data-throw-if-not-resolved=\"false\"></xref> comes from for the flight-phase pelvis arc\n(<code>GaitMath.FlightHeight</code>). <b>Append-only</b>, same rule as\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring\" data-throw-if-not-resolved=\"false\"></xref>: this is portable preset data, so reordering or\ndeleting a member after presets exist in the wild would silently reinterpret them.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1060,11 +1060,11 @@
       "type": "Toc",
       "source_relative_path": "reference/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "reference/toc.html"
-        },
         ".json": {
           "relative_path": "reference/toc.json"
+        },
+        ".html": {
+          "relative_path": "reference/toc.html"
         }
       },
       "version": ""
@@ -1073,11 +1073,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

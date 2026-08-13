@@ -821,7 +821,7 @@ so a robot preset gets the required &quot;clamp, never stretch&quot; reach for f
   </h3>
 
   <div class="markdown level1 summary"><p>L02 (run): not a new pose, per <code>locomotion-catalog.md</code>'s own note — Duty Factor below 0.5
-is what produces the double-float flight phase <code>WalkGait.FlightHeight</code> arcs the pelvis
+is what produces the double-float flight phase <code>GaitMath.FlightHeight</code> arcs the pelvis
 through instead of the walking Bob wave. Step Length up widens the thigh-swing amplitude too,
 since <code>ThighSwingDegrees</code> already derives it from Step Length and duty — no separate
 thigh-swing field is needed. Move Speed raised to match a running pace; <code>DeriveCadenceFromSpeed</code>
