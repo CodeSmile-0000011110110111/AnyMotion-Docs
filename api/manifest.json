@@ -176,6 +176,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource.yml\" sourcestartlinenumber=\"1\">Which pose the driver spaces restore each frame, and therefore what the authored angles are\ncomposed against. <b>Append-only</b>, same rule as <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring\" data-throw-if-not-resolved=\"false\"></xref>:\nthis is portable preset data, so reordering or deleting a member after presets exist in the\nwild would silently reinterpret them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.ChannelBlendMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.ChannelBlendMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.ChannelBlendMode",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.ChannelBlendMode.yml\" sourcestartlinenumber=\"1\">How one channel's authored angles combine with the base pose. Unobservable while\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePose\" data-throw-if-not-resolved=\"false\"></xref> is <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource.BindPose\" data-throw-if-not-resolved=\"false\"></xref>, because the base is then\nthe rest pose the angles are already measured from. <b>Append-only</b>, same rule as\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.yml\" sourcestartlinenumber=\"1\"><b>Reserved schema, no consumer. Nothing in this group is read by any code, and its defaults\ndescribe exactly what AnyMotion does today.</b> It exists so that the upper-body clip-layering\nmode — an animation clip supplies the base pose, AnyMotion composes the upper body on top of\nit — can be added later without a preset-schema break. See\n<code>redesign-decision-tree/02-fixed-pose-restore-point/pose-3-real-clip-escape-hatch.md</code> for\nthe mode itself, and <code>locomotion-catalog.md</code> §5 (what this list changes about the P7\nschema freeze) for the reservation rule it follows: &quot;an unused field costs nothing, a missing\none costs a schema break&quot;. P7 (JSON preset schema freeze) is the deadline that makes the\nreservation worth making now rather than when the mode is built.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.yml",
       "output": {
         ".html": {
@@ -1060,11 +1102,11 @@
       "type": "Toc",
       "source_relative_path": "reference/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "reference/toc.json"
-        },
         ".html": {
           "relative_path": "reference/toc.html"
+        },
+        ".json": {
+          "relative_path": "reference/toc.json"
         }
       },
       "version": ""
@@ -1073,11 +1115,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
