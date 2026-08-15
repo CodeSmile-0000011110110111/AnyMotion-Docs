@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Struct GaitPose | AnyMotion API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct GaitPose | AnyMotion API Reference ">
+      
+      <meta name="description" content="One evaluated frame of gait, expressed in two forms at once so that all three candidate driver spaces of the P2 spike can consume the same source parameters.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css?v=2">
+      <link rel="stylesheet" href="../public/alert.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/new/main/apiSpec/new?filename=CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose.md&amp;value=---%0Auid%3A%20CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../public/gdscript-loader.js"></script>
+      <script src="../public/highlight-custom.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="AnyMotion API Reference">
+            AnyMotion API Reference
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose">
+
+
+
+  <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose" class="text-break">
+Struct GaitPose  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One evaluated frame of gait, expressed in two forms at once so that all three candidate driver
+spaces of the P2 spike can consume the same source parameters.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct GaitPose</code></pre>
+  </div>
+
+
+
+
+  <details>
+  <summary style="display: list-item; font-size: 15px"><i>Expand Details ...</i></summary>
+
+
+
+
+
+  </details>
+
+
+
+
+  <h2 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Units: <b>metres and degrees, already scaled to this specific rig</b> through
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html">RigMetrics</a>. The portable, rig-independent unit is
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>, not this type. Denormalisation happens in exactly one place,
+<span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait</span>, so there is a single point to inspect when a preset does not carry over
+between rigs.</p>
+<p>
+    Positions are local to the character's visual root: X is right, Y is up with 0 at the ground
+    plane, Z is forward.
+</p>
+<p>
+    Which form each space reads:
+    space A (Mecanim muscle) and space B (custom per-bone rotation frame) read
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftLeg">LeftLeg</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightLeg">RightLeg</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftArm">LeftArm</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightArm">RightArm</a>
+    and the torso rotations; space C (body-normalised IK targets) reads <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftFoot">LeftFoot</a>,
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightFoot">RightFoot</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand">LeftHand</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightHand">RightHand</a> and the same torso
+    rotations. Both forms come from one phase value and one parameter set, so a difference in
+    result is attributable to the space and not to different timing.
+</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Anchoring" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Anchoring">
+  Anchoring
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05 (foot planting on uneven ground): how a foot's IK target may follow ground the gait did
+not author. Copied from <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_Anchoring">Anchoring</a> so
+<code>IkTargetSpaceDriver</code> can gate its raycast on the pose alone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public WalkGaitParameters.GroundGroup.ContactAnchoring Anchoring</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html">GroundGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.html">ContactAnchoring</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmElbowPoleAngle" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmElbowPoleAngle">
+  ArmElbowPoleAngle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ElbowPoleAngle">ElbowPoleAngle</a>, copied as-is — already in
+degrees from straight back towards this arm's own side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float ArmElbowPoleAngle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachAcrossLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachAcrossLimit">
+  ArmReachAcrossLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachAcrossLimit">ReachAcrossLimit</a>, copied as-is — already in
+degrees, measured from straight forward towards the centre line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float ArmReachAcrossLimit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachBehindLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachBehindLimit">
+  ArmReachBehindLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachBehindLimit">ReachBehindLimit</a>, copied as-is — already in
+degrees, measured from straight forward, going outwards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float ArmReachBehindLimit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ArmReachUpLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmReachUpLimit">
+  ArmReachUpLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_ReachUpLimit">ReachUpLimit</a>, copied as-is — already in
+degrees, measured from hanging straight down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float ArmReachUpLimit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ChestEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ChestEuler">
+  ChestEuler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Vector3 ChestEuler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_GroundSmoothingSeconds" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.GroundSmoothingSeconds">
+  GroundSmoothingSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SmoothingTime">SmoothingTime</a>, copied as-is — already in
+seconds, nothing to denormalise. How long a foot's height correction and the pelvis drop take
+to catch up to a newly measured ground height instead of snapping there in one frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float GroundSmoothingSeconds</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HandTargetWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HandTargetWeight">
+  HandTargetWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11 (arm layering): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_HandTargetWeight">HandTargetWeight</a>, copied as-is
+— already a 0..1 fraction. <code>IkTargetSpaceDriver</code> reads this to decide how much of a
+hand's reach comes from an externally assigned target (eg a carried object's grip point)
+instead of the gait's own swinging rotation — 0 (the default, and every existing preset)
+leaves the arm exactly as before this field had any consumer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float HandTargetWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_HeadEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.HeadEuler">
+  HeadEuler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Vector3 HeadEuler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Hips" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Hips">
+  Hips
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Where the Hips bone should sit and how it should be oriented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.SegmentPose Hips</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SegmentPose.html">SegmentPose</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_IdleWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.IdleWeight">
+  IdleWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>0 while walking, 1 when fully idle (L04). Already folded into every field below by
+<span class="xref">CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGait</span>'s post-evaluation blend — a driver space that ignores this field
+still receives a pose blended toward standing, since the blend is applied here, not layered
+separately downstream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float IdleWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftArm">
+  LeftArm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.ArmAngles LeftArm</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ArmAngles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftFoot" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftFoot">
+  LeftFoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LimbTarget LeftFoot</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftHand">
+  LeftHand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11 (arm layering), arm-swing-spec.md §2: the arm's authoritative IK target for space C —
+not a debug approximation. Unlike every other <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">GaitPose.LimbTarget</a>, <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_Position">Position</a>
+and <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_NeutralPosition">NeutralPosition</a> here are <b>offsets from the shoulder joint,
+expressed in root space</b>, not root-local points — a hand hangs from the shoulder and must
+follow it wherever the pelvis bob, torso lean, spine twist and clavicle rotation put it, so
+anchoring in the character's root frame the way a planted foot does would fight the shoulder
+instead of following it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LimbTarget LeftHand</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LeftLeg">
+  LeftLeg
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LegAngles LeftLeg</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.html">LegAngles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtChestWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtChestWeight">
+  LookAtChestWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtChestWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtEasing" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtEasing">
+  LookAtEasing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_Easing">Easing</a>, copied as-is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public bool LookAtEasing</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtHeadWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtHeadWeight">
+  LookAtHeadWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L01 (look-at / head tracking): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_HeadWeight">HeadWeight</a>/
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_NeckWeight">NeckWeight</a>/
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_ChestWeight">ChestWeight</a>, copied as-is — the split is computed
+from the sum of these three at the point they are applied, not here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtHeadWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtNeckWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtNeckWeight">
+  LookAtNeckWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtNeckWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtPitchLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtPitchLimit">
+  LookAtPitchLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_PitchLimit">PitchLimit</a>, copied as-is — already in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtPitchLimit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtTrackingSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtTrackingSpeed">
+  LookAtTrackingSpeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_TrackingSpeed">TrackingSpeed</a>, copied as-is — already in
+degrees per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtTrackingSpeed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LookAtYawLimit" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LookAtYawLimit">
+  LookAtYawLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L01: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LookAtGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LookAtGroup_YawLimit">YawLimit</a>, copied as-is — already in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LookAtYawLimit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_MaxUnsupportedFootDropMetres" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.MaxUnsupportedFootDropMetres">
+  MaxUnsupportedFootDropMetres
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_MaxUnsupportedFootDrop">MaxUnsupportedFootDrop</a>, denormalised to
+metres for this rig. The no-ground policy clamps a foot's downward correction to this distance
+instead of reaching for a distant or missing surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float MaxUnsupportedFootDropMetres</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_Phase" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.Phase">
+  Phase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position of the gait cycle, 0..1. One cycle is two steps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float Phase</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightArm">
+  RightArm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.ArmAngles RightArm</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ArmAngles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightFoot" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightFoot">
+  RightFoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LimbTarget RightFoot</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightHand" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightHand">
+  RightHand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L11: same as <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LeftHand">LeftHand</a>, for the right hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LimbTarget RightHand</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html">LimbTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_RightLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.RightLeg">
+  RightLeg
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public GaitPose.LegAngles RightLeg</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.html">GaitPose</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LegAngles.html">LegAngles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_ShoulderGirdleEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ShoulderGirdleEuler">
+  ShoulderGirdleEuler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Vector3 ShoulderGirdleEuler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopePelvisTiltAmount" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopePelvisTiltAmount">
+  SlopePelvisTiltAmount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L08 (slope adaptation): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltAmount">PelvisTiltAmount</a>, copied
+as-is — already a 0..1 fraction, nothing to denormalise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float SlopePelvisTiltAmount</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SlopeStepShortenRatio" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SlopeStepShortenRatio">
+  SlopeStepShortenRatio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L08: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_StepShortenRatio">StepShortenRatio</a>, copied as-is — already a
+0..1 fraction, nothing to denormalise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float SlopeStepShortenRatio</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SoftReachStart" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SoftReachStart">
+  SoftReachStart
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>O4 (knee pop): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart">SoftReachStart</a>, copied as-is —
+already a 0..1 fraction of a limb's full reach. Shared by legs and arms, since both solve
+through the same two-bone IK.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float SoftReachStart</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_SpineEuler" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.SpineEuler">
+  SpineEuler
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotation offsets for the torso and head chain, in degrees, relative to the bind pose.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Vector3 SpineEuler</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepLengthMetres" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepLengthMetres">
+  StepLengthMetres
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ground distance one step covers this frame, in metres.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float StepLengthMetres</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_StepsPerSecond" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.StepsPerSecond">
+  StepsPerSecond
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cadence actually used this frame, in steps per second.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float StepsPerSecond</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L31" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
