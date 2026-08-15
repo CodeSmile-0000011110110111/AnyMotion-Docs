@@ -179,6 +179,23 @@ out.</p>
 <p>The core <strong>timing</strong> settings control cadence: steps per second, or a move speed that the system
 converts into steps per second for you.</p>
 
+<p><strong>Simulated Speed (Edit Mode)</strong> is the speed the Scene view preview walks at, in metres per second.
+It applies outside Play mode only, and only while <strong>Derive Speed From Delta Position</strong> (under
+timing) is on: the character does not actually move in the Scene view, so there is no movement to
+measure and nothing writes Move Speed there. It sits directly below Move Speed, because the two are
+one decision and the preview reads one or the other. In Play mode, and whenever that checkbox is off,
+Move Speed is used instead and this field is grayed out. It is also grayed out together with Move
+Speed while <strong>Derive Cadence From Speed</strong> is off, because the step rate then comes from Cadence and
+neither speed changes the animation. Changing it never affects Play mode or a built game.</p>
+
+<p>The line of text directly below it names the field the rate is currently coming from — one of the
+two speed fields, or Cadence while <strong>Derive Cadence From Speed</strong> is off. When the character is
+standing still, it also names the setting and the threshold that decided that — Min Walk Speed under
+idle, or Steps Per Second Threshold when Derive Cadence From Speed is off. Below
+that threshold the feet stay planted, exactly as they do in Play mode, so the walking settings have
+nothing to act on: editing Step Length or Step Height changes nothing on screen until the speed is
+raised past it.</p>
+
 <p>The <strong>run blend</strong> settings describe what changes as speed rises into a run — duty factor, step
 length, lean, and an overall “how energetic” multiplier. Each one blends in gradually rather than
 snapping.</p>
@@ -290,7 +307,8 @@ would build a similar lopsided or injured gait of your own.</p>
 <p>Controls for watching the animation while you edit. None of these affect a built game.</p>
 
 <p><strong>Preview In Edit Mode</strong> runs the animation continuously in the Scene view without pressing Play.
-<strong>Draw Gizmos</strong> and <strong>Draw Trails</strong> turn on debug visualisation.</p>
+The speed it runs at is Simulated Speed (Edit Mode), under <a href="#movement">Movement</a>. <strong>Draw Gizmos</strong>
+and <strong>Draw Trails</strong> turn on debug visualisation.</p>
 
 <p>While preview is off, a <strong>Scrub Cycle</strong> slider lets you step through exactly one gait cycle by hand,
 to inspect a specific pose. It’s hidden while preview is running, because the preview would
@@ -305,8 +323,8 @@ scratch — useful if a script recompile left the character looking wrong.</p>
 <p>Collapsed by default, and correct as shipped for most projects — open it only if you have a specific
 reason to.</p>
 
-<p>It holds the internal driver space selection and update rate, plus read-only references to the
-component’s own dependencies (filled in automatically, shown here only for troubleshooting).</p>
+<p>It holds the internal driver space selection, plus read-only references to the component’s own
+dependencies (filled in automatically, shown here only for troubleshooting).</p>
 
 <p>There’s also a <strong>Re-attach To Bones</strong> button, for after you change the Avatar or replace the mesh,
 and a <strong>Driver space comparison</strong> foldout. That foldout is development and reference information
