@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Animate Yourself vs Animator | AnyMotion Docs</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Animate Yourself vs Animator" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<meta name="twitter:description" property="og:description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<link rel="canonical" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-yourself-vs-animator/" />
+<meta property="og:url" content="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-yourself-vs-animator/" />
+<meta property="og:site_name" content="AnyMotion Docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Animate Yourself vs Animator" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the AnyMotion procedural humanoid animation tools.","headline":"Animate Yourself vs Animator","url":"https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-yourself-vs-animator/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AnyMotion-Docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/feed.xml" title="AnyMotion Docs" /><!--
+    Override of minima 2.5's stock head.html (verified byte-identical against 2.5.2's copy in the
+    gem). Identical to it apart from the include below,
+    which minima has no hook for: a page that needs its own stylesheet or script has nowhere to
+    declare one, and putting a <link> or <script> in the page body instead is not valid HTML.
+    See _includes/custom-head.html for how a page opts in. Same reasoning as the header.html
+    override alongside this file; re-sync both against the gem after a minima upgrade.
+  --><link rel="stylesheet" href="/AnyMotion-Docs/assets/css/comparison-matrix.css"><script src="/AnyMotion-Docs/assets/js/comparison-matrix.js" defer></script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/AnyMotion-Docs/">AnyMotion Docs</a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/AnyMotion-Docs/animate-humanoid/">AnimateHumanoid Guide</a><a class="page-link" href="/AnyMotion-Docs/animate-yourself-vs-animator/">Animate Yourself vs Animator</a><!--
+          Override of minima's stock header.html (which only resolves header_pages against
+          site.pages) so the nav can link straight to the generated DocFX API reference. /api/
+          is published onto this same gh-pages branch by a separate workflow (docfx.yml, see
+          AGENTS.md "Documentation site"), not built by Jekyll, so it has no site.pages entry to
+          look up - hardcoded here instead of routing through the deleted /api-reference/ stub.
+        -->
+        <a class="page-link" href="/AnyMotion-Docs/api/">API Reference</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Animate Yourself vs Animator</h1>
+  </header>
+
+  <div class="post-content">
+    <p>This page compares two ways of making a humanoid character walk, run, turn and stop in Unity:</p>
+
+<ul>
+  <li><strong>Animate Yourself</strong> — the procedural layer in this asset. No animation clips. Every pose is
+computed each frame from a set of numbers.</li>
+  <li><strong>The Animator pipeline</strong> — Unity’s standard humanoid workflow: AnimationClips authored or
+captured per motion, connected into an Animator Controller state machine, blended by BlendTrees,
+played through the Animator component.</li>
+</ul>
+
+<div class="matrix-disclaimer" role="note">
+<p><strong>How far the Animate Yourself column has been verified.</strong> Most of this asset's
+locomotion features are verified numerically — unit tests, compile checks, analytic derivations and
+measured probes. They have not been confirmed by watching them run in the Unity Editor.</p>
+<p>Two kinds of row are marked <span class="unverified-mark">not fully verified</span> in the table:
+a row whose claim has not been confirmed by watching it run, and a row where the investigation could
+not settle the question. Each marked row's own detail states exactly what evidence does exist.</p>
+<p>An unmarked row is one of three things: a problem that cannot occur because the mechanism causing
+it is absent, which is provable from the code; a measurement of something other than how the
+character moves, where the measured number is the whole claim; or a row stating that this asset has
+the problem too, which carries no claim to confirm.</p>
+</div>
+
+<h2 id="where-the-list-of-problems-came-from">Where the list of problems came from</h2>
+
+<p>The rows are not a feature list. They are a list of <strong>problems people report</strong> with humanoid
+locomotion — 32 distinct complaints, collected from a body of written material about what goes wrong
+and then checked one by one against this asset’s own source code, unit tests, measured probes and
+planning documents.</p>
+
+<p>Four of those 32 are split across two rows each: two because the two halves of the complaint get
+different answers, and two because checking the complaint turned up a separate defect worth stating
+on its own. That makes 36. Seven further rows are questions that could not be answered from the
+available evidence, for 43 in total.</p>
+
+<p>The rows are grouped by the outcome of that check, in the order the investigation produced them.
+They are deliberately <strong>not</strong> ordered as an argument: the group where this asset has the same
+problem, and the group where nothing was established, are in the same table as the rest.</p>
+
+<h2 id="how-each-column-was-established">How each column was established</h2>
+
+<p><strong>Animate Yourself.</strong> Every cell is backed by the asset’s own code, a unit test, a measurement, or a
+recorded decision. Where a claim is bounded, the bound is in the row’s detail text — a number, a
+test, or the specific condition it holds under.</p>
+
+<p>The <strong>not fully verified</strong> mark described at the top of this page is what carries the
+numeric-versus-visual qualification into the table itself. In full: the project records “not yet
+visually confirmed” against look-at, run, slope adaptation, arm layering, starting and stopping, the
+settling step and the restart work, and it has no test fixture that runs a complete pose against a
+real skinned character. A marked row that says a problem is handled therefore means the mechanism
+exists, is reachable, and produces the right numbers. It does not mean somebody has watched it and
+it looks right. That distinction is itself a row, near the bottom of the table.</p>
+
+<p><strong>Animator.</strong> Each cell describes the standard Unity humanoid workflow named above. Where no basis
+was established for a statement about it, the cell says <strong>“Not established here.”</strong> rather than
+being filled in for symmetry. In particular, <strong>no performance comparison is claimed</strong>: this asset’s
+per-character cost was measured and the Animator pipeline’s was not.</p>
+
+<h2 id="reading-the-table">Reading the table</h2>
+
+<p>Click the round <strong>i</strong> next to any problem to open the detail for that row. Every one of those
+detail texts is also written out in full in the <a href="#detail-for-every-row">legend below the table</a>, in
+the same order, so nothing is lost if the table is copied somewhere the buttons do not work.</p>
+
+<div class="matrix-scroll" tabindex="0" role="region" aria-label="Comparison matrix, scrollable">
+<table class="matrix">
+<colgroup>
+<col class="col-woe" />
+<col class="col-ay" />
+<col class="col-an" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Problem</th>
+<th scope="col">Animate Yourself</th>
+<th scope="col">Animator</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Cannot occur by construction — the mechanism that causes it is absent <span class="matrix-count">(8)</span></th></tr>
+
+<tr>
+<td>Blending two speeds<a class="tip" href="#d-blend-two-speeds" aria-label="Details: Blending two speeds">i</a></td>
+<td>There are no clips to blend. Cadence is computed from speed, so every speed produces a gait generated for that speed.</td>
+<td>A blend tree interpolates between recorded clips, so a parameter value between two of them produces a weighted mix of two recordings.</td>
+</tr>
+
+<tr>
+<td>T-pose from a missing clip<a class="tip" href="#d-missing-clip-t-pose" aria-label="Details: T-pose from a missing clip">i</a></td>
+<td>There is no clip that can be missing and no transition that can fail to be found. The pose is recomputed from the current settings every frame.</td>
+<td>A state with no Motion assigned, a missing clip asset and an Any State transition that fires unexpectedly are each a separate thing that resolves at runtime, and a character with no clip driving its bones shows the pose it was imported in.</td>
+</tr>
+
+<tr>
+<td>Root motion vs in place<a class="tip" href="#d-root-motion" aria-label="Details: Root motion vs in place">i</a></td>
+<td>Neither exists. The animation layer never writes the character's root transform; movement stays entirely with your own controller.</td>
+<td>Root motion is the Animator component's own applyRootMotion setting plus each clip's Root Transform import settings; there is no per-state root-motion toggle. In-place clips and root-motion clips need different movement code.</td>
+</tr>
+
+<tr>
+<td>Building a clip library<a class="tip" href="#d-clip-library" aria-label="Details: Building a clip library">i</a></td>
+<td>A gait is a set of numbers that saves as a small JSON file. Seven presets ship; there is no capture, import or retarget step.</td>
+<td>Each motion is an authored or captured clip that is imported and referenced from a state. Retargeting onto another humanoid is automatic once each model has an Avatar; acquiring and maintaining the clips is not.</td>
+</tr>
+
+<tr>
+<td>Responsiveness cost<a class="tip" href="#d-responsiveness" aria-label="Details: Responsiveness cost">i</a></td>
+<td>The feet never feed back into the controller, so adding the component does not change input latency.</td>
+<td>Where movement is driven by root motion, travel comes from the clip, so animation timing and control response are coupled. OnAnimatorMove is where a project takes that delta back and decides what to do with it. Not measured here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Wobble at a stop<a class="tip" href="#d-stop-wobble" aria-label="Details: Wobble at a stop">i</a></td>
+<td>There is no inertialization and no blend into a standing clip. Each leg stops where it stands. The upper body does still cross-fade. <span class="unverified-mark">not fully verified</span></td>
+<td>A stop is a transition into a standing clip, so overshoot is shaped by that transition's duration and exit time. Mecanim has no inertialization of its own; smoothing beyond the transition is something the project adds.</td>
+</tr>
+
+<tr>
+<td>T-pose vs A-pose rigs<a class="tip" href="#d-bind-pose" aria-label="Details: T-pose vs A-pose rigs">i</a></td>
+<td>There is no source pose to transfer from. The rest pose is read from the mesh's own bind poses, and arm rest direction is measured per character.</td>
+<td>Each rig carries its own Avatar, and the bone mapping and the rest pose it is measured against are set in the Avatar's Configure view, which offers Enforce T-Pose for a model authored in another pose. Retargeting is correct only if both Avatars are.</td>
+</tr>
+
+<tr>
+<td>Clipping through doors<a class="tip" href="#d-environment-collision" aria-label="Details: Clipping through doors">i</a></td>
+<td>Not this layer. It writes bone transforms only; environment collision belongs to the character controller.</td>
+<td>Same. Environment collision belongs to the character controller in either pipeline.</td>
+</tr>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Handled with no setup <span class="matrix-count">(11)</span></th></tr>
+
+<tr class="unverified-row">
+<td>Foot sliding<a class="tip" href="#d-foot-sliding" aria-label="Details: Foot sliding">i</a></td>
+<td>Cadence is derived from the character's own measured displacement, so a planted foot travels backward at exactly the speed the body travels forward. Measured on flat ground at 0.00–0.01 mm through constant, accelerating, braking and oscillating speed. Slopes and the walk-to-run blend are not covered. <span class="unverified-mark">not fully verified</span></td>
+<td>A clip's stride comes from the recorded performance and the rate it is played back at, not from the controller. Matching the two is manual, and a mismatch is visible as sliding.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Hand-typed move speed<a class="tip" href="#d-typed-move-speed" aria-label="Details: Hand-typed move speed">i</a></td>
+<td>Speed is measured from the character's own displacement. Changing the controller's speed cannot desynchronise the gait, because the gait reads the result rather than a second number. <span class="unverified-mark">not fully verified</span></td>
+<td>The value fed to the blend tree is a number game code supplies. Unity can compute a 1D blend tree's thresholds from each clip's own root-motion speed, but keeping the value supplied at runtime consistent with them is manual.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Moonwalking at low speed<a class="tip" href="#d-moonwalk" aria-label="Details: Moonwalking at low speed">i</a></td>
+<td>Cadence cannot disagree with speed. At zero speed there is no cycle to run, and below the threshold the legs park rather than keep stepping. <span class="unverified-mark">not fully verified</span></td>
+<td>A clip plays at the cadence it was recorded at, scaled by its playback rate, so the artifact appears when the body travels slower than the stride that rate produces. The standard remedy is to scale playback speed from the blend tree, and keeping that scale matched to travel speed is manual.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Knee bending backward<a class="tip" href="#d-knee-backward" aria-label="Details: Knee bending backward">i</a></td>
+<td>Three separate guards, one of which makes it structurally impossible: the bend angle comes from an arc cosine, so the joint cannot pass straight. <span class="unverified-mark">not fully verified</span></td>
+<td>Clip playback reproduces recorded joint angles, so a flip comes from an IK pass on top — Unity's per-state Foot IK, or a solver the project adds. Which of those is present is project-specific and is not evaluated here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>IK pop at full reach<a class="tip" href="#d-ik-pop" aria-label="Details: IK pop at full reach">i</a></td>
+<td>The specific discontinuity that is visible as a pop was measured and removed, and two further pop sources are closed. One residual case remains, on stairs. <span class="unverified-mark">not fully verified</span></td>
+<td>Foot pinning is an IK pass over clip playback — Unity's per-state Foot IK, or a solver the project adds — and behaviour at full extension is a property of that solver.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Other body proportions<a class="tip" href="#d-proportions" aria-label="Details: Other body proportions">i</a></td>
+<td>There is no transfer. Motion is generated from ratios measured on the target body itself. One preset on five characters from 1.28 m to 1.87 m gave a step-length spread of 0.9 % coefficient of variation against a 10 % threshold. <span class="unverified-mark">not fully verified</span></td>
+<td>Humanoid retargeting normalises a clip through a proportion-normalized muscle space, so joint rotations do adapt across proportions. What it does not preserve is world-space contact points, so a clip authored for one body can still show sliding or foot penetration on a differently proportioned one. The standard partial remedy is the per-state Foot IK option rather than re-authoring the clip.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Bone axes and naming<a class="tip" href="#d-bone-axes" aria-label="Details: Bone axes and naming">i</a></td>
+<td>Hinge axes are measured per character and their sign fixed by observation. Bones are identified through Unity's humanoid roles, so there is no name string to misspell. <span class="unverified-mark">not fully verified</span></td>
+<td>The Avatar's bone mapping is configured per character at import. Unity's Avatar Configuration inspector validates that mapping and reports a structurally invalid one at import time; what is visible only at playback is a mapping that is valid but assigns the wrong bone. Names also appear in code as state and parameter strings, which fail only at runtime.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Feet floating above ground<a class="tip" href="#d-floating-feet" aria-label="Details: Feet floating above ground">i</a></td>
+<td>Ankle height is measured per character, and a ground probe raises or lowers the foot target. Ground penetration measured at zero on all five test characters. <span class="unverified-mark">not fully verified</span></td>
+<td>Retargeting adapts a clip's joint rotations to the target's proportions, but does not preserve the world-space position of a foot contact, so a different ankle height or ground level is visible as floating or penetration unless a foot IK pass corrects it.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Turning on the spot<a class="tip" href="#d-turn-on-spot" aria-label="Details: Turning on the spot">i</a></td>
+<td>A stationary turn is a step in place: the cycle is floored so it cannot freeze part-way through a stride, and the stance sweep produces zero forward or backward foot travel. <span class="unverified-mark">not fully verified</span></td>
+<td>A stationary turn is its own clip or blend tree, usually driven by an angular-velocity parameter. Without one, the character rotates as a rigid body while another clip plays.</td>
+</tr>
+
+<tr>
+<td>Cost per character<a class="tip" href="#d-crowd-cost" aria-label="Details: Cost per character">i</a></td>
+<td>Measured at 22 microseconds per character with 150 characters in the scene, against a 50 microsecond per character budget.</td>
+<td class="unset">Not established. The Animator pipeline's own per-character cost was not isolated in that measurement, so no comparison is claimed.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Idle that looks alive<a class="tip" href="#d-idle-alive" aria-label="Details: Idle that looks alive">i</a></td>
+<td>Breathing and weight shift ship on by default, and the weight shift's period is varied so it does not repeat at a fixed interval. <span class="unverified-mark">not fully verified</span></td>
+<td>An idle is one or more authored clips, so keeping a standing character in motion means authoring and looping that motion.</td>
+</tr>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Exposed as a setting <span class="matrix-count">(4)</span></th></tr>
+
+<tr>
+<td>Directional blend gaps<a class="tip" href="#d-directional-gaps" aria-label="Details: Directional blend gaps">i</a></td>
+<td>The direction of travel is one continuous setting in degrees, and the step sweep is decomposed by the cosine and sine of that heading. There is no authored set of directions for a heading to fall between.</td>
+<td>Each authored direction is its own clip, and a heading between two of them is a weighted blend of the neighbouring recordings. A heading outside the authored set is clamped to the edge of that set.</td>
+</tr>
+
+<tr>
+<td>The fix cascade<a class="tip" href="#d-fix-cascade" aria-label="Details: The fix cascade">i</a></td>
+<td>Partly. The surface is settings rather than states, so there is no transition condition and no timeout to fire at the wrong moment. The remaining half is the state-per-fix row below.</td>
+<td>Each fix adds a state, a parameter, a transition condition or a layer to the controller. Sub-state machines and layers are what Unity provides to organise them; keeping their interactions correct is manual.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Head and spine in a turn<a class="tip" href="#d-head-and-spine" aria-label="Details: Head and spine in a turn">i</a></td>
+<td>Authored directly as settings: torso twist, chest and shoulder counter-twist, head counter-twist and lag, plus per-bone look-at weights and angular limits. <span class="unverified-mark">not fully verified</span></td>
+<td>Upper-body decoupling is a layer with an avatar mask and its own clips, or a constraint from the Animation Rigging package.</td>
+</tr>
+
+<tr>
+<td>The loop seam<a class="tip" href="#d-loop-seam" aria-label="Details: The loop seam">i</a></td>
+<td>There is no clip boundary to join. The gait runs on a continuous fixed-step phase accumulator, and per-cycle variation is exposed as noise and jitter settings.</td>
+<td>A looping clip's last frame has to match its first. Loop Pose in the humanoid clip importer is the standard remedy for the pose match; matching velocity and foot phase across the seam remains an authoring concern.</td>
+</tr>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Reduced, not removed <span class="matrix-count">(6)</span></th></tr>
+
+<tr class="unverified-row">
+<td>Stairs and step edges<a class="tip" href="#d-stairs" aria-label="Details: Stairs and step edges">i</a></td>
+<td>Vertical ground conformance ships: a probe at the predicted landing position, foot tilt onto the ground normal, smoothing, and a two-leg hip compromise. Four cases remain open, including a one-frame snap when turning near a step edge. <span class="unverified-mark">not fully verified</span></td>
+<td>A clip carries no knowledge of the ground under the character. The per-state Foot IK option applies the clip's own foot goals; matching real ground means setting IK goals from the project's own raycasts.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Coming to a stop<a class="tip" href="#d-stopping" aria-label="Details: Coming to a stop">i</a></td>
+<td>Each leg parks on its own schedule, the last step is shortened, a settling step ships on by default, and restarts are deterministic. Planted-foot travel through a stop and restart went from 567 mm to under 29 mm. Two residuals remain, and none of it is visually confirmed. <span class="unverified-mark">not fully verified</span></td>
+<td>A stop is a transition from a locomotion clip to a standing clip, so where the feet end up is a property of that blend rather than a chosen footstep.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Each new movement mode<a class="tip" href="#d-new-modes" aria-label="Details: Each new movement mode">i</a></td>
+<td>Partly. A new mode is code plus settings rather than a clip set, and eleven features ship. Ten named modes, including jump, crouch walk and swimming, are not built. <span class="unverified-mark">not fully verified</span></td>
+<td>A new mode is a new clip or clip set, plus its state, its parameter and its transition.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>A state per fix<a class="tip" href="#d-state-per-fix" aria-label="Details: A state per fix">i</a></td>
+<td>No user-facing state machine, so nothing to deadlock and no timeout to fire mid-blend. The recorded limitation is the opposite one: no notion of a discrete state at all. <span class="unverified-mark">not fully verified</span></td>
+<td>The controller is the state machine, so every added state, condition and timeout is another interaction to get right.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Loop repetition<a class="tip" href="#d-loop-repetition" aria-label="Details: Loop repetition">i</a></td>
+<td>Not solved, and the project's own standing decision forbids claiming it is. There is no seam and there is per-cycle noise, but noise cannot produce a variation someone chose. <span class="unverified-mark">not fully verified</span></td>
+<td>The same clip replays identically each cycle, so variation means authoring more clips or selecting randomly between them.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Capsule vs body<a class="tip" href="#d-capsule-vs-body" aria-label="Details: Capsule vs body">i</a></td>
+<td>The two cannot disagree about speed, because the animation is derived from the capsule's own measured displacement. They can still disagree about the ground: the feet are visual only, so a foot that misses a ledge edge floats. <span class="unverified-mark">not fully verified</span></td>
+<td>With root motion off, the clip's stride and the capsule's speed are two separate numbers kept in agreement by hand. With it on, travel comes from the clip and the controller has to accept that.</td>
+</tr>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Animate Yourself has this problem too <span class="matrix-count">(7)</span></th></tr>
+
+<tr>
+<td>Arms clipping the body<a class="tip" href="#d-arm-self-clipping" aria-label="Details: Arms clipping the body">i</a></td>
+<td>Present, for arms. The three reach limits constrain the shoulder's reach direction only, so a hand target near the chest can still let the forearm pass through the torso. A real fix is specified for a later version.</td>
+<td>Clip playback performs no self-collision either, and a hand driven by an IK layer can reach into the body the same way.</td>
+</tr>
+
+<tr>
+<td>Frame-order latency<a class="tip" href="#d-frame-order" aria-label="Details: Frame-order latency">i</a></td>
+<td>A live, undiagnosed instance. The component that measures speed carries no explicit execution order, so whether it samples the position change before or after the controller has moved is unspecified.</td>
+<td>Parameter changes take effect on the Animator's next evaluation. Script Execution Order and the Animator's update mode are what a project sets to make that order deterministic.</td>
+</tr>
+
+<tr>
+<td>Non-humanoid rigs<a class="tip" href="#d-non-humanoid" aria-label="Details: Non-humanoid rigs">i</a></td>
+<td>Not supported. A Humanoid Avatar with hips, head and both complete leg and arm chains is required; without them the component reports the character as unmeasurable.</td>
+<td>Generic rigs are supported by playing clips authored for that specific skeleton. Humanoid retargeting itself also requires a Humanoid Avatar.</td>
+</tr>
+
+<tr>
+<td>Finger mapping<a class="tip" href="#d-fingers" aria-label="Details: Finger mapping">i</a></td>
+<td>Neither caused nor fixed. No finger bone is written anywhere in the product, so a character with a broken finger mapping still has one.</td>
+<td>Retargeting maps fingers through the Avatar's own finger configuration, so a character mapped wrongly plays back wrongly.</td>
+</tr>
+
+<tr>
+<td>Wrist twist and skinning<a class="tip" href="#d-wrist-twist" aria-label="Details: Wrist twist and skinning">i</a></td>
+<td>Neither caused nor fixed. These are skin deformation and twist-bone setup, which belong to the character's rig.</td>
+<td>Same. Deformation belongs to the rig's skinning, whatever produces the bone rotations.</td>
+</tr>
+
+<tr>
+<td>Torso twist across rigs<a class="tip" href="#d-torso-twist-rigs" aria-label="Details: Torso twist across rigs">i</a></td>
+<td>A recorded inconsistency: a character without an upper chest bone twists less than one with it. The deviation has never been measured, because no character in the test set lacks that bone.</td>
+<td class="unset">Not established here.</td>
+</tr>
+
+<tr>
+<td>Target passing behind<a class="tip" href="#d-target-behind" aria-label="Details: Target passing behind">i</a></td>
+<td>A recorded defect: the upper body snaps to the other side when a look-at target crosses directly behind the character. A likely cause is identified, not investigated in code and not fixed.</td>
+<td>A look-at is Unity's own humanoid look-at IK or an added constraint, and behaviour at that wrap point is a property of whichever is used. Not evaluated here.</td>
+</tr>
+
+<tr class="matrix-group"><th colspan="3" scope="colgroup">Open questions, not settled either way <span class="matrix-count">(7)</span></th></tr>
+
+<tr class="unverified-row">
+<td>Whether it looks right<a class="tip" href="#d-visual-confirmation" aria-label="Details: Whether it looks right">i</a></td>
+<td class="unset">Not established. The features are verified numerically and recorded as not visually confirmed, and no test fixture runs a complete pose against a real skinned character. <span class="unverified-mark">not fully verified</span></td>
+<td>A clip is a recorded performance and can be watched before it ships. Whether it still looks right after retargeting onto another character is the separate question in the body-proportions row.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Reported jitter<a class="tip" href="#d-reported-jitter" aria-label="Details: Reported jitter">i</a></td>
+<td class="unset">Open, not reproduced and not measured. One setting decides it and has not been switched. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not established here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Slope on a clamped rig<a class="tip" href="#d-slope-clamped-rig" aria-label="Details: Slope on a clamped rig">i</a></td>
+<td class="unset">Not established. Slope adaptation has never been tested on the one test character whose leg reach is already clamped, which is the character flagged for it. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not established here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Whether a stop reads right<a class="tip" href="#d-stop-on-short-legs" aria-label="Details: Whether a stop reads right">i</a></td>
+<td class="unset">Not established. The numbers are inside their bounds; nobody has judged how the stop appears on the short-legged test character named for it. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not established here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Cost compared to Animator<a class="tip" href="#d-cost-compared" aria-label="Details: Cost compared to Animator">i</a></td>
+<td>22 microseconds per character, measured. No comparison is claimed. The mark on this row is the could-not-settle kind: the measurement stands, and the comparison against the Animator pipeline was never made. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not measured. No head-to-head number exists.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Foot through the run blend<a class="tip" href="#d-run-blend-foot" aria-label="Details: Foot through the run blend">i</a></td>
+<td class="unset">Not established. The drift measurements vary speed; they do not vary the two settings the walk-to-run blend interpolates. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not established here.</td>
+</tr>
+
+<tr class="unverified-row">
+<td>Foot slide on a slope<a class="tip" href="#d-slope-slide" aria-label="Details: Foot slide on a slope">i</a></td>
+<td class="unset">Not established as a number. A residual slide on slopes is documented and unquantified: the horizontal sweep is shorter than the surface distance travelled. <span class="unverified-mark">not fully verified</span></td>
+<td class="unset">Not established here.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div id="matrix-tip" popover="manual" tabindex="-1" aria-labelledby="matrix-tip-title">
+<button type="button" id="matrix-tip-close" aria-label="Close">&times;</button>
+<h2 id="matrix-tip-title"></h2>
+<div id="matrix-tip-body"></div>
+</div>
+
+<h2 id="detail-for-every-row">Detail for every row</h2>
+
+<p>The same text the <strong>i</strong> buttons show, in table order.</p>
+
+<dl class="matrix-legend">
+
+<dt id="d-blend-two-speeds">Blending two speeds</dt>
+<dd>
+<p>The complaint is that a speed value between two clips in a blend tree produces motion matching neither of them.</p>
+<p>Animate Yourself contains no AnimationClip reference anywhere, tests included, and no Animator Controller, blend tree or cross-fade call. Steps per second is computed as move speed divided by step length in metres, so an intermediate speed is not a lookup between two recorded performances — it is a gait generated for that speed. The one blend that does exist, walk to run, interpolates three numbers — duty factor, step length and torso lean — rather than two recordings, and its weight functions are covered by unit tests.</p>
+</dd>
+
+<dt id="d-missing-clip-t-pose">T-pose from a missing clip</dt>
+<dd>
+<p>This was the most frequently repeated complaint in the source material, appearing in 13 of 20 texts. Its three named causes are a missing clip file, a state machine that finds no transition to take, and an Any State transition that fires when it was not expected.</p>
+<p>None of the three exists in Animate Yourself: there are no clips, no Animator Controller, and no layers or transitions. The pose is recomputed from the current settings every LateUpdate.</p>
+<p>One honest qualification. The internal rest-pose reference does fall back to Unity's own humanoid T-pose when a character has no skinned mesh to read a bind pose from, and it logs a warning when even that fails. That is a calibration reference the gait is generated on top of, not an output pose — but a screenshot of a wrongly set-up character could be mistaken for the original complaint.</p>
+</dd>
+
+<dt id="d-root-motion">Root motion vs in place</dt>
+<dd>
+<p>The complaint is the mismatch between animation that moves the character and a controller that also moves it.</p>
+<p>Animate Yourself has no root motion in either direction. Its hierarchy contract forbids the animation layer writing the character root, and the code follows it: in the shipping driver the only transform writes are the hips' local position and rotation, the feet's rotation, and the two limb rotations the IK solver produces. There is no in-place-versus-root-motion choice to get wrong, because there is only one mode.</p>
+</dd>
+
+<dt id="d-clip-library">Building a clip library</dt>
+<dd>
+<p>The complaint is the cost of acquiring and maintaining a clip library — one clip per motion, per character type, captured or authored and then kept in sync.</p>
+<p>In Animate Yourself a gait is a settings value that saves as a small JSON file, which can be shared and version-controlled. Seven presets ship: Neutral, Cartoon, Horror, Limp, Run, Robot and Blank. Nothing is recorded, imported or retargeted.</p>
+</dd>
+
+<dt id="d-responsiveness">Responsiveness cost</dt>
+<dd>
+<p>The complaint is that adding real foot planting makes movement feel heavier and less responsive than it was before.</p>
+<p>In Animate Yourself the capsule collider is authoritative for where the body goes and the feet are visual only — a scope decision settled 2026-08-02 and recorded with its reasoning. Nothing in the layer can delay, damp or veto a movement input, because the layer writes bone transforms and nothing else. Input latency is exactly what it was before the component was added.</p>
+<p>The cost of that decision has its own row: a foot that misses a ledge edge floats rather than causing the character to trip or fall.</p>
+</dd>
+
+<dt id="d-stop-wobble">Wobble at a stop</dt>
+<dd>
+<p>The complaint is a torso that oscillates and then snaps still when the character stops, which is overshoot in a blend.</p>
+<p>Animate Yourself stops by parking each leg where it stands, once there is nothing left to step for and that foot is down. The reason it is not a cross-fade is written into the code: standing has both feet planted at once, and no walking or running gait has both feet planted for a whole cycle, so there is no instant of the walk that the standing pose is a blend towards.</p>
+<p>The upper body — pelvis, torso, head, arms, breathing — does still cross-fade, over the idle blend duration.</p>
+</dd>
+
+<dt id="d-bind-pose">T-pose vs A-pose rigs</dt>
+<dd>
+<p>The complaint is a motion authored on a T-posed body applied to an A-posed one, or the reverse.</p>
+<p>Animate Yourself transfers nothing, so there is no pair of poses to mismatch. The bind pose is read once from the skinned mesh's own bind poses — asset data, not live scene state — and handed to every driver. Arm rest posture is measured rather than assumed: the system records each character's own bind-pose arm direction and the minimal rotation that brings it to hanging, and applies that innermost, before any authored angle. A character that ships in an A-pose and one that ships in a T-pose both reach the same hanging rest.</p>
+</dd>
+
+<dt id="d-environment-collision">Clipping through doors</dt>
+<dd>
+<p>The complaint is a character intersecting doorframes, crates and other characters.</p>
+<p>This row is listed so the comparison is complete, not as a claim for either column. Animate Yourself neither causes nor fixes it: environment collision belongs to the character controller in both pipelines.</p>
+</dd>
+
+<dt id="d-foot-sliding">Foot sliding</dt>
+<dd>
+<p>This was the most frequent technical complaint in the source material, in 16 of 20 texts.</p>
+<p>Steps per second is computed from move speed and step length rather than authored, and move speed itself is measured from the character's own position change each frame rather than typed in — on by default. The stance sweep is a rate rather than a pair of endpoints, which is what makes it correct at a changing speed and not only a constant one.</p>
+<p>Four independent measurements. A five-character run with one identical preset measured foot slide at 0.0000 to 0.0090 leg lengths against a 0.02 threshold. A committed test bounds worst planted-foot travel through a stop and a restart at under 0.1 stance reach, which is 29 mm, over 120 stop phases. The same test measures the shipping mechanism against the one it replaced, whose own record is a 566.9 mm to 18.0 mm improvement in the median. A probe written for this investigation drove the real sweep code through constant walk, constant run, gradual and hard acceleration, gradual and hard braking, and a 1 Hz oscillating speed, and measured 0.00 to 0.01 mm of planted-foot world travel in every case.</p>
+<p>That probe detects sliding when sliding exists: with speed-derived cadence switched off it measures 363 mm at a steady walk and 1728 mm through an acceleration ramp.</p>
+<p>What this does not cover. Flat ground only — a residual slide on slopes is documented and has never been given a number. The walk-to-run blend's own planted-foot geometry is untested. And speed-derived cadence is a setting that can be switched off, which reintroduces the problem at the two numbers above.</p>
+</dd>
+
+<dt id="d-typed-move-speed">Hand-typed move speed</dt>
+<dd>
+<p>The complaint is that the speed number driving the animation and the speed the character actually travels at are two separate values, kept in agreement by hand and broken by any later edit to either one.</p>
+<p>Animate Yourself measures the character's transform displacement over the frame's delta time, on by default, so a character moved by a Character Controller, a Rigidbody or anything else feeds the animation with no extra code. Changing the controller's move speed cannot desynchronise the gait, because the gait reads the result rather than a parallel number.</p>
+</dd>
+
+<dt id="d-moonwalk">Moonwalking at low speed</dt>
+<dd>
+<p>The complaint is feet that move backward relative to the ground at low speeds.</p>
+<p>Moving backward relative to the ground is cadence disagreeing with speed, which the derivation in the foot-sliding row prevents: at zero speed, steps per second is zero and there is no cycle to run. Below the idle threshold the legs additionally stop cycling and park. The idle decision carries a plus-or-minus 25 % hysteresis band so that noise on the speed measurement cannot make it alternate. Covered by unit tests for idle and for starting and stopping.</p>
+</dd>
+
+<dt id="d-knee-backward">Knee bending backward</dt>
+<dd>
+<p>The complaint is a knee that solves to the anatomically wrong side.</p>
+<p>Three guards. First, the sign is removed from the problem: the IK solver places the middle joint on the pole side by construction rather than rotating by a signed angle about a derived axis. Its own comment records why — an axis taken from a cross product has a sign that depends on the handedness of that product, and getting it wrong bends the knee backward.</p>
+<p>Second, the bend angle comes from an arc cosine, whose range is 0 to 180 degrees, so the joint cannot pass straight.</p>
+<p>Third, the case where the pole direction becomes collinear with the aim direction — which would reach a fallback that does not know which leg it is solving and would bend both knees the same way — is prevented rather than caught: a floor holds the pole-to-aim angle at 30 degrees or more, smoothed so that it does nothing at all for every shipped preset. Covered by unit tests.</p>
+</dd>
+
+<dt id="d-ik-pop">IK pop at full reach</dt>
+<dd>
+<p>The complaint is a one-frame snap at the ankle when the feet are pinned to the ground with IK.</p>
+<p>The hard clamp at full leg reach was replaced with a curve that approaches full reach without ever arriving at it. The measurement is recorded in the code: the hard clamp's sensitivity steps from 5.74 degrees per 1 % of leg length to exactly zero at full reach, and that step in the derivative, not the peak sensitivity, is what is visible as a pop. Softening starts at 90 % of full reach by default and is exposed as a setting.</p>
+<p>Two further sources are closed. A swing-phase ground correction fades in as its prediction converges, instead of applying at full strength on the first frame of the swing. Every height correction is exponentially smoothed.</p>
+<p>A residual case remains, in the stairs-and-step-edges row.</p>
+</dd>
+
+<dt id="d-proportions">Other body proportions</dt>
+<dd>
+<p>The complaint is motion authored for one body applied to a much taller, wider or shorter one.</p>
+<p>Animate Yourself measures leg chain length, hip width, hip joint height, arm chain length and shoulder joint height on each character, and every amplitude in the settings is a fraction of one of those — step length as a fraction of leg length, stance width as a fraction of hip width.</p>
+<p>Measured: one identical preset on five characters spanning 1.28 m to 1.87 m produced a step-length spread of 0.9 % coefficient of variation and 2.4 % range, against a 10 % portability threshold; swing clearance was identical to four decimal places on all five; hip yaw was 14.26, 14.26, 14.26, 14.26 and 14.27 degrees.</p>
+<p>One qualification on that portability, in the torso-twist-across-rigs row.</p>
+</dd>
+
+<dt id="d-bone-axes">Bone axes and naming</dt>
+<dd>
+<p>The complaint is a rig whose bone axes, rotation order or bone names differ from what the motion assumed, producing reversed or wrong-axis movement.</p>
+<p>Animate Yourself derives each hinge axis from the limb's own geometry and fixes its sign empirically — it rotates the joint and observes which way the end of the limb actually moved. Authored rotations are expressed in the character's own frame and converted into whatever arbitrary local axes the bone happens to have. Bone identity comes from Unity's HumanBodyBones enumeration through the Humanoid Avatar, so there is no name string to misspell and no clip reference to keep in sync.</p>
+</dd>
+
+<dt id="d-floating-feet">Feet floating above ground</dt>
+<dd>
+<p>The complaint is soles that hover above the floor, or sink below it.</p>
+<p>Two mechanisms. Ankle height is measured on the character and subtracted from the ground reference, so a character whose foot bone sits at a different height than the source does not float. Ground conformance raycasts at the position the foot is predicted to land at and raises or lowers the IK target to meet it.</p>
+<p>The five-character measurement run recorded ground penetration of zero on all five.</p>
+</dd>
+
+<dt id="d-turn-on-spot">Turning on the spot</dt>
+<dd>
+<p>The complaint is a character that rotates as one rigid piece instead of stepping around.</p>
+<p>Animate Yourself treats a turn as something a step can serve even at zero speed, and floors the gait clock while a turn continues, so the cycle cannot freeze part-way through a stride and rotate as a static pose. The stance sweep tracks actual body travel at both ends of a step, so a stationary turn produces zero forward or backward foot travel — a step in place rather than a foot sliding backward at every pivot.</p>
+<p>Covered by unit tests, including a steady-state pivot and a turn beginning part-way through a stop. A residual case is in the head-and-spine-in-a-turn row.</p>
+</dd>
+
+<dt id="d-crowd-cost">Cost per character</dt>
+<dd>
+<p>The complaint is the cost of animating a crowd.</p>
+<p>The 2026-07-31 measurement recorded Animate Yourself at 22 microseconds per character across 150 characters, which is inside a budget set for 50 characters, at three times that count. Rendering was not a factor in that run: disabling every renderer moved the frame time from 36 ms to 35 ms.</p>
+<p>This is a measurement of Animate Yourself only. No head-to-head comparison against the Animator pipeline exists, and this row must not be read as one.</p>
+</dd>
+
+<dt id="d-idle-alive">Idle that looks alive</dt>
+<dd>
+<p>The complaint is that a character held perfectly still appears to be a stopped application, so idle motion has to be authored — and then the repetition in it becomes noticeable.</p>
+<p>Animate Yourself ships breathing as a periodic motion and a weight shift whose period is modulated by a noise sample, so it does not land on a fixed interval. Exposed as breathing rate, breathing bob, breathing lean, weight shift period, weight shift period jitter and weight shift sway.</p>
+</dd>
+
+<dt id="d-directional-gaps">Directional blend gaps</dt>
+<dd>
+<p>The complaint is a directional blend space with a gap in it — a heading that falls between the authored directions.</p>
+<p>Animate Yourself has a single move-direction field in degrees, from −180 to 180, where 0 is straight ahead, 90 is sideways to the right, −90 sideways to the left and 180 is walking backward. The step sweep is decomposed by the cosine and sine of that heading, so there is no authored set of directions for a heading to fall between.</p>
+<p>Feet crossing over each other during a sideways step are handled jointly rather than per leg, bounded by a minimum lateral separation setting. Covered by unit tests.</p>
+</dd>
+
+<dt id="d-fix-cascade">The fix cascade</dt>
+<dd>
+<p>The complaint is a chain in which each fix creates the next problem: sliding feet lead to root motion, root motion desynchronises and leads to IK, the IK pops and leads to a smoothing curve, the curve removes the turn and leads to a pivot state, the pivot state deadlocks and leads to a timeout.</p>
+<p>Animate Yourself removes the state-machine half of that chain: the user-facing surface is settings, so there is no transition condition, no layer and no timeout.</p>
+<p>The honest half is that the layer has no notion of a discrete state at all, which is a recorded architectural limitation rather than an oversight. See the state-per-fix row.</p>
+</dd>
+
+<dt id="d-head-and-spine">Head and spine in a turn</dt>
+<dd>
+<p>The complaint is an upper body that decouples from the lower body during a turn and ends up facing the wrong way.</p>
+<p>In Animate Yourself the relationship is authored rather than emergent: torso twist, chest counter-twist, shoulder counter-twist, head counter-twist weight and head lag are settings, as are the head, neck and chest shares of a look-at and its yaw and pitch limits.</p>
+<p>One defect remains here, in the target-passing-behind row.</p>
+</dd>
+
+<dt id="d-loop-seam">The loop seam</dt>
+<dd>
+<p>The complaint is the visible join where a looping clip's last frame meets its first.</p>
+<p>Animate Yourself has no clip and therefore no boundary: the gait phase accumulates continuously at a fixed internal step. Per-cycle variation is exposed as noise amount, noise frequency, jitter amount, jitter frequency and a seed value, the last of which keeps a crowd of otherwise identical characters from moving in unison.</p>
+<p>What this does not solve is in the separate loop-repetition row.</p>
+</dd>
+
+<dt id="d-stairs">Stairs and step edges</dt>
+<dd>
+<p>The complaint is IK that breaks on stairs — an ankle straightening on contact, a leg folding, a character passing through the steps.</p>
+<p>What ships: a raycast at the predicted landing position with a forward lookahead during the swing; foot rotation onto the ground normal; a fade-in of the correction as the prediction converges; a hip drop that measures only the increment the ground correction itself adds, so flat ground produces no drop at all; a continuously differentiable compromise between the two legs' demands rather than taking the larger of the two; a rule that stops a foot hanging over a ledge from pulling the other leg's knee; and an adjustable smoothing time. Slope handling adds hip tilt and step shortening.</p>
+<p>What remains, all of it written down. Turning near a step edge can still snap a foot or bend a knee for one frame, because a single ray crosses a discontinuity and a large or fast enough turn outruns the smoothing. Teleporting a character without reattaching it leaves the smoothing catching up. A dedicated feature for discrete step heights is not built. And slope adaptation has never been tested on the one test character whose leg reach is already clamped.</p>
+</dd>
+
+<dt id="d-stopping">Coming to a stop</dt>
+<dd>
+<p>The complaint is a stop that slides past its mark, or freezes part-way through a stride with one foot in the air.</p>
+<p>Animate Yourself decouples the two legs' cycles so each parks and unparks on its own schedule; shortens the final step so it does not land a full stride ahead of a body that has stopped; brings the trailing foot alongside with a settling step that ships on by default; and makes a restart deterministic by choosing which leg leads, bounding the swing so it cannot outlive the partner's remaining stance, and correcting the shared cycle onto the legs rather than the legs onto the cycle.</p>
+<p>Measured: both feet airborne during a restart went from 0.417 s to 0.000 s; the longest restart swing went from 0.967 s to 0.450 s, against an ordinary swing of 0.444 s, over 120 stop phases; planted-foot travel through a stop and a restart went from 567 mm to under 29 mm.</p>
+<p>What remains: the last step of a stop lands slightly further forward than the ideal — the median resting distance between the feet went from 116.7 mm to 192.3 mm, accepted deliberately in exchange for removing a 288.7 mm single-frame jump — and the upper body still cross-fades rather than parking. None of this has been confirmed visually in the Unity Editor.</p>
+</dd>
+
+<dt id="d-new-modes">Each new movement mode</dt>
+<dd>
+<p>The complaint is that every additional movement mode is a fresh authoring project.</p>
+<p>Eleven features ship: look-at, run, walk, idle, uneven ground, strafe, slope, arm layering, leg parking with a settling step, limp, and shake and noise.</p>
+<p>Not built: jump; turning while moving with a banked lean; aim and point IK; crouch walk; walking backward as its own mode, although a move direction of 180 degrees covers the heading; falling and airborne; landing compression; ragdoll handoff; stairs; and swimming.</p>
+<p>Nothing here removes the need to build a mode. It removes the need to author, capture, import and retarget one.</p>
+</dd>
+
+<dt id="d-state-per-fix">A state per fix</dt>
+<dd>
+<p>The complaint is a state machine that grows a state for every fix, until the states interact in ways nobody planned.</p>
+<p>Animate Yourself has no user-facing state machine, so there is nothing to deadlock and no timeout to fire part-way through a blend.</p>
+<p>The recorded architectural limitation is the reverse one: the layer is a single continuous set of settings evaluated every frame, with no notion of a discrete state, and whether to adopt a state model at all is an open project question. There is an internal leg-cycle state machine — parking, unparking, settling, in sync — which is not exposed, and which the project tracks as a candidate for extraction.</p>
+</dd>
+
+<dt id="d-loop-repetition">Loop repetition</dt>
+<dd>
+<p>This is separate from the loop-seam row: the complaint here is not the join, it is that the walk never varies from one cycle to the next.</p>
+<p>Animate Yourself has no seam, and has per-cycle noise. The project's own recorded decision is that noise is not the answer to repetition: noise varies every cycle and cannot produce a deviation a designer chose, which is what stops a repeating cycle from being noticed as one. The feature that would — override sequences — is catalogued and not built.</p>
+<p>The decision is written as a prohibition: do not treat repetition as solved.</p>
+</dd>
+
+<dt id="d-capsule-vs-body">Capsule vs body</dt>
+<dd>
+<p>The complaint is a collision capsule that moves through the world while the visible legs produce a different motion.</p>
+<p>The speed half is closed: the animation is derived from the capsule's own measured displacement, so the two cannot disagree about how fast the character is travelling.</p>
+<p>The remaining half is deliberate and recorded. The capsule is authoritative for where the body goes, and the feet are visual only. A foot that misses a ledge edge floats; it does not cause the character to trip, become unbalanced or fall.</p>
+</dd>
+
+<dt id="d-arm-self-clipping">Arms clipping the body</dt>
+<dd>
+<p>The complaint is a limb passing through the character's own body.</p>
+<p>In Animate Yourself this is a recorded known issue for arms: the reach-up, reach-across and reach-behind limits are one shared window applied to the shoulder's reach direction, not to each arm segment, and they constrain direction rather than distance. So a hand target near the chest can still let the forearm pass through the torso.</p>
+<p>A real fix is specified for a later version — collision against a capsule approximation of the torso, with the solver pushing the elbow out of it — and is explicitly not a clamp on a target point, which is what was tried and which constrains the wrong body part.</p>
+<p>Legs are separated by a minimum lateral separation rule. Leg intersection during a hard turn is recorded as rare, brief and accepted.</p>
+<p>Do not read this row as a claim that self-clipping is solved.</p>
+</dd>
+
+<dt id="d-frame-order">Frame-order latency</dt>
+<dd>
+<p>The complaint is a one-frame delay between an event and the animation responding to it.</p>
+<p>Animate Yourself has an open, undiagnosed instance. The driver that writes bones carries an explicit late execution order; the component that measures speed does not. So whether it samples the character's position change before or after the controller has moved that frame is unspecified, which modulates the measured speed by the ratio of consecutive frame durations.</p>
+<p>A one-setting test that would decide it — switching off speed measurement from displacement — is written down and has not been run. Tracked in the project backlog.</p>
+</dd>
+
+<dt id="d-non-humanoid">Non-humanoid rigs</dt>
+<dd>
+<p>The complaint is a character that is not a two-armed, two-legged human: a quadruped, a spider, a character with a tail.</p>
+<p>Animate Yourself requires a Humanoid Avatar with hips, head and both complete leg and arm chains, and reports the character as unmeasurable without them. Multi-legged gaits and secondary appendage motion such as a tail or a ponytail are both catalogued and not built.</p>
+<p>This is a hard scope boundary, not a gap a setting can close.</p>
+</dd>
+
+<dt id="d-fingers">Finger mapping</dt>
+<dd>
+<p>The complaint is finger chains that map badly between rigs.</p>
+<p>Animate Yourself writes no finger bone at all, so a character whose finger mapping is broken still has a broken finger mapping. Hand and finger IK is catalogued and not built.</p>
+</dd>
+
+<dt id="d-wrist-twist">Wrist twist and skinning</dt>
+<dd>
+<p>The complaint covers forearm twist collapsing the mesh, twist bones, and weight painting. It was the most frequent complaint in the rig-retargeting part of the source material.</p>
+<p>These are skinning and deformation problems, not motion generation problems. Animate Yourself writes bone rotations and inherits whatever deformation the character's rig produces from them: a rotation this system produces will show an existing wrist twist problem exactly as any other rotation would. Twist bone distribution is catalogued and not built.</p>
+<p>Do not read this row as a claim for either column.</p>
+</dd>
+
+<dt id="d-torso-twist-rigs">Torso twist across rigs</dt>
+<dd>
+<p>This was not one of the original complaints. It was found while checking the body-proportions row, and it is listed because it qualifies that row.</p>
+<p>The known issue reads: a character without an UpperChest bone twists less than one with it. Portability across characters is the property the whole normalisation design exists to protect, so this is a real inconsistency rather than a cosmetic one. It is left as it is for now, and the deviation has never been measured, because no character in the current test set lacks that bone.</p>
+<p>No comparable measurement was made for the Animator pipeline, so that column states nothing.</p>
+</dd>
+
+<dt id="d-target-behind">Target passing behind</dt>
+<dd>
+<p>The source material's image of a head turning backward has a real counterpart here.</p>
+<p>The known issue reads: the upper body snaps to the other side when the look-at target crosses directly behind the character. A likely cause is identified — the yaw computation wraps at ±180 degrees, and the angular limit is applied to that already-discontinuous raw value before the tracking step sees it — but it has not been investigated in code, is not fixed, and needs a Play-mode reproduction. Tracked in the project backlog.</p>
+</dd>
+
+<dt id="d-visual-confirmation">Whether it looks right</dt>
+<dd>
+<p>This is the largest open question, and it applies to most of the rows above it.</p>
+<p>The project records look-at, run, slope adaptation, arm layering, starting and stopping, the settling step and the restart work as not visually confirmed. It has no test fixture that binds a real character, so a complete pose evaluation, the arm IK application and a parked leg's settle ramp have never run against a real skinned character.</p>
+<p>A verdict of "handled with no setup" on this page therefore means the mechanism exists, is reachable, and produces the right numbers. It does not mean somebody has watched it and it looks right.</p>
+<p>The Animator column states the one thing that is structurally different rather than better: a clip is a recorded performance, so its appearance is fixed and can be watched before it ships. Whether it still looks right after retargeting onto another character is a separate question, and it is the body-proportions row.</p>
+</dd>
+
+<dt id="d-reported-jitter">Reported jitter</dt>
+<dd>
+<p>A report of leg motion appearing to update below the frame rate is recorded as an open, undiagnosed issue.</p>
+<p>The fixed-step internal loop is excluded by construction, because the phase handed to the evaluation is accumulated real time multiplied by the rate, at any frame rate. The remaining candidate is the unsmoothed, execution-order-dependent speed measurement in the frame-order-latency row.</p>
+<p>The one-setting test that decides it — switching off speed measurement from displacement — is written down and has not been run. Nothing has been reproduced or measured, so no verdict is given for either column.</p>
+</dd>
+
+<dt id="d-slope-clamped-rig">Slope on a clamped rig</dt>
+<dd>
+<p>The project's own roadmap flagged one specific test character — the only one in the five-character measurement run whose leg reach is clamped — as the character to test slope adaptation on, and the project records that as still owed.</p>
+<p>The slope part of the stairs-and-step-edges row is therefore unconfirmed on the character most likely to break it.</p>
+</dd>
+
+<dt id="d-stop-on-short-legs">Whether a stop reads right</dt>
+<dd>
+<p>The known issue for stopping names one specific test character — 1.28 m, short legs — as the one to judge the resting distance between the feet on. That has never been done.</p>
+<p>This is the difference between the numbers being inside their bounds and the stop appearing as a stop.</p>
+</dd>
+
+<dt id="d-cost-compared">Cost compared to Animator</dt>
+<dd>
+<p>The per-character cost of Animate Yourself was measured at 22 microseconds. The Animator pipeline's own per-character cost was not isolated in the same run.</p>
+<p>The project's own competitive analysis states this explicitly and declines to claim a performance advantage. This row exists to record that the comparison has not been made — not to imply either direction.</p>
+</dd>
+
+<dt id="d-run-blend-foot">Foot through the run blend</dt>
+<dd>
+<p>The foot-sliding measurements vary speed, which is what drives cadence. They do not vary the two settings the walk-to-run blend interpolates — duty factor and step length — and stance reach, the unit the whole sweep is expressed in, is the product of those two.</p>
+<p>The shipped tests for the run blend cover its weight functions, not planted-foot geometry through the blend. Untested and unmeasured.</p>
+</dd>
+
+<dt id="d-slope-slide">Foot slide on a slope</dt>
+<dd>
+<p>The project's own roadmap records a known residual: on a slope, the horizontal step sweep is shorter than the distance actually travelled along the surface, so a small slide remains.</p>
+<p>"Small" is not a number, and no measurement exists. The foot-sliding row's figures are flat-ground figures and do not cover this case.</p>
+</dd>
+
+</dl>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/AnyMotion-Docs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">AnyMotion Docs</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">AnyMotion Docs</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the AnyMotion procedural humanoid animation tools.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

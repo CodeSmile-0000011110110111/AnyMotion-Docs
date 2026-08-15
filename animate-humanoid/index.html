@@ -18,7 +18,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the AnyMotion procedural humanoid animation tools.","headline":"AnimateHumanoid Guide","url":"https://codesmile-0000011110110111.github.io/AnyMotion-Docs/animate-humanoid/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/AnyMotion-Docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/feed.xml" title="AnyMotion Docs" /></head>
+<link rel="stylesheet" href="/AnyMotion-Docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/feed.xml" title="AnyMotion Docs" /><!--
+    Override of minima 2.5's stock head.html (verified byte-identical against 2.5.2's copy in the
+    gem). Identical to it apart from the include below,
+    which minima has no hook for: a page that needs its own stylesheet or script has nowhere to
+    declare one, and putting a <link> or <script> in the page body instead is not valid HTML.
+    See _includes/custom-head.html for how a page opts in. Same reasoning as the header.html
+    override alongside this file; re-sync both against the gem after a minima upgrade.
+  --></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/AnyMotion-Docs/">AnyMotion Docs</a>
@@ -33,7 +40,7 @@
         </span>
       </label>
 
-      <div class="trigger"><a class="page-link" href="/AnyMotion-Docs/animate-humanoid/">AnimateHumanoid Guide</a><!--
+      <div class="trigger"><a class="page-link" href="/AnyMotion-Docs/animate-humanoid/">AnimateHumanoid Guide</a><a class="page-link" href="/AnyMotion-Docs/animate-yourself-vs-animator/">Animate Yourself vs Animator</a><!--
           Override of minima's stock header.html (which only resolves header_pages against
           site.pages) so the nav can link straight to the generated DocFX API reference. /api/
           is published onto this same gh-pages branch by a separate workflow (docfx.yml, see

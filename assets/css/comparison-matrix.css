@@ -1,0 +1,309 @@
+/*
+ * Styling for the comparison matrix page (animate-yourself-vs-animator.md).
+ *
+ * Loaded through the page's own `extra_css` front matter, via _includes/custom-head.html.
+ * Colours follow minima's defaults (#111 text, #828282 grey, #2a7ae2 link) so the page does not
+ * look like it came from a different site.
+ */
+
+/* ---------------------------------------------------------------- table --- */
+
+/* The table is wider than a phone screen by design: the first column must stay on one line
+   (see .matrix td:first-child below), which is a hard layout requirement for this page. The
+   wrapper is what scrolls, so the page body itself never scrolls sideways. */
+.matrix-scroll {
+	overflow-x: auto;
+	margin: 1.5rem 0;
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+}
+
+/* Three columns of prose do not fit minima's 800px content column: at that width each comparison
+   column gets roughly 30 characters per line. Above 62rem the table alone is allowed wider than the
+   surrounding text, centred on the same axis. The negative margin the calc() produces is bounded by
+   the viewport width, so the page body still never scrolls sideways - which the rendered page is
+   checked for, not only reasoned about. */
+@media screen and (min-width: 62rem) {
+	.matrix-scroll {
+		width: min(94vw, 76rem);
+		margin-left: calc((100% - min(94vw, 76rem)) / 2);
+	}
+}
+
+.matrix {
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 46rem;
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.45;
+	border: 0;
+}
+
+.matrix th,
+.matrix td {
+	padding: 0.55rem 0.75rem;
+	text-align: left;
+	vertical-align: top;
+	border: 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.matrix thead th {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: #f5f5f5;
+	border-bottom: 2px solid #d0d0d0;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+/* Column 1 is one line, always. The label text itself is short enough for this to hold at any
+   viewport width; the wrapper above absorbs the overflow instead of the text wrapping. */
+.matrix td:first-child {
+	white-space: nowrap;
+	font-weight: 600;
+	width: 1%;
+}
+
+.matrix col.col-woe { width: 15rem; }
+.matrix col.col-ay  { width: 42.5%; }
+.matrix col.col-an  { width: 42.5%; }
+
+.matrix tbody tr:hover td {
+	background: #fafafa;
+}
+
+/* Verdict-group separator rows. Six of them, in the order the source investigation grouped its
+   findings: strongest evidence first, open questions last. */
+.matrix tr.matrix-group th {
+	background: #efefef;
+	border-top: 2px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	white-space: normal;
+}
+
+.matrix tr.matrix-group .matrix-count {
+	font-weight: 400;
+	color: #666;
+}
+
+/* Cells where no verdict was established. Neutral grey, deliberately not styled as a negative
+   result for either column. */
+.matrix .unset {
+	color: #6a6a6a;
+}
+
+/* ------------------------------------------------------ verification mark --- */
+
+/* The statement of how far the Animate Yourself column has been verified, directly under the page's
+   opening paragraph. Neutral, not an alert: it states what evidence exists, not that anything is
+   wrong. */
+.matrix-disclaimer {
+	margin: 1.5rem 0;
+	padding: 0.9rem 1.1rem;
+	border: 1px solid #d8d2bf;
+	border-left: 4px solid #b8ad8a;
+	border-radius: 4px;
+	background: #fbf9f2;
+	font-size: 0.92rem;
+	line-height: 1.55;
+}
+
+.matrix-disclaimer p {
+	margin: 0 0 0.6rem;
+}
+
+.matrix-disclaimer p:last-child {
+	margin-bottom: 0;
+}
+
+/* The mark itself is the words "not fully verified", so it survives the table being copied into a
+   context that carries no styling. The chip and the row tint only make it easier to find. */
+.unverified-mark {
+	display: inline-block;
+	margin-left: 0.3rem;
+	padding: 0.02rem 0.4rem;
+	border: 1px solid #c6bfa8;
+	border-radius: 0.75rem;
+	background: #f3efe2;
+	color: #57503c;
+	font-size: 0.72rem;
+	font-weight: 600;
+	line-height: 1.5;
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+/* The row tint and the edge marker are declared after the hover rule above so that both stay
+   visible while the row is hovered. The edge marker is an inset shadow rather than a border,
+   because a border would widen the first column, which has to stay on one line at any width. */
+.matrix tbody tr.unverified-row td {
+	background: #fbf9f2;
+}
+
+.matrix tbody tr.unverified-row:hover td {
+	background: #f6f2e4;
+}
+
+.matrix tbody tr.unverified-row td:first-child {
+	box-shadow: inset 3px 0 0 #b8ad8a;
+}
+
+/* ----------------------------------------------------------- info bubble --- */
+
+/* Without JavaScript, or in a browser without the Popover API, this stays an ordinary link that
+   jumps to the same text in the legend below the table. The legend is the single source of the
+   text; the bubble is filled from it at click time, so the two cannot drift apart. */
+.tip {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.15rem;
+	height: 1.15rem;
+	margin-left: 0.3rem;
+	border: 1px solid #b9b9b9;
+	border-radius: 50%;
+	background: #fff;
+	color: #555;
+	font-size: 0.72rem;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 0;
+}
+
+/* Two rules rather than one selector list: a selector list is dropped whole when any one of its
+   selectors will not parse, so an engine without `:focus-visible` would lose the hover styling too. */
+.tip:hover {
+	border-color: #2a7ae2;
+	background: #2a7ae2;
+	color: #fff;
+	text-decoration: none;
+}
+
+.tip:focus-visible {
+	border-color: #2a7ae2;
+	background: #2a7ae2;
+	color: #fff;
+	text-decoration: none;
+}
+
+.tip[aria-expanded="true"] {
+	border-color: #2a7ae2;
+	background: #2a7ae2;
+	color: #fff;
+}
+
+/* Hidden is the base state, and the rule that reveals it is the one carrying `:popover-open`. An
+   engine that does not know that pseudo-class drops the rule it appears in, so this order is what
+   keeps the bubble hidden in the no-Popover-API fallback; the reverse order (`display: flex` here,
+   `:not(:popover-open)` hiding it) left the bubble and its Close button rendered there.
+
+   A column, so the heading and the close button stay put and only the text scrolls. The longest
+   entry is around 700px tall at this width; capping the whole bubble is what lets the positioning
+   code always find somewhere in the viewport to put it. */
+#matrix-tip {
+	position: fixed;
+	display: none;
+	flex-direction: column;
+	box-sizing: border-box;
+	max-width: 26rem;
+	max-height: min(70vh, 34rem);
+	overflow: hidden;
+	width: max-content;
+	margin: 0;
+	padding: 0.85rem 1rem 0.95rem;
+	border: 1px solid #c8c8c8;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+	font-size: 0.85rem;
+	line-height: 1.5;
+	color: #111;
+}
+
+#matrix-tip:popover-open {
+	display: flex;
+}
+
+#matrix-tip h2 {
+	flex: 0 0 auto;
+	margin: 0 2rem 0.4rem 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+#matrix-tip-body {
+	flex: 1 1 auto;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+}
+
+#matrix-tip p {
+	margin: 0 0 0.5rem;
+}
+
+#matrix-tip p:last-child {
+	margin-bottom: 0;
+}
+
+#matrix-tip-close {
+	position: absolute;
+	top: 0.35rem;
+	right: 0.4rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 0;
+	border-radius: 4px;
+	background: transparent;
+	color: #666;
+	font-size: 1.1rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+#matrix-tip-close:hover {
+	background: #f0f0f0;
+	color: #111;
+}
+
+/* ---------------------------------------------------------------- legend --- */
+
+.matrix-legend dt {
+	margin-top: 1.1rem;
+	font-weight: 600;
+}
+
+.matrix-legend dd {
+	margin: 0.25rem 0 0;
+	padding-left: 0;
+}
+
+.matrix-legend dd p {
+	margin: 0 0 0.5rem;
+}
+
+.matrix-legend dd p:last-child {
+	margin-bottom: 0;
+}
+
+/* The row the reader arrived at from an info bubble, when JavaScript is unavailable. */
+.matrix-legend dt:target {
+	background: #fff6d6;
+	box-shadow: -0.4rem 0 0 #fff6d6, 0.4rem 0 0 #fff6d6;
+}
+
+@media screen and (max-width: 40rem) {
+	#matrix-tip {
+		max-width: calc(100vw - 2rem);
+	}
+}
