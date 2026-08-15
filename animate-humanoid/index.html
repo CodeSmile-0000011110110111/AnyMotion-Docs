@@ -189,7 +189,8 @@ standing character looking alive instead of frozen.</p>
 
 <h3 id="steps-and-ground">Steps and Ground</h3>
 
-<p>Where each foot lands, and how the character reacts to ground that isn’t flat.</p>
+<p>Where each foot lands, how the character reacts to ground that isn’t flat, and what any limb does as
+it runs out of reach.</p>
 
 <p>The <strong>footstep</strong> settings shape a single step: how far it reaches, how high it lifts, how far apart
 the feet are placed, and the angle the foot lands and leaves at.</p>
@@ -202,22 +203,50 @@ to uneven terrain. The probe fields tell it where to physically look for that te
 <p>Further down, <strong>slope</strong> settings control how far the hips tilt to lean into a slope, and how much a
 step shortens — rather than lowering the hips — when the ground is steep.</p>
 
-<p><strong>Knee</strong> settings cover more than the bend angle. The two knee-bend angles take effect only if the
-project is using an older internal driver mode; with the default mode, the knee angle follows
-automatically from where the foot is placed — raising Step Height under Footstep is the normal way
-to change how high the leg lifts. <strong>Pole Outward</strong> decides which way the knees point.</p>
+<p><strong>Knee</strong> settings are the bend angles and the direction the knees point. The two knee-bend angles
+take effect only if the project is using an older internal driver mode; with the default mode, the
+knee angle follows automatically from where the foot is placed — raising Step Height under Footstep
+is the normal way to change how high the leg lifts. <strong>Pole Outward</strong> decides which way the knees
+point.</p>
 
-<p><strong>Soft Reach Start</strong> and <strong>Bone Stretch</strong>, at the bottom of the group, do apply with the default
-mode, and control what a limb does as it approaches full extension. <strong>Soft Reach Start</strong> is how
-close to straight a leg (or arm) gets before it starts easing off, so the joint doesn’t snap
-straight the moment a target moves out of reach; in exchange, the foot or hand stops a little short
-of a distant target. <strong>Bone Stretch</strong>, off by default, lets the two segments grow slightly inside
-that same band so the target is reached after all, and <strong>Max Bone Stretch</strong> sets how much longer a
-segment may become at full extension, as a fraction of its own length — 0.05 adds five percent to
-the thigh and five percent to the shin. Turning Bone Stretch on changes the character’s visible limb
-length, which suits stylised characters more than realistic ones. A high Soft Reach Start leaves a
-narrow band for the stretch to work in and lowers the largest stretch that is usable; if your Max
-Bone Stretch is above that, the Inspector states the smaller value that is actually in force.</p>
+<p>The <strong>limb reach</strong> settings, last in this section, are the one group here that is not leg-only. The
+same two-bone solver drives the elbows and the knees, so these settings apply to all four limbs and a
+change here is visible in the arms as well as the legs.</p>
+
+<p><strong>Soft Reach Start</strong> is how close to straight a limb gets before it starts easing off, so the joint
+doesn’t snap straight the moment a target moves out of reach; in exchange, the hand or foot stops a
+little short of a distant target.</p>
+
+<p>Soft Reach Start affects arm posture, not only the legs, and the amount is worth knowing before you
+change it. At the default 0.90 and the default arm settings, the arms sit inside the softening band
+for the whole walk cycle, so the elbow bend you see is the softened one rather than the one you
+author: an authored Elbow Bend running 18 to 26 degrees across the cycle renders as 38.6 to 39.2
+degrees, with an authored 18 degrees rendering as 38.6 degrees and an authored 26 degrees rendering
+as 39.2 degrees. The 8 degrees of authored Elbow Swing renders as 0.61 degrees, which is the
+difference between those two rendered figures. The hand settles at about 0.94 of full arm span
+instead of the 0.98 it is aimed at, roughly 20 mm on a 0.55 m arm. Because the arm stays inside
+the band on every frame, the rendered elbow bend stays within 38.6 to 39.2 degrees for the whole
+cycle, so the elbow reads as nearly rigid rather than swinging: almost none of the change is over
+time, even though the rendered angle differs from the authored one at every instant. These figures
+were measured on the arms.</p>
+
+<p>Neither direction of this setting is free. Raising Soft Reach Start brings the arms closer to the
+posture you authored, at the cost of a narrower softening band, so a knee or an elbow snaps
+straighter as a target passes out of reach — the joint pop this setting exists to remove — and it
+lowers the largest usable Max Bone Stretch. Lowering it softens the knees and elbows further and
+moves them further from the posture you authored.</p>
+
+<p><strong>Bone Stretch</strong>, off by default, lets the two segments grow slightly inside that same band so the
+target is reached after all, and <strong>Max Bone Stretch</strong> sets how much longer a segment may become at
+full extension, as a fraction of its own length — 0.05 adds five percent to the thigh and five
+percent to the shin, and the same five percent to the upper arm and the forearm. On the arms at
+those defaults, that moves the hand from 0.944 to 0.969 of full span, 13.7 mm on a 0.55 m arm, and
+bends the elbow about 5 degrees further — from 38.6 degrees with Bone Stretch off to 44.0 degrees
+with it on — because the softening then works against the longer arm. Turning Bone Stretch on
+changes the character’s visible limb length, which suits stylised characters more than realistic
+ones. A high Soft Reach Start leaves a narrow band for the stretch to work in and lowers the
+largest stretch that is usable; if your Max Bone Stretch is above that, the Inspector states the
+smaller value that is actually in force.</p>
 
 <h3 id="body-and-style">Body and Style</h3>
 
