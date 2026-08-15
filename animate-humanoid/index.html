@@ -195,10 +195,22 @@ to uneven terrain. The probe fields tell it where to physically look for that te
 <p>Further down, <strong>slope</strong> settings control how far the hips tilt to lean into a slope, and how much a
 step shortens — rather than lowering the hips — when the ground is steep.</p>
 
-<p><strong>Knee</strong> settings control knee-bend angles directly, but they only take effect if the project is
-using an older internal driver mode. With the default mode, the knee angle follows automatically
-from where the foot is placed — raising Step Height under Footstep is the normal way to change how
-high the leg lifts.</p>
+<p><strong>Knee</strong> settings cover more than the bend angle. The two knee-bend angles take effect only if the
+project is using an older internal driver mode; with the default mode, the knee angle follows
+automatically from where the foot is placed — raising Step Height under Footstep is the normal way
+to change how high the leg lifts. <strong>Pole Outward</strong> decides which way the knees point.</p>
+
+<p><strong>Soft Reach Start</strong> and <strong>Bone Stretch</strong>, at the bottom of the group, do apply with the default
+mode, and control what a limb does as it approaches full extension. <strong>Soft Reach Start</strong> is how
+close to straight a leg (or arm) gets before it starts easing off, so the joint doesn’t snap
+straight the moment a target moves out of reach; in exchange, the foot or hand stops a little short
+of a distant target. <strong>Bone Stretch</strong>, off by default, lets the two segments grow slightly inside
+that same band so the target is reached after all, and <strong>Max Bone Stretch</strong> sets how much longer a
+segment may become at full extension, as a fraction of its own length — 0.05 adds five percent to
+the thigh and five percent to the shin. Turning Bone Stretch on changes the character’s visible limb
+length, which suits stylised characters more than realistic ones. A high Soft Reach Start leaves a
+narrow band for the stretch to work in and lowers the largest stretch that is usable; if your Max
+Bone Stretch is above that, the Inspector states the smaller value that is actually in force.</p>
 
 <h3 id="body-and-style">Body and Style</h3>
 
