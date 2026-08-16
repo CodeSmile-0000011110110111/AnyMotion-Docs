@@ -2,15 +2,22 @@
  * Click-to-open detail bubbles for the comparison matrix page
  * (animate-yourself-vs-animator.md).
  *
- * Progressive enhancement, in two deliberate parts:
+ * Every Animate Yourself and Animator cell holds one symbol button rather than a full sentence.
+ * Each button carries a `data-detail` attribute naming a `<template>` element that sits right
+ * after that row in the table body - one template per row, holding an "Animate Yourself" section,
+ * an "Animator" section and (for a row that used to have a legend entry) an "Additional detail"
+ * section, so the two buttons in one row point at the same template and open the same content.
+ * The bubble's body is a clone of that template's content, read at click time rather than
+ * duplicated in a second place, so the bubble and the table cannot disagree with each other.
  *
- * 1. In the HTML, every info bubble is an ordinary link pointing at the matching entry in the
- *    legend below the table. With this script absent, JavaScript disabled, or a browser without
- *    the Popover API, clicking one jumps to that legend entry. Nothing becomes unreachable.
- *
- * 2. With this script running, the same click opens a bubble instead. The bubble's text is read
- *    out of the legend entry at click time rather than duplicated in the markup, so the bubble
- *    and the legend cannot disagree with each other.
+ * This page used to have a no-JavaScript fallback: the trigger was a link to a matching entry in
+ * a legend below the table, so clicking it without this script still reached the text. That
+ * legend is gone - its content now lives only in the templates above - so a plain <button> with
+ * this script absent, or in a browser without the Popover API, does nothing when activated. That
+ * is an accepted trade-off, not an oversight: a compact symbol has nowhere else to send a reader
+ * for the detail behind it. Using a <button> instead of the previous <a> does gain one thing back:
+ * the Space key opens it, not only Enter, because a form control responds to both by default and
+ * a plain link never responded to Space.
  *
  * Opening is click-driven, never hover-driven: a hover-only tooltip cannot be opened on a touch
  * device at all.
@@ -19,19 +26,20 @@
  * horizontal scroll container. It is declared popover="manual" rather than popover="auto", so the
  * browser's own light-dismiss behaviour does not apply and this file closes it instead: Escape, a
  * pointer press outside it, and the close button. An auto popover light-dismisses on the pointerup
- * of any press whose target is not in its ancestor chain, and a plain link cannot be in that chain
- * (only a button or an input can be a popover invoker) — so with auto, every press on a trigger
- * closed the bubble before the click event was dispatched, which turned a second press on the same
- * trigger into a reopen and a press on another trigger into a close followed by a reopen.
+ * of any press whose target is not in its ancestor chain, and only a button or an input can be in
+ * that chain as a popover invoker - so with auto, every press on a trigger closed the bubble
+ * before the click event was dispatched, which turned a second press on the same trigger into a
+ * reopen and a press on another trigger into a close followed by a reopen. Measured directly in
+ * Chrome with trusted pointer events before this file settled on manual.
  */
 (function () {
 	"use strict";
 
 	var bubble = document.getElementById("matrix-tip");
-	var links = document.querySelectorAll("a.tip");
+	var triggers = document.querySelectorAll("button.tip");
 
-	// No bubble element, no triggers, or no Popover API: leave the links as links.
-	if (!bubble || !links.length || typeof bubble.showPopover !== "function") { return; }
+	// No bubble element, no triggers, or no Popover API: the buttons stay inert.
+	if (!bubble || !triggers.length || typeof bubble.showPopover !== "function") { return; }
 
 	var title = document.getElementById("matrix-tip-title");
 	var body = document.getElementById("matrix-tip-body");
@@ -46,20 +54,24 @@
 	}
 
 	function triggerOf(node) {
-		return node && typeof node.closest === "function" ? node.closest("a.tip") : null;
+		return node && typeof node.closest === "function" ? node.closest("button.tip") : null;
 	}
 
-	/* Fill the bubble from the legend entry the link points at. The <dt> supplies the heading and
-	   the <dd> immediately after it supplies the text. */
-	function fill(link) {
-		var id = (link.getAttribute("href") || "").replace(/^#/, "");
-		var term = id ? document.getElementById(id) : null;
-		var detail = term ? term.nextElementSibling : null;
+	/* Fill the bubble from the <template> the button names, and title it with the row's own first
+	   cell - the problem label both of a row's buttons share, so the same title applies whichever
+	   one was pressed. */
+	function fill(trigger) {
+		var id = trigger.getAttribute("data-detail");
+		var template = id ? document.getElementById(id) : null;
 
-		if (!term || !detail || detail.tagName !== "DD") { return false; }
+		if (!template || template.tagName !== "TEMPLATE") { return false; }
 
-		title.textContent = term.textContent.trim();
-		body.innerHTML = detail.innerHTML;
+		var row = trigger.closest("tr");
+		var labelCell = row ? row.querySelector("td:first-child") : null;
+
+		title.textContent = labelCell ? labelCell.textContent.trim() : "";
+		body.innerHTML = "";
+		body.appendChild(template.content.cloneNode(true));
 		return true;
 	}
 
@@ -67,8 +79,8 @@
 	   clamp it into the viewport on both axes. The final clamp is not redundant: the trigger can be
 	   scrolled off the top of the screen while the bubble is open, and without it the bubble would
 	   follow the trigger out of sight. The bubble's own max-height keeps that clamp satisfiable. */
-	function position(link) {
-		var anchor = link.getBoundingClientRect();
+	function position(trigger) {
+		var anchor = trigger.getBoundingClientRect();
 		var size = bubble.getBoundingClientRect();
 		var left = anchor.left + (anchor.width / 2) - (size.width / 2);
 		var top = anchor.bottom + GAP;
@@ -92,8 +104,8 @@
 	function syncExpandedState() {
 		var open = isOpen();
 
-		for (var n = 0; n < links.length; n++) {
-			links[n].setAttribute("aria-expanded", open && links[n] === current ? "true" : "false");
+		for (var n = 0; n < triggers.length; n++) {
+			triggers[n].setAttribute("aria-expanded", open && triggers[n] === current ? "true" : "false");
 		}
 	}
 
@@ -102,17 +114,17 @@
 	   function has already moved `current` on, and the close handler would clear the state the open
 	   handler had just set.
 
-	   Focus moves into the bubble, because the click handler suppresses the link's own jump to the
-	   legend entry: without this a keyboard or screen-reader user is told the bubble is expanded and
+	   Focus moves into the bubble, because the click handler suppresses the button's own default
+	   action: without this a keyboard or screen-reader user is told the bubble is expanded and
 	   given no way to reach the text it holds. */
-	function open(link) {
-		if (!fill(link)) { return false; }
+	function open(trigger) {
+		if (!fill(trigger)) { return false; }
 
-		current = link;
+		current = trigger;
 
 		if (!isOpen()) { bubble.showPopover(); }
 
-		position(link);
+		position(trigger);
 		syncExpandedState();
 		bubble.focus({ preventScroll: true });
 		return true;
@@ -127,20 +139,15 @@
 	}
 
 	/* Both attributes are set here rather than in the markup, so a trigger only describes itself as a
-	   disclosure control while the script that makes it one is running. Without the script it stays
-	   an ordinary link to the legend entry, which is what it behaves as. */
-	for (var i = 0; i < links.length; i++) {
-		links[i].setAttribute("aria-controls", "matrix-tip");
-		links[i].setAttribute("aria-expanded", "false");
+	   disclosure control while the script that makes it one is running. */
+	for (var i = 0; i < triggers.length; i++) {
+		triggers[i].setAttribute("aria-controls", "matrix-tip");
+		triggers[i].setAttribute("aria-expanded", "false");
 
 		/* Reading the bubble's state here is only correct because nothing can close it between the
 		   press and this event: a manual popover performs no light dismiss of its own, and the
-		   outside-press rule below returns early for a press on any trigger.
-
-		   The link's own jump is suppressed only once there is a bubble to show instead. A legend
-		   entry that does not resolve — a renamed or mistyped id — therefore leaves the trigger
-		   working as the plain link it started as, rather than doing nothing at all. */
-		links[i].addEventListener("click", function (event) {
+		   outside-press rule below returns early for a press on any trigger. */
+		triggers[i].addEventListener("click", function (event) {
 			if (isOpen() && current === this) {
 				event.preventDefault();
 				hide();
@@ -173,7 +180,7 @@
 
 	/* Covers every way the bubble can close, so no trigger reports an open bubble that is not there.
 	   Focus goes back to the trigger it was opened from, but only when the close left it with
-	   nowhere to be — a close caused by pressing something else must not take focus away from it. */
+	   nowhere to be - a close caused by pressing something else must not take focus away from it. */
 	bubble.addEventListener("toggle", function (event) {
 		if (event.newState !== "closed") { return; }
 
