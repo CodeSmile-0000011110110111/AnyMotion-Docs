@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Roadmap | AnyMotion Docs</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Roadmap" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<meta name="twitter:description" property="og:description" content="Documentation for the AnyMotion procedural humanoid animation tools." />
+<link rel="canonical" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/roadmap/" />
+<meta property="og:url" content="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/roadmap/" />
+<meta property="og:site_name" content="AnyMotion Docs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Roadmap" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Documentation for the AnyMotion procedural humanoid animation tools.","headline":"Roadmap","url":"https://codesmile-0000011110110111.github.io/AnyMotion-Docs/roadmap/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/AnyMotion-Docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://codesmile-0000011110110111.github.io/AnyMotion-Docs/feed.xml" title="AnyMotion Docs" /><!--
+    Override of minima 2.5's stock head.html (verified byte-identical against 2.5.2's copy in the
+    gem). Identical to it apart from the include below,
+    which minima has no hook for: a page that needs its own stylesheet or script has nowhere to
+    declare one, and putting a <link> or <script> in the page body instead is not valid HTML.
+    See _includes/custom-head.html for how a page opts in. Same reasoning as the header.html
+    override alongside this file; re-sync both against the gem after a minima upgrade.
+  --></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/AnyMotion-Docs/">AnyMotion Docs</a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger"><a class="page-link" href="/AnyMotion-Docs/animate-humanoid/">AnimateHumanoid Guide</a><a class="page-link" href="/AnyMotion-Docs/animate-yourself-vs-animator/">Animate Yourself vs Animator</a><a class="page-link" href="/AnyMotion-Docs/roadmap/">Roadmap</a><!--
+          Override of minima's stock header.html (which only resolves header_pages against
+          site.pages) so the nav can link straight to the generated DocFX API reference. /api/
+          is published onto this same gh-pages branch by a separate workflow (docfx.yml, see
+          AGENTS.md "Documentation site"), not built by Jekyll, so it has no site.pages entry to
+          look up - hardcoded here instead of routing through the deleted /api-reference/ stub.
+        -->
+        <a class="page-link" href="/AnyMotion-Docs/api/">API Reference</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Roadmap</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="roadmap">Roadmap</h1>
+
+<p>What is planned for AnyMotion, grouped by version, plus further ideas the project has identified but
+not yet committed to a version.</p>
+
+<p>This page is a snapshot, not a live feed. The status markers below reflect the state of the project’s
+source repository as of the date this page was last updated, not the state of any single plan
+document — a feature can show as in progress here even after its design is finished, if the code
+implementing it has not merged yet.</p>
+
+<h2 id="planned">Planned</h2>
+
+<h3 id="v10">v1.0</h3>
+
+<ul>
+  <li>✅ <strong>Ground locomotion.</strong> Walking, running, strafing, look-at head tracking, foot planting on
+uneven ground, slope adaptation, and an asymmetric/limp gait.</li>
+  <li>🔄 <strong>Style blending for gait presets.</strong> Blend between named preset styles — for example a base
+walk plus a “weary” or “cartoon” trait — using adjustable per-style weights, instead of hand-tuning
+every individual setting. Includes an in-Editor authoring section with a curve preview and a
+per-style contribution display, and a runtime API to read and change style weights from code.
+<em>In progress: the underlying mechanism, the editor section and the runtime API are three separate,
+currently open changes, none merged yet.</em></li>
+  <li>🔄 <strong>Per-character crowd variation.</strong> Deterministic per-character variation applied on top of a
+style blend, so many characters sharing one style set do not all move in perfect unison.
+<em>In progress, part of the same change as style blending above.</em></li>
+  <li>🔄 <strong>Safer preset loading.</strong> A preset file with a version newer than the build supports, or an
+empty or corrupted file, is rejected instead of silently loading as all-default values.
+<em>In progress, part of the same change as style blending above.</em></li>
+</ul>
+
+<h3 id="v11">v1.1</h3>
+
+<ul>
+  <li>⬜ <strong>Timeline keying for gait parameters.</strong> Individual gait settings — for example duty factor —
+become keyable directly from Unity’s Timeline, documented as a supported way to author motion.</li>
+  <li>⬜ <strong>Named style signals.</strong> An optional layer on top of style blending that lets a shared or
+purchased style pack ship with named, described values instead of only numbered slots.</li>
+</ul>
+
+<h3 id="v12">v1.2</h3>
+
+<ul>
+  <li>⬜ <strong>Character-condition presets.</strong> Ready-made style deltas for common character conditions —
+injury, infection, mechanical damage, intoxication, age, fatigue — built entirely on the v1.0
+style-blending mechanism, so this is authoring and polish rather than new code.</li>
+  <li>⬜ <strong>Player-facing style dial.</strong> Style sets loadable at runtime, so a game can expose a style
+choice directly to the player rather than only to the character’s designer.</li>
+</ul>
+
+<h2 id="not-yet-planned">Not yet planned</h2>
+
+<p>Further ideas the project has identified, roughly ordered by priority, none committed to a version
+yet. Each item carries a confidence marker: <strong>definitely</strong> (clearly intended, just not yet scheduled
+into a version), <strong>maybe</strong> (discussed as plausible, not committed), or <strong>tbd</strong> (genuinely open, no
+clear direction yet).</p>
+
+<ul>
+  <li><strong>Jumping, falling and landing, with a ragdoll handoff for whatever the animation can’t cover.</strong>
+The next dependency-ordered step after ground locomotion; when a character walks off a ledge or
+misses a footing, releasing to physics removes the need for most of the recovery animation a
+scripted fall would otherwise require. <em>(definitely)</em></li>
+  <li><strong>Aim and point IK.</strong> Reach or point a hand, or turn the spine, toward a target — the same
+mechanism the shipped look-at feature already uses, extended to hands. <em>(definitely)</em></li>
+  <li><strong>Limb disablement and body-part damage feedback.</strong> A reportable per-limb state (working,
+degraded, disabled) a game can read and react to. <em>(definitely)</em></li>
+  <li><strong>A fuller per-body-part injury model</strong>, building on the item above: combined motion state for
+legs, arms, head and torso, plus shipped example reaction rules — a hit to the head raising a hand
+to it and slowing movement, a serious leg injury adding a temporary limp. <em>(maybe — recorded as an
+idea worth writing down, not yet scoped for a version)</em></li>
+  <li><strong>A precise footstep and landing audio event</strong>, tied to the exact moment a foot’s ground raycast
+detects contact, carrying enough information (impact strength, which foot, whether it was a full
+stride or a small corrective step) for a game to decide whether a sound should play at all.
+<em>(definitely — already scoped in detail, not yet built)</em></li>
+  <li><strong>Override sequences.</strong> Short, authored one-shot animation deltas — a wave, a stumble, a beat —
+played on top of the running gait, so a walk cycle stops repeating identically forever.
+<em>(definitely)</em></li>
+  <li><strong>Turning while moving, with a banked lean.</strong> <em>(maybe)</em></li>
+  <li><strong>Creature and non-human gait presets</strong> — zombie shuffle, prowling, lurching, and multi-legged
+creature gaits built on the same underlying system. <em>(maybe)</em></li>
+  <li><strong>Crouch walking and sneaking.</strong> Deliberately deferred so far in favor of the style-blending work
+above. <em>(maybe)</em></li>
+  <li><strong>Low and zero-gravity locomotion.</strong> <em>(maybe)</em></li>
+  <li><strong>Bone rotation limits</strong>, clamping joints to anatomically plausible ranges using data Unity’s own
+humanoid rig already provides. <em>(definitely)</em></li>
+  <li><strong>Secondary appendage motion</strong> — tails, ponytails, jaw wobble and similar simple secondary
+motion. <em>(maybe)</em></li>
+  <li><strong>Hand and finger IK</strong> — grip shapes, pointing, gestures. <em>(tbd)</em></li>
+  <li><strong>A multi-value linked Inspector control</strong>, for editing two or more related settings together by
+dragging one point in a small 2D shape, the way character-creator sliders are often edited.
+<em>(tbd)</em></li>
+  <li><strong>Surface running</strong> — running along walls and ceilings at any orientation, on any number of
+limbs. The strongest single visual showcase candidate in the project’s own catalog, but also one
+of the most technically demanding items in it. <em>(tbd)</em></li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/AnyMotion-Docs/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">AnyMotion Docs</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">AnyMotion Docs</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Documentation for the AnyMotion procedural humanoid animation tools.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
