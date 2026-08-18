@@ -168,6 +168,46 @@ than the other.</p>
 that file with someone else, or check it into version control. <strong>Reset All</strong> returns every setting
 to its default without touching scene references such as look-at or hand targets.</p>
 
+<h3 id="style">Style</h3>
+
+<p>A style set is a project asset that holds one named style per look you want to mix — tired, alert,
+wounded, whatever you name them. Each style is stored as a difference from this character’s own
+settings, which is why styles that change different parts of the body combine rather than
+overwriting each other, and why the preset buttons above still decide what the character is while
+these sliders mix named styles on top of it. This is not the same thing as the <strong>Body and Style</strong>
+section further down: that section holds the individual pelvis, torso, arm and head settings a style
+is a difference from, while this section mixes complete named styles across the whole character.</p>
+
+<p>Assign a set in the <strong>Style Set</strong> field. If none is assigned yet, a <strong>Create Style Set…</strong> button
+creates the asset and assigns it in one step.</p>
+
+<p>Each style gets its own weight slider, 0 to 1. The weight is stored on the character rather than on
+the style set, so two characters sharing one set can carry different mixes.</p>
+
+<p>Beside each slider is a response graph showing how much of that style the character takes on against
+the weight you give it, from none at the left to all of it at the right. The dashed diagonal is what
+a response in exact proportion to the weight would look like. The dot shows where this character is
+right now, and is only drawn while the Scene view preview is running or the game is playing, since
+nothing moves a style’s position otherwise.</p>
+
+<p>The <strong>Shape</strong> dropdown and the <strong>Onset</strong> and <strong>Snap</strong> sliders below the graph shape that response.
+They’re worth reading rather than guessing at: with <strong>Snap</strong> high, the response stays flat near the
+bottom, so a style at a low weight contributes almost nothing — at the slider’s maximum, nothing at
+all below a weight of about 0.19. That’s invisible in the two numbers alone and obvious in the graph.</p>
+
+<p>The <strong>Per-body-part response</strong> foldout lets one body part follow its own response instead of the one
+above — for example, letting the hips arrive fully at a style while the arms are still close to the
+character’s own settings.</p>
+
+<p><strong>Variation</strong> and <strong>Variation Seed</strong>, at the bottom of this section, control how much a character’s
+own body parts may randomly differ from the weights you set, so a crowd sharing one style set doesn’t
+move identically. Two characters with the same seed vary identically, and the variation survives a
+recompile or a scene reload.</p>
+
+<p>A warning can appear below the sliders when two assigned styles move the same setting in opposite
+directions — mixing them then returns that setting towards the character’s own value rather than
+arriving at either style, and the warning names which settings that’s happening to.</p>
+
 <h3 id="movement">Movement</h3>
 
 <p>How fast the character moves, how a walk turns into a run, and what happens when it stops.</p>
@@ -342,6 +382,11 @@ angles.</p>
 <p>This is the fastest way to confirm a character controller is actually feeding in the speed you
 expect. It will also warn you if a foot is being asked to reach further than the character’s leg is
 physically long — a sign to reduce Step Length or Stance Width, not a bug.</p>
+
+<p>When a style set is assigned under <a href="#style">Style</a>, Live Stats also gains a Style Mix block: each
+style’s requested weight against the weight it has actually reached, and one bar per body part
+showing how much of that part comes from each style, with the remainder coming from the character’s
+own settings.</p>
 
 <h2 id="controlling-it-from-your-own-scripts">Controlling it from your own scripts</h2>
 
