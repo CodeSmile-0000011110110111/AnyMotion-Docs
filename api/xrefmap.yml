@@ -214,6 +214,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.RightHandTarget
   nameWithType: AnimateHumanoid.RightHandTarget
+- uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style
+  name: Style
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Style
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style
+  fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style
+  nameWithType: AnimateHumanoid.Style
+- uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style*
+  name: Style
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Style_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style
+  nameWithType: AnimateHumanoid.Style
 - uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Weight
   name: Weight
   href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Weight
@@ -1645,6 +1658,98 @@ references:
   commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset
   nameWithType: WalkGaitPreset
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle
+  name: HumanoidStyle
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html
+  commentId: T:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle
+  nameWithType: HumanoidStyle
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount
+  name: AnchorCount
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_AnchorCount
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount
+  nameWithType: HumanoidStyle.AnchorCount
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount*
+  name: AnchorCount
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_AnchorCount_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.AnchorCount
+  nameWithType: HumanoidStyle.AnchorCount
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight(System.Int32)
+  name: EffectiveWeight(int)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_EffectiveWeight_System_Int32_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight(System.Int32)
+  name.vb: EffectiveWeight(Integer)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight(int)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight(Integer)
+  nameWithType: HumanoidStyle.EffectiveWeight(int)
+  nameWithType.vb: HumanoidStyle.EffectiveWeight(Integer)
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight*
+  name: EffectiveWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_EffectiveWeight_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.EffectiveWeight
+  nameWithType: HumanoidStyle.EffectiveWeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight(System.Int32)
+  name: GetWeight(int)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_GetWeight_System_Int32_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight(System.Int32)
+  name.vb: GetWeight(Integer)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight(int)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight(Integer)
+  nameWithType: HumanoidStyle.GetWeight(int)
+  nameWithType.vb: HumanoidStyle.GetWeight(Integer)
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight*
+  name: GetWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_GetWeight_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.GetWeight
+  nameWithType: HumanoidStyle.GetWeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf(System.Int32)
+  name: NameOf(int)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_NameOf_System_Int32_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf(System.Int32)
+  name.vb: NameOf(Integer)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf(int)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf(Integer)
+  nameWithType: HumanoidStyle.NameOf(int)
+  nameWithType.vb: HumanoidStyle.NameOf(Integer)
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf*
+  name: NameOf
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_NameOf_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.NameOf
+  nameWithType: HumanoidStyle.NameOf
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(System.Int32,System.Single)
+  name: SetWeight(int, float)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_SetWeight_System_Int32_System_Single_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(System.Int32,System.Single)
+  name.vb: SetWeight(Integer, Single)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(int, float)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(Integer, Single)
+  nameWithType: HumanoidStyle.SetWeight(int, float)
+  nameWithType.vb: HumanoidStyle.SetWeight(Integer, Single)
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(System.String,System.Single)
+  name: SetWeight(string, float)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_SetWeight_System_String_System_Single_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(System.String,System.Single)
+  name.vb: SetWeight(String, Single)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(string, float)
+  fullName.vb: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight(String, Single)
+  nameWithType: HumanoidStyle.SetWeight(string, float)
+  nameWithType.vb: HumanoidStyle.SetWeight(String, Single)
+- uid: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight*
+  name: SetWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.html#CodeSmile_AnyMotion_AnimateYourself_HumanoidStyle_SetWeight_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.HumanoidStyle.SetWeight
+  nameWithType: HumanoidStyle.SetWeight
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples
   name: CodeSmile.AnyMotion.AnimateYourself.Samples
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.html
