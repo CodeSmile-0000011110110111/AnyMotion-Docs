@@ -181,14 +181,15 @@ differ between walking and running (<code>WalkGait.Run()</code>'s own preset not
 LookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of
 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a> regardless of blend weight, so there is exactly one place to
 keep those in sync rather than two full duplicated presets that could drift apart on settings
-that have nothing to do with running. <code>WalkGait.StanceFraction</code> is the only accessor that
+that have nothing to do with running. <code>StanceFraction</code> is the only accessor that
 already centralises Duty Factor for every reader (its own doc comment: &quot;never from Parameters
-directly&quot;) — the blend piggybacks on that same accessor, plus private equivalents added in
-<code>WalkGait.cs</code> for Step Length and Torso Lean. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DynamismMultiplier">DynamismMultiplier</a> is
+directly&quot;) — the blend piggybacks on that same accessor, plus equivalents for Step Length and
+Torso Lean; all four live on <code>GaitContext</code>, which is what carries the blend weight into
+the pose evaluation. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DynamismMultiplier">DynamismMultiplier</a> is
 different in kind from those three: rather than one more individually-overridden target
 field, it <i>scales</i> several existing Pelvis/Head/Arms amplitudes together, so &quot;more
 dynamic running&quot; does not need a new override field added here every time another amplitude
-turns out to want it too — see its own tooltip and <code>WalkGait.EffectiveDynamism</code>.</p>
+turns out to want it too — see its own tooltip and <code>GaitContext.EffectiveDynamism</code>.</p>
 </dd>
     </dl>
     <dl class="jumplist">

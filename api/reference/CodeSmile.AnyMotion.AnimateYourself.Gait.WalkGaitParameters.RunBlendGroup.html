@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WalkGaitParameters.RunBlendGroup | AnyMotion API Reference ">
       
-      <meta name="description" content="Walk/run speed blend: the &amp;quot;fully running&amp;quot; endpoint for the handful of fields that actually differ between walking and running (WalkGait.Run()&#39;s own preset note). Ground, Slope, LookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of  regardless of blend weight, so there is exactly one place to keep those in sync rather than two full duplicated presets that could drift apart on settings that have nothing to do with running. WalkGait.StanceFraction is the only accessor that already centralises Duty Factor for every reader (its own doc comment: &amp;quot;never from Parameters directly&amp;quot;) — the blend piggybacks on that same accessor, plus private equivalents added in WalkGait.cs for Step Length and Torso Lean.  is different in kind from those three: rather than one more individually-overridden target field, it scales several existing Pelvis/Head/Arms amplitudes together, so &amp;quot;more dynamic running&amp;quot; does not need a new override field added here every time another amplitude turns out to want it too — see its own tooltip and WalkGait.EffectiveDynamism.">
+      <meta name="description" content="Walk/run speed blend: the &amp;quot;fully running&amp;quot; endpoint for the handful of fields that actually differ between walking and running (WalkGait.Run()&#39;s own preset note). Ground, Slope, LookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of  regardless of blend weight, so there is exactly one place to keep those in sync rather than two full duplicated presets that could drift apart on settings that have nothing to do with running. StanceFraction is the only accessor that already centralises Duty Factor for every reader (its own doc comment: &amp;quot;never from Parameters directly&amp;quot;) — the blend piggybacks on that same accessor, plus equivalents for Step Length and Torso Lean; all four live on GaitContext, which is what carries the blend weight into the pose evaluation.  is different in kind from those three: rather than one more individually-overridden target field, it scales several existing Pelvis/Head/Arms amplitudes together, so &amp;quot;more dynamic running&amp;quot; does not need a new override field added here every time another amplitude turns out to want it too — see its own tooltip and GaitContext.EffectiveDynamism.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css?v=2">
@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup" class="text-break">
-Class WalkGaitParameters.RunBlendGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L587"><i class="bi bi-code-slash"></i></a>
+Class WalkGaitParameters.RunBlendGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L588"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -90,14 +90,15 @@ differ between walking and running (<code>WalkGait.Run()</code>'s own preset not
 LookAt, Irregularity, Asymmetry and Knees are shared, read unchanged from the rest of
 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a> regardless of blend weight, so there is exactly one place to
 keep those in sync rather than two full duplicated presets that could drift apart on settings
-that have nothing to do with running. <code>WalkGait.StanceFraction</code> is the only accessor that
+that have nothing to do with running. <code>StanceFraction</code> is the only accessor that
 already centralises Duty Factor for every reader (its own doc comment: &quot;never from Parameters
-directly&quot;) — the blend piggybacks on that same accessor, plus private equivalents added in
-<code>WalkGait.cs</code> for Step Length and Torso Lean. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DynamismMultiplier">DynamismMultiplier</a> is
+directly&quot;) — the blend piggybacks on that same accessor, plus equivalents for Step Length and
+Torso Lean; all four live on <code>GaitContext</code>, which is what carries the blend weight into
+the pose evaluation. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DynamismMultiplier">DynamismMultiplier</a> is
 different in kind from those three: rather than one more individually-overridden target
 field, it <i>scales</i> several existing Pelvis/Head/Arms amplitudes together, so &quot;more
 dynamic running&quot; does not need a new override field added here every time another amplitude
-turns out to want it too — see its own tooltip and <code>WalkGait.EffectiveDynamism</code>.</p>
+turns out to want it too — see its own tooltip and <code>GaitContext.EffectiveDynamism</code>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -137,7 +138,7 @@ public sealed class WalkGaitParameters.RunBlendGroup</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_BlendDuration" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.BlendDuration">
   BlendDuration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L610"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L611"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -169,7 +170,7 @@ public float BlendDuration</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DutyFactor" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.DutyFactor">
   DutyFactor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L615"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L616"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -201,7 +202,7 @@ public float DutyFactor</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_DynamismMultiplier" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.DynamismMultiplier">
   DynamismMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L630"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -233,7 +234,7 @@ public float DynamismMultiplier</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_MaxSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.MaxSpeed">
   MaxSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L596"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L597"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -265,7 +266,7 @@ public float MaxSpeed</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_MaxStepsPerSecond" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.MaxStepsPerSecond">
   MaxStepsPerSecond
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L605"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -297,7 +298,7 @@ public float MaxStepsPerSecond</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_MinSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.MinSpeed">
   MinSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L592"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L593"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -329,7 +330,7 @@ public float MinSpeed</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_MinStepsPerSecond" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.MinStepsPerSecond">
   MinStepsPerSecond
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L600"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -361,7 +362,7 @@ public float MinStepsPerSecond</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_StepLength" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.StepLength">
   StepLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L621"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -393,7 +394,7 @@ public float StepLength</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_RunBlendGroup_TorsoLean" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.RunBlendGroup.TorsoLean">
   TorsoLean
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L624"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L625"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -426,7 +427,7 @@ public float TorsoLean</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L587" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L588" class="edit-link">Edit this page</a>
         </div>
 
 
