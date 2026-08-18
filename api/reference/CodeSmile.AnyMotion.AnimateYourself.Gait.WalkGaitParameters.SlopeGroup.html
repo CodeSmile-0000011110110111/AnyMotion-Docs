@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup" class="text-break">
-Class WalkGaitParameters.SlopeGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L702"><i class="bi bi-code-slash"></i></a>
+Class WalkGaitParameters.SlopeGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L770"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -121,6 +121,37 @@ public sealed class WalkGaitParameters.SlopeGroup</code></pre>
 
 
 
+  <h2 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><b><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltPitchWeight">PelvisTiltPitchWeight</a> and <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltRollWeight">PelvisTiltRollWeight</a> are reserved
+schema with no consumer.</b> No code reads either field, so no value of either changes what a
+character does. They exist so that separating the pelvis tilt into a fore/aft share and a
+sideways share can be added later without changing the preset format. A climb and a descent
+lean the hips along the direction of travel; crossing a slope banks them across it. One
+measured surface normal produces both, so expressing that difference needs a weight for each
+direction.</p>
+<p>
+    <b>They multiply <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltAmount">PelvisTiltAmount</a>, they do not replace it.</b>
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltAmount">PelvisTiltAmount</a> keeps its own meaning and its own authored value: it is how
+    much of the measured slope reaches the hips at all, and these two weights decide what
+    share of it goes to each direction. Adding two weights beside it rather than replacing it
+    with two fields is what lets a preset written before they existed keep the amount it
+    authored — a renamed field is dropped on load and its value is lost, an added one is not.
+</p>
+<p>
+    <b>Why the shipped values cannot change anything, even once the separation exists.</b>
+    Both are 1, and <code>amount × 1</code> is <code>amount</code> in each direction. The tilt is one
+    rotation about a horizontal axis, so writing it as two components along any two
+    perpendicular horizontal axes and scaling each by 1 recomposes the same rotation, whichever
+    two axes the separation is resolved along. Every other pair of values does depend on which
+    two axes those are, and which two axes a separation would use is not decided yet.
+</p>
+<p>
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version">Version</a> is deliberately not raised for these two fields.
+    A preset written before they existed deserializes with these initialisers intact, which is
+    the behaviour that preset already described, so a load-time upgrade pass would have nothing
+    to do.
+</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -130,7 +161,7 @@ public sealed class WalkGaitParameters.SlopeGroup</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltAmount" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltAmount">
   PelvisTiltAmount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L709"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L777"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -160,9 +191,73 @@ public float PelvisTiltAmount</code></pre>
 
 
 
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltPitchWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltPitchWeight">
+  PelvisTiltPitchWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L788"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Reserved: what share of Pelvis Tilt Amount applies to the slope&#39;s fore/aft direction — the lean into a climb or a descent. Has no effect yet.&quot;)]
+[Range(0, 1)]
+public float PelvisTiltPitchWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltRollWeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltRollWeight">
+  PelvisTiltRollWeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L792"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Reserved: what share of Pelvis Tilt Amount applies to the slope&#39;s sideways direction — the lean into a bank when crossing a slope rather than climbing it. Has no effect yet.&quot;)]
+[Range(0, 1)]
+public float PelvisTiltRollWeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_StepShortenRatio" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.StepShortenRatio">
   StepShortenRatio
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L784"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -195,7 +290,7 @@ public float StepShortenRatio</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L702" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L770" class="edit-link">Edit this page</a>
         </div>
 
 

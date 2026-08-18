@@ -987,6 +987,18 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.World
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.ContactAnchoring.World
   nameWithType: WalkGaitParameters.GroundGroup.ContactAnchoring.World
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltPitchWeight
+  name: FootTiltPitchWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_FootTiltPitchWeight
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltPitchWeight
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltPitchWeight
+  nameWithType: WalkGaitParameters.GroundGroup.FootTiltPitchWeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltRollWeight
+  name: FootTiltRollWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_FootTiltRollWeight
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltRollWeight
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.FootTiltRollWeight
+  nameWithType: WalkGaitParameters.GroundGroup.FootTiltRollWeight
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.MaxUnsupportedFootDrop
   name: MaxUnsupportedFootDrop
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_MaxUnsupportedFootDrop
@@ -1538,6 +1550,18 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltAmount
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltAmount
   nameWithType: WalkGaitParameters.SlopeGroup.PelvisTiltAmount
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltPitchWeight
+  name: PelvisTiltPitchWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltPitchWeight
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltPitchWeight
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltPitchWeight
+  nameWithType: WalkGaitParameters.SlopeGroup.PelvisTiltPitchWeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltRollWeight
+  name: PelvisTiltRollWeight
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_PelvisTiltRollWeight
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltRollWeight
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.PelvisTiltRollWeight
+  nameWithType: WalkGaitParameters.SlopeGroup.PelvisTiltRollWeight
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.StepShortenRatio
   name: StepShortenRatio
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.SlopeGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_SlopeGroup_StepShortenRatio
