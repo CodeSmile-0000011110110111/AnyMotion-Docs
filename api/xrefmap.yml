@@ -188,6 +188,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResetPose
   nameWithType: AnimateHumanoid.ResetPose
+- uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters
+  name: ResolvedParameters
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ResolvedParameters
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters
+  fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters
+  nameWithType: AnimateHumanoid.ResolvedParameters
+- uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters*
+  name: ResolvedParameters
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ResolvedParameters_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters
+  nameWithType: AnimateHumanoid.ResolvedParameters
 - uid: CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.RightHandTarget
   name: RightHandTarget
   href: reference/CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_RightHandTarget
@@ -3654,6 +3667,22 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend
   nameWithType: NoiseMath.Blend
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit(System.Int32,System.Int32,System.Int32)
+  name: HashToSignedUnit(int, int, int)
+  href: reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_HashToSignedUnit_System_Int32_System_Int32_System_Int32_
+  commentId: M:CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit(System.Int32,System.Int32,System.Int32)
+  name.vb: HashToSignedUnit(Integer, Integer, Integer)
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit(int, int, int)
+  fullName.vb: CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit(Integer, Integer, Integer)
+  nameWithType: NoiseMath.HashToSignedUnit(int, int, int)
+  nameWithType.vb: NoiseMath.HashToSignedUnit(Integer, Integer, Integer)
+- uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit*
+  name: HashToSignedUnit
+  href: reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_HashToSignedUnit_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit
+  nameWithType: NoiseMath.HashToSignedUnit
 - uid: CodeSmile.AnyMotion.Core.Noise.NoiseMath.Sample1D(System.Single,System.Int32,System.Int32)
   name: Sample1D(float, int, int)
   href: reference/CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_System_Single_System_Int32_System_Int32_
@@ -4383,6 +4412,38 @@ references:
   fullName.vb: CodeSmile.AnyMotion.Core.SaveLoad.ITextSerializer.Serialize(Of T)(T)
   nameWithType: ITextSerializer.Serialize<T>(T)
   nameWithType.vb: ITextSerializer.Serialize(Of T)(T)
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData
+  name: IVersionedData
+  href: reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html
+  commentId: T:CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData
+  nameWithType: IVersionedData
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion
+  name: SupportedVersion
+  href: reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html#CodeSmile_AnyMotion_Core_SaveLoad_IVersionedData_SupportedVersion
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion
+  nameWithType: IVersionedData.SupportedVersion
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion*
+  name: SupportedVersion
+  href: reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html#CodeSmile_AnyMotion_Core_SaveLoad_IVersionedData_SupportedVersion_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.SupportedVersion
+  nameWithType: IVersionedData.SupportedVersion
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version
+  name: Version
+  href: reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html#CodeSmile_AnyMotion_Core_SaveLoad_IVersionedData_Version
+  commentId: P:CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version
+  nameWithType: IVersionedData.Version
+- uid: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version*
+  name: Version
+  href: reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html#CodeSmile_AnyMotion_Core_SaveLoad_IVersionedData_Version_
+  commentId: Overload:CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version
+  nameWithType: IVersionedData.Version
 - uid: CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer
   name: JsonUtilityTextSerializer
   href: reference/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.html

@@ -128,7 +128,7 @@ why per-axis 1D noise was chosen over a 3D/vector noise field.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_AttenuateByDistance_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_AnimationCurve_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.AttenuateByDistance(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.AnimationCurve)">
   AttenuateByDistance(Vector3, Vector3, float, AnimationCurve)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>0..1 falloff from <code class="paramref">source</code> to <code class="paramref">listener</code>: 1 at zero
@@ -193,7 +193,7 @@ per listener.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_Blend_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.Blend(System.Single,System.Single,System.Single)">
   Blend(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>0 = pure <code class="paramref">periodic</code>, 1 = pure <code class="paramref">noise</code>.</p>
@@ -242,6 +242,76 @@ per listener.</p>
 
 
 
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_HashToSignedUnit_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_HashToSignedUnit_System_Int32_System_Int32_System_Int32_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.HashToSignedUnit(System.Int32,System.Int32,System.Int32)">
+  HashToSignedUnit(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deterministic -1..1 value from three integers. Not noise over time and not random: the same
+three inputs always give the same result, in this process and every later one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static float HashToSignedUnit(int seed, int channel, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>seed</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>channel</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">int</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>index</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_HashToSignedUnit_System_Int32_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For per-instance variation that has to survive a domain reload, a scene reload and a rebind —
+a crowd whose members differ from each other but do not re-randomise every time a script is
+saved. <span class="xref">UnityEngine.Random</span> cannot do that, and a re-randomising crowd makes the
+Scene view unstable while authoring and a defect unreproducible.</p>
+<p>
+    Integer avalanche (the finaliser of MurmurHash3's 32-bit mixer, one round per input) rather
+    than <a class="xref" href="CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_Sample1D_System_Single_System_Int32_System_Int32_">Sample1D(float, int, int)</a>: Perlin noise is spatially continuous, so neighbouring seeds
+    would produce neighbouring values and a crowd seeded 1, 2, 3 would barely differ. Here
+    neighbouring inputs are uncorrelated, which is the whole requirement.
+</p>
+</div>
 
 
 
@@ -386,7 +456,7 @@ line off <span class="xref">UnityEngine.Mathf.PerlinNoise(float, float)</span>'s
 
   <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SamplePeriodic(System.Single)">
   SamplePeriodic(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plain periodic oscillator. <code class="paramref">phase</code> is in cycles, not radians.</p>
@@ -433,7 +503,7 @@ line off <span class="xref">UnityEngine.Mathf.PerlinNoise(float, float)</span>'s
 
   <h3 id="CodeSmile_AnyMotion_Core_Noise_NoiseMath_SampleSharpenedWave_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.Core.Noise.NoiseMath.SampleSharpenedWave(System.Single,System.Single)">
   SampleSharpenedWave(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Noise/NoiseMath.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a class="xref" href="CodeSmile.AnyMotion.Core.Noise.NoiseMath.html#CodeSmile_AnyMotion_Core_Noise_NoiseMath_SamplePeriodic_System_Single_">SamplePeriodic(float)</a> flattened towards a square wave as <code class="paramref">sharpness</code>

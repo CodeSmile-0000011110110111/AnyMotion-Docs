@@ -161,6 +161,13 @@ format can change (eg JSON to a binary format) without touching file I/O or the 
 that composes this with it.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html">IVersionedData</a></dt>
+      <dd><p>Opt-in schema check for a preset data type. <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.html#CodeSmile_AnyMotion_Core_SaveLoad_SaveSystem_Load__1_System_String_">Load&lt;T&gt;(string)</a> refuses a document
+whose <a class="xref" href="CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html#CodeSmile_AnyMotion_Core_SaveLoad_IVersionedData_Version">Version</a> this build does not read, so a file written by a newer build is
+reported as a version mismatch rather than loaded with some of its fields silently wrong.</p>
+</dd>
+    </dl>
 
 
 </article>

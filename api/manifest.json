@@ -988,6 +988,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.yml\" sourcestartlinenumber=\"1\">Opt-in schema check for a preset data type. <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.SaveSystem.Load%60%601(System.String)\" data-throw-if-not-resolved=\"false\"></xref> refuses a document\nwhose <xref href=\"CodeSmile.AnyMotion.Core.SaveLoad.IVersionedData.Version\" data-throw-if-not-resolved=\"false\"></xref> this build does not read, so a file written by a newer build is\nreported as a version mismatch rather than loaded with some of its fields silently wrong.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.Core.SaveLoad.JsonUtilityTextSerializer.yml",
       "output": {
         ".html": {
