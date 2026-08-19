@@ -733,48 +733,72 @@ references:
   commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup
   nameWithType: WalkGaitParameters.AsymmetryGroup
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.AffectedLeg
-  name: AffectedLeg
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_AffectedLeg
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.AffectedLeg
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.AffectedLeg
-  nameWithType: WalkGaitParameters.AsymmetryGroup.AffectedLeg
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.KneeBendMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence
+  name: WalkGaitParameters.AsymmetryGroup.ArmDivergence
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html
+  commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence
+  nameWithType: WalkGaitParameters.AsymmetryGroup.ArmDivergence
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.ElbowBendMultiplier
+  name: ElbowBendMultiplier
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_ArmDivergence_ElbowBendMultiplier
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.ElbowBendMultiplier
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.ElbowBendMultiplier
+  nameWithType: WalkGaitParameters.AsymmetryGroup.ArmDivergence.ElbowBendMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.SwingMultiplier
+  name: SwingMultiplier
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_ArmDivergence_SwingMultiplier
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.SwingMultiplier
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.SwingMultiplier
+  nameWithType: WalkGaitParameters.AsymmetryGroup.ArmDivergence.SwingMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftArm
+  name: LeftArm
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LeftArm
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftArm
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftArm
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LeftArm
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftLeg
+  name: LeftLeg
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LeftLeg
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftLeg
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftLeg
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LeftLeg
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence
+  name: WalkGaitParameters.AsymmetryGroup.LegDivergence
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html
+  commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LegDivergence
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.KneeBendMultiplier
   name: KneeBendMultiplier
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_KneeBendMultiplier
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.KneeBendMultiplier
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.KneeBendMultiplier
-  nameWithType: WalkGaitParameters.AsymmetryGroup.KneeBendMultiplier
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side
-  name: WalkGaitParameters.AsymmetryGroup.Side
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html
-  commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side
-  nameWithType: WalkGaitParameters.AsymmetryGroup.Side
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Left
-  name: Left
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_Side_Left
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Left
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Left
-  nameWithType: WalkGaitParameters.AsymmetryGroup.Side.Left
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Right
-  name: Right
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_Side_Right
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Right
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.Right
-  nameWithType: WalkGaitParameters.AsymmetryGroup.Side.Right
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StepHeightMultiplier
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LegDivergence_KneeBendMultiplier
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.KneeBendMultiplier
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.KneeBendMultiplier
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LegDivergence.KneeBendMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StepHeightMultiplier
   name: StepHeightMultiplier
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_StepHeightMultiplier
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StepHeightMultiplier
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StepHeightMultiplier
-  nameWithType: WalkGaitParameters.AsymmetryGroup.StepHeightMultiplier
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StrideMultiplier
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LegDivergence_StepHeightMultiplier
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StepHeightMultiplier
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StepHeightMultiplier
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LegDivergence.StepHeightMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StrideMultiplier
   name: StrideMultiplier
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_StrideMultiplier
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StrideMultiplier
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StrideMultiplier
-  nameWithType: WalkGaitParameters.AsymmetryGroup.StrideMultiplier
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LegDivergence_StrideMultiplier
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StrideMultiplier
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.StrideMultiplier
+  nameWithType: WalkGaitParameters.AsymmetryGroup.LegDivergence.StrideMultiplier
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightArm
+  name: RightArm
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_RightArm
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightArm
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightArm
+  nameWithType: WalkGaitParameters.AsymmetryGroup.RightArm
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightLeg
+  name: RightLeg
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_RightLeg
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightLeg
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightLeg
+  nameWithType: WalkGaitParameters.AsymmetryGroup.RightLeg
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Blank
   name: Blank()
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Blank
@@ -915,6 +939,18 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.MinLateralSeparation
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.MinLateralSeparation
   nameWithType: WalkGaitParameters.FootstepGroup.MinLateralSeparation
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseIn
+  name: StepEaseIn
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_FootstepGroup_StepEaseIn
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseIn
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseIn
+  nameWithType: WalkGaitParameters.FootstepGroup.StepEaseIn
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseOut
+  name: StepEaseOut
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_FootstepGroup_StepEaseOut
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseOut
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepEaseOut
+  nameWithType: WalkGaitParameters.FootstepGroup.StepEaseOut
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.StepHeight
   name: StepHeight
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.FootstepGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_FootstepGroup_StepHeight

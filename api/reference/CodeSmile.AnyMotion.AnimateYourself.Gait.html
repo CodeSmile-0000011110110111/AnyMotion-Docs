@@ -95,12 +95,28 @@ should produce the same visible walk on a 1.28 m mouse and a 1.87 m Pumpkinhulk.
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">WalkGaitParameters.AsymmetryGroup</a></dt>
-      <dd><p>L19 (limp / asymmetric gait): per-leg divergence for one selected leg, applied in
-<code>WalkGait.EvaluateLeg</code>. The pelvis and torso response (favouring the good leg, rolling
-onto it, winding up against it) is not authored here — it already falls out of
-<code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance terms once the two
-legs' strides diverge, since those derive from leg state rather than from independent
-oscillators.</p>
+      <dd><p>L19 (limp / asymmetric gait): per-limb divergence, one block for each of the four limbs,
+applied in <code>WalkGait.EvaluateLeg</code> and <code>WalkGait.EvaluateArm</code>. Every multiplier is 1
+by default, which is an even gait and the shipped behaviour. The pelvis and torso response
+(favouring the good leg, rolling onto it, winding up against it) is not authored here — it
+already falls out of <code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance
+terms once the two legs' strides diverge, since those derive from leg state rather than from
+independent oscillators.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html">WalkGaitParameters.AsymmetryGroup.ArmDivergence</a></dt>
+      <dd><p>What one arm may do differently from the other. Read through
+<code>GaitMath.ResolveArmMultipliers</code>, never field by field, for the same reason
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html">WalkGaitParameters.AsymmetryGroup.LegDivergence</a> is: <code>WalkGait.EvaluateArm</code> produces a hand IK target and
+a set of joint angles from the same numbers and the two must not disagree.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html">WalkGaitParameters.AsymmetryGroup.LegDivergence</a></dt>
+      <dd><p>What one leg may do differently from the other. Read through
+<code>GaitMath.ResolveLegMultipliers</code>, never field by field, so both output forms (foot
+position for space C, thigh and knee angles for spaces A and B) scale together.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -249,11 +265,6 @@ describe the same intended motion.</p>
     <h3 id="enums">
 Enums
 </h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html">WalkGaitParameters.AsymmetryGroup.Side</a></dt>
-      <dd><p>Which leg <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">WalkGaitParameters.AsymmetryGroup</a>'s multipliers apply to.</p>
-</dd>
-    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ClipLayeringGroup.BasePoseSource.html">WalkGaitParameters.ClipLayeringGroup.BasePoseSource</a></dt>
       <dd><p>Which pose the driver spaces restore each frame, and therefore what the authored angles are

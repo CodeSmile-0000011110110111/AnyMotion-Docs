@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class WalkGaitParameters.AsymmetryGroup | AnyMotion API Reference ">
       
-      <meta name="description" content="L19 (limp / asymmetric gait): per-leg divergence for one selected leg, applied in WalkGait.EvaluateLeg. The pelvis and torso response (favouring the good leg, rolling onto it, winding up against it) is not authored here — it already falls out of WalkGait.Evaluate&#39;s existing leg-differential and weight-balance terms once the two legs&#39; strides diverge, since those derive from leg state rather than from independent oscillators.">
+      <meta name="description" content="L19 (limp / asymmetric gait): per-limb divergence, one block for each of the four limbs, applied in WalkGait.EvaluateLeg and WalkGait.EvaluateArm. Every multiplier is 1 by default, which is an even gait and the shipped behaviour. The pelvis and torso response (favouring the good leg, rolling onto it, winding up against it) is not authored here — it already falls out of WalkGait.Evaluate&#39;s existing leg-differential and weight-balance terms once the two legs&#39; strides diverge, since those derive from leg state rather than from independent oscillators.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css?v=2">
@@ -78,19 +78,20 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup" class="text-break">
-Class WalkGaitParameters.AsymmetryGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L557"><i class="bi bi-code-slash"></i></a>
+Class WalkGaitParameters.AsymmetryGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L608"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.html">Gait</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>L19 (limp / asymmetric gait): per-leg divergence for one selected leg, applied in
-<code>WalkGait.EvaluateLeg</code>. The pelvis and torso response (favouring the good leg, rolling
-onto it, winding up against it) is not authored here — it already falls out of
-<code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance terms once the two
-legs' strides diverge, since those derive from leg state rather than from independent
-oscillators.</p>
+  <div class="markdown summary"><p>L19 (limp / asymmetric gait): per-limb divergence, one block for each of the four limbs,
+applied in <code>WalkGait.EvaluateLeg</code> and <code>WalkGait.EvaluateArm</code>. Every multiplier is 1
+by default, which is an even gait and the shipped behaviour. The pelvis and torso response
+(favouring the good leg, rolling onto it, winding up against it) is not authored here — it
+already falls out of <code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance
+terms once the two legs' strides diverge, since those derive from leg state rather than from
+independent oscillators.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -121,6 +122,41 @@ public sealed class WalkGaitParameters.AsymmetryGroup</code></pre>
 
 
 
+  <h2 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><b>Which channels may diverge per limb, and which may not.</b> A multiplier here may scale a
+limb's own <i>reach, height or bend</i> — how far it travels, how high it lifts, how much a
+joint folds. It may <b>not</b> scale anything that feeds the shared two-leg phase model:
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TimingGroup_DutyFactor">DutyFactor</a> (how long a foot stays planted),
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TimingGroup_LegPhaseOffset">LegPhaseOffset</a> (how far apart in the cycle the two legs are), and
+the cadence derived from <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TimingGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TimingGroup_MoveSpeed">MoveSpeed</a>. Both legs run on one phase
+model whose stance sweep is what cancels body travel, so a per-leg stance duration
+desynchronises that model rather than producing an uneven gait — which is why duty-factor
+asymmetry needs the general contact-schedule field (<code>locomotion-catalog.md</code> §5) and not a
+multiplier. <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.ArmGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_ArmGroup_PhaseOffset">PhaseOffset</a> is shared for the same reason: an arm takes
+the opposite leg's phase, so a per-arm offset would decouple an arm from the leg it belongs
+with.</p>
+<p>
+    <b>Why four blocks rather than one selected limb.</b> This replaces an <code>AffectedLeg</code>
+    enum plus three multipliers, which could describe only one differing leg and no arm at
+    all. Two differently affected legs (a stride difference on one, a dragged foot on the
+    other) were unreachable by construction, and <code>WalkGait.EvaluateArm</code> takes a side but
+    had no per-side multiplier to read, so both arms were always the same swing mirrored. The
+    group shape is the expensive half of this to change once presets exist, so it is decided
+    once here rather than widened later — the narrow reservation named in
+    <code>scout-p7-reserved-fields-budma/report.md</code> §5.4 (C5, per-limb divergence).
+</p>
+<p>
+    <b>A preset written before this reshape loses its asymmetry.</b> The four keys it carries
+    — <code>AffectedLeg</code>, <code>StrideMultiplier</code>, <code>StepHeightMultiplier</code>,
+    <code>KneeBendMultiplier</code> — have no field to land in, so <code>JsonUtility</code> drops them and
+    every multiplier below loads at 1. That is an even gait, not a broken one.
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version">Version</a> is deliberately not bumped: it has no consumer,
+    the JSON preset schema is not frozen yet (P7), and the same decision was recorded for the
+    2026-08-15 <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html">WalkGaitParameters.LimbReachGroup</a> split. See <code>CLAUDE.md</code> → Current state for
+    that reasoning; the repository's own serialized characters were rewritten to the new shape
+    in the same change rather than left to degrade.
+</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -128,17 +164,17 @@ public sealed class WalkGaitParameters.AsymmetryGroup</code></pre>
 
 
 
-  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_AffectedLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.AffectedLeg">
-  AffectedLeg
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LeftArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftArm">
+  LeftArm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L620"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Which leg the three settings below apply to. The other leg keeps the normal gait.&quot;)]
-public WalkGaitParameters.AsymmetryGroup.Side AffectedLeg</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the left arm differs from an even swing, for example an arm carrying something or an injured shoulder.&quot;)]
+public WalkGaitParameters.AsymmetryGroup.ArmDivergence LeftArm</code></pre>
   </div>
 
 
@@ -146,7 +182,7 @@ public WalkGaitParameters.AsymmetryGroup.Side AffectedLeg</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html">Side</a></dt>
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html">ArmDivergence</a></dt>
     <dd></dd>
   </dl>
 
@@ -159,18 +195,17 @@ public WalkGaitParameters.AsymmetryGroup.Side AffectedLeg</code></pre>
 
 
 
-  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_KneeBendMultiplier" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.KneeBendMultiplier">
-  KneeBendMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L584"><i class="bi bi-code-slash"></i></a>
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_LeftLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LeftLeg">
+  LeftLeg
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L612"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How far the affected leg&#39;s knee bends, compared with the other leg. Near 0 reads as a stiff or locked knee. Has no effect with the IK Targets driver space, which is the default: there the knee angle is worked out from where the foot is placed rather than set directly.&quot;)]
-[Range(0, 2)]
-public float KneeBendMultiplier</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the left leg differs from an even gait.&quot;)]
+public WalkGaitParameters.AsymmetryGroup.LegDivergence LeftLeg</code></pre>
   </div>
 
 
@@ -178,7 +213,7 @@ public float KneeBendMultiplier</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">float</span></dt>
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html">LegDivergence</a></dt>
     <dd></dd>
   </dl>
 
@@ -191,18 +226,17 @@ public float KneeBendMultiplier</code></pre>
 
 
 
-  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_StepHeightMultiplier" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StepHeightMultiplier">
-  StepHeightMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L578"><i class="bi bi-code-slash"></i></a>
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_RightArm" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightArm">
+  RightArm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L623"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How high the affected leg lifts, compared with the other leg. Below 1 the foot clears the ground less, which reads as dragging it. Near 0 the foot barely leaves the ground at all.&quot;)]
-[Range(0, 2)]
-public float StepHeightMultiplier</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the right arm differs from an even swing.&quot;)]
+public WalkGaitParameters.AsymmetryGroup.ArmDivergence RightArm</code></pre>
   </div>
 
 
@@ -210,7 +244,7 @@ public float StepHeightMultiplier</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">float</span></dt>
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html">ArmDivergence</a></dt>
     <dd></dd>
   </dl>
 
@@ -223,18 +257,17 @@ public float StepHeightMultiplier</code></pre>
 
 
 
-  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_StrideMultiplier" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.StrideMultiplier">
-  StrideMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L573"><i class="bi bi-code-slash"></i></a>
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_AsymmetryGroup_RightLeg" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.RightLeg">
+  RightLeg
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L616"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How far the affected leg steps, compared with the other leg. 1 is an even gait. Below 1 the leg does not reach as far, which reads as favouring it, as in a limp. Above 1 it reaches further than the other leg.&quot;)]
-[Range(0, 2)]
-public float StrideMultiplier</code></pre>
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How the right leg differs from an even gait. This is the usual place to author a limp: leave the left leg alone and shorten this one.&quot;)]
+public WalkGaitParameters.AsymmetryGroup.LegDivergence RightLeg</code></pre>
   </div>
 
 
@@ -242,7 +275,7 @@ public float StrideMultiplier</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">float</span></dt>
+    <dt><a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html">WalkGaitParameters</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.html">AsymmetryGroup</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html">LegDivergence</a></dt>
     <dd></dd>
   </dl>
 
@@ -258,7 +291,7 @@ public float StrideMultiplier</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L557" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L608" class="edit-link">Edit this page</a>
         </div>
 
 

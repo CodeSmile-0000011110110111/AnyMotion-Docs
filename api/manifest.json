@@ -148,17 +148,31 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.yml",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.yml",
       "output": {
         ".html": {
-          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.html"
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side",
-      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.Side.yml\" sourcestartlinenumber=\"1\">Which leg <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup\" data-throw-if-not-resolved=\"false\"></xref>'s multipliers apply to.</p>\n"
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.ArmDivergence.yml\" sourcestartlinenumber=\"1\">What one arm may do differently from the other. Read through\n<code>GaitMath.ResolveArmMultipliers</code>, never field by field, for the same reason\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence\" data-throw-if-not-resolved=\"false\"></xref> is: <code>WalkGait.EvaluateArm</code> produces a hand IK target and\na set of joint angles from the same numbers and the two must not disagree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.LegDivergence.yml\" sourcestartlinenumber=\"1\">What one leg may do differently from the other. Read through\n<code>GaitMath.ResolveLegMultipliers</code>, never field by field, so both output forms (foot\nposition for space C, thigh and knee angles for spaces A and B) scale together.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -172,7 +186,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup",
-      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.yml\" sourcestartlinenumber=\"1\">L19 (limp / asymmetric gait): per-leg divergence for one selected leg, applied in\n<code>WalkGait.EvaluateLeg</code>. The pelvis and torso response (favouring the good leg, rolling\nonto it, winding up against it) is not authored here — it already falls out of\n<code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance terms once the two\nlegs' strides diverge, since those derive from leg state rather than from independent\noscillators.</p>\n"
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.AsymmetryGroup.yml\" sourcestartlinenumber=\"1\">L19 (limp / asymmetric gait): per-limb divergence, one block for each of the four limbs,\napplied in <code>WalkGait.EvaluateLeg</code> and <code>WalkGait.EvaluateArm</code>. Every multiplier is 1\nby default, which is an even gait and the shipped behaviour. The pelvis and torso response\n(favouring the good leg, rolling onto it, winding up against it) is not authored here — it\nalready falls out of <code>WalkGait.Evaluate</code>'s existing leg-differential and weight-balance\nterms once the two legs' strides diverge, since those derive from leg state rather than from\nindependent oscillators.</p>\n"
     },
     {
       "type": "ManagedReference",
