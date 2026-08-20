@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene" class="text-break">
-Class DesignScene  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L51"><i class="bi bi-code-slash"></i></a>
+Class DesignScene  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -140,13 +140,18 @@ public sealed class DesignScene : MonoBehaviour</code></pre>
     every editor update.
 </p>
 <p>
-    <b>Hierarchy contract (R1).</b> This component writes the character root transform, the same
-    way a character controller would. The gait writes the visual root below it. Each entry in
-    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Characters">Characters</a> is therefore a character root whose <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a>
-    sits on a child, not on the entry itself. An entry that carries
-    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a> on the entry object is reported in
-    <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.BuildReport()</span> and skipped, because moving that object here and animating it
-    there would be two writers on one transform.
+    <b>An entry in <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Characters">Characters</a> may be the character itself or a parent of it.</b>
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitPreset.html">BuildTake(int, WalkGaitPreset, float)</a> takes the entry as given and looks for
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a> on the entry object first and then on its children, so both
+    shapes work and neither is wrong. Until 2026-08-20 the entry had to be a parent, and an
+    entry carrying <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a> itself was skipped as an R1 violation. That
+    requirement was wrong: R1 forbids two writers on one transform, and there is only one
+    writer here. This component writes the entry's transform, the same way a character
+    controller would; the gait writes bone transforms from Hips downwards
+    (<code>IkTargetSpaceDriver</code> and <code>BoneFrameSpaceDriver</code> write
+    <code>hips.localPosition</code> and bone rotations, and nothing in the runtime writes the
+    transform <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a> sits on). The gait reads that transform's rotation
+    as the frame its rotations are expressed in, which is a read, not a write.
 </p>
 <p>
     <b>Only characters this component wrote a preset onto get their settings restored.</b> A
@@ -167,7 +172,7 @@ public sealed class DesignScene : MonoBehaviour</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DefaultRunSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultRunSpeed">
   DefaultRunSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Value <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunSpeed">RunSpeed</a> starts at, in metres per second.</p>
@@ -198,7 +203,7 @@ public sealed class DesignScene : MonoBehaviour</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DefaultWalkSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultWalkSpeed">
   DefaultWalkSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Value <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkSpeed">WalkSpeed</a> starts at, in metres per second.</p>
@@ -229,7 +234,7 @@ public sealed class DesignScene : MonoBehaviour</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_FramingMarginFraction" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.FramingMarginFraction">
   FramingMarginFraction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Share of the frame height left empty above the reference character, and again below it. 0.125
@@ -261,7 +266,7 @@ is the middle of the 10 to 15 percent the framing was asked for.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_FramingReferenceFieldOfView" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.FramingReferenceFieldOfView">
   FramingReferenceFieldOfView
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Vertical field of view the two default framing constants below were computed for, in degrees.
@@ -293,7 +298,7 @@ Unity's own default for a new camera.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_FramingReferenceHeight" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.FramingReferenceHeight">
   FramingReferenceHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Character height the default framing is built for, in metres. Not a per-character
@@ -325,7 +330,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_IdleSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IdleSpeed">
   IdleSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Speed the Idle button writes into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a>, in metres per second.</p>
@@ -356,7 +361,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MaxSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxSpeed">
   MaxSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Highest value any of the three speed fields accepts, in metres per second.</p>
@@ -387,7 +392,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MaxWalkDistance" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxWalkDistance">
   MaxWalkDistance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Longest travel span <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkDistance">WalkDistance</a> accepts, in metres.</p>
@@ -418,7 +423,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MinWalkDistance" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MinWalkDistance">
   MinWalkDistance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Shortest travel span <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkDistance">WalkDistance</a> accepts, in metres.</p>
@@ -454,7 +459,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Characters" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Characters">
   Characters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Character roots the sequence plays, in order.</p>
@@ -486,7 +491,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_IsDriving" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IsDriving">
   IsDriving
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True while this component is moving characters.</p>
@@ -518,7 +523,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ManualCharacterIndex" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualCharacterIndex">
   ManualCharacterIndex
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Which entry of <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Characters">Characters</a> Manual Design drives.</p>
@@ -550,7 +555,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ManualPresetIndex" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex">
   ManualPresetIndex
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Which entry of <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Presets">Presets</a> Manual Design applies while
@@ -583,7 +588,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Mode" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Mode">
   Mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L247"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Which of the two modes is driving. Changing it restarts from the first take.</p>
@@ -615,7 +620,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Presets" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Presets">
   Presets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Presets the sequence applies, in order.</p>
@@ -647,7 +652,7 @@ measurement on purpose: one framing for every character is what makes two takes 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed">
   RunSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The run speed, in metres per second. Written into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a> by the Run button,
@@ -680,7 +685,7 @@ shown in that button's label, and used by the automated sequence's run take.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ShowReadout" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout">
   ShowReadout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether the on-screen readout is drawn. False hides it, which is how a take is recorded
@@ -713,7 +718,7 @@ without text over it.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Speed">
   Speed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Travel speed used by Manual Design, in metres per second.</p>
@@ -745,7 +750,7 @@ without text over it.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Strafe" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe">
   Strafe
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True while the character faces the camera or away from it and travels sideways. Sets
@@ -779,7 +784,7 @@ gait strafe.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StrafeFacing" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing">
   StrafeFacing
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Which way the character faces while <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Strafe">Strafe</a> is true.</p>
@@ -811,7 +816,7 @@ gait strafe.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_TakeCount" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.TakeCount">
   TakeCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How many takes the automated sequence plays: one walk and one run for every combination of a
@@ -844,7 +849,7 @@ character and a preset. 0 while either list is empty.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_TakeIndex" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.TakeIndex">
   TakeIndex
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Index of the take the automated sequence is playing, counting from 0.</p>
@@ -876,7 +881,7 @@ character and a preset. 0 while either list is empty.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_TravelDirection" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.TravelDirection">
   TravelDirection
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L305"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Which way characters cross the frame.</p>
@@ -908,7 +913,7 @@ character and a preset. 0 while either list is empty.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_UseManualPreset" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset">
   UseManualPreset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True while Manual Design applies the preset <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ManualPresetIndex">ManualPresetIndex</a> selects. False
@@ -942,7 +947,7 @@ untouched and editable while it moves.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkBackwards" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards">
   WalkBackwards
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True while the character keeps facing along the travel line and travels the opposite way,
@@ -976,7 +981,7 @@ which sets <code>AnimateHumanoid.MoveDirection</code> to 180 degrees. Ignored wh
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkDistance" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance">
   WalkDistance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How far a character travels before it returns to the start of the span, in metres, between
@@ -1010,7 +1015,7 @@ the point the camera looks at.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed">
   WalkSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The walk speed, in metres per second. Written into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a> by the Walk button,
@@ -1047,7 +1052,7 @@ shown in that button's label, and used by the automated sequence's walk take.</p
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ApplyFraming" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming">
   ApplyFraming()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L500"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Places the camera at the position and rotation the two framing sliders describe and reports
@@ -1083,7 +1088,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DistanceForVisibleHeight_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DistanceForVisibleHeight(System.Single,System.Single)">
   DistanceForVisibleHeight(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L724"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Distance at which a camera's view is <code class="paramref">visibleHeight</code> metres high.</p>
@@ -1135,7 +1140,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_NextTake" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.NextTake">
   NextTake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Moves to the next take of the automated sequence, wrapping past the last one.</p>
@@ -1162,7 +1167,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_PreviousTake" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.PreviousTake">
   PreviousTake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L489"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Moves to the previous take of the automated sequence, wrapping past the first one.</p>
@@ -1189,7 +1194,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RestartTake" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RestartTake">
   RestartTake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L468"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L479"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plays the current take from its beginning again.</p>
@@ -1216,7 +1221,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ReverseTravelDirection" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ReverseTravelDirection">
   ReverseTravelDirection()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L444"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Swaps the travel direction between right-to-left and left-to-right.</p>
@@ -1243,7 +1248,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunBlendWeight_CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunBlendWeight(CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters,System.Single)">
   RunBlendWeight(WalkGaitParameters, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L739"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L752"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How far between walking and running a character's settings put it at
@@ -1296,7 +1301,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetIdleSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed">
   SetIdleSpeed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L435"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes the Idle speed, 0 metres per second, into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a>.</p>
@@ -1323,7 +1328,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetRunSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetRunSpeed">
   SetRunSpeed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunSpeed">RunSpeed</a> into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a>.</p>
@@ -1350,7 +1355,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetWalkSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetWalkSpeed">
   SetWalkSpeed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkSpeed">WalkSpeed</a> into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed">Speed</a>.</p>
@@ -1377,7 +1382,7 @@ there is no camera to place.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StartDriving" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StartDriving">
   StartDriving()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts playing from the first take. Safe to call while already driving: it restarts without
@@ -1410,7 +1415,7 @@ already driving captures the same settings a scene started by this method does.<
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StepLengthMetres_CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StepLengthMetres(CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters,System.Single,System.Single)">
   StepLengthMetres(WalkGaitParameters, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L724"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L737"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How far the character travels per step at <code class="paramref">moveSpeed</code>, in metres, given a
@@ -1474,7 +1479,7 @@ because it answers a question about a speed the character is not travelling at y
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StopDriving" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StopDriving">
   StopDriving()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stops driving and writes back every captured character's active state and position, plus the
@@ -1503,7 +1508,7 @@ is, which is the framing the two sliders describe.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Tick_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Tick(System.Single)">
   Tick(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L541"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Advances the scene by <code class="paramref">deltaTime</code> seconds: places the camera, then, while
@@ -1564,7 +1569,7 @@ whether this component exists or not.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_VisibleHeight_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.VisibleHeight(System.Single,System.Single)">
   VisibleHeight(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L707"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L720"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Height of the camera's view at a given distance in front of it, in metres. The plain
@@ -1618,7 +1623,7 @@ the camera actually produces come from one place.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L51" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/DesignScene/DesignScene.cs/#L56" class="edit-link">Edit this page</a>
         </div>
 
 
