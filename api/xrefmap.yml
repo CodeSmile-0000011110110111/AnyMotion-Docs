@@ -1822,6 +1822,19 @@ references:
   commentId: T:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene
   nameWithType: DesignScene
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming
+  name: ApplyFraming()
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ApplyFraming
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming()
+  nameWithType: DesignScene.ApplyFraming()
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming*
+  name: ApplyFraming
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ApplyFraming_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ApplyFraming
+  nameWithType: DesignScene.ApplyFraming
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Characters
   name: Characters
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Characters
@@ -1835,6 +1848,18 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Characters
   nameWithType: DesignScene.Characters
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultRunSpeed
+  name: DefaultRunSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DefaultRunSpeed
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultRunSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultRunSpeed
+  nameWithType: DesignScene.DefaultRunSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultWalkSpeed
+  name: DefaultWalkSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DefaultWalkSpeed
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultWalkSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DefaultWalkSpeed
+  nameWithType: DesignScene.DefaultWalkSpeed
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.DistanceForVisibleHeight(System.Single,System.Single)
   name: DistanceForVisibleHeight(float, float)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_DistanceForVisibleHeight_System_Single_System_Single_
@@ -1869,6 +1894,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.FramingReferenceHeight
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.FramingReferenceHeight
   nameWithType: DesignScene.FramingReferenceHeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IdleSpeed
+  name: IdleSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_IdleSpeed
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IdleSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IdleSpeed
+  nameWithType: DesignScene.IdleSpeed
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.IsDriving
   name: IsDriving
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_IsDriving
@@ -1895,6 +1926,37 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualCharacterIndex
   nameWithType: DesignScene.ManualCharacterIndex
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex
+  name: ManualPresetIndex
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ManualPresetIndex
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex
+  nameWithType: DesignScene.ManualPresetIndex
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex*
+  name: ManualPresetIndex
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ManualPresetIndex_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ManualPresetIndex
+  nameWithType: DesignScene.ManualPresetIndex
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxSpeed
+  name: MaxSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MaxSpeed
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxSpeed
+  nameWithType: DesignScene.MaxSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxWalkDistance
+  name: MaxWalkDistance
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MaxWalkDistance
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxWalkDistance
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MaxWalkDistance
+  nameWithType: DesignScene.MaxWalkDistance
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MinWalkDistance
+  name: MinWalkDistance
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_MinWalkDistance
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MinWalkDistance
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.MinWalkDistance
+  nameWithType: DesignScene.MinWalkDistance
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Mode
   name: Mode
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Mode
@@ -1992,9 +2054,29 @@ references:
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
   name: RunSpeed
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunSpeed
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
   nameWithType: DesignScene.RunSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed*
+  name: RunSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_RunSpeed_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.RunSpeed
+  nameWithType: DesignScene.RunSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed
+  name: SetIdleSpeed()
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetIdleSpeed
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed()
+  nameWithType: DesignScene.SetIdleSpeed()
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed*
+  name: SetIdleSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetIdleSpeed_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetIdleSpeed
+  nameWithType: DesignScene.SetIdleSpeed
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetRunSpeed
   name: SetRunSpeed()
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_SetRunSpeed
@@ -2021,6 +2103,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.SetWalkSpeed
   nameWithType: DesignScene.SetWalkSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout
+  name: ShowReadout
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ShowReadout
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout
+  nameWithType: DesignScene.ShowReadout
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout*
+  name: ShowReadout
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_ShowReadout_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.ShowReadout
+  nameWithType: DesignScene.ShowReadout
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Speed
   name: Speed
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Speed
@@ -2076,6 +2171,32 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StopDriving
   nameWithType: DesignScene.StopDriving
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe
+  name: Strafe
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Strafe
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe
+  nameWithType: DesignScene.Strafe
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe*
+  name: Strafe
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_Strafe_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.Strafe
+  nameWithType: DesignScene.Strafe
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing
+  name: StrafeFacing
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StrafeFacing
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing
+  nameWithType: DesignScene.StrafeFacing
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing*
+  name: StrafeFacing
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_StrafeFacing_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.StrafeFacing
+  nameWithType: DesignScene.StrafeFacing
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.TakeCount
   name: TakeCount
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_TakeCount
@@ -2131,6 +2252,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.TravelDirection
   nameWithType: DesignScene.TravelDirection
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset
+  name: UseManualPreset
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_UseManualPreset
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset
+  nameWithType: DesignScene.UseManualPreset
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset*
+  name: UseManualPreset
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_UseManualPreset_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.UseManualPreset
+  nameWithType: DesignScene.UseManualPreset
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.VisibleHeight(System.Single,System.Single)
   name: VisibleHeight(float, float)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_VisibleHeight_System_Single_System_Single_
@@ -2147,10 +2281,43 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.VisibleHeight
   nameWithType: DesignScene.VisibleHeight
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards
+  name: WalkBackwards
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkBackwards
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards
+  nameWithType: DesignScene.WalkBackwards
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards*
+  name: WalkBackwards
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkBackwards_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkBackwards
+  nameWithType: DesignScene.WalkBackwards
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance
+  name: WalkDistance
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkDistance
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance
+  nameWithType: DesignScene.WalkDistance
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance*
+  name: WalkDistance
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkDistance_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkDistance
+  nameWithType: DesignScene.WalkDistance
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
   name: WalkSpeed
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkSpeed
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
+  nameWithType: DesignScene.WalkSpeed
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed*
+  name: WalkSpeed
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignScene_WalkSpeed_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
+  isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.WalkSpeed
   nameWithType: DesignScene.WalkSpeed
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode
@@ -2171,6 +2338,24 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode.ManualDesign
   fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode.ManualDesign
   nameWithType: DesignSceneMode.ManualDesign
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing
+  name: DesignSceneStrafeFacing
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.html
+  commentId: T:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing
+  nameWithType: DesignSceneStrafeFacing
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingAway
+  name: FacingAway
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignSceneStrafeFacing_FacingAway
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingAway
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingAway
+  nameWithType: DesignSceneStrafeFacing.FacingAway
+- uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingCamera
+  name: FacingCamera
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.html#CodeSmile_AnyMotion_AnimateYourself_Samples_DesignSceneStrafeFacing_FacingCamera
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingCamera
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.FacingCamera
+  nameWithType: DesignSceneStrafeFacing.FacingCamera
 - uid: CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection
   name: DesignSceneTravelDirection
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection.html

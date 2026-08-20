@@ -526,6 +526,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneStrafeFacing.yml\" sourcestartlinenumber=\"1\">Which way a strafing character faces in the design scene.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection.yml",
       "output": {
         ".html": {
