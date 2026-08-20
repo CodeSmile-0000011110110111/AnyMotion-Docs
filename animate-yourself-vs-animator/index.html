@@ -393,13 +393,13 @@ above.</li>
 </tr>
 <template id="d-floating-feet">
 <h3>Animate Yourself</h3>
-<p>Ankle height is measured per character, and a ground probe raises or lowers the foot target. Ground penetration measured at zero on all five test characters. <span class="unverified-mark">not fully verified</span></p>
+<p>Ankle height is measured per character, and a ground probe raises or lowers the foot target. The ankle meets its ground target on all five test characters, with no penetration. The drawn sole is a separate measurement: it sits 18.4 mm off the surface on average in the shipped default configuration, and turning Sole Grounding on takes that to 1.58 mm. <span class="unverified-mark">not fully verified</span></p>
 <h3>Animator</h3>
 <p>Retargeting adapts a clip's joint rotations to the target's proportions, but does not preserve the world-space position of a foot contact, so a different ankle height or ground level is visible as floating or penetration unless a foot IK pass corrects it.</p>
 <h3>Additional detail</h3>
 <p>The complaint is soles that hover above the floor, or sink below it.</p>
-<p>Two mechanisms. Ankle height is measured on the character and subtracted from the ground reference, so a character whose foot bone sits at a different height than the source does not float. Ground conformance raycasts at the position the foot is predicted to land at and raises or lowers the IK target to meet it.</p>
-<p>The five-character measurement run recorded ground penetration of zero on all five.</p>
+<p>Three mechanisms. Ankle height is measured on the character and subtracted from the ground reference, so a character whose foot bone sits at a different height than the source does not float. Ground conformance raycasts at the position the foot is predicted to land at and raises or lowers the IK target to meet it. Sole Grounding, an optional setting that is off by default, measures the lowest point of the drawn foot and moves the foot target until that point reaches the surface.</p>
+<p>The first two are measured at the ankle, and the five-character measurement run recorded the ankle meeting its ground target on all five, with no penetration. The drawn sole is a different quantity, measured separately on three characters walking over flat ground: 18.4 mm off the surface on average with Sole Grounding off, which is the default, and 1.58 mm with it on. Sole Grounding is off by default because it multiplies the cost of posing that character each frame by six to nine, and because it bends the standing knee further.</p>
 </template>
 <tr class="unverified-row">
 <td>Turning on the spot</td>
