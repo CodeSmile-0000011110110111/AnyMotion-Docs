@@ -144,10 +144,12 @@ separately as an asymmetry value.</li>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Animator" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Animator">
   Animator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Animator describing this rig, resolved but never created. Returns null when the character
+has no Animator and none has been manufactured yet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -167,6 +169,88 @@ separately as an asymmetry value.</li>
 
 
 
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Animator_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Safe to call from Inspector code, which must not add a component. Callers that need one to
+exist — measuring, binding — call <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator">EnsureAnimator()</a> instead.</p>
+</div>
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar">
+  Avatar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This character's Humanoid Avatar. Assigning one is enough to drive the character; the Animator
+component is not required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Avatar Avatar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Avatar</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Assigning moves <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version">Version</a>, which is what a driver that gave up on an
+Avatar-less character watches. Without that, code following the console message and assigning
+an Avatar at runtime would leave the character dead, because <code>OnValidate</code> does not run
+for a script assignment.</p>
+</div>
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot">
+  RigRoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The transform this rig's frame of reference sits on, resolved but never created. Never null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Transform RigRoot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Every driver space expresses its rotations in this object's frame, and <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a>
+reads its scale, so anything reporting on the rig's transform has to read the same one. It is
+the Animator's transform when an Animator is resolvable, and the derived rig root otherwise —
+which is the transform <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator">EnsureAnimator()</a> would put a manufactured Animator on, so
+the answer does not change when that Animator comes and goes across a domain reload.</p>
+</div>
 
 
 
@@ -175,7 +259,7 @@ separately as an asymmetry value.</li>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Values">
   Values
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Last measured values. Valid only when <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_IsValid">IsValid</a> is true.</p>
@@ -203,15 +287,173 @@ separately as an asymmetry value.</li>
 
 
 
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version">
+  Version
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Increments whenever anything a driver's bind depends on may have changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public int Version { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A driver that failed to bind must not retry on every frame, and must still retry the moment
+the user fixes what was wrong. Comparing this number is how it tells those two apart. It is
+deliberately not serialized: a freshly loaded driver has not bound yet and attempts its first
+bind whatever this value is.</p>
+</div>
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_UnityEngine_Transform_UnityEngine_Avatar_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform,UnityEngine.Avatar)">
+  DeriveRigRoot(Transform, Avatar)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L690"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The transform a rig under <code class="paramref">root</code> is anchored to, derived from geometry
+alone. Null when no skinned mesh under it can answer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public static Transform DeriveRigRoot(Transform root, Avatar avatar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <table>
+  <tr>
+  <th>Type</th>
+  <th>Name</th>
+  <th>Description</th>
+  </tr>
+  <dl class="parameters">
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">Transform</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>root</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  <tr>
+    <td style="width: fit-content;white-space: nowrap"><dt><span class="xref">Avatar</span></dt></td>
+    <td style="width: fit-content;white-space: nowrap"><dt><code>avatar</code></dt></td>
+    <td style="width: 99%"><dd></dd></td>
+  </tr>
+  </dl>
+  </table>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_UnityEngine_Transform_UnityEngine_Avatar__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The one implementation of this rule in the codebase, and the reason it is public and static:
+anything asking &quot;is the rig on this object&quot; has to get the same answer this component's own
+rig root gives, and a second implementation elsewhere would drift from it. Creates nothing and
+needs no <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html">RigMetrics</a> instance, so it is safe to call from a guard at startup.</p>
+<p>
+    <code class="paramref">avatar</code> is optional and only sharpens the answer: it names the bone
+    mapped to Hips, which separates this character's own rig from a cape, a weapon or a prop
+    that carries a skinned renderer and bones of its own. Pass null when no Avatar is known
+    and every candidate is accepted.
+</p>
+</div>
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator">
+  EnsureAnimator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an Animator describing this rig, creating a hidden one from <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> when
+the character has none. Returns null when neither an Animator nor an Avatar is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public Animator EnsureAnimator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Animator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Call this from Awake, from <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a>, and from a driver's bind.
+<b>Never call it from OnValidate.</b> Unity does allow AddComponent there, but logs
+&quot;SendMessage cannot be called during Awake, CheckConsistency, or OnValidate&quot;, and it refuses
+DestroyImmediate outright — so a component created there could not be taken back.</p>
+<p>
+    <b>This modifies the scene, and it can run without the user doing anything.</b>
+    <code>GaitDriver</code> is <code>ExecuteAlways</code>, so opening a scene or a prefab saved before this
+    change runs its <code>OnEnable</code>, which binds, which calls this. On a character that carries
+    an Animator, this then adopts that Animator, switches it off and back-fills the
+    <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> field. Those writes mark the scene or the prefab dirty, so the user
+    sees unsaved changes on a scene they only opened.
+</p>
+<p>
+    That is the cost of the decision that an adopted Animator stays disabled for good,
+    including after this component is removed: a disable that is not written to disk would not
+    survive the session. It happens once, because every later call returns at the first line of
+    <span class="xref">CodeSmile.AnyMotion.Core.Rig.RigMetrics.DisableAdoptedAnimator(UnityEngine.Animator)</span> on an Animator that is already off and skips the
+    back-fill on an Avatar that is already assigned. The one console warning per character
+    naming what was disabled is the explanation for the unsaved changes.
+</p>
+</div>
+
+
 
 
   <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure*"></a>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure">
   Measure()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L935"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the rig and stores the result in <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values">Values</a>.
@@ -237,6 +479,40 @@ Safe to call in the Editor outside Play mode.</p>
 
 
 
+
+
+
+
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren">
+  ResolveAvatarFromChildren()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> from a model in this object's children, and says so when more than
+one child could have answered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public void ResolveAvatarFromChildren()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Called when the component is added and from <code>AnimateHumanoid</code>'s own Reset. It fills the
+visible field on the path most users take. It is not the only resolution path: the search in
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator">EnsureAnimator()</a> still runs when this field is empty, which is what keeps every
+scene and prefab that already exists working.</p>
+</div>
 
 
 

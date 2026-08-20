@@ -918,6 +918,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.IRigDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.IRigDriver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.IRigDriver",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.IRigDriver.yml\" sourcestartlinenumber=\"1\">Implemented by a component that writes this rig's bones every frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.yml",
       "output": {
         ".html": {

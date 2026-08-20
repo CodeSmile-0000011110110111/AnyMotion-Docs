@@ -2650,19 +2650,6 @@ references:
   fullName.vb: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.New
   nameWithType: HumanoidBoneSet.HumanoidBoneSet
   nameWithType.vb: HumanoidBoneSet.New
-- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator
-  name: Animator
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_Animator
-  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator
-  nameWithType: HumanoidBoneSet.Animator
-- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator*
-  name: Animator
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_Animator_
-  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator
-  isSpec: "True"
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.Animator
-  nameWithType: HumanoidBoneSet.Animator
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.ApplyRestRotation(UnityEngine.HumanBodyBones,System.Single)
   name: ApplyRestRotation(HumanBodyBones, float)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_ApplyRestRotation_UnityEngine_HumanBodyBones_System_Single_
@@ -4144,6 +4131,12 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.BindPose.Source
   nameWithType: BindPose.Source
+- uid: CodeSmile.AnyMotion.Core.Rig.IRigDriver
+  name: IRigDriver
+  href: reference/CodeSmile.AnyMotion.Core.Rig.IRigDriver.html
+  commentId: T:CodeSmile.AnyMotion.Core.Rig.IRigDriver
+  fullName: CodeSmile.AnyMotion.Core.Rig.IRigDriver
+  nameWithType: IRigDriver
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics
   name: RigMetrics
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html
@@ -4163,6 +4156,45 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Animator
   nameWithType: RigMetrics.Animator
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
+  name: Avatar
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
+  nameWithType: RigMetrics.Avatar
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar*
+  name: Avatar
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
+  nameWithType: RigMetrics.Avatar
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform,UnityEngine.Avatar)
+  name: DeriveRigRoot(Transform, Avatar)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_UnityEngine_Transform_UnityEngine_Avatar_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform,UnityEngine.Avatar)
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform, UnityEngine.Avatar)
+  nameWithType: RigMetrics.DeriveRigRoot(Transform, Avatar)
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot*
+  name: DeriveRigRoot
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot
+  nameWithType: RigMetrics.DeriveRigRoot
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
+  name: EnsureAnimator()
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator()
+  nameWithType: RigMetrics.EnsureAnimator()
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator*
+  name: EnsureAnimator
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
+  nameWithType: RigMetrics.EnsureAnimator
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure
   name: Measure()
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure
@@ -4416,6 +4448,32 @@ references:
   commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.VisualHeight
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.VisualHeight
   nameWithType: RigMetrics.Metrics.VisualHeight
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren
+  name: ResolveAvatarFromChildren()
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren()
+  nameWithType: RigMetrics.ResolveAvatarFromChildren()
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren*
+  name: ResolveAvatarFromChildren
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren
+  nameWithType: RigMetrics.ResolveAvatarFromChildren
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
+  name: RigRoot
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
+  nameWithType: RigMetrics.RigRoot
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot*
+  name: RigRoot
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
+  nameWithType: RigMetrics.RigRoot
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Values
   name: Values
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values
@@ -4429,6 +4487,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Values
   nameWithType: RigMetrics.Values
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
+  name: Version
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
+  nameWithType: RigMetrics.Version
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version*
+  name: Version
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
+  nameWithType: RigMetrics.Version
 - uid: CodeSmile.AnyMotion.Core.SaveLoad
   name: CodeSmile.AnyMotion.Core.SaveLoad
   href: reference/CodeSmile.AnyMotion.Core.SaveLoad.html
