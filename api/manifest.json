@@ -498,6 +498,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene.yml\" sourcestartlinenumber=\"1\">Walks and runs characters across a fixed camera framing, either as an automated sequence over a\nlist of characters and a list of presets, or as one character under manual control. The\nautomated sequence is what a screen recording is cut from; the manual mode is what one preset is\ndesigned in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneMode.yml\" sourcestartlinenumber=\"1\">What the design scene is being used for. See <xref href=\"CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.DesignSceneTravelDirection.yml\" sourcestartlinenumber=\"1\">Which way a character crosses the design scene's frame.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup.yml",
       "output": {
         ".html": {
@@ -523,6 +565,20 @@
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Editor",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.IDesignSceneGroundShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.AnimateYourself.Samples.IDesignSceneGroundShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.IDesignSceneGroundShape",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.IDesignSceneGroundShape.yml\" sourcestartlinenumber=\"1\">The shape of the ground the design scene walks a character over. Implement this on a\n<xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> in the design scene and assign that component to\n<xref href=\"CodeSmile.AnyMotion.AnimateYourself.Samples.DesignScene\" data-throw-if-not-resolved=\"false\"></xref>'s Ground Shape field to replace the flat default.</p>\n"
     },
     {
       "type": "ManagedReference",
