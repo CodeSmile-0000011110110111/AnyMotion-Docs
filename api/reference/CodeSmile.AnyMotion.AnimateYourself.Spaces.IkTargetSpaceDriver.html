@@ -148,7 +148,7 @@ with nothing installed; Final IK becomes an optional higher-quality substitute l
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_BindError" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.BindError">
   BindError
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reason <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IGaitDriverSpace_Bind_UnityEngine_Animator_CodeSmile_AnyMotion_Core_Rig_RigMetrics_CodeSmile_AnyMotion_Core_Rig_BindPose_">Bind(Animator, RigMetrics, BindPose)</a> failed, or null.</p>
@@ -180,7 +180,7 @@ with nothing installed; Final IK becomes an optional higher-quality substitute l
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_BoneStretchEnabled" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.BoneStretchEnabled">
   BoneStretchEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4 (knee pop) from the ik-pop-flip-prevention scout report:
@@ -222,7 +222,7 @@ the two solver settings should end up on the same route.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_DisplayName" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.DisplayName">
   DisplayName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Short label for the comparison table.</p>
@@ -254,7 +254,7 @@ the two solver settings should end up on the same route.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Kind" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.Kind">
   Kind
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -281,11 +281,178 @@ the two solver settings should end up on the same route.</p>
 
 
 
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastLeftSoleLift_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastLeftSoleLift" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift">
+  LastLeftSoleLift
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: metres the last Apply raised the left foot's IK target by to put its sole on the ground.
+Negative means the foot was hovering and was lowered. 0 while the compensation is off or the
+foot is swinging. Reported for measurement and for the inspector, and read by nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LastLeftSoleLift { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastRightSoleLift_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastRightSoleLift" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift">
+  LastRightSoleLift
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: same as <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastLeftSoleLift">LastLeftSoleLift</a>, for the right foot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LastRightSoleLift { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleEvaluations_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleEvaluations" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations">
+  LastSoleEvaluations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: how many candidate poses the last Apply's search placed and measured. This is the whole
+per-frame cost of the compensation, so it is the number to watch when its cost is in
+question.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public int LastSoleEvaluations { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolePelvisRaise_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolePelvisRaise" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise">
+  LastSolePelvisRaise
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: metres the last Apply raised the pelvis by. Never negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float LastSolePelvisRaise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleSolveReachedContact_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleSolveReachedContact" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact">
+  LastSoleSolveReachedContact
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: false when the last Apply's search ran out of travel before a stance sole reached the
+surface. That is a real state, not an error: on a rig where bending the knee pitches the foot
+enough to cancel the rise, no lift inside <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.SoleContactSolver.MaxLiftMetres</span>
+grounds the sole.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public bool LastSoleSolveReachedContact { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolveClamped_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolveClamped*"></a>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolveClamped" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolveClamped">
   LastSolveClamped
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set true when a target was outside the leg's reach on the last Apply — or, L11 (arm layering),
@@ -320,7 +487,7 @@ ordinary swing).</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LeftHandTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LeftHandTarget">
   LeftHandTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11 (arm layering): what the left hand reaches for via IK, blended against the position the
@@ -356,7 +523,7 @@ arm on its ordinary swing. Set every frame by <code>GaitDriver.ApplyNow</code>, 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LookAtTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LookAtTarget">
   LookAtTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L01: what the head/neck/chest chain turns towards. Null disables look-at — the tracked angle
@@ -392,7 +559,7 @@ needs no rebind.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_MaxBoneStretch" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.MaxBoneStretch">
   MaxBoneStretch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_MaxBoneStretch">MaxBoneStretch</a>. Ignored while
@@ -425,7 +592,7 @@ needs no rebind.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_RightHandTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.RightHandTarget">
   RightHandTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: same as <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LeftHandTarget">LeftHandTarget</a>, for the right hand.</p>
@@ -453,11 +620,117 @@ needs no rebind.</p>
 
 
 
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGeometrySource_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGeometrySource" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource">
+  SoleGeometrySource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: what the reduced foot geometry was built from, or why there is none. Reads
+&quot;not measured&quot; until <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Bind_UnityEngine_Animator_CodeSmile_AnyMotion_Core_Rig_RigMetrics_CodeSmile_AnyMotion_Core_Rig_BindPose_">Bind(Animator, RigMetrics, BindPose)</a> has run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public string SoleGeometrySource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled">
+  SoleGroundingEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05 (foot planting on uneven ground), sole-height compensation:
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SoleGrounding">SoleGrounding</a>. Off leaves this space
+bit-for-bit as it was before the compensation existed — the whole block is skipped, not
+applied with a zero lift.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public bool SoleGroundingEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Set every frame by <code>GaitDriver.ApplyNow</code> from the gait's own parameters, the same route
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_BoneStretchEnabled">BoneStretchEnabled</a> takes and for the same reason: it describes how the chain is
+solved, not what pose it is solving for.</p>
+</div>
+
+
+
+
+  <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SolePelvisShare_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SolePelvisShare" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare">
+  SolePelvisShare
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>L05: <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SolePelvisShare">SolePelvisShare</a>. Ignored while
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled">SoleGroundingEnabled</a> is false. Set every frame, same as that property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public float SolePelvisShare { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsAnimationRigging_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsAnimationRigging*"></a>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsAnimationRigging" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsAnimationRigging">
   SupportsAnimationRigging
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>False when this space overwrites whatever Animation Rigging produced, making the two mutually
@@ -490,7 +763,7 @@ exclusive.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsLimbTargets" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsLimbTargets">
   SupportsLimbTargets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>False when the space cannot place a hand or foot at a chosen point, which R10 requires.</p>
@@ -522,7 +795,7 @@ exclusive.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsMasking" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsMasking">
   SupportsMasking
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>False when the space can only write the whole body, so partial-body jank is impossible.</p>
@@ -558,7 +831,7 @@ exclusive.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Apply_CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose__System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.Apply(CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose@,System.Single)">
   Apply(in GaitPose, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L588"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes the pose to the rig. <code class="paramref">weight</code> blends between the bind pose at 0 and
@@ -607,7 +880,7 @@ rather than switch it.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Bind_UnityEngine_Animator_CodeSmile_AnyMotion_Core_Rig_RigMetrics_CodeSmile_AnyMotion_Core_Rig_BindPose_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.Bind(UnityEngine.Animator,CodeSmile.AnyMotion.Core.Rig.RigMetrics,CodeSmile.AnyMotion.Core.Rig.BindPose)">
   Bind(Animator, RigMetrics, BindPose)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L520"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Prepares the space for one rig. Returns false and sets <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IGaitDriverSpace.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IGaitDriverSpace_BindError">BindError</a> on failure.</p>
@@ -667,7 +940,7 @@ reference, after which rotations stack on a pose that already contains a frame o
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_BlendGroundNormal_UnityEngine_Vector3_System_Single_UnityEngine_Vector3_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.BlendGroundNormal(UnityEngine.Vector3,System.Single,UnityEngine.Vector3,System.Single)">
   BlendGroundNormal(Vector3, float, Vector3, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L08: the ground normal the pelvis should tilt towards, blended from both feet's L05 ground
@@ -732,7 +1005,7 @@ rather than an undefined blend, since there is nothing to measure a slope from.<
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ClampArmReachDistance_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ClampArmReachDistance(System.Single,System.Single,System.Single,System.Single)">
   ClampArmReachDistance(float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1052"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how far along the reach direction the hand target may be placed. The upper limit is
@@ -797,7 +1070,7 @@ the two segments' difference, below which no elbow angle exists.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ClampGroundDelta_System_Boolean_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ClampGroundDelta(System.Boolean,System.Single,System.Single)">
   ClampGroundDelta(bool, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05 no-ground policy: clamps a raw ground-height delta to the authored maximum drop, and
@@ -857,7 +1130,7 @@ scene; <span class="xref">CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpa
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ClampLookAngle_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ClampLookAngle(System.Single,System.Single)">
   ClampLookAngle(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L01: clamps a yaw or pitch angle to <code class="paramref">fullRangeDegrees</code> of total sweep,
@@ -912,7 +1185,7 @@ at their default of 180 allow ±90°, and at 360 allow the full circle a Horrifi
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeCompromisePelvisDrop_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeCompromisePelvisDrop(System.Single,System.Single,System.Single)">
   ComputeCompromisePelvisDrop(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O6 (scout-ik-pop-flip-prevention.md §3): the smooth, C∞ compromise between the two legs'
@@ -991,7 +1264,7 @@ preserving the gait's own intended bend exactly as the old rule did in that case
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeGroundInducedPelvisDrop_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeGroundInducedPelvisDrop(System.Single,System.Single,System.Single)">
   ComputeGroundInducedPelvisDrop(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05: pelvis drop attributable to the ground correction alone, not to the gait pose's own
@@ -1057,7 +1330,7 @@ is.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeLookAngles_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeLookAngles(UnityEngine.Vector3)">
   ComputeLookAngles(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L01 (look-at / head tracking): the yaw/pitch, in degrees, that would turn the character's
@@ -1113,7 +1386,7 @@ rotation about the root's right axis, positive tilting down, matching
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputePelvisDrop_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputePelvisDrop(System.Single,System.Single)">
   ComputePelvisDrop(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L247"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05: how far the pelvis must additionally drop so a leg whose ground-corrected target is
@@ -1166,7 +1439,7 @@ farther than its own reach is not left stretching. 0 when the target is already 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ComputeStepShortenMetres_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ComputeStepShortenMetres(System.Single,System.Single)">
   ComputeStepShortenMetres(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L518"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L08: how many metres to pull a leg's foot target back towards directly under the hip (<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Apply_CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose__System_Single_">Apply(in GaitPose, float)</a>'s use against <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_Position">Position</a>'s Z), attempting to
@@ -1231,7 +1504,7 @@ absorb it.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ConfigureGroundConformance_UnityEngine_LayerMask_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ConfigureGroundConformance(UnityEngine.LayerMask,System.Single,System.Single)">
   ConfigureGroundConformance(LayerMask, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L771"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L852"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05: sets the physics/scene wiring the ground raycast needs. Called once from
@@ -1285,7 +1558,7 @@ rig data — they describe this project's colliders, not this character's measur
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_Dispose" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L841"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -1312,7 +1585,7 @@ rig data — they describe this project's colliders, not this character's measur
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LookAtWeightShare_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LookAtWeightShare(System.Single,System.Single)">
   LookAtWeightShare(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L01: one bone's fraction of the total look rotation, from its own authored weight
@@ -1368,7 +1641,7 @@ zero, which disables the rotation instead of producing <code>NaN</code>.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_MirrorGroundNormalHorizontal_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.MirrorGroundNormalHorizontal(UnityEngine.Vector3)">
   MirrorGroundNormalHorizontal(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L498"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L08: a ground normal's horizontal projection always points downhill — the direction of
@@ -1423,7 +1696,7 @@ component never changes a vector's length, so a unit normal in stays a unit norm
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveArmIkWeight_System_Boolean_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveArmIkWeight(System.Boolean,System.Single,System.Single,System.Single)">
   ResolveArmIkWeight(bool, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L803"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L884"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11 (arm layering): whether and how much <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.ArmAngles.html">ApplyArm(ArmAngles, LimbTarget, float, float, float, float, float, Transform, float, Transform, float, HumanBodyBones, HumanBodyBones, HumanBodyBones, float, float, float)</a> should reach for an external
@@ -1490,7 +1763,7 @@ exactly as before this mechanism existed rather than reaching for an undefined p
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveArmPoleDirection_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveArmPoleDirection(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Vector3)">
   ResolveArmPoleDirection(Vector3, Vector3, float, Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1030"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: which way the elbow points. A relaxed human elbow points backwards and a little outwards,
@@ -1565,7 +1838,7 @@ is also collinear with, because the two are <code class="paramref">poleOutwardDe
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveAzimuthExcess_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveAzimuthExcess(System.Single,System.Single,System.Single)">
   ResolveAzimuthExcess(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L920"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1001"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how many degrees <code class="paramref">azimuthDegrees</code> lies outside the allowed window
@@ -1624,7 +1897,7 @@ is also collinear with, because the two are <code class="paramref">poleOutwardDe
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveMissedFootDelta_System_Single_System_Boolean_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveMissedFootDelta(System.Single,System.Boolean,System.Single)">
   ResolveMissedFootDelta(float, bool, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05 no-ground policy, second stage: what to apply for a foot whose own raycast missed. A miss
@@ -1691,7 +1964,7 @@ capsule collider can still be holding it up even when both feet miss.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachAzimuth_UnityEngine_Vector3_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachAzimuth(UnityEngine.Vector3,System.Single)">
   ResolveReachAzimuth(Vector3, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L898"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L979"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: the direction from a shoulder to a reach target, as a horizontal bearing in degrees — 0
@@ -1746,7 +2019,7 @@ two arms produce the same number for mirrored targets and one set of limits cove
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachElevation_UnityEngine_Vector3_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachElevation(UnityEngine.Vector3)">
   ResolveReachElevation(Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L912"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L993"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how far a reach direction is from hanging straight down, in degrees — 0 hanging, 90 level
@@ -1794,7 +2067,7 @@ with the shoulder, 180 straight overhead.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveReachability_UnityEngine_Vector3_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveReachability(UnityEngine.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single)">
   ResolveReachability(Vector3, float, float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L950"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1031"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: how much of an assigned hand target's reach the arm should actually attempt, 0..1. 1 inside
@@ -1881,7 +2154,7 @@ the reach has no such point, and matches what a person does with something out o
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveStretchCeiling_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveStretchCeiling(System.Single)">
   ResolveStretchCeiling(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1516"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4: the largest stretch that still leaves the joint <b>straightening</b> as its target moves
@@ -1952,7 +2225,7 @@ recovering — a 9.4° inversion in the middle of the band.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveStretchFactor_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveStretchFactor(System.Single,System.Single,System.Single,System.Single)">
   ResolveStretchFactor(float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1592"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4 (knee pop) from the ik-pop-flip-prevention scout report, second half of the Kovar fix: how
@@ -2050,7 +2323,7 @@ forearm) from receiving a stretch sized by the other segment.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveStretchedJointPositions_UnityEngine_Vector3_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__UnityEngine_Vector3__" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.ResolveStretchedJointPositions(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,UnityEngine.Vector3@,UnityEngine.Vector3@)">
   ResolveStretchedJointPositions(Vector3, Vector3, Vector3, float, out Vector3, out Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1639"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4: where a chain's two joints move to once <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_ResolveStretchFactor_System_Single_System_Single_System_Single_System_Single_">ResolveStretchFactor(float, float, float, float)</a> has asked for a
@@ -2140,7 +2413,7 @@ because both vectors are measured in the same frame they are written back to.</p
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SlerpReachDirection_UnityEngine_Vector3_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SlerpReachDirection(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
   SlerpReachDirection(Vector3, Vector3, Vector3, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L985"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1066"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L11: rotates <code class="paramref">fromDirection</code> a fraction <code class="paramref">t</code> of the way
@@ -2212,7 +2485,7 @@ an arm through and keeps the two arms mirror-symmetric.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SmoothDirectionTowards_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SmoothDirectionTowards(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)">
   SmoothDirectionTowards(Vector3, Vector3, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L08 (slope adaptation): <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SmoothTowards_System_Single_System_Single_System_Single_System_Single_">SmoothTowards(float, float, float, float)</a>'s exponential-smoothing step, for a
@@ -2278,7 +2551,7 @@ one frame.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SmoothTowards_System_Single_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SmoothTowards(System.Single,System.Single,System.Single,System.Single)">
   SmoothTowards(float, float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05: one exponential-smoothing step of <code class="paramref">current</code> towards
@@ -2353,7 +2626,7 @@ same <code>Time.realtimeSinceStartup</code> value.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoftenReach_System_Single_System_Single_System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach(System.Single,System.Single,System.Single)">
   SoftenReach(float, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L1661"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4 (knee pop) from the ik-pop-flip-prevention scout report: softens reach distance as it
@@ -2425,7 +2698,7 @@ already inside the chain's ordinary working range is unaffected.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_TrackLookAngle_System_Single_System_Single_System_Single_System_Single_System_Boolean_System_Single__System_Single_" data-uid="CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.TrackLookAngle(System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Single@,System.Single)">
   TrackLookAngle(float, float, float, float, bool, ref float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Spaces/IkTargetSpaceDriver.cs/#L450"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L01: advances a currently-tracked yaw or pitch towards <code class="paramref">targetDegrees</code>, capped

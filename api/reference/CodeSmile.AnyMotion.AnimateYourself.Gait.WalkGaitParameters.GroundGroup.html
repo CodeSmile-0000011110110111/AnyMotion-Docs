@@ -312,6 +312,69 @@ public float SmoothingTime</code></pre>
 
 
 
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SoleGrounding" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleGrounding">
+  SoleGrounding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L821"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;Puts the visible sole of each standing foot on the surface instead of near it. The foot IK target aims the ankle bone, and how far the sole then sits below the ankle changes as the knee bends, so the sole ends up inside the ground or above it even when the ankle is exactly where it was asked to be. This measures the drawn foot every frame and corrects it. It costs performance and it bends the standing knee further, so it is off unless you turn it on.&quot;)]
+public bool SoleGrounding</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SolePelvisShare" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare">
+  SolePelvisShare
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L828"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How much of each foot&#39;s correction the hips take, from 0 (the knee absorbs all of it) to 1 (the hips absorb all of it). Only used while Sole Grounding is on. Keep this low. Raising the hips lifts both of them, which stretches the other leg until its own foot leaves the ground, so a high value places the feet less accurately than the default does.&quot;)]
+[Range(0, 1)]
+public float SolePelvisShare</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">float</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 </article>
 
         <div class="contribution d-print-none">

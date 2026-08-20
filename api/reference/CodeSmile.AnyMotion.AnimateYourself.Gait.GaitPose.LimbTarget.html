@@ -211,6 +211,46 @@ Unused by hands.</p>
 
 
 
+  <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_IsStance" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.IsStance">
+  IsStance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True while this leg is in the stance half of its own cycle, and while the character is
+standing. Always false for a hand.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public bool IsStance</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_IsStance_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Separate from <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_ContactWeight">ContactWeight</a> on purpose. That value ramps through the
+beginning and end of swing so a correction can fade in and out, which makes it a weight
+and not a state; reading &quot;stance&quot; out of it means comparing it against 1, and that would
+silently change meaning the next time the ramp is retuned. The sole-height compensation in
+<code>IkTargetSpaceDriver</code> needs the state: it corrects a planted foot and must leave a
+swinging one alone.</p>
+</div>
+
+
+
+
+
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_NeutralPosition" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.NeutralPosition">
   NeutralPosition
   <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L196"><i class="bi bi-code-slash"></i></a>
@@ -284,7 +324,7 @@ mid-air (<code>locomotion-catalog.md</code> §3, spec correction). Unused by han
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_PoleAngle" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.PoleAngle">
   PoleAngle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/GaitPose.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Direction the knee points, in degrees around the limb's root-to-tip axis. Positive is

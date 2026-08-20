@@ -1030,6 +1030,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.yml\" sourcestartlinenumber=\"1\">One group of drawn points that move rigidly with one bone, in that bone's own local space.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.SoleGeometry",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.yml\" sourcestartlinenumber=\"1\">The drawn geometry of both feet, reduced to the few vertices that can ever be the lowest one, so\nthe height of a sole above the ground can be evaluated every frame without reading the mesh.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodeSmile.AnyMotion.Core.Rig.SoleGeometryData",
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.yml\" sourcestartlinenumber=\"1\">Both feet's drawn lowest-point candidates, measured once from the mesh and stored on\n<xref href=\"CodeSmile.AnyMotion.Core.Rig.RigMetrics\" data-throw-if-not-resolved=\"false\"></xref>. See <xref href=\"CodeSmile.AnyMotion.Core.Rig.SoleGeometry\" data-throw-if-not-resolved=\"false\"></xref> for what it is for and how it is\nreduced.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "reference/CodeSmile.AnyMotion.Core.Rig.yml",
       "output": {
         ".html": {

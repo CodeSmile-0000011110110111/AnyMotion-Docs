@@ -469,6 +469,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.GroundBlend
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.GroundBlend
   nameWithType: GaitPose.LimbTarget.GroundBlend
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.IsStance
+  name: IsStance
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_IsStance
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.IsStance
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.IsStance
+  nameWithType: GaitPose.LimbTarget.IsStance
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.NeutralPosition
   name: NeutralPosition
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.GaitPose.LimbTarget.html#CodeSmile_AnyMotion_AnimateYourself_Gait_GaitPose_LimbTarget_NeutralPosition
@@ -1047,6 +1053,18 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SmoothingTime
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SmoothingTime
   nameWithType: WalkGaitParameters.GroundGroup.SmoothingTime
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleGrounding
+  name: SoleGrounding
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SoleGrounding
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleGrounding
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleGrounding
+  nameWithType: WalkGaitParameters.GroundGroup.SoleGrounding
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare
+  name: SolePelvisShare
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SolePelvisShare
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare
+  nameWithType: WalkGaitParameters.GroundGroup.SolePelvisShare
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Head
   name: Head
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Head
@@ -3385,6 +3403,12 @@ references:
   commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose()
   nameWithType: HumanoidBoneSet.RestoreBindPose()
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose(UnityEngine.HumanBodyBones)
+  name: RestoreBindPose(HumanBodyBones)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RestoreBindPose_UnityEngine_HumanBodyBones_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose(UnityEngine.HumanBodyBones)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose(UnityEngine.HumanBodyBones)
+  nameWithType: HumanoidBoneSet.RestoreBindPose(HumanBodyBones)
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RestoreBindPose*
   name: RestoreBindPose
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RestoreBindPose_
@@ -3839,6 +3863,71 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.Kind
   nameWithType: IkTargetSpaceDriver.Kind
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift
+  name: LastLeftSoleLift
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastLeftSoleLift
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift
+  nameWithType: IkTargetSpaceDriver.LastLeftSoleLift
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift*
+  name: LastLeftSoleLift
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastLeftSoleLift_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastLeftSoleLift
+  nameWithType: IkTargetSpaceDriver.LastLeftSoleLift
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift
+  name: LastRightSoleLift
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastRightSoleLift
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift
+  nameWithType: IkTargetSpaceDriver.LastRightSoleLift
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift*
+  name: LastRightSoleLift
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastRightSoleLift_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastRightSoleLift
+  nameWithType: IkTargetSpaceDriver.LastRightSoleLift
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations
+  name: LastSoleEvaluations
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleEvaluations
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations
+  nameWithType: IkTargetSpaceDriver.LastSoleEvaluations
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations*
+  name: LastSoleEvaluations
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleEvaluations_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleEvaluations
+  nameWithType: IkTargetSpaceDriver.LastSoleEvaluations
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise
+  name: LastSolePelvisRaise
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolePelvisRaise
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise
+  nameWithType: IkTargetSpaceDriver.LastSolePelvisRaise
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise*
+  name: LastSolePelvisRaise
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolePelvisRaise_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolePelvisRaise
+  nameWithType: IkTargetSpaceDriver.LastSolePelvisRaise
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact
+  name: LastSoleSolveReachedContact
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleSolveReachedContact
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact
+  nameWithType: IkTargetSpaceDriver.LastSoleSolveReachedContact
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact*
+  name: LastSoleSolveReachedContact
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSoleSolveReachedContact_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSoleSolveReachedContact
+  nameWithType: IkTargetSpaceDriver.LastSoleSolveReachedContact
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.LastSolveClamped
   name: LastSolveClamped
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_LastSolveClamped
@@ -4154,6 +4243,45 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoftenReach
   nameWithType: IkTargetSpaceDriver.SoftenReach
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource
+  name: SoleGeometrySource
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGeometrySource
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource
+  nameWithType: IkTargetSpaceDriver.SoleGeometrySource
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource*
+  name: SoleGeometrySource
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGeometrySource_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGeometrySource
+  nameWithType: IkTargetSpaceDriver.SoleGeometrySource
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled
+  name: SoleGroundingEnabled
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled
+  nameWithType: IkTargetSpaceDriver.SoleGroundingEnabled
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled*
+  name: SoleGroundingEnabled
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleGroundingEnabled_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleGroundingEnabled
+  nameWithType: IkTargetSpaceDriver.SoleGroundingEnabled
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
+  name: SolePelvisShare
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SolePelvisShare
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
+  nameWithType: IkTargetSpaceDriver.SolePelvisShare
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare*
+  name: SolePelvisShare
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SolePelvisShare_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
+  nameWithType: IkTargetSpaceDriver.SolePelvisShare
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsAnimationRigging
   name: SupportsAnimationRigging
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsAnimationRigging
@@ -5070,6 +5198,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
   nameWithType: RigMetrics.RigRoot
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
+  name: SoleGeometry
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_SoleGeometry
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
+  nameWithType: RigMetrics.SoleGeometry
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry*
+  name: SoleGeometry
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_SoleGeometry_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
+  nameWithType: RigMetrics.SoleGeometry
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Values
   name: Values
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values
@@ -5096,6 +5237,137 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version
   nameWithType: RigMetrics.Version
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup
+  name: SoleBoneGroup
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.html
+  commentId: T:CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup
+  nameWithType: SoleBoneGroup
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.BonePath
+  name: BonePath
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.html#CodeSmile_AnyMotion_Core_Rig_SoleBoneGroup_BonePath
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.BonePath
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.BonePath
+  nameWithType: SoleBoneGroup.BonePath
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.Points
+  name: Points
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.html#CodeSmile_AnyMotion_Core_Rig_SoleBoneGroup_Points
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.Points
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleBoneGroup.Points
+  nameWithType: SoleBoneGroup.Points
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry
+  name: SoleGeometry
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html
+  commentId: T:CodeSmile.AnyMotion.Core.Rig.SoleGeometry
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry
+  nameWithType: SoleGeometry
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind(UnityEngine.Animator,CodeSmile.AnyMotion.Core.Rig.SoleGeometryData)
+  name: Bind(Animator, SoleGeometryData)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Bind_UnityEngine_Animator_CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind(UnityEngine.Animator,CodeSmile.AnyMotion.Core.Rig.SoleGeometryData)
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind(UnityEngine.Animator, CodeSmile.AnyMotion.Core.Rig.SoleGeometryData)
+  nameWithType: SoleGeometry.Bind(Animator, SoleGeometryData)
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind*
+  name: Bind
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Bind_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind
+  nameWithType: SoleGeometry.Bind
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure(UnityEngine.Animator)
+  name: Measure(Animator)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Measure_UnityEngine_Animator_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure(UnityEngine.Animator)
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure(UnityEngine.Animator)
+  nameWithType: SoleGeometry.Measure(Animator)
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure*
+  name: Measure
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Measure_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure
+  nameWithType: SoleGeometry.Measure
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.MinimumDominantWeight
+  name: MinimumDominantWeight
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_MinimumDominantWeight
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.MinimumDominantWeight
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.MinimumDominantWeight
+  nameWithType: SoleGeometry.MinimumDominantWeight
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount(System.Boolean)
+  name: PointCount(bool)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_PointCount_System_Boolean_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount(System.Boolean)
+  name.vb: PointCount(Boolean)
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount(bool)
+  fullName.vb: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount(Boolean)
+  nameWithType: SoleGeometry.PointCount(bool)
+  nameWithType.vb: SoleGeometry.PointCount(Boolean)
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount*
+  name: PointCount
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_PointCount_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount
+  nameWithType: SoleGeometry.PointCount
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.ReductionDirections
+  name: ReductionDirections
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_ReductionDirections
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.ReductionDirections
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.ReductionDirections
+  nameWithType: SoleGeometry.ReductionDirections
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint(System.Boolean,UnityEngine.Vector3@)
+  name: TryGetLowestPoint(bool, out Vector3)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_TryGetLowestPoint_System_Boolean_UnityEngine_Vector3__
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint(System.Boolean,UnityEngine.Vector3@)
+  name.vb: TryGetLowestPoint(Boolean, Vector3)
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint(bool, out UnityEngine.Vector3)
+  fullName.vb: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint(Boolean, UnityEngine.Vector3)
+  nameWithType: SoleGeometry.TryGetLowestPoint(bool, out Vector3)
+  nameWithType.vb: SoleGeometry.TryGetLowestPoint(Boolean, Vector3)
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint*
+  name: TryGetLowestPoint
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometry.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometry_TryGetLowestPoint_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint
+  nameWithType: SoleGeometry.TryGetLowestPoint
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData
+  name: SoleGeometryData
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html
+  commentId: T:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData
+  nameWithType: SoleGeometryData
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid
+  name: IsValid
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_IsValid
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid
+  nameWithType: SoleGeometryData.IsValid
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid*
+  name: IsValid
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_IsValid_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.IsValid
+  nameWithType: SoleGeometryData.IsValid
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.LeftFoot
+  name: LeftFoot
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_LeftFoot
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.LeftFoot
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.LeftFoot
+  nameWithType: SoleGeometryData.LeftFoot
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.RightFoot
+  name: RightFoot
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_RightFoot
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.RightFoot
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.RightFoot
+  nameWithType: SoleGeometryData.RightFoot
+- uid: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.Source
+  name: Source
+  href: reference/CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.html#CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_Source
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.Source
+  fullName: CodeSmile.AnyMotion.Core.Rig.SoleGeometryData.Source
+  nameWithType: SoleGeometryData.Source
 - uid: CodeSmile.AnyMotion.Core.SaveLoad
   name: CodeSmile.AnyMotion.Core.SaveLoad
   href: reference/CodeSmile.AnyMotion.Core.SaveLoad.html
