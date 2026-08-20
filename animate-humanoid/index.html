@@ -97,25 +97,40 @@ meant to be visible in the Inspector or referenced from your own scripts.</p>
 <p>Before adding the component, the character needs:</p>
 
 <ul>
-  <li>An <strong>Animator</strong> component with its <strong>Avatar</strong> set to <strong>Humanoid</strong> (not Generic). This is what lets
-the system find the character’s hips, spine, arms and legs by their standard humanoid roles,
-regardless of what the bones are actually named in that particular model.</li>
+  <li>A model imported with its <strong>Rig</strong> set to <strong>Humanoid</strong> (not Generic), so it has a Humanoid
+<strong>Avatar</strong>. That Avatar is what lets the system find the character’s hips, spine, arms and legs by
+their standard humanoid roles, regardless of what the bones are actually named in that particular
+model. You do <strong>not</strong> need to add an Animator component: assigning the Avatar is enough, and there
+is no Animator Controller and no animation clip anywhere in this asset.</li>
   <li>A <strong>uniform scale</strong> on the character (the same scale value on X, Y and Z). A character scaled
 differently on different axes cannot be measured correctly, and the system will refuse to animate
 it rather than produce a distorted result.</li>
-  <li>A skinned mesh, so the system can read the character’s true rest pose from the mesh itself.</li>
 </ul>
+
+<p>A skinned mesh is not required, but it is preferred: with one, the system reads the character’s true
+rest pose from the mesh itself. Without one it falls back to the Avatar’s T-pose and says so in the
+Inspector.</p>
+
+<p>If the character already has an Animator component, it is used and then <strong>switched off</strong>, and one
+message in the Console says so. This asset generates motion procedurally and never plays a clip, so
+an enabled Animator costs frame time for no result, and an Animator Controller on it would drive the
+bones this asset does not — which puts two different poses on one character. The Animator component
+can be removed if nothing else in your project uses it. It is never switched back on, including
+after <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> is removed.</p>
 
 <h2 id="adding-it-to-a-character">Adding it to a character</h2>
 
 <ol>
-  <li>Select the character’s root GameObject — the one carrying the Animator — or, if you have already
-built a controller/visual hierarchy split (see the note on placement below), the visual root.</li>
+  <li>Select the character’s root GameObject, or, if you have already built a controller/visual
+hierarchy split (see the note on placement below), the visual root.</li>
   <li><strong>Add Component ▸ AnyMotion ▸ Animate Humanoid.</strong></li>
   <li>Unity adds two more components alongside it automatically: one measures the character’s body (leg
 length, hip width, shoulder height), and the other turns settings into a pose each frame. You
 don’t add these yourself, and they don’t show up as separate entries in the Inspector —
 <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> owns and hides them, and shows their settings as one combined UI instead.</li>
+  <li>Check the <strong>Avatar</strong> field at the top of the Inspector. It is filled in automatically from the
+model when the component is added; assign the character’s Humanoid Avatar there yourself if it is
+empty.</li>
   <li>Find the body-measuring component in the Inspector (it stays visible, since it is shared by other
 tools in this asset) and press <strong>Measure</strong>. Until a character has been measured, <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code>
 shows a warning at the top of its Inspector and does nothing.</li>
@@ -123,8 +138,8 @@ shows a warning at the top of its Inspector and does nothing.</li>
 preview is on (see <a href="#preview-and-debug">Preview and Debug</a> below), or in Play mode regardless.</li>
 </ol>
 
-<p>If a measurement fails, the warning will say why — almost always either the Avatar is not set to
-Humanoid, or the character’s scale is not uniform.</p>
+<p>If a measurement fails, the warning will say why — almost always either no Avatar was found, the
+Avatar is not Humanoid, or the character’s scale is not uniform.</p>
 
 <h3 id="where-to-put-it-the-hierarchy-matters">Where to put it: the hierarchy matters</h3>
 
@@ -133,7 +148,7 @@ Humanoid, or the character’s scale is not uniform.</p>
 each frame, the two writes fight each other and produce jitter or drift.</p>
 
 <p>The safe pattern is a two-level hierarchy: an outer object that your movement code moves around the
-world, and an inner “visual root” object, parented under it, that carries the Animator and this
+world, and an inner “visual root” object, parented under it, that carries the rig and this
 component. Movement code only ever touches the outer object. <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> only ever touches the
 inner one.</p>
 
