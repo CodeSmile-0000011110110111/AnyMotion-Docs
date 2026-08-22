@@ -280,15 +280,27 @@ to uneven terrain. The probe fields tell it where to physically look for that te
 standing foot on the surface rather than near it. The foot target aims the ankle bone, and how far
 the sole sits below the ankle changes as the knee bends, so the sole ends up slightly inside the
 ground or above it even when the ankle is exactly where it was asked to be. Turning Sole Grounding
-on takes the average sole error, measured on three characters walking over flat ground, from 18.4 mm
-to 1.58 mm. It is off by default for two reasons: it multiplies the cost of posing that character
-each frame by six to nine, and it bends the standing knee further to hold the sole down.</p>
+on takes the average sole error, measured on three characters walking over flat ground, from 14.3 mm
+to 0.53 mm. It is off by default for two reasons: posing that character each frame costs 193 to 526
+microseconds with it on against 51 to 74 microseconds with it off, which is roughly 3 to 9 times
+depending on the character, comparing each character against its own cost with the setting off; and
+it bends the standing knee further to hold the sole down.</p>
 
-<p>Sole Grounding depends on two things. The character must have been measured, and the body-measuring
-component’s results carry a <strong>Sole Geometry</strong> row that states whether the foot shape it needs was
-captured. It also reaches those numbers only at Soft Reach Start 0.95 with Bone Stretch on: at the
-default 0.90 with Bone Stretch off, the leg runs out of reach before the foot arrives and about a
-third of the improvement is left.</p>
+<p><strong>Sole Solver Iterations</strong>, beside it, is how many poses the correction may try per foot each pass.
+The default never cuts the search short, so lowering it is what buys frame time: measured over three
+characters on flat ground, the default leaves an average sole error of 0.53 mm and costs 193 to
+526 microseconds per character per frame, and the lowest setting leaves 2.96 mm and costs 161 to
+188 microseconds. Most of that saving comes from the character whose feet need the most work; a
+character the correction already solves in two or three tries barely gets cheaper.</p>
+
+<p>Sole Grounding depends on two things. The character must have been measured in the Editor while the
+game is not running, because that is when the foot shape is read and saved with the character;
+pressing Measure while the game runs measures everything else and leaves the foot shape as it was.
+The body-measuring component’s results then carry a <strong>Sole Geometry</strong> row that states whether the
+foot shape it needs was captured. The Kyle character included with Animate Yourself was measured
+before it shipped, so it already carries that foot shape. Sole Grounding also reaches those numbers
+only at Soft Reach Start 0.95 with Bone Stretch on: at the default 0.90 with Bone Stretch off, the
+leg runs out of reach before the foot arrives and about a third of the improvement is left.</p>
 
 <p><strong>Sole Pelvis Share</strong> decides how much of each foot’s correction the hips take instead of the knee.
 Keep it low. Raising the hips lifts both of them, which stretches the other leg until its own foot
