@@ -1065,6 +1065,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SolePelvisShare
   nameWithType: WalkGaitParameters.GroundGroup.SolePelvisShare
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleSolverIterations
+  name: SoleSolverIterations
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_GroundGroup_SoleSolverIterations
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleSolverIterations
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.GroundGroup.SoleSolverIterations
+  nameWithType: WalkGaitParameters.GroundGroup.SoleSolverIterations
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Head
   name: Head
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Head
@@ -4282,6 +4288,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SolePelvisShare
   nameWithType: IkTargetSpaceDriver.SolePelvisShare
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations
+  name: SoleSolverIterations
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleSolverIterations
+  commentId: P:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations
+  nameWithType: IkTargetSpaceDriver.SoleSolverIterations
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations*
+  name: SoleSolverIterations
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SoleSolverIterations_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SoleSolverIterations
+  nameWithType: IkTargetSpaceDriver.SoleSolverIterations
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.SupportsAnimationRigging
   name: SupportsAnimationRigging
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.IkTargetSpaceDriver.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_IkTargetSpaceDriver_SupportsAnimationRigging

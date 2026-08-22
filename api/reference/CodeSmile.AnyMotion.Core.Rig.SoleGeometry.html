@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry" class="text-break">
-Class SoleGeometry  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L70"><i class="bi bi-code-slash"></i></a>
+Class SoleGeometry  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -117,11 +117,13 @@ the height of a sole above the ground can be evaluated every frame without readi
 
 
   <h2 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The sole-height compensation in <code>IkTargetSpaceDriver</code> measures a sole 29 to 67 times per
-character per frame. Skinning every foot vertex that many times is not affordable, and reading
-the mesh at all is not possible in a player build: a model imported with Read/Write off —
-Unity's default, and the setting on this project's own Kyle-1000 rig — returns no vertices at
-run time.</p>
+  <div class="markdown level0 remarks"><p>The sole-height compensation in <code>IkTargetSpaceDriver</code> places a candidate pose whenever it
+needs a sole height, and <code>IkTargetSpaceDriver.LastSoleEvaluations</code> counts those poses.
+<code>Assets/Plan/engineering/implementation-notes.md</code> → L05 sole-height compensation owns the
+measured range and this remark does not restate it. Skinning every foot vertex once per
+candidate pose is not affordable, and reading the mesh at all is not possible in a player build:
+a model imported with Read/Write off — Unity's default, and the setting on this project's own
+Kyle-1000 rig — returns no vertices at run time.</p>
 <p>
     Both problems have the same answer. A sole vertex is weighted almost entirely to one bone —
     the foot or a toe — so its position in that bone's local space is fixed, and it can be
@@ -148,7 +150,7 @@ run time.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_MinimumDominantWeight" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.MinimumDominantWeight">
   MinimumDominantWeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Smallest single-bone weight a vertex may have and still be treated as rigidly attached to
@@ -180,7 +182,7 @@ that bone. Below this the vertex is dropped.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_ReductionDirections" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.ReductionDirections">
   ReductionDirections
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How many directions the reduction samples. Each contributes the one point extreme along it,
@@ -222,7 +224,7 @@ only the one-off measurement more.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Bind_UnityEngine_Animator_CodeSmile_AnyMotion_Core_Rig_SoleGeometryData_" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Bind(UnityEngine.Animator,CodeSmile.AnyMotion.Core.Rig.SoleGeometryData)">
   Bind(Animator, SoleGeometryData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Resolves stored bone paths against a live rig. Returns null when
@@ -275,10 +277,10 @@ only the one-off measurement more.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Measure_UnityEngine_Animator_" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.Measure(UnityEngine.Animator)">
   Measure(Animator)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reads every readable skinned mesh under <code class="paramref">animator</code> and reduces the two
+  <div class="markdown level1 summary"><p>Reads every skinned mesh under <code class="paramref">animator</code> that can be read and reduces the two
 feet's vertices as the class remarks describe. Returns null when nothing could be read, so a
 caller can keep whatever it measured earlier rather than replacing it with nothing.</p>
 </div>
@@ -317,9 +319,11 @@ caller can keep whatever it measured earlier rather than replacing it with nothi
 
 
   <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_Measure_UnityEngine_Animator__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Call this from the Editor. A mesh imported with Read/Write off can be read there and cannot
-be read in a player, so measuring at run time succeeds only on a rig whose meshes were
-deliberately made readable.</p>
+  <div class="markdown level1 remarks"><p>Call this from the Editor outside play mode. <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a> is the only
+caller and it skips this while <code>Application.isPlaying</code> is true, so the measurement runs
+once per Editor Measure and the result a spawn uses is the serialized one. A mesh imported
+with Read/Write off can be read in the Editor and cannot be read in a player, which is why
+the result is serialized rather than produced at run time.</p>
 </div>
 
 
@@ -329,7 +333,7 @@ deliberately made readable.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_PointCount_System_Boolean_" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.PointCount(System.Boolean)">
   PointCount(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How many points this foot is evaluated from.</p>
@@ -376,7 +380,7 @@ deliberately made readable.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_SoleGeometry_TryGetLowestPoint_System_Boolean_UnityEngine_Vector3__" data-uid="CodeSmile.AnyMotion.Core.Rig.SoleGeometry.TryGetLowestPoint(System.Boolean,UnityEngine.Vector3@)">
   TryGetLowestPoint(bool, out Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lowest drawn point of one foot, in world space.</p>
@@ -428,7 +432,7 @@ deliberately made readable.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L70" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/SoleGeometry.cs/#L72" class="edit-link">Edit this page</a>
         </div>
 
 
