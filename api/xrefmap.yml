@@ -4932,6 +4932,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure
   nameWithType: RigMetrics.Measure
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord
+  name: MeasureAndRecord()
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_MeasureAndRecord
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord()
+  nameWithType: RigMetrics.MeasureAndRecord()
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord*
+  name: MeasureAndRecord
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_MeasureAndRecord_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord
+  nameWithType: RigMetrics.MeasureAndRecord
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics
   name: RigMetrics.Metrics
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html
