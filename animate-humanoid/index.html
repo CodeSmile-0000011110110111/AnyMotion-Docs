@@ -448,7 +448,9 @@ runtime:</p>
   <li><strong><code class="language-plaintext highlighter-rouge">MoveSpeed</code></strong> / <strong><code class="language-plaintext highlighter-rouge">MoveDirection</code></strong> — write these from your movement code each frame if you have
 turned off automatic speed measurement, or if facing and travel direction can differ (for example,
 strafing). <code class="language-plaintext highlighter-rouge">MoveDirection</code> is in degrees relative to the way the character is facing: 0 is straight
-ahead, 90 is sideways to the right, 180 is walking backwards.</li>
+ahead, 90 is sideways to the right, 180 is walking backwards. These two say where the character is
+actually going, so a style never changes them: raising a style weight moves neither value away from
+the one in force, whether you wrote it yourself or automatic speed measurement supplied it.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">LookAtTarget</code></strong> — assign or clear a Transform for the head/neck/chest to turn towards; safe to
 reassign every frame.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">LeftHandTarget</code></strong> / <strong><code class="language-plaintext highlighter-rouge">RightHandTarget</code></strong> — assign a Transform for a hand to reach towards, for
