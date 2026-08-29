@@ -4912,19 +4912,22 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
   nameWithType: RigMetrics.Avatar
-- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform,UnityEngine.Avatar)
-  name: DeriveRigRoot(Transform, Avatar)
-  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_UnityEngine_Transform_UnityEngine_Avatar_
-  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform,UnityEngine.Avatar)
-  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot(UnityEngine.Transform, UnityEngine.Avatar)
-  nameWithType: RigMetrics.DeriveRigRoot(Transform, Avatar)
-- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot*
-  name: DeriveRigRoot
-  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DeriveRigRoot_
-  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(System.String,System.String)
+  name: DescribeSkeletonRootFault(string, string)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DescribeSkeletonRootFault_System_String_System_String_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(System.String,System.String)
+  name.vb: DescribeSkeletonRootFault(String, String)
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(string, string)
+  fullName.vb: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(String, String)
+  nameWithType: RigMetrics.DescribeSkeletonRootFault(string, string)
+  nameWithType.vb: RigMetrics.DescribeSkeletonRootFault(String, String)
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault*
+  name: DescribeSkeletonRootFault
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DescribeSkeletonRootFault_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault
   isSpec: "True"
-  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DeriveRigRoot
-  nameWithType: RigMetrics.DeriveRigRoot
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault
+  nameWithType: RigMetrics.DescribeSkeletonRootFault
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
   name: EnsureAnimator()
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator
@@ -4938,6 +4941,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator
   nameWithType: RigMetrics.EnsureAnimator
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Transform,UnityEngine.Animator)
+  name: FindSkeletonRootFault(Transform, Animator)
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_FindSkeletonRootFault_UnityEngine_Transform_UnityEngine_Animator_
+  commentId: M:CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Transform,UnityEngine.Animator)
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Transform, UnityEngine.Animator)
+  nameWithType: RigMetrics.FindSkeletonRootFault(Transform, Animator)
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault*
+  name: FindSkeletonRootFault
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_FindSkeletonRootFault_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault
+  nameWithType: RigMetrics.FindSkeletonRootFault
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure
   name: Measure()
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure
@@ -5230,6 +5246,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot
   nameWithType: RigMetrics.RigRoot
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged
+  name: SkeletonRootFaultWasLogged
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_SkeletonRootFaultWasLogged
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged
+  nameWithType: RigMetrics.SkeletonRootFaultWasLogged
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged*
+  name: SkeletonRootFaultWasLogged
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_SkeletonRootFaultWasLogged_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged
+  nameWithType: RigMetrics.SkeletonRootFaultWasLogged
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry
   name: SoleGeometry
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_SoleGeometry

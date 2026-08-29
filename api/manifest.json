@@ -564,7 +564,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup",
-      "Summary": null
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup.yml\" sourcestartlinenumber=\"1\">Adds a CharacterController, the movement component and a working Cinemachine third-person rig to\na selected humanoid, so that wiring is produced by one command instead of by hand.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -648,7 +648,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController",
-      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController.yml\" sourcestartlinenumber=\"1\">Third-person locomotion for the P1 hierarchy spike: a <xref href=\"UnityEngine.CharacterController\" data-throw-if-not-resolved=\"false\"></xref> driven\nby the Input System, moving relative to the Cinemachine camera.</p>\n"
+      "Summary": "<p sourcefile=\"reference/CodeSmile.AnyMotion.AnimateYourself.Samples.ThirdPersonCharacterController.yml\" sourcestartlinenumber=\"1\">Third-person locomotion: a <xref href=\"UnityEngine.CharacterController\" data-throw-if-not-resolved=\"false\"></xref> driven by the Input System, moving\nrelative to the Cinemachine camera.</p>\n"
     },
     {
       "type": "ManagedReference",

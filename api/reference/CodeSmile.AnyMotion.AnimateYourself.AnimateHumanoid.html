@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid" class="text-break">
-Class AnimateHumanoid  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L46"><i class="bi bi-code-slash"></i></a>
+Class AnimateHumanoid  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -146,10 +146,12 @@ composes three components on the same GameObject and hides the two it owns:</p>
     than replacing them.
 </p>
 <p>
-    Hierarchy contract (R1): this component belongs on the visual root, <b>not</b> on the object
-    a character controller moves. Two scripts writing the same Transform produce jitter or drift.
-    The <code>Tools ▸ AnyMotion ▸ Setup Third Person Character</code> menu command builds a correct
-    hierarchy.
+    This component may sit on the same object as a character controller. It writes the
+    character's bones, which are below that object, so it never writes the transform the
+    controller moves — measured in all three driver spaces on 2026-08-23, 0.0000 mm of position
+    change over 120 driven steps. The
+    <code>Window ▸ AnyMotion ▸ Setup Third Person Character Controller</code> menu command wires
+    a character up this way.
 </p>
 </div>
 
@@ -162,7 +164,7 @@ composes three components on the same GameObject and hides the two it owns:</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_IsBound" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.IsBound">
   IsBound
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True once the animation system has attached to this character's bones successfully.</p>
@@ -194,7 +196,7 @@ composes three components on the same GameObject and hides the two it owns:</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_IsReady" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.IsReady">
   IsReady
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True once the character has been measured successfully and can be animated. False means
@@ -229,7 +231,7 @@ scale.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_LeftHandTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.LeftHandTarget">
   LeftHandTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Point the left hand reaches for, for example the grip point of a carried object. How far the
@@ -262,7 +264,7 @@ hand goes towards it is set by Hand Target Weight under Arms, which is 0 by defa
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_LookAtTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.LookAtTarget">
   LookAtTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Object the head, neck and chest turn towards. Null disables looking, in which case the
@@ -296,7 +298,7 @@ frame.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_MoveDirection" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.MoveDirection">
   MoveDirection
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Direction of travel relative to the direction the character faces, in degrees. 0 is straight
@@ -331,7 +333,7 @@ while strafing.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_MoveSpeed" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.MoveSpeed">
   MoveSpeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Current forward speed in metres per second. Write this from a character controller every
@@ -369,7 +371,7 @@ measured from how far the character actually moved and any value written here is
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Parameters" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Parameters">
   Parameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Every animation setting, grouped the same way the Inspector groups them — this character's own
@@ -413,7 +415,7 @@ script marks the scene as changed and persists the value.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Phase" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Phase">
   Phase
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Position within the current gait cycle, from 0 to 1. One cycle is two steps. Writing it moves
@@ -466,7 +468,7 @@ where in the cycle the character is.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Pose" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Pose">
   Pose
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The pose produced for the current frame: foot and hand targets, hip position, joint angles.</p>
@@ -498,7 +500,7 @@ where in the cycle the character is.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ResolvedParameters" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResolvedParameters">
   ResolvedParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The settings actually in effect this frame, after any style blend. Read-only in practice:
@@ -535,7 +537,7 @@ writes to it are overwritten on the next frame — change <a class="xref" href="
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_RightHandTarget" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.RightHandTarget">
   RightHandTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Point the right hand reaches for. Works exactly like <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html#CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_LeftHandTarget">LeftHandTarget</a>.</p>
@@ -567,7 +569,7 @@ writes to it are overwritten on the next frame — change <a class="xref" href="
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Style" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Style">
   Style
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How much of each named style this character is using, when a Gait Style Set is assigned to it.
@@ -611,7 +613,7 @@ nothing, so game code shared by styled and unstyled characters needs no test of 
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_Weight" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.Weight">
   Weight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>How strongly the procedural animation is applied, from 0 (the character stays in its
@@ -648,7 +650,7 @@ unanimated rest pose) to 1 (full animation). Values in between fade the animatio
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ApplyNow" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ApplyNow">
   ApplyNow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes the current pose onto the bones immediately, instead of waiting for the end of the
@@ -677,7 +679,7 @@ this.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ApplyParameters_CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ApplyParameters(CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters)">
   ApplyParameters(WalkGaitParameters)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Replaces every setting at once, for example with one of the named presets on
@@ -720,7 +722,7 @@ this.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ResetPhase" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResetPhase">
   ResetPhase()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L355"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Restarts the gait cycle from the beginning, with both feet back at their starting position.</p>
@@ -747,7 +749,7 @@ this.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_ResetPose" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.ResetPose">
   ResetPose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L362"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Puts the character back into its unanimated rest pose, re-reads that pose from the mesh,
@@ -779,7 +781,7 @@ pose, for example after a script recompile interrupted the animation.</p>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_AnimateHumanoid_FootMissedGround" data-uid="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.FootMissedGround">
   FootMissedGround
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Raised when a foot's downward ground probe found nothing to stand on, for example because the
@@ -818,7 +820,7 @@ contract (R13, public event surface) before release, so its shape may still chan
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L46" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/AnimateHumanoid.cs/#L48" class="edit-link">Edit this page</a>
         </div>
 
 

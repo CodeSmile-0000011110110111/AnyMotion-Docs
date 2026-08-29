@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ThirdPersonSetup | AnyMotion API Reference ">
       
-      
+      <meta name="description" content="Adds a CharacterController, the movement component and a working Cinemachine third-person rig to a selected humanoid, so that wiring is produced by one command instead of by hand.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css?v=2">
@@ -78,14 +78,16 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Samples_Editor_ThirdPersonSetup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.ThirdPersonSetup" class="text-break">
-Class ThirdPersonSetup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/Editor/ThirdPersonSetup.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Class ThirdPersonSetup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/Editor/ThirdPersonSetup.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="CodeSmile.html">CodeSmile</a>.<a class="xref" href="CodeSmile.AnyMotion.html">AnyMotion</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.html">AnimateYourself</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.html">Samples</a>.<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Samples.Editor.html">Editor</a></dd> / <dt>Assembly</dt><dd>ApiSource.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Adds a CharacterController, the movement component and a working Cinemachine third-person rig to
+a selected humanoid, so that wiring is produced by one command instead of by hand.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -114,13 +116,24 @@ Class ThirdPersonSetup  <a class="header-action link-secondary" title="View sour
 
 
 
+  <h2 id="CodeSmile_AnyMotion_AnimateYourself_Samples_Editor_ThirdPersonSetup_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Everything goes on the character itself:</p>
+<pre><code class="lang-csharp">Character   CharacterController + movement + AnimateHumanoid + the rig
++-- CameraTarget                                 &lt;- what the camera follows and looks at</code></pre>
+<p>There is no separate visual root. It was required until 2026-08-23 on the belief that the
+movement component and the gait drivers would otherwise write the same transform; measuring all
+three driver spaces showed the drivers write the character's bones and never the object the
+components sit on, so the extra object bought nothing and the requirement was removed.
+Wiring Cinemachine 3 by hand is several components and one easily-missed input reference, so it
+is done here too rather than left as a set of instructions.</p>
+</div>
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/Editor/ThirdPersonSetup.cs/#L26" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Samples/Editor/ThirdPersonSetup.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

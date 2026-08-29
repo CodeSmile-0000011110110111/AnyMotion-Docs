@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_Core_Rig_IRigDriver" data-uid="CodeSmile.AnyMotion.Core.Rig.IRigDriver" class="text-break">
-Interface IRigDriver  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/IRigDriver.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Interface IRigDriver  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/IRigDriver.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -109,10 +109,13 @@ Interface IRigDriver  <a class="header-action link-secondary" title="View source
 
 
   <h2 id="CodeSmile_AnyMotion_Core_Rig_IRigDriver_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Its presence under the same character is what makes disabling a competing Animator correct: the
-bones are already being written procedurally, so a clip playing over them produces one character
-whose parts come from two sources. A character carrying <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html">RigMetrics</a> and nothing else
-is being measured, not driven, and its Animator is left exactly as the user set it.</p>
+  <div class="markdown level0 remarks"><p>Marks a character as driven rather than only measured: a character carrying
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html">RigMetrics</a> and nothing else is being measured, and nothing writes its bones.</p>
+<p>
+    Nothing in this assembly reads this marker since 2026-08-24, when the automatic Animator
+    disable that used it was removed. It is kept as the type a component outside this assembly
+    declares to say that it writes this rig's bones.
+</p>
 </div>
 
 
@@ -120,7 +123,7 @@ is being measured, not driven, and its Animator is left exactly as the user set 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/IRigDriver.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/IRigDriver.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 
