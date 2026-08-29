@@ -111,12 +111,28 @@ it rather than produce a distorted result.</li>
 rest pose from the mesh itself. Without one it falls back to the Avatar’s T-pose and says so in the
 Inspector.</p>
 
-<p>If the character already has an Animator component, it is used and then <strong>switched off</strong>, and one
-message in the Console says so. This asset generates motion procedurally and never plays a clip, so
-an enabled Animator costs frame time for no result, and an Animator Controller on it would drive the
-bones this asset does not — which puts two different poses on one character. The Animator component
-can be removed if nothing else in your project uses it. It is never switched back on, including
-after <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> is removed.</p>
+<p>If the character already has an Animator component, it is used and <strong>left exactly as you set it</strong>.
+Its enabled state is never changed. An enabled Animator with no Animator Controller assigned costs
+nothing measurable: at 60 characters on a 2026-08-24 measurement it was inside the frame-to-frame
+noise of the same scene with every Animator switched off.</p>
+
+<p>An Animator Controller assigned to that Animator is a different matter, and the Inspector shows a
+warning at the top while the Animator is enabled and has a Controller assigned. A switched-off
+Animator plays nothing, so it is not warned about. <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> writes the character’s bones in
+<code class="language-plaintext highlighter-rouge">LateUpdate</code>, after the Animator has written them, so the pose the Controller produces is replaced on
+every bone this asset drives: the hips, spine, chest, upper chest, neck and head, both shoulder,
+upper arm, lower arm and hand chains, and both upper leg, lower leg, foot and toes chains. The bones
+this asset does not drive keep what the Controller gives them, so the fingers, the jaw and the eyes
+still follow the clip and the character shows two animation sources at the same time. That is usually
+not what you want.</p>
+
+<p>The frame time is real too: a 2026-08-24 measurement put a Controller playing a clip at <strong>32.5
+microseconds per character per frame</strong>, which roughly doubled the frame time of a 60-character scene.</p>
+
+<p>Clear the Controller field, or switch the Animator off, unless something else in your project needs
+it. Switching the Animator off also stops any Unity Animation Rigging constraint on the character
+from having an effect, so clearing the Controller field is the better of the two if you use that
+package.</p>
 
 <h2 id="adding-it-to-a-character">Adding it to a character</h2>
 
