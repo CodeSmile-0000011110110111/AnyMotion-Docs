@@ -1,0 +1,250 @@
+/*
+ * Styling for the roadmap page (roadmap.md).
+ *
+ * Loaded through the page's own `extra_css` front matter, via _includes/custom-head.html, so
+ * every rule below applies to /roadmap/ and to no other page on the site. That is why bare
+ * `body`, `h2` and `li` selectors are safe here where they would not be in a site-wide
+ * stylesheet.
+ *
+ * The typography, colour values, card treatment and spacing are copied from the captain's
+ * private roadmap board (`roadmap_tpl.html`, rendered by `gen_roadmap.py`), so the two pages
+ * read as the same document even though they list different items. The board is a table of
+ * one-line rows; this page is prose bullets. Where a board number does not survive that
+ * difference it is adapted rather than copied, and each such case is commented below.
+ *
+ * Nothing here loads from a remote host: the one font file is served from this site's own
+ * assets/fonts/ directory.
+ */
+
+/* ---------------------------------------------------------------- font --- */
+
+/*
+ * The board asks for Nunito and falls back to Segoe UI, which is what the captain's own machine
+ * has installed. A visitor's phone has neither, so the font is vendored here instead of being
+ * named and hoped for. This is the latin subset of Google Fonts' Nunito v32 variable file
+ * (39 KB), which covers weights 400 through 700 in one download. Licence: SIL Open Font
+ * License 1.1, full text in assets/fonts/Nunito-OFL.txt beside the file.
+ *
+ * The `src` URL is relative to this stylesheet, not site-root-relative, so it resolves under the
+ * site's /AnyMotion-Docs/ baseurl without needing Liquid to rewrite it.
+ *
+ * unicode-range is the latin range only. The status markers on this page (the check mark, the
+ * arrows, the empty box) and the em dashes outside that range fall through to the next family in
+ * the stack, which is what the board does too.
+ */
+@font-face {
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+	src: url("../fonts/nunito-latin-variable.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+		U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+
+/* -------------------------------------------------------------- palette --- */
+
+/* Copied value for value from the :root block of roadmap_tpl.html. The board also defines a red,
+   a green and an amber for its risk and value stars; this page has no stars, so those three are
+   left out rather than carried across unused. */
+:root {
+	--rm-ink: #1b1f24;
+	--rm-muted: #5f6b7a;
+	--rm-line: #dde3ea;
+	--rm-bg: #fbfcfd;
+	--rm-card: #fff;
+	--rm-blue: #1f6fb5;
+}
+
+/* ----------------------------------------------------------------- page --- */
+
+body {
+	background: var(--rm-bg);
+	color: var(--rm-ink);
+	font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+/*
+ * The board's content column is 1180px wide and is deliberately NOT copied. Every board row is one
+ * truncated line, so its width never produces a long line of prose. This page's items are
+ * sentences, and it also takes the board's 14.5px body size, which puts more characters on a line
+ * at any given width: at 1180px a line would run past 160 characters, and even at 900px past 120.
+ * Minima's own column is left alone at 740px, which is about 100 characters here and is the width
+ * the site's other pages already use, so the roadmap does not change column width under a nav bar
+ * shared with them. What carries the board's look is the palette, the card treatment, the type
+ * scale and the spacing below, none of which depend on the column being wide.
+ */
+
+/* Minima's page layout prints the front-matter title as .post-title, and this page's markdown
+   then opens with its own `# Roadmap` heading. Before this stylesheet both rendered, one above
+   the other, showing the word "Roadmap" twice. Hiding minima's chrome copy keeps the page's own
+   authored heading, which is the one the board's h1 styling below is meant for. No authored
+   content is hidden by this rule. */
+.post-header {
+	display: none;
+}
+
+/* --------------------------------------------------------- site chrome --- */
+
+/* The header and footer are minima's, not the board's. They are only pulled onto the board's
+   palette here so they do not sit on the page as a differently coloured strip. */
+.site-header,
+.site-footer {
+	border-color: var(--rm-line);
+	background: var(--rm-card);
+}
+
+.site-title,
+.site-title:visited,
+.site-nav .page-link {
+	color: var(--rm-ink);
+}
+
+.site-footer,
+.site-footer .footer-heading,
+.site-footer p,
+.site-footer li {
+	color: var(--rm-muted);
+}
+
+a,
+a:visited {
+	color: var(--rm-blue);
+}
+
+/* ------------------------------------------------------------- headings --- */
+
+/* h1 and h2 keep the board's exact sizes and margins. Both are 700, which is what the board
+   renders: its stylesheet sets no font-weight on h1 or h2, so both fall to the browser default of
+   bold, and 700 is also the heaviest weight the vendored Nunito file above actually contains. */
+.post-content h1 {
+	font-size: 29px;
+	line-height: 1.2;
+	margin: 0 0 4px;
+	font-weight: 700;
+}
+
+.post-content h2 {
+	font-size: 21px;
+	margin: 34px 0 6px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid var(--rm-line);
+	font-weight: 700;
+}
+
+/* The version labels (v1.0, v1.1, v1.2) take the board's `h3.sub` treatment: a small uppercase
+   grey divider sitting above a group of cards, rather than a heading competing with the h2. */
+.post-content h3 {
+	font-size: 14px;
+	margin: 18px 0 6px;
+	color: var(--rm-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- prose --- */
+
+.post-content p {
+	margin: 0 0 11px;
+}
+
+/* The sentence directly under the h1 is the page's lead line. It takes the board's `.blurb`
+   treatment: grey, one step smaller than body text. */
+.post-content > h1 + p {
+	color: var(--rm-muted);
+	font-size: 14.5px;
+	margin-bottom: 22px;
+}
+
+/* Two explanatory paragraphs take the board's `.box` treatment - a white panel that reads as a
+   note about how to read the page rather than as part of the list:
+     - the paragraph after the lead, which says the page is a dated snapshot;
+     - the paragraph under "Not yet planned", which explains the confidence markers.
+   Both are the only `p` in their position, so no class attribute is needed in the markdown. */
+.post-content > h1 + p + p,
+.post-content > h2 + p {
+	background: var(--rm-card);
+	border: 1px solid var(--rm-line);
+	border-radius: 10px;
+	padding: 14px 19px;
+	margin: 0 0 18px;
+}
+
+/* ---------------------------------------------------------------- cards --- */
+
+/* Each roadmap item becomes one card, matching the board's `.box` border, radius and background.
+   A board row carries 5px of vertical padding; a bullet here is a sentence or three, so the padding
+   follows the board's `.box` (14px 19px) rather than its row padding, set one step tighter at
+   12px 17px. */
+.post-content ul {
+	list-style: none;
+	margin: 0 0 18px;
+	padding-left: 0;
+}
+
+.post-content ul > li {
+	background: var(--rm-card);
+	border: 1px solid var(--rm-line);
+	border-radius: 10px;
+	padding: 12px 17px;
+	margin-bottom: 9px;
+	font-size: 14.5px;
+	overflow-wrap: break-word;
+}
+
+.post-content ul > li:last-child {
+	margin-bottom: 0;
+}
+
+/* The item title. Same weight the board gives `td.item b`. */
+.post-content ul > li strong {
+	font-weight: 700;
+	color: var(--rm-ink);
+}
+
+/* The italic trailing notes - the in-progress explanations and the (definitely) / (maybe) / (tbd)
+   confidence markers - take the board's `.dsc` grey, so the item title stays the loudest part of
+   the card. */
+.post-content ul > li em {
+	color: var(--rm-muted);
+}
+
+/* The board's `.idt` identifier chip, applied to inline code: its background, border, radius,
+   padding and colour. The size follows the board's own `code` rule (0.9em) rather than `.idt`'s
+   fixed 11px, so a chip scales with the text around it. This page has no inline code today; the
+   rule is here so a code span added later matches the board instead of minima's default. */
+.post-content code {
+	font-family: ui-monospace, Consolas, monospace;
+	font-size: 0.9em;
+	background: #eef2f6;
+	border: 1px solid var(--rm-line);
+	border-radius: 4px;
+	padding: 0 4px;
+	color: var(--rm-muted);
+}
+
+/* ----------------------------------------------------------- phone width --- */
+
+/* At phone width the cards run edge to edge with less inset, and the h1 comes down so a long
+   heading does not wrap awkwardly. Nothing switches layout: the page is one column at every
+   width, so there is no horizontal scroll to guard against. */
+@media screen and (max-width: 600px) {
+	.post-content h1 {
+		font-size: 25px;
+	}
+
+	.post-content h2 {
+		font-size: 19px;
+		margin-top: 28px;
+	}
+
+	.post-content ul > li,
+	.post-content > h1 + p + p,
+	.post-content > h2 + p {
+		padding: 11px 13px;
+	}
+}
