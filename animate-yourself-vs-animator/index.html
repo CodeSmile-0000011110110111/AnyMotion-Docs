@@ -202,7 +202,7 @@ above.</li>
 <p>Root motion is the Animator component's own applyRootMotion setting plus each clip's Root Transform import settings; there is no per-state root-motion toggle. In-place clips and root-motion clips need different movement code.</p>
 <h3>Additional detail</h3>
 <p>The complaint is the mismatch between animation that moves the character and a controller that also moves it.</p>
-<p>Animate Yourself has no root motion in either direction. Its hierarchy contract forbids the animation layer writing the character root, and the code follows it: in the shipping driver the only transform writes are the hips' local position and rotation, the feet's rotation, and the two limb rotations the IK solver produces. There is no in-place-versus-root-motion choice to get wrong, because there is only one mode.</p>
+<p>Animate Yourself has no root motion in either direction. The animation layer writes bones and never the character's own transform: in the shipping driver the only transform writes are the hips' local position and rotation, the feet's rotation, and the two limb rotations the IK solver produces. There is no in-place-versus-root-motion choice to get wrong, because there is only one mode.</p>
 </template>
 <tr>
 <td>Building a clip library</td>

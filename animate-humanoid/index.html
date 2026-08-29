@@ -121,8 +121,8 @@ after <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> 
 <h2 id="adding-it-to-a-character">Adding it to a character</h2>
 
 <ol>
-  <li>Select the character’s root GameObject, or, if you have already built a controller/visual
-hierarchy split (see the note on placement below), the visual root.</li>
+  <li>Select the character’s root GameObject — the one carrying the Animator, or the one you assigned
+the Humanoid Avatar to.</li>
   <li><strong>Add Component ▸ AnyMotion ▸ Animate Humanoid.</strong></li>
   <li>Unity adds two more components alongside it automatically: one measures the character’s body (leg
 length, hip width, shoulder height), and the other turns settings into a pose each frame. You
@@ -145,20 +145,28 @@ and one message in the Console, both naming what went wrong — almost always th
 found, that the Avatar is not Humanoid, that the assigned Avatar belongs to a different model, or
 that the character’s scale is not uniform. Fix that and press <strong>Measure</strong>.</p>
 
-<h3 id="where-to-put-it-the-hierarchy-matters">Where to put it: the hierarchy matters</h3>
+<h3 id="where-to-put-it">Where to put it</h3>
 
-<p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> writes to the character’s bones every frame. If something else — a
-<code class="language-plaintext highlighter-rouge">CharacterController</code>-driven movement script, for example — is also writing to the <em>same</em> transform
-each frame, the two writes fight each other and produce jitter or drift.</p>
+<p>Put it on the character itself, on the same object as your movement script. No extra object is
+needed between them.</p>
 
-<p>The safe pattern is a two-level hierarchy: an outer object that your movement code moves around the
-world, and an inner “visual root” object, parented under it, that carries the rig and this
-component. Movement code only ever touches the outer object. <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> only ever touches the
-inner one.</p>
+<p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> writes the character’s bones, and the bones are children of that object, so it
+never writes the transform your movement script moves. Measured on 2026-08-23 in all three driver
+spaces: with a movement script and <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> on one object, 120 frames of animation changed
+that object’s position by 0.0000 mm, its rotation by 0.0000 degrees and its scale by 0.0000,
+while the character’s hips moved.</p>
 
-<p>The menu command <strong>Tools ▸ AnyMotion ▸ Setup Third Person Character</strong> builds this hierarchy
-correctly and adds <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> to it, which is the fastest way to get a working example if you
-are setting one up from scratch.</p>
+<p>Earlier versions of this page required a separate “visual root” object under the moving object. That
+requirement is gone. A character already built that way keeps working — the extra object changes
+nothing — so there is no need to rebuild one.</p>
+
+<p>The menu command <strong>Window ▸ AnyMotion ▸ Setup Third Person Character Controller</strong> adds a <code class="language-plaintext highlighter-rouge">CharacterController</code>,
+a movement script, a camera rig and <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> to the selected character, which is the
+fastest way to get a working example if you are setting one up from scratch.</p>
+
+<p>One hierarchy is refused: a character whose own root object is one of its bones, meaning the Avatar
+maps a humanoid bone to it. Measuring such a character fails with an error. Rebuild the character so
+its root object holds no bone and the skeleton starts one object below it.</p>
 
 <h2 id="the-inspector-section-by-section">The Inspector, section by section</h2>
 
