@@ -300,15 +300,21 @@ they used to live in two separate Inspectors. The ground settings describe how a
 to uneven terrain. The probe fields tell it where to physically look for that terrain in your scene
 — which layers count as “ground,” and how far up and down to search.</p>
 
-<p><strong>Sole Grounding</strong>, in the ground settings and off by default, puts the visible sole of each
-standing foot on the surface rather than near it. The foot target aims the ankle bone, and how far
-the sole sits below the ankle changes as the knee bends, so the sole ends up slightly inside the
-ground or above it even when the ankle is exactly where it was asked to be. Turning Sole Grounding
-on takes the average sole error, measured on three characters walking over flat ground, from 14.3 mm
-to 0.53 mm. It is off by default for two reasons: posing that character each frame costs 193 to 526
-microseconds with it on against 51 to 74 microseconds with it off, which is roughly 3 to 9 times
-depending on the character, comparing each character against its own cost with the setting off; and
-it bends the standing knee further to hold the sole down.</p>
+<p>Three of the ground settings — <strong>Sole Grounding</strong>, <strong>Sole Pelvis Share</strong> and <strong>Sole Solver
+Iterations</strong> — are not drawn in the Inspector as it ships. Sole Grounding is off by default, so a
+character moves the same whether the three controls are on screen or not. All three values are still
+stored on the character, a preset still carries them, and a script can still read and write them
+through <code class="language-plaintext highlighter-rouge">Parameters.Ground</code>. The paragraphs below describe what each of the three values does.</p>
+
+<p><strong>Sole Grounding</strong>, off by default, puts the visible sole of each standing foot on the surface
+rather than near it. The foot target aims the ankle bone, and how far the sole sits below the ankle
+changes as the knee bends, so the sole ends up slightly inside the ground or above it even when the
+ankle is exactly where it was asked to be. Turning Sole Grounding on takes the average sole error,
+measured on three characters walking over flat ground, from 14.3 mm to 0.53 mm. It is off by default
+for two reasons: posing that character each frame costs 193 to 526 microseconds with it on against
+51 to 74 microseconds with it off, which is roughly 3 to 9 times depending on the character,
+comparing each character against its own cost with the setting off; and it bends the standing knee
+further to hold the sole down.</p>
 
 <p><strong>Sole Solver Iterations</strong>, beside it, is how many poses the correction may try per foot each pass.
 The default never cuts the search short, so lowering it is what buys frame time: measured over three
@@ -367,6 +373,11 @@ straighter as a target passes out of reach — the joint pop this setting exists
 lowers the largest usable Max Bone Stretch. Lowering it softens the knees and elbows further and
 moves them further from the posture you authored.</p>
 
+<p><strong>Bone Stretch</strong> and <strong>Max Bone Stretch</strong> are not drawn in the Inspector as it ships either, on the
+same terms as the three sole controls above: Bone Stretch is off by default, both values are still
+stored on the character and carried by a preset, a script can still read and write them through
+<code class="language-plaintext highlighter-rouge">Parameters.LimbReach</code>.</p>
+
 <p><strong>Bone Stretch</strong>, off by default, lets the two segments grow slightly inside that same band so the
 target is reached after all, and <strong>Max Bone Stretch</strong> sets how much longer a segment may become at
 full extension, as a fraction of its own length — 0.05 adds five percent to the thigh and five
@@ -377,7 +388,7 @@ with it on — because the softening then works against the longer arm. Turning 
 changes the character’s visible limb length, which suits stylised characters more than realistic
 ones. A high Soft Reach Start leaves a narrow band for the stretch to work in and lowers the
 largest stretch that is usable; if your Max Bone Stretch is above that, the Inspector states the
-smaller value that is actually in force.</p>
+smaller value that is actually in force under the slider, whenever the slider is on screen.</p>
 
 <h3 id="body-and-style">Body and Style</h3>
 
