@@ -410,11 +410,14 @@ bind whatever this value is.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_DescribeSkeletonRootFault_System_String_System_String_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(System.String,System.String)">
   DescribeSkeletonRootFault(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L785"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The console text for <span class="xref">CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Animator)</span>, so the setup command and the
-measurement report the same fault in the same words.</p>
+  <div class="markdown level1 summary"><p>The fault text for <span class="xref">CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Animator)</span>, so the setup command and the
+measurement report the same fault in the same words. Returned without the
+<code>AnyMotion: </code> product prefix on purpose: the two console call sites add it themselves,
+which keeps it out of the Inspector's error box and out of the setup command's dialog,
+both of which already identify the product.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -583,7 +586,7 @@ ancestor: passing an ancestor of the Animator returns null however the character
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure">
   Measure()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the rig and stores the result in <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values">Values</a>.
@@ -617,7 +620,7 @@ Safe to call in the Editor outside Play mode.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_MeasureAndRecord" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord">
   MeasureAndRecord()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the rig and writes the result durably: to Undo, to a prefab instance's modification
@@ -691,7 +694,7 @@ Measure by hand.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren">
   ResolveAvatarFromChildren()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1059"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1062"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> from a model in this object's children, and says so when more than
