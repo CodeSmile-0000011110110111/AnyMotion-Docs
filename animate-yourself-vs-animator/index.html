@@ -485,12 +485,12 @@ above.</li>
 </tr>
 <template id="d-head-and-spine">
 <h3>Animate Yourself</h3>
-<p>Authored directly as settings: torso twist, chest and shoulder counter-twist, head counter-twist and lag, plus per-bone look-at weights and angular limits. <span class="unverified-mark">not fully verified</span></p>
+<p>Authored directly as settings: Spine Twist, Chest Twist, Shoulder Twist, and the head's Counter Twist Weight and Lag, plus per-bone look-at weights and angular limits. <span class="unverified-mark">not fully verified</span></p>
 <h3>Animator</h3>
 <p>Upper-body decoupling is a layer with an avatar mask and its own clips, or a constraint from the Animation Rigging package.</p>
 <h3>Additional detail</h3>
 <p>The complaint is an upper body that decouples from the lower body during a turn and ends up facing the wrong way.</p>
-<p>In Animate Yourself the relationship is authored rather than emergent: torso twist, chest counter-twist, shoulder counter-twist, head counter-twist weight and head lag are settings, as are the head, neck and chest shares of a look-at and its yaw and pitch limits.</p>
+<p>In Animate Yourself the relationship is authored rather than emergent: Spine Twist, Chest Twist and Shoulder Twist under Torso, and Counter Twist Weight and Lag under Head, are settings, as are the head, neck and chest shares of a look-at and its Yaw Limit and Pitch Limit.</p>
 <p>One defect remains here, in the target-passing-behind row.</p>
 </template>
 <tr>
@@ -689,12 +689,13 @@ above.</li>
 </tr>
 <template id="d-torso-twist-rigs">
 <h3>Animate Yourself</h3>
-<p>A recorded inconsistency: a character without an upper chest bone twists less than one with it. The deviation has never been measured, because no character in the test set lacks that bone.</p>
+<p>A recorded inconsistency: a character that maps one of the two chest bones and not the other twists less than one that maps both. It is not corrected, because no character measured here has either of those two mappings.</p>
 <h3>Animator</h3>
 <p>Not established here.</p>
 <h3>Additional detail</h3>
 <p>This was not one of the original complaints. It was found while checking the body-proportions row, and it is listed because it qualifies that row.</p>
-<p>The known issue reads: a character without an UpperChest bone twists less than one with it. Portability across characters is the property the whole normalisation design exists to protect, so this is a real inconsistency rather than a cosmetic one. It is left as it is for now, and the deviation has never been measured, because no character in the current test set lacks that bone.</p>
+<p>The known issue reads: the chest's turn is split between the Chest bone and the UpperChest bone, so a character that maps one of the two and not the other receives only that bone's share and twists less than a character that maps both. Portability across characters is the property the whole normalisation design exists to protect, so this is a real inconsistency rather than a cosmetic one. It is left as it is, because no character measured here has either of those two mappings: the ones that were checked map both chest bones or neither.</p>
+<p>A character that maps neither chest bone is a separate case and was fixed 2026-09-11. Its chest turn used to reach no bone at all, so Chest Twist moved nothing on it; that turn now goes to the neck, or to the head when the character maps no neck, and to both collarbones. The chest's own mesh deformation is the one part that cannot be recovered on a character with no chest bone.</p>
 <p>No comparable measurement was made for the Animator pipeline, so that column states nothing.</p>
 </template>
 <tr>
