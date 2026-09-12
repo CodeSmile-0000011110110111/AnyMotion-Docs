@@ -3451,6 +3451,19 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateAboutRootAxes
   nameWithType: HumanoidBoneSet.RotateAboutRootAxes
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace(UnityEngine.Quaternion)
+  name: RotateChestLevelInRootSpace(Quaternion)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RotateChestLevelInRootSpace_UnityEngine_Quaternion_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace(UnityEngine.Quaternion)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace(UnityEngine.Quaternion)
+  nameWithType: HumanoidBoneSet.RotateChestLevelInRootSpace(Quaternion)
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace*
+  name: RotateChestLevelInRootSpace
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RotateChestLevelInRootSpace_
+  commentId: Overload:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateChestLevelInRootSpace
+  nameWithType: HumanoidBoneSet.RotateChestLevelInRootSpace
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateHinge(UnityEngine.HumanBodyBones,System.Single)
   name: RotateHinge(HumanBodyBones, float)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RotateHinge_UnityEngine_HumanBodyBones_System_Single_
@@ -3480,6 +3493,12 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateInParentSpace
   nameWithType: HumanoidBoneSet.RotateInParentSpace
+- uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateInRootSpace(UnityEngine.HumanBodyBones,UnityEngine.Quaternion)
+  name: RotateInRootSpace(HumanBodyBones, Quaternion)
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RotateInRootSpace_UnityEngine_HumanBodyBones_UnityEngine_Quaternion_
+  commentId: M:CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateInRootSpace(UnityEngine.HumanBodyBones,UnityEngine.Quaternion)
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateInRootSpace(UnityEngine.HumanBodyBones, UnityEngine.Quaternion)
+  nameWithType: HumanoidBoneSet.RotateInRootSpace(HumanBodyBones, Quaternion)
 - uid: CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.RotateInRootSpace(UnityEngine.HumanBodyBones,UnityEngine.Vector3)
   name: RotateInRootSpace(HumanBodyBones, Vector3)
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Spaces.HumanoidBoneSet.html#CodeSmile_AnyMotion_AnimateYourself_Spaces_HumanoidBoneSet_RotateInRootSpace_UnityEngine_HumanBodyBones_UnityEngine_Vector3_
@@ -4912,6 +4931,12 @@ references:
   isSpec: "True"
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar
   nameWithType: RigMetrics.Avatar
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.CurrentMeasurementSchemaVersion
+  name: CurrentMeasurementSchemaVersion
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_CurrentMeasurementSchemaVersion
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.CurrentMeasurementSchemaVersion
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.CurrentMeasurementSchemaVersion
+  nameWithType: RigMetrics.CurrentMeasurementSchemaVersion
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(System.String,System.String)
   name: DescribeSkeletonRootFault(string, string)
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_DescribeSkeletonRootFault_System_String_System_String_
@@ -5034,12 +5059,24 @@ references:
   commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.GroundOffset
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.GroundOffset
   nameWithType: RigMetrics.Metrics.GroundOffset
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasChestBone
+  name: HasChestBone
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HasChestBone
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasChestBone
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasChestBone
+  nameWithType: RigMetrics.Metrics.HasChestBone
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasToeBones
   name: HasToeBones
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HasToeBones
   commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasToeBones
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasToeBones
   nameWithType: RigMetrics.Metrics.HasToeBones
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasUpperChestBone
+  name: HasUpperChestBone
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HasUpperChestBone
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasUpperChestBone
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HasUpperChestBone
+  nameWithType: RigMetrics.Metrics.HasUpperChestBone
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.HeadBoneHeight
   name: HeadBoneHeight
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HeadBoneHeight
@@ -5124,6 +5161,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MeasuredInTPose
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MeasuredInTPose
   nameWithType: RigMetrics.Metrics.MeasuredInTPose
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MeasurementSchemaVersion
+  name: MeasurementSchemaVersion
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_MeasurementSchemaVersion
+  commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MeasurementSchemaVersion
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MeasurementSchemaVersion
+  nameWithType: RigMetrics.Metrics.MeasurementSchemaVersion
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.MissingOptionalBones
   name: MissingOptionalBones
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_MissingOptionalBones
@@ -5220,6 +5263,19 @@ references:
   commentId: F:CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.VisualHeight
   fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.VisualHeight
   nameWithType: RigMetrics.Metrics.VisualHeight
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement
+  name: NeedsMeasurement
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_NeedsMeasurement
+  commentId: P:CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement
+  nameWithType: RigMetrics.NeedsMeasurement
+- uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement*
+  name: NeedsMeasurement
+  href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_NeedsMeasurement_
+  commentId: Overload:CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement
+  isSpec: "True"
+  fullName: CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement
+  nameWithType: RigMetrics.NeedsMeasurement
 - uid: CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren
   name: ResolveAvatarFromChildren()
   href: reference/CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren

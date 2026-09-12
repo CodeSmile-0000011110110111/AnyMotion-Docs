@@ -136,6 +136,79 @@ separately as an asymmetry value.</li>
 </div>
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_CurrentMeasurementSchemaVersion" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.CurrentMeasurementSchemaVersion">
+  CurrentMeasurementSchemaVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Which set of fields <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a> writes today. Raise it by one in the same change
+that adds a field to <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html">RigMetrics.Metrics</a>, so a measurement saved before that field existed
+is recognised and taken again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public const int CurrentMeasurementSchemaVersion = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_CurrentMeasurementSchemaVersion_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The same schema check the preset format already makes (<code>IVersionedData</code> in
+<code>Core.SaveLoad</code>, <code>specs/serialization-format-decision.md</code>), applied to a serialized measurement instead of
+to a saved file. It is needed for the same reason: Unity reads a field that is absent from the
+saved data as that type's default, and a default is indistinguishable from a measured value.
+<code>HasChestBone</code> false is the case that forced this — it is what a rig with no Chest bone
+legitimately measures, so the booleans themselves cannot say whether a measurement is stale.
+Version 1 is the first to carry <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HasChestBone">HasChestBone</a> and
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_HasUpperChestBone">HasUpperChestBone</a>; every measurement saved before 2026-09-11 carries 0.</p>
+<p>
+    <b>Settled, so that it is not reopened a third time.</b> Those two booleans could instead
+    be resolved from the live Animator at bind time, which needs no serialized field and would
+    remove this constant, <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_NeedsMeasurement">NeedsMeasurement</a>, the check in <code>GaitDriver.Bind</code>
+    and <code>RigMetricsMeasurementSchemaVersionTests</code> with it. That was weighed on 2026-09-11
+    and again on 2026-09-12, and the serialized form was kept for two reasons: the work is
+    built and correct, so its cost is already paid rather than still owed; and nobody has
+    measured what live resolution costs where <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html">RigMetrics.Metrics</a> is read with no Animator
+    available, so switching now would trade a known paid cost for an unmeasured one.
+</p>
+<p>
+    A third reason was given on 2026-09-12 and <b>withdrawn as false on the same day</b>: that
+    the full measure a stale character runs at its first bind happens once, so it is not a
+    recurring cost. It recurs. <code>GaitDriver.Bind</code> calls plain <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a> and
+    not <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_MeasureAndRecord">MeasureAndRecord()</a>, so that opening a scene does not mark it dirty; that
+    call stamps <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_MeasurementSchemaVersion">MeasurementSchemaVersion</a> in memory and writes nothing
+    back to the prefab or the scene file. The saved asset still reads 0 the next time Unity
+    loads it from disk, so the measure runs again: on every scene open, on every play-mode
+    enter that reloads the scene, and on every Editor restart. Outside play mode that path
+    also reaches <code>Rig.SoleGeometry.Measure</code>, which copies a mesh's vertices and bone
+    weights and runs the 2048-direction reduction, once per stale character.
+    <code>_Development/Assets/Scenes/SampleScene.unity</code> carries 10 characters whose saved
+    measurement reads 0. Re-measuring those assets and saving them is what ends the cost
+    (<code>backlog/engineering.md</code> §25); nothing animates wrongly meanwhile, because the bind
+    measures before anything reads the values.
+</p>
+</div>
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -144,7 +217,7 @@ separately as an asymmetry value.</li>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Animator" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Animator">
   Animator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Animator describing this rig, resolved but never created. Returns null when the character
@@ -181,7 +254,7 @@ exist — measuring, binding — call <a class="xref" href="CodeSmile.AnyMotion.
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Avatar">
   Avatar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This character's Humanoid Avatar. Assigning one is enough to drive the character; the Animator
@@ -216,11 +289,45 @@ for a script assignment.</p>
 
 
 
+  <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_NeedsMeasurement_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement*"></a>
+
+  <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_NeedsMeasurement" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.NeedsMeasurement">
+  NeedsMeasurement
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True when this component has to measure before its values can be read: it has never measured
+successfully, or it carries a measurement written with an older set of fields than
+<a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_CurrentMeasurementSchemaVersion">CurrentMeasurementSchemaVersion</a> names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">public bool NeedsMeasurement { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot*"></a>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_RigRoot" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.RigRoot">
   RigRoot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The transform this rig's frame of reference sits on, resolved but never created. Never null.</p>
@@ -259,7 +366,7 @@ the answer does not change when that Animator comes and goes across a domain rel
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_SkeletonRootFaultWasLogged" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.SkeletonRootFaultWasLogged">
   SkeletonRootFaultWasLogged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>True when the last <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure">Measure()</a> failed on the skeleton-root fault and wrote
@@ -301,7 +408,7 @@ rig, and the console does not survive a scene save.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_SoleGeometry" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.SoleGeometry">
   SoleGeometry
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>L05: both feet's reduced drawn geometry, for the sole-height compensation. Never null;
@@ -336,7 +443,7 @@ frame.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Values">
   Values
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Last measured values. Valid only when <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Metrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Metrics_IsValid">IsValid</a> is true.</p>
@@ -368,7 +475,7 @@ frame.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Version" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Version">
   Version
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Increments whenever anything a driver's bind depends on may have changed.</p>
@@ -410,7 +517,7 @@ bind whatever this value is.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_DescribeSkeletonRootFault_System_String_System_String_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.DescribeSkeletonRootFault(System.String,System.String)">
   DescribeSkeletonRootFault(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L785"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L836"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The fault text for <span class="xref">CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Animator)</span>, so the setup command and the
@@ -466,7 +573,7 @@ both of which already identify the product.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_EnsureAnimator" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.EnsureAnimator">
   EnsureAnimator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L546"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns an Animator describing this rig, creating a hidden one from <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> when
@@ -522,7 +629,7 @@ DestroyImmediate outright — so a component created there could not be taken ba
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_FindSkeletonRootFault_UnityEngine_Transform_UnityEngine_Animator_" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.FindSkeletonRootFault(UnityEngine.Transform,UnityEngine.Animator)">
   FindSkeletonRootFault(Transform, Animator)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L815"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Same test against a named <code class="paramref">root</code>, for a character being set up before its
@@ -586,7 +693,7 @@ ancestor: passing an ancestor of the Animator returns null however the character
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_Measure" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.Measure">
   Measure()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the rig and stores the result in <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Values">Values</a>.
@@ -620,7 +727,7 @@ Safe to call in the Editor outside Play mode.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_MeasureAndRecord" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.MeasureAndRecord">
   MeasureAndRecord()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the rig and writes the result durably: to Undo, to a prefab instance's modification
@@ -694,7 +801,7 @@ Measure by hand.</p>
 
   <h3 id="CodeSmile_AnyMotion_Core_Rig_RigMetrics_ResolveAvatarFromChildren" data-uid="CodeSmile.AnyMotion.Core.Rig.RigMetrics.ResolveAvatarFromChildren">
   ResolveAvatarFromChildren()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1062"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/Core/Runtime/Rig/RigMetrics.cs/#L1113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fills <a class="xref" href="CodeSmile.AnyMotion.Core.Rig.RigMetrics.html#CodeSmile_AnyMotion_Core_Rig_RigMetrics_Avatar">Avatar</a> from a model in this object's children, and says so when more than
