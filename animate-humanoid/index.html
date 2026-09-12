@@ -191,6 +191,15 @@ component a setting happens to live on. Every field carries its own tooltip writ
 no animation background — hover over anything you are unsure about. The sections below summarise
 what each one is for and when you would open it.</p>
 
+<p>Each group of settings has its own <strong>Reset</strong> button. It returns that group to the Blank values, which
+are the least amount of motion those settings can produce — a starting point to raise values from,
+not the ordinary walk the <strong>Neutral</strong> preset gives you. Where a group shows a setting that belongs to
+another part of the character, such as the per-leg differences under Legs, that setting is reset with
+the group you see it in. A Reset also covers the settings its group holds that a different section
+shows: pressing <strong>Reset</strong> under Arms returns <strong>Hand Target Weight</strong> and the three reach limits, which
+you see under <strong>IK Targeting</strong>, along with the arm settings in front of you. <strong>Reset All</strong>, under
+Presets, writes the same values for every group at once.</p>
+
 <p>If hovering shows no tooltip, check whether the Editor is in Play mode. Unity hides tooltips
 throughout the Editor while the game is running unless <strong>Enable PlayMode Tooltips</strong> is turned on,
 on the <strong>General</strong> page of the Preferences window. This is a Unity preference and it is off by
@@ -204,12 +213,14 @@ settings.</p>
 
 <p><strong>Neutral</strong> is an ordinary upright walk — the starting point the others change. <strong>Cartoon</strong> is
 exaggerated and bouncy, with long high steps. <strong>Horror</strong> is slow and hunched, with joints that snap
-rather than ease, and an uneven gait. <strong>Limp</strong> makes one leg noticeably shorter, lower and stiffer
-than the other.</p>
+rather than ease, and an uneven gait. <strong>Limp</strong> gives one leg a shorter, lower swing than the other.</p>
 
 <p>Below the presets, <strong>Load JSON…</strong> and <strong>Save JSON…</strong> read and write a settings file. You can share
-that file with someone else, or check it into version control. <strong>Reset All</strong> returns every setting
-to its default without touching scene references such as look-at or hand targets.</p>
+that file with someone else, or check it into version control. <strong>Reset All</strong> returns every setting to
+the Blank values — the least amount of motion the settings can produce, which is what each group’s
+own <strong>Reset</strong> button writes for that one group, described under
+<a href="#the-inspector-section-by-section">The Inspector, section by section</a>. It leaves scene references
+such as look-at or hand targets alone.</p>
 
 <h3 id="style">Style</h3>
 
@@ -292,8 +303,11 @@ standing character looking alive instead of frozen.</p>
 <p>Where each foot lands, how the character reacts to ground that isn’t flat, and what any limb does as
 it runs out of reach.</p>
 
-<p>The <strong>footstep</strong> settings shape a single step: how far it reaches, how high it lifts, how far apart
-the feet are placed, and the angle the foot lands and leaves at.</p>
+<p>The <strong>Legs</strong> settings shape a single step: how far it reaches, how high it lifts, how far apart the
+feet are placed, and the angle the foot lands and leaves at. <strong>Left Leg</strong> and <strong>Right Leg</strong>, at the
+bottom of that group, are where one leg is made to move differently from the other — a shorter stride
+or a lower lift on one side. That is the general mechanism behind the <strong>Limp</strong> preset, and it is how
+you would build a lopsided or injured walk of your own.</p>
 
 <p>The <strong>ground</strong> settings and the <strong>ground probe</strong> fields just below them work together, even though
 they used to live in two separate Inspectors. The ground settings describe how a foot should react
@@ -340,11 +354,16 @@ leaves the ground, so a high value places the feet less accurately than the defa
 <p>Further down, <strong>slope</strong> settings control how far the hips tilt to lean into a slope, and how much a
 step shortens — rather than lowering the hips — when the ground is steep.</p>
 
-<p><strong>Knee</strong> settings are the bend angles and the direction the knees point. The two knee-bend angles
-take effect only if the project is using an older internal driver mode; with the default mode, the
-knee angle follows automatically from where the foot is placed — raising Step Height under Footstep
-is the normal way to change how high the leg lifts. <strong>Pole Outward</strong> decides which way the knees
-point.</p>
+<p><strong>Knees</strong> holds <strong>Pole Outward</strong>, which decides which way the knees point: positive gives a
+bow-legged walk, negative a knock-kneed one. There is no control for how far a knee bends, because
+the knee angle follows from where the foot is placed — raising <strong>Step Height</strong> under Legs is how you
+change how high the leg lifts, and shortening <strong>Step Length</strong> is how you straighten the leg.</p>
+
+<p>Three settings that ask for a knee angle directly — <strong>Swing Knee Bend</strong>, <strong>Stance Knee Bend</strong> and
+each leg’s <strong>Knee Bend Multiplier</strong> — are not drawn in the Inspector as it ships, because nothing
+reads them: the knee angle comes from the foot position instead. The values are still stored on the
+character, a preset still carries them, and a script can still read and write them through
+<code class="language-plaintext highlighter-rouge">Parameters.Knees</code> and <code class="language-plaintext highlighter-rouge">Parameters.Asymmetry</code>. Writing one changes nothing the character does.</p>
 
 <p>The <strong>limb reach</strong> settings, last in this section, are the one group here that is not leg-only. The
 same two-bone solver drives the elbows and the knees, so these settings apply to all four limbs and a
@@ -398,21 +417,25 @@ smaller value that is actually in force under the slider, whenever the slider is
 turn and tip through the cycle. This is the single biggest contributor to a character’s overall
 silhouette while moving.</p>
 
-<p><strong>Torso</strong> covers lean, sideways bend and twist of the spine and chest.</p>
+<p><strong>Torso</strong> covers lean, sideways bend and the three twists along the spine: <strong>Spine Twist</strong> turns the
+spine against the hips, <strong>Chest Twist</strong> turns the chest against the spine, and <strong>Shoulder Twist</strong>
+turns the shoulders against the chest. The hips’ own turn is <strong>Hips Twist</strong>, under Pelvis.</p>
 
-<p><strong>Arms</strong> covers how far the arms swing, how they’re held, and elbow bend. It also controls how far a
-hand reaches towards an assigned <strong>hand target</strong>, instead of following the ordinary swing — the two
-“Left/Right Hand Target” fields just below are for pointing a hand at a specific world object, such
-as something to carry or grab. Three limits control how far up, across and behind the body a hand
-may reach before the system gives up and lets the arm swing normally instead.</p>
+<p><strong>Arms</strong> covers how far the arms swing, how they’re held, elbow bend, and which way the elbows point.
+<strong>Left Arm</strong> and <strong>Right Arm</strong>, at the bottom of the group, are where one arm is made to swing or
+bend differently from the other — an arm carrying something, or an injured shoulder.</p>
 
 <p><strong>Head</strong> covers the head’s own bob, turn and tilt as the character walks, and how much it
 counter-turns to keep facing forward rather than swinging with the torso.</p>
 
-<p><strong>Look At</strong>, together with the <strong>Look At Target</strong> field below it, turns the head, neck and chest
-towards an assigned object. Assign a Transform there — for example, whatever the character should be
-watching — and adjust how much of the turn each of the three body parts contributes, and how far and
-how fast they’re allowed to turn.</p>
+<p><strong>IK Targeting</strong> is where the character aims at objects you assign, for both the head and the hands.
+The look-at half turns the head, neck and chest towards the object in the <strong>Look At Target</strong> field
+below it: assign a Transform there — for example, whatever the character should be watching — and
+adjust how much of the turn each of the three body parts contributes, and how far and how fast
+they’re allowed to turn. The hand half decides how far a hand reaches towards the object in the
+<strong>Left Hand Target</strong> or <strong>Right Hand Target</strong> field instead of following the ordinary arm swing, with
+three limits on how far up, across and behind the body a hand may reach before the system gives up
+and lets the arm swing normally.</p>
 
 <h3 id="variation">Variation</h3>
 
@@ -423,9 +446,9 @@ characters with the same settings move a little differently from each other.</p>
 movement, plus a seed value so a crowd of otherwise-identical characters doesn’t move in perfect
 unison.</p>
 
-<p><strong>Asymmetry</strong> makes one specific leg move differently from the other — shorter, lower or
-stiffer-kneed. This is the general mechanism behind the Limp preset above, and it’s also how you
-would build a similar lopsided or injured gait of your own.</p>
+<p>Making one limb move differently from its opposite number is not here: those settings sit with the
+limb they change, as <strong>Left Leg</strong> and <strong>Right Leg</strong> under <a href="#steps-and-ground">Steps and Ground</a>, and
+<strong>Left Arm</strong> and <strong>Right Arm</strong> under <a href="#body-and-style">Body and Style</a>.</p>
 
 <h3 id="preview-and-debug">Preview and Debug</h3>
 
@@ -441,19 +464,8 @@ immediately overwrite anything the slider set.</p>
 
 <p>Two buttons below that: <strong>Restart Cycle</strong> puts both feet back at the start of the cycle, and
 <strong>Reset Pose</strong> re-reads the character’s rest pose from its mesh and reattaches to its bones from
-scratch — useful if a script recompile left the character looking wrong.</p>
-
-<h3 id="advanced">Advanced</h3>
-
-<p>Collapsed by default, and correct as shipped for most projects — open it only if you have a specific
-reason to.</p>
-
-<p>It holds the internal driver space selection, plus read-only references to the component’s own
-dependencies (filled in automatically, shown here only for troubleshooting).</p>
-
-<p>There’s also a <strong>Re-attach To Bones</strong> button, for after you change the Avatar or replace the mesh,
-and a <strong>Driver space comparison</strong> foldout. That foldout is development and reference information
-about the system’s internal techniques, rather than something a typical project needs to touch.</p>
+scratch. Press it if a script recompile left the character looking wrong, and after you change the
+Avatar or replace the mesh.</p>
 
 <h3 id="live-stats">Live Stats</h3>
 
@@ -466,7 +478,12 @@ angles.</p>
 
 <p>This is the fastest way to confirm a character controller is actually feeding in the speed you
 expect. It will also warn you if a foot is being asked to reach further than the character’s leg is
-physically long — a sign to reduce Step Length or Stance Width, not a bug.</p>
+physically long — that is a setting to change, not a bug. The warning names what to change, and it
+names it in the order that helps most: a <strong>Forward Bias</strong> that has been moved off 0 is the single
+biggest cause, then <strong>Step Length</strong> under Legs, then <strong>Duty Factor</strong> under Timing. Step Width is
+not worth reaching for — measured on the Kyle character, taking it from 2.5 all the way down to 1.0
+takes 0.0235 off the reach ratio, against 0.3126 for returning Forward Bias to 0, which is about one
+thirteenth as much.</p>
 
 <p>When a style set is assigned under <a href="#style">Style</a>, Live Stats also gains a Style Mix block: each
 style’s requested weight against the weight it has actually reached, and one bar per body part
