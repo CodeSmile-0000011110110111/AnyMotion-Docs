@@ -150,10 +150,10 @@ that the character’s scale is not uniform. Fix that and press <strong>Measure<
 <p>Put it on the character itself, on the same object as your movement script.</p>
 
 <p><code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> writes the character’s bones, and the bones are children of that object, so it
-never writes the transform your movement script moves. Measured on 2026-08-23 in all three driver
-spaces: with a movement script and <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> on one object, 120 frames of animation changed
-that object’s position by 0.0000 mm, its rotation by 0.0000 degrees and its scale by 0.0000,
-while the character’s hips moved.</p>
+never writes the transform your movement script moves. Measured on 2026-08-23: with a movement
+script and <code class="language-plaintext highlighter-rouge">AnimateHumanoid</code> on one object, 120 frames of animation changed that object’s position
+by 0.0000 mm, its rotation by 0.0000 degrees and its scale by 0.0000, while the character’s hips
+moved.</p>
 
 <p>Earlier versions of this page required a separate “visual root” object under the moving object. A
 character already built that way keeps working — the extra object changes nothing — so there is no
@@ -308,8 +308,10 @@ while the game runs measures everything else and leaves the foot shape as it was
 results then carry a <strong>Sole Geometry</strong> row that states whether the foot shape it needs was captured.
 The Kyle character included with Animate Yourself was measured before it shipped, so it already
 carries that foot shape. Sole Grounding also reaches those numbers only at Soft Reach Start 0.95
-with Bone Stretch on: at the default 0.90 with Bone Stretch off, the leg runs out of reach before
-the foot arrives and about a third of the improvement is left.</p>
+with Bone Stretch on: at Soft Reach Start 0.90 with Bone Stretch off, the leg runs out of reach
+before the foot arrives and about a third of the improvement is left. The shipped default is 0.94,
+which sits between those two measured values, 0.04 above 0.90 and 0.01 below 0.95. Sole Grounding
+was not measured at 0.94.</p>
 
 <p><strong>Sole Pelvis Share</strong> decides how much of each foot’s correction the hips take instead of the knee.
 Raising the hips lifts both of them, which stretches the other leg until its own foot leaves the
@@ -335,9 +337,11 @@ and the knees, so a change here is visible in the arms as well as the legs.</p>
 
 <p><strong>Soft Reach Start</strong> is how close to straight a limb gets before it starts easing off, so the joint
 doesn’t snap straight the moment a target moves out of reach; in exchange, the hand or foot stops a
-little short of a distant target.</p>
+little short of a distant target. The shipped default is 0.94.</p>
 
-<p>At the default 0.90 and the default arm settings, the arms sit inside the softening band
+<p>The figures below were measured at Soft Reach Start 0.90 and have not been re-measured at
+the current default of 0.94; they still describe how the setting behaves and how far it can be
+pushed. At 0.90 and the default arm settings, the arms sit inside the softening band
 for the whole walk cycle, so the elbow bend you see is the softened one rather than the one you
 author: an authored Elbow Bend running 18 to 26 degrees across the cycle renders as 38.6 to 39.2
 degrees, with an authored 18 degrees rendering as 38.6 degrees and an authored 26 degrees rendering
@@ -361,15 +365,16 @@ stored on the character and carried by a preset, a script can still read and wri
 
 <p><strong>Bone Stretch</strong>, off by default, lets the two segments grow slightly inside that same band so the
 target is reached after all, and <strong>Max Bone Stretch</strong> sets how much longer a segment may become at
-full extension, as a fraction of its own length — 0.05 adds five percent to the thigh and five
-percent to the shin, and the same five percent to the upper arm and the forearm. On the arms at
-those defaults, that moves the hand from 0.944 to 0.969 of full span, 13.7 mm on a 0.55 m arm, and
-bends the elbow about 5 degrees further — from 38.6 degrees with Bone Stretch off to 44.0 degrees
-with it on — because the softening then works against the longer arm. Turning Bone Stretch on
-changes the character’s visible limb length, which suits stylised characters more than realistic
-ones. A high Soft Reach Start leaves a narrow band for the stretch to work in and lowers the
-largest stretch that is usable; if your Max Bone Stretch is above that, the Inspector states the
-smaller value that is actually in force under the slider, whenever the slider is on screen.</p>
+full extension, as a fraction of its own length — the default 0.042105 adds 4.2105 percent to the
+thigh and 4.2105 percent to the shin, and the same 4.2105 percent to the upper arm and the forearm.
+On the arms at Soft Reach Start 0.90 with Max Bone Stretch 0.05, that moves the hand from 0.944 to
+0.969 of full span, 13.7 mm on a 0.55 m arm, and bends the elbow about 5 degrees further — from 38.6
+degrees with Bone Stretch off to 44.0 degrees with it on — because the softening then works against
+the longer arm. Turning Bone Stretch on changes the character’s visible limb length, which suits
+stylised characters more than realistic ones. A high Soft Reach Start leaves a narrow band for the
+stretch to work in and lowers the largest stretch that is usable; if your Max Bone Stretch is above
+that, the Inspector states the smaller value that is actually in force under the slider, whenever
+the slider is on screen.</p>
 
 <h3 id="body-and-style">Body and Style</h3>
 
