@@ -126,9 +126,9 @@ public sealed class ThirdPersonCharacterController : MonoBehaviour</code></pre>
 <ul><li>
         It writes <b>only</b> the object it sits on. The gait drivers write the character's
         bones, which are below that object, so the two never write the same transform. Measured
-        on 2026-08-23 in all three driver spaces: with this component and the rig on one object,
-        120 steps of driving the gait changed the object's position by 0.0000 mm, its rotation
-        by 0.0000 degrees and its scale by 0.0000, while the hips moved.
+        on 2026-08-23: with this component and the rig on one object, 120 steps of driving the
+        gait changed the object's position by 0.0000 mm, its rotation by 0.0000 degrees and
+        its scale by 0.0000, while the hips moved.
     </li><li>
         It pushes its own measured planar speed into <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.AnimateHumanoid.html">AnimateHumanoid</a> instead of
         letting the gait guess. Cadence derives from speed, so a gait told the wrong speed takes

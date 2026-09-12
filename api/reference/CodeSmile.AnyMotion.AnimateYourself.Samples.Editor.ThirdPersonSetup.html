@@ -121,9 +121,9 @@ a selected humanoid, so that wiring is produced by one command instead of by han
 <pre><code class="lang-csharp">Character   CharacterController + movement + AnimateHumanoid + the rig
 +-- CameraTarget                                 &lt;- what the camera follows and looks at</code></pre>
 <p>There is no separate visual root. It was required until 2026-08-23 on the belief that the
-movement component and the gait drivers would otherwise write the same transform; measuring all
-three driver spaces showed the drivers write the character's bones and never the object the
-components sit on, so the extra object bought nothing and the requirement was removed.
+movement component and the gait drivers would otherwise write the same transform; measurement
+showed the drivers write the character's bones and never the object the components sit on, so
+the extra object bought nothing and the requirement was removed.
 Wiring Cinemachine 3 by hand is several components and one easily-missed input reference, so it
 is done here too rather than left as a set of instructions.</p>
 </div>

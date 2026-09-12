@@ -78,7 +78,7 @@
 
 
   <h1 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup" class="text-break">
-Class WalkGaitParameters.LimbReachGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L971"><i class="bi bi-code-slash"></i></a>
+Class WalkGaitParameters.LimbReachGroup  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L974"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -128,9 +128,11 @@ unlike an arm a leg is not necessarily inside the band on every frame. Where a l
 relative to the band was not measured; the figures below are arm measurements.</p>
 <p>
     <b>On an arm, soft reach replaces the authored posture rather than trimming it.</b> Measured
-    by calling the shipped functions at the defaults (<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart">SoftReachStart</a> 0.90,
-    <code>Arms.ElbowBend</code> 18°, <code>Arms.ElbowSwing</code> 8°): the authored elbow bend runs 18.0° to
-    26.0° across the cycle, and the rendered one runs 38.6° to 39.2°. The rendered bend rises
+    by calling the shipped functions at <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart">SoftReachStart</a> 0.90 (the default at
+    the time of measurement; the current default is 0.94, and this measurement has not been
+    redone at that value), <code>Arms.ElbowBend</code> 18°, <code>Arms.ElbowSwing</code> 8°: the
+    authored elbow bend runs 18.0° to 26.0° across the cycle, and the rendered one runs
+    38.6° to 39.2°. The rendered bend rises
     with the authored bend, so the two ends pair as 18.0° rendering as 38.6° and 26.0°
     rendering as 39.2°. At the authored 18.0° end the gait's hand target is 0.9877 of arm span,
     which <code>IkTargetSpaceDriver.ClampArmReachDistance</code> caps at 0.9800 and
@@ -138,19 +140,22 @@ relative to the band was not measured; the figures below are arm measurements.</
     target is 0.9744, which is below the cap and softens to 0.9422. The authored 8° of
     <code>Arms.ElbowSwing</code> renders as 0.61°, which is the 38.6°-to-39.2° span.
     With <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_BoneStretch">BoneStretch</a> on at
-    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_MaxBoneStretch">MaxBoneStretch</a> 0.05 the arm segments grow 4.48 %, the hand moves from 0.944
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_MaxBoneStretch">MaxBoneStretch</a> 0.05 (its default at the time of measurement; the current
+    default is 0.042105) the arm segments grow 4.48 %, the hand moves from 0.944
     to 0.969 of span (13.7 mm on a 0.55 m arm), and the elbow bends about 5° further, from
     38.6° with the stretch off to 44.0° with it on, because the softening then applies against
     the longer span.
 </p>
 <p>
-    This is not visible as motion. The arm is inside the softening band on every frame of the
-    cycle, so the rendered elbow bend stays within 38.6° to 39.2° for the whole cycle: the
-    authored 8° of <code>Arms.ElbowSwing</code> is suppressed to 0.61°, and the elbow reads as
-    nearly rigid. There is almost no change over time for a viewer to notice, even though the
-    rendered angle differs from the authored one by 13.2° to 20.6° at every instant. The
-    difference between authored and rendered is not constant — it is 20.6° at the authored
-    18.0° end and 13.2° at the authored 26.0° end.
+    This is not visible as motion. Every figure in this paragraph was measured at the same
+    <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart">SoftReachStart</a> 0.90 as the paragraph above; the current default is 0.94
+    and the measurement has not been redone at that value. The arm is inside the softening
+    band on every frame of the cycle, so the rendered elbow bend stays within 38.6° to
+    39.2° for the whole cycle: the authored 8° of <code>Arms.ElbowSwing</code> is suppressed to
+    0.61°, and the elbow reads as nearly rigid. There is almost no change over time for a
+    viewer to notice, even though the rendered angle differs from the authored one by 13.2°
+    to 20.6° at every instant. The difference between authored and rendered is not constant
+    — it is 20.6° at the authored 18.0° end and 13.2° at the authored 26.0° end.
 </p>
 </div>
 
@@ -162,7 +167,7 @@ relative to the band was not measured; the figures below are arm measurements.</
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_BoneStretch" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.BoneStretch">
   BoneStretch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L993"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L996"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4 (knee pop) from the ik-pop-flip-prevention scout report, second half of the Kovar fix
@@ -198,19 +203,23 @@ public bool BoneStretch</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_MaxBoneStretch" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.MaxBoneStretch">
   MaxBoneStretch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L1011"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L1019"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>O4: bound on <a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_BoneStretch">BoneStretch</a>, as a fraction of <b>each segment's own</b> bind-pose
 length rather than of the whole chain, so an unusually short shin is never given a
 thigh-sized absolute stretch. Applied per segment and reached only at full extension.
 Capped further by <code>IkTargetSpaceDriver.ResolveStretchCeiling</code>, which is where the
-measurement behind the 0.05 default and behind the cap itself is written down.</p>
+cap's analytic derivation and the measurement of why a cap is needed at all are written
+down. The 0.042105 default is that formula's value at the shipped
+<a class="xref" href="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart">SoftReachStart</a> of 0.94, which is 0.04210526, shortened to six decimal
+places and so still below it: the value in force and the value on the slider agree
+until one of the two is changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How much longer a limb segment may become at full extension, as a fraction of its own length. 0.05 adds 5 percent to the thigh and 5 percent to the shin, and the same 5 percent to the upper arm and the forearm, so the limb reaches 5 percent further and recovers about 60 percent of the reach the softening gives up. Only reached at full extension, and zero at Soft Reach Start. A raised Soft Reach Start narrows the band this has to work in and lowers the value that can be used: above roughly 0.07 at the default Soft Reach Start of 0.90 the limb would start to bend more as it reaches further, so the value is capped there. Has no effect while Bone Stretch is off.&quot;)]
+    <pre><code class="lang-csharp hljs" style="display: block;white-space: pre-wrap;padding-left: 6em;text-indent: -5em;">[Tooltip(&quot;How much longer a limb segment may become at full extension, as a fraction of its own length. The default 0.042105 adds 4.2105 percent to the thigh and 4.2105 percent to the shin, and the same 4.2105 percent to the upper arm and the forearm, so the limb reaches 4.2105 percent further and recovers part of the reach the softening gives up. Only reached at full extension, and zero at Soft Reach Start. A raised Soft Reach Start narrows the band this has to work in and lowers the value that can be used: above 0.04210526 at the default Soft Reach Start of 0.94 the limb would start to bend more as it reaches further, so the value is capped there, which is why the default sits just under it at 0.042105. Has no effect while Bone Stretch is off.&quot;)]
 [Range(0, 0.1)]
 public float MaxBoneStretch</code></pre>
   </div>
@@ -235,7 +244,7 @@ public float MaxBoneStretch</code></pre>
 
   <h3 id="CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_LimbReachGroup_SoftReachStart" data-uid="CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.LimbReachGroup.SoftReachStart">
   SoftReachStart
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L979"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L982"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -268,7 +277,7 @@ public float SoftReachStart</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L971" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CodeSmile-0000011110110111/AnyMotion-Development-Project/blob/main/Assets/CodeSmile/AnyMotion/AnimateYourself/Runtime/Gait/WalkGaitParameters.cs/#L974" class="edit-link">Edit this page</a>
         </div>
 
 
