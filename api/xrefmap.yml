@@ -1470,6 +1470,12 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.Physics
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.GravitySource.Physics
   nameWithType: WalkGaitParameters.PelvisGroup.GravitySource.Physics
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.HipsTwist
+  name: HipsTwist
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_PelvisGroup_HipsTwist
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.HipsTwist
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.HipsTwist
+  nameWithType: WalkGaitParameters.PelvisGroup.HipsTwist
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Pitch
   name: Pitch
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_PelvisGroup_Pitch
@@ -1494,12 +1500,6 @@ references:
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Sway
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Sway
   nameWithType: WalkGaitParameters.PelvisGroup.Sway
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Twist
-  name: Twist
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_PelvisGroup_Twist
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Twist
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.PelvisGroup.Twist
-  nameWithType: WalkGaitParameters.PelvisGroup.Twist
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Robot
   name: Robot()
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Robot
@@ -1700,36 +1700,36 @@ references:
   commentId: T:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup
   nameWithType: WalkGaitParameters.TorsoGroup
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestCounterTwist
-  name: ChestCounterTwist
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_ChestCounterTwist
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestCounterTwist
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestCounterTwist
-  nameWithType: WalkGaitParameters.TorsoGroup.ChestCounterTwist
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestTwist
+  name: ChestTwist
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_ChestTwist
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestTwist
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ChestTwist
+  nameWithType: WalkGaitParameters.TorsoGroup.ChestTwist
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Lean
   name: Lean
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_Lean
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Lean
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Lean
   nameWithType: WalkGaitParameters.TorsoGroup.Lean
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderCounterTwist
-  name: ShoulderCounterTwist
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_ShoulderCounterTwist
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderCounterTwist
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderCounterTwist
-  nameWithType: WalkGaitParameters.TorsoGroup.ShoulderCounterTwist
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderTwist
+  name: ShoulderTwist
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_ShoulderTwist
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderTwist
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.ShoulderTwist
+  nameWithType: WalkGaitParameters.TorsoGroup.ShoulderTwist
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SideBend
   name: SideBend
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_SideBend
   commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SideBend
   fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SideBend
   nameWithType: WalkGaitParameters.TorsoGroup.SideBend
-- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Twist
-  name: Twist
-  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_Twist
-  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Twist
-  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.Twist
-  nameWithType: WalkGaitParameters.TorsoGroup.Twist
+- uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SpineTwist
+  name: SpineTwist
+  href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_TorsoGroup_SpineTwist
+  commentId: F:CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SpineTwist
+  fullName: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.TorsoGroup.SpineTwist
+  nameWithType: WalkGaitParameters.TorsoGroup.SpineTwist
 - uid: CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.Version
   name: Version
   href: reference/CodeSmile.AnyMotion.AnimateYourself.Gait.WalkGaitParameters.html#CodeSmile_AnyMotion_AnimateYourself_Gait_WalkGaitParameters_Version
